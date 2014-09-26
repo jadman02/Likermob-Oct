@@ -17,6 +17,11 @@ myApp.onPageInit('index', function (page) {
 askLocation();
 functionEmpty();
 
+
+$$('.swipeout').on('swipeout', function (e) {
+  alert('yo');
+}); 
+
 //likebutton
 
 
@@ -92,9 +97,7 @@ myApp.init();
 
 
 
-$$('.swipeout').on('swipeout', function (e) {
-  alert('Item opened on: ' + e.detail.progress + '%');
-}); 
+
 
 
 var mainView = myApp.addView('.view-main', {
