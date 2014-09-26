@@ -7,7 +7,9 @@ var myApp = new Framework7({
 var $$ = Dom7;
 
 
-
+$$('.swipeout').on('swipeout', function (e) {
+  console.log('Item opened on: ' + e.detail.progress + '%');
+}); 
 	
 	//Now we add our callback for initial page
 myApp.onPageInit('index', function (page) {
