@@ -18,9 +18,7 @@ askLocation();
 functionEmpty();
 
 
-$$('.mark').on('click', function () {
-  myApp.alert('like');
-});
+myApp.alert('like');
 
 
 
