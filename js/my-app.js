@@ -19,9 +19,7 @@ functionEmpty();
 
 //likebutton
 
-$$('.swipeout').on('swipeout', function (e) {
-  alert('Item opened on: ' + e.detail.progress + '%');
-}); 
+
 
 $$('#likebutton').on('click', function (e) {
 
@@ -93,6 +91,10 @@ $$('.item-title').on('click', function (e) {
 myApp.init();
 
 
+
+$$('.swipeout').on('swipeout', function (e) {
+  alert('Item opened on: ' + e.detail.progress + '%');
+}); 
 
 
 var mainView = myApp.addView('.view-main', {
