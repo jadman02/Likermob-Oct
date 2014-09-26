@@ -7,7 +7,9 @@ var myApp = new Framework7({
 var $$ = Dom7;
 
 
-
+$$('.mark').on('click', function () {
+  myApp.alert('Mark');
+});
 	
 	//Now we add our callback for initial page
 myApp.onPageInit('index', function (page) {
@@ -18,7 +20,7 @@ askLocation();
 functionEmpty();
 
 
-myApp.alert('like');
+
 
 
 
