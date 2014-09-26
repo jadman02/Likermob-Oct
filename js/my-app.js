@@ -326,6 +326,7 @@ elem.value = response.result.formatted_address;
 function likeButton() {
 	
 	myApp.alert('like');
+	share();
 	
 }
 
