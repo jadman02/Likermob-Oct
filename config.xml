@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.likermob"
+        versionCode = "10"
+        version     = "1.1.0">
+ 
+    <name>Likermob-Sep</name>
+ 
+    <description>
+       Save on things you like!
+    </description>
+ 
+    <author href="http://www.likermob.com" email="jadman02@hotmail.com">
+        Jarrod Dean
+    </author>
+ 
+<gap:plugin name="org.apache.cordova.inappbrowser">
+
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
+    <feature name="http://api.phonegap.com/1.0/notification"/>
+ 
+ 
+<access origin="*" />
+
+ <access origin="*" subdomains="true">
+<access origin="http://smilesavers.net.au"/>
+<access origin="*.akamaihd.net"/>
+<access origin="*.fbcdn.net"/>
+<access origin="graph.facebook.com"/>
+<access origin="api.facebook.com"/>
+<access origin="m.facebook.com"/>
+<access origin="facebook.com"/>
+ 
+ <gap:platform name="ios" />
+ <preference name="orientation" value="portrait" />
+ 
+ <preference name="DisallowOverscroll" value="true" />
+
+ 
+</widget>
