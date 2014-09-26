@@ -7,7 +7,7 @@ var myApp = new Framework7({
 var $$ = Dom7;
 
 myApp.alert('intro');
-$$('.button').on('click', function () {
+$$('.mark').on('click', function () {
   myApp.alert('Mark');
 });
 	
@@ -157,7 +157,7 @@ $$.getJSON('http://www.smilesavers.net.au/jsonp.php?callback=?', function(respon
 localStorage.setItem("total_pages", response.length);
 $$("#loader-container").hide();
 for (i = 0; i < 5; i++) {        
-$$( '#result' ).append('<li class="swipeout"><div class="swipeout-content"><a href="#" class="item-content item-link"><div class="item-media"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ response[i][3] + '</div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ response[i][4] +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-blue mark"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" class="swipeout-delete swipeout-overswipe"><i class="pe-7s-close-circle pe-2x"></i></a></div></li>');
+$$( '#result' ).append('<li class="swipeout"><div class="swipeout-content"><a href="#" class="item-content item-link"><div class="item-media"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ response[i][3] + '</div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ response[i][4] +'</div></div></a></div><div class="swipeout-actions-left mark"><a href="#" class="bg-blue mark"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" class="swipeout-delete swipeout-overswipe"><i class="pe-7s-close-circle pe-2x"></i></a></div></li>');
 
 }
 track_click++;
