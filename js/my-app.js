@@ -20,7 +20,7 @@ functionEmpty();
 //likebutton
 
 $$('.swipeout').on('swipeout', function (e) {
-  console.log('Item opened on: ' + e.detail.progress + '%');
+  alert('Item opened on: ' + e.detail.progress + '%');
 }); 
 
 $$('#likebutton').on('click', function (e) {
