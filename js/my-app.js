@@ -7,7 +7,7 @@ var myApp = new Framework7({
 var $$ = Dom7;
 
 myApp.alert('intro');
-$$('.swipeout').on('click', function () {
+$$('.button').on('click', function () {
   myApp.alert('Mark');
 });
 	
