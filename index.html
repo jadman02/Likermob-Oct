@@ -271,8 +271,8 @@ function like() {
         
         openFB.api({
             path: '/363053000439943_703019106443329/likes',
-            success: function() {
-                alert('I like this already');
+            success: function(data) {
+                alert(data[0].id);
             },
             error: errorHandler});
         
