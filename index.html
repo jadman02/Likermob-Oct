@@ -270,11 +270,13 @@ function like() {
         
         
         openFB.api({
-            path: '/363053000439943_703019106443329/likes',
+            method: 'POST',
+            path: '/363053000439943_703038599774713/likes',
             success: function(data) {
                 alert(JSON.stringify(data));
             },
             error: errorHandler});
+        
         
         
         
