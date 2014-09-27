@@ -338,6 +338,9 @@ FB.api(
         alert('ok so this is working');
         
       }
+      
+      else {alert('actually not working');}
+      
     }
 );
 	
