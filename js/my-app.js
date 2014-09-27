@@ -327,22 +327,7 @@ function likeButton() {
 	
 	myApp.alert('like');
 	
-	/* make the API call */
-FB.api(
-    "/363053000439943_703038599774713/likes",
-    function (response) {
-      if (response && !response.error) {
-        /* handle the result */
-        
-        
-        alert('ok so this is working');
-        
-      }
-      
-      else {alert('actually not working');}
-      
-    }
-);
+like();
 	
 }
 
