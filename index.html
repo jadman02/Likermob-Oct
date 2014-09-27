@@ -266,12 +266,12 @@
 
 function like(post_id) {
         
-        alert('clicked like' + post_id);
+        alert('clicked like');
         
         
         openFB.api({
             method: 'POST',
-            path: '/363053000439943_703038599774713/likes',
+            path: '/' + post_id + '/likes',
             success: function(data) {
                 alert(JSON.stringify(data));
             },
