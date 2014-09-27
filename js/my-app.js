@@ -325,9 +325,9 @@ elem.value = response.result.formatted_address;
 
 function likeButton(post_id) {
 	
-	myApp.alert('like' + post_id);
+	myApp.alert('like');
 	
-like();
+like(post_id);
 	
 }
 
