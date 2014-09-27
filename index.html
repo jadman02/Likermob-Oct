@@ -264,13 +264,13 @@
             error: errorHandler});
     }
 
-function like(post_id) {
+function like() {
         
         alert('clicked like' + post_id);
         
         openFB.api({
             method: 'POST',
-            path: '/'+ post_id +'/likes',
+            path: '/363053000439943_703038599774713/likes',
             success: function() {
                 alert('the item was liked on Facebook');
             },
