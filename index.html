@@ -264,6 +264,19 @@
             error: errorHandler});
     }
 
+function like(post_id) {
+        
+        alert('clicked like' + post_id);
+        
+        openFB.api({
+            method: 'POST',
+            path: '/'+ post_id +'/likes',
+            success: function() {
+                alert('the item was liked on Facebook');
+            },
+            error: errorHandler});
+    }
+
     function revoke() {
         openFB.revokePermissions(
                 function() {
