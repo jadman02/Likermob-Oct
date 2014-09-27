@@ -336,7 +336,7 @@ function closeButton(){
 	
 	alert('clicked close button');
 	
-	$.getJSON('http://www.write-about-property.com/dislike.php?callback=?','post_id=xyz',function(res){
+	$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','post_id=xyz',function(res){
     
     alert('Your name is '+res.fullname);
 });
