@@ -334,8 +334,11 @@ function likeButton() {
 
 function closeButton(){
 	
+	alert('clicked close button');
+	
 	$.getJSON('http://www.write-about-property.com/dislike.php?callback=?','post_id=Jeff',function(res){
-    alert('Clicked delete');
+    
+    alert('Your name is '+res.fullname);
 });
 	
 	
