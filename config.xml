@@ -14,6 +14,8 @@
     <author href="http://www.likermob.com" email="jadman02@hotmail.com">
         Jarrod Dean
     </author>
+
+<gap:platform name="ios" />
  
 <gap:plugin name="org.apache.cordova.inappbrowser">
 
@@ -33,7 +35,7 @@
 <access origin="m.facebook.com"/>
 <access origin="facebook.com"/>
  
- <gap:platform name="ios" />
+ 
  <preference name="orientation" value="portrait" />
  
  <preference name="DisallowOverscroll" value="true" />
