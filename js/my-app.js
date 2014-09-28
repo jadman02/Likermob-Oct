@@ -375,13 +375,10 @@ mainView.loadPage('deal.html');
 
 alert(post_id);
 
-$$.getJSON('http://www.smilesavers.net.au/getdeal.php?callback=?','post_id=174238599281322_782468995124943',function(response){
+$$.getJSON('http://www.smilesavers.net.au/getdeal.php?callback=?', function(response){
 
+alert('it worked');
 
-for (i = 0; i < 5; i++) {        
-    alert(response[i][3]);
-
-}
 
 
 });	
