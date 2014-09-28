@@ -377,10 +377,7 @@ alert(post_id);
 
 $$.getJSON('http://www.smilesavers.net.au/getdeal.php?callback=?', \'post_id='+ post_id +'\', function(response){
 
-for (i = 0; i < 5; i++) {        
-alert('it worked - response:' + response[i][1] + response[i][3] + response[i][2]);
-
-}
+alert('it worked - response:');
 
 
 
