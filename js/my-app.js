@@ -140,6 +140,13 @@ alert('on about page');
     });
 });
 
+myApp.onPageInit('deal', function (page) {
+
+alert('on deal page');
+
+
+});
+
 
 
 
