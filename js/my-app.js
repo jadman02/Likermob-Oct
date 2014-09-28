@@ -26,7 +26,12 @@ functionEmpty();
 });
 
 
+myApp.onPageInit('register', function (page) {
 
+alert('on register page');
+mainView.hideNavbar();
+
+});
 
 
 
@@ -97,19 +102,14 @@ var mainView = myApp.addView('.view-main', {
 });
 
 	
-myApp.onPageInit('register', function (page) {
 
-alert('on register page');
-mainView.hideNavbar();
-
-});
 
 
 
 var register = localStorage.getItem('register');
 if (register) {
 
-if(latitude) {}
+if(latitude) {mainView.loadPage('index.html');}
 else{mainView.loadPage('location.html');}
 	
 	
