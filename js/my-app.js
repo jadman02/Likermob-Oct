@@ -379,7 +379,7 @@ $$.getJSON('http://www.smilesavers.net.au/getdeal.php?callback=?','post_id=17423
 
 
 for (i = 0; i < 5; i++) {        
-    alert(response[i][2]);
+    alert(response[i][3]);
 
 }
 
