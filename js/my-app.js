@@ -371,20 +371,20 @@ function addEntry(post_id) {
 
 function getDeal(post_id) {
 	
-mainView.loadPage('deal.html');
+//mainView.loadPage('deal.html');
 
+$$("#result li").css("height", "500px;");
 
+//$$.getJSON('http://www.smilesavers.net.au/getdeal.php?callback=?', 'post_id=' + post_id, function(response){
 
-$$.getJSON('http://www.smilesavers.net.au/getdeal.php?callback=?', 'post_id=' + post_id, function(response){
-
-document.getElementById("dealnavbar").innerHTML = response[0][16];
+//document.getElementById("dealnavbar").innerHTML = response[0][16];
 
 
     
-    alert('Your name is '+response[0][2] + response[0][3]);
+  //  alert('Your name is '+response[0][2] + response[0][3]);
 
 
-});	
+//});	
 	
 	
 }
