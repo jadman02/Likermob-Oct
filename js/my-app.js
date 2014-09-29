@@ -378,7 +378,7 @@ mainView.loadPage('deal.html');
 $$.getJSON('http://www.smilesavers.net.au/getdeal.php?callback=?', 'post_id=' + post_id, function(res){
 
 
-    alert('Your name is '+response[0][2] + response[0][3]);
+    alert('Your name is '+res[0][2] + res[0][3]);
 
 
 });	
