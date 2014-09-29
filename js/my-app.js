@@ -377,7 +377,7 @@ mainView.loadPage('deal.html');
 
 $$.getJSON('http://www.smilesavers.net.au/getdeal.php?callback=?', 'post_id=' + post_id, function(response){
 
-document.getElementById("dealnavbar").innerHTML = '<div class="navbar"><div class="navbar-inner"><div class="left"><a href="index.html" class="back" icon-only><i class="pe-7s-angle-left-circle pe-lg"></i></a></div><div class="center">'+ response[0][16] +'</div></div></div>';
+document.getElementById("dealnavbar").innerHTML = response[0][16];
 
 
     
