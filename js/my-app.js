@@ -373,11 +373,11 @@ function getDeal(post_id,title) {
 	
 mainView.loadPage('deal.html');
 
-alert(post_id + ',' + title);
+document.getElementById("dealnavbar").innerHTML = title;
 
 $$.getJSON('http://www.smilesavers.net.au/getdeal.php?callback=?', 'post_id=' + post_id, function(response){
 
-document.getElementById("dealnavbar").innerHTML = response[0][16];
+
 
 
     
