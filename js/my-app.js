@@ -371,12 +371,12 @@ function addEntry(post_id) {
 
 function getDeal(post_id,title) {
 	
-mainView.loadPage('deal.html');
+
 
 alert(title);
 
 document.getElementById("dealnavbar").innerHTML = title;
-
+mainView.loadPage('deal.html');
 //$$.getJSON('http://www.smilesavers.net.au/getdeal.php?callback=?', 'post_id=' + post_id, function(response){
 
 
