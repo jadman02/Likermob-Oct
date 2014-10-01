@@ -378,11 +378,10 @@ function addEntry(post_id) {
 function getDeal(post_id,name,title,page_id,cover) {
 	
 var width = $$( window ).width();
-alert(width);
 
 mainView.loadPage('deal.html');
-document.getElementById("dealnavbar").innerHTML = '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=10&height=10" style="border-radius:50%;"/>' + name;
-document.getElementById("dealresult").innerHTML = '</br></br></br></br><img src="'+ cover +'" style="width:100%;margin:20px;"/>'+ title;
+document.getElementById("dealnavbar").innerHTML = '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;"/>' + name;
+document.getElementById("dealresult").innerHTML = '<img src="'+ cover +'" style="width:100%;margin-top:10px;"/>'+ title;
 
 //$$.getJSON('http://www.smilesavers.net.au/getdeal.php?callback=?', 'post_id=' + post_id, function(response){
 
