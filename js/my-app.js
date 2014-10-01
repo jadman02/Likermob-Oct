@@ -39,6 +39,9 @@ myApp.onPageInit('deal', function (page) {
 
 alert('on deal page');
 
+var isEmpty = document.getElementById('dealnavbar').html === "";
+
+if (isEmpty==="") alert('The deal is empty');
 
 });
 
