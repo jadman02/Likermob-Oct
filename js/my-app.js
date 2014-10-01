@@ -378,6 +378,7 @@ function addEntry(post_id) {
 function getDeal(post_id,name,title,page_id,cover) {
 
 var popupHTML ='<div class="popup">'+
+                    '<div class="navbar"><div class="navbar-inner"><div class="left">Left</div><div class="center">Center</div><div class="right">Right</div></div></div>'+
                     '<div class="content-block">'+
                       '<img src="'+ cover +'" style="width:100%;margin-top:30px;"/>'+
                       '<p>'+ title +'</p>'+
