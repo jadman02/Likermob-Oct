@@ -377,10 +377,10 @@ function addEntry(post_id) {
 
 function getDeal(post_id,name,title,page_id,cover) {
 
-var popupHTML ='<div class="popup">'+
+var popupHTML ='<div class="popup" style="margin:0;">'+
                     '<div class="navbar"><div class="navbar-inner"><div class="left">Left</div><div class="center">Center</div><div class="right">Right</div></div></div>'+
                     '<div class="content-block">'+
-                      '<img src="'+ cover +'" style="width:100%;margin-top:30px;"/>'+
+                      '<img src="'+ cover +'" style="width:100%;"/>'+
                       '<p>'+ title +'</p>'+
                       '<p><a href="#" class="close-popup">Close me</a></p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>Lorem ipsum dolor ...</p>'+
                     '</div>'+
