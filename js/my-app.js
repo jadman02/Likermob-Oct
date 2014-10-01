@@ -94,7 +94,16 @@ $$('.item-title').on('click', function (e) {
 myApp.init();
 
 
-
+    
+    $$('.create-popup').on('click', function () {
+  var popupHTML = '<div class="popup">'+
+                    '<div class="content-block">'+
+                      '<p>Popup created dynamically.</p>'+
+                      '<p><a href="#" class="close-popup">Close me</a></p>'+
+                    '</div>'+
+                  '</div>'
+  myApp.popup(popupHTML);
+});
 
 
 
