@@ -168,7 +168,7 @@ for (i = 0; i < 5; i++) {
 
 
 
-$$( '#result' ).append('<li class="swipeout"><div class="swipeout-content"><a href="#" onclick="getDeal(\''+ response[i][2]  +'\',\''+ response[i][16]  +'\',\''+ response[i][3]  +'\')" class="item-content item-link link"><div class="item-media"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ response[i][3] + '</div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ response[i][4] +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-blue swipeout-delete swipeout-overswipe" onclick="likeButton(\''+ response[i][2]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton()" class="swipeout-delete swipeout-overswipe"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');
+$$( '#result' ).append('<li class="swipeout"><div class="swipeout-content"><a href="#" onclick="getDeal(\''+ response[i][2]  +'\',\''+ response[i][16]  +'\',\''+ response[i][3]  +'\',\''+ response[i][1]  +'\')" class="item-content item-link link"><div class="item-media"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ response[i][3] + '</div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ response[i][4] +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-blue swipeout-delete swipeout-overswipe" onclick="likeButton(\''+ response[i][2]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton()" class="swipeout-delete swipeout-overswipe"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');
 
 }
 track_click++;
@@ -375,11 +375,11 @@ function addEntry(post_id) {
 	
 }
 
-function getDeal(post_id,name,title) {
+function getDeal(post_id,name,title,page_id) {
 	
 
 mainView.loadPage('deal.html');
-document.getElementById("dealnavbar").innerHTML = name;
+document.getElementById("dealnavbar").innerHTML = '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=50&height=50" style="border-radius:50%;"/>' + name;
 document.getElementById("dealresult").innerHTML = '</br></br></br></br>'+ title;
 
 //$$.getJSON('http://www.smilesavers.net.au/getdeal.php?callback=?', 'post_id=' + post_id, function(response){
