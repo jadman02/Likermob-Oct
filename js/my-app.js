@@ -41,7 +41,7 @@ alert('on deal page');
 
 var isEmpty = document.getElementById('dealnavbar').value;
 
-if (isEmpty==='') alert('The deal is empty');
+if (isEmpty==="") alert('The deal is empty');
 
 });
 
