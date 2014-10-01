@@ -380,6 +380,7 @@ function getDeal(post_id,name,title,page_id,cover) {
 var width = $$( window ).width();
 
 mainView.loadPage('deal.html');
+$$( body ).css( 'background-image', 'url(\''+ cover  +'\');' );
 document.getElementById("dealnavbar").innerHTML = '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;"/>' + name;
 document.getElementById("dealresult").innerHTML = '<img src="'+ cover +'" style="width:100%;margin-top:10px;"/>'+ title;
 
