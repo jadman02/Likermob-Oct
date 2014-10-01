@@ -378,7 +378,7 @@ function addEntry(post_id) {
 function getDeal(post_id,name,title,page_id,cover) {
 
 var popupHTML ='<div class="popup" style="margin:0;">'+
-                    '<div class="navbar"><div class="navbar-inner"><div class="left">Left</div><div class="center">Center</div><div class="right">Right</div></div></div>'+
+                    '<div class="navbar"><div class="navbar-inner"><div class="left"><a href="index.html" class="back" icon-only><i class="pe-7s-angle-left-circle pe-lg"></i></a></div><div class="right"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/>' + name + '</div></div></div>'+
                     '<div class="content-block">'+
                       '<img src="'+ cover +'" style="width:100%;"/>'+
                       '<p>'+ title +'</p>'+
@@ -389,7 +389,7 @@ var popupHTML ='<div class="popup" style="margin:0;">'+
 
 
 
-//document.getElementById("dealnavbar").innerHTML = '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/>' + name;
+
 //document.getElementById("dealresult").innerHTML = '<img src="'+ cover +'" style="width:100%;margin-top:30px;"/><br/><br/><h1>'+ title + '</h1><br/><br/><p>p1</p><br/><br/><p>p2</p><br/><br/><p>p3</p><br/><br/><p>p4</p>';
 
 //$$.getJSON('http://www.smilesavers.net.au/getdeal.php?callback=?', 'post_id=' + post_id, function(response){
