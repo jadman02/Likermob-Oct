@@ -6,7 +6,15 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
-
+$$('.create-popup').on('click', function () {
+  var popupHTML = '<div class="popup">'+
+                    '<div class="content-block">'+
+                      '<p>Popup created dynamically.</p>'+
+                      '<p><a href="#" class="close-popup">Close me</a></p>'+
+                    '</div>'+
+                  '</div>'
+  myApp.popup(popupHTML);
+});
 
 	
 	//Now we add our callback for initial page
