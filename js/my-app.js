@@ -376,8 +376,8 @@ function getDeal(post_id,name,title) {
 	
 
 mainView.loadPage('deal.html');
-document.getElementById("dealnavbar").innerHTML = title;
-document.getElementById("dealresult").innerHTML = title;
+document.getElementById("dealnavbar").innerHTML = name;
+document.getElementById("dealresult").innerHTML = '</br></br></br></br>'+ title;
 
 //$$.getJSON('http://www.smilesavers.net.au/getdeal.php?callback=?', 'post_id=' + post_id, function(response){
 
