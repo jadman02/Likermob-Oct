@@ -99,7 +99,7 @@ myApp.init();
   var popupHTML = '<div class="popup">'+
                     '<div class="content-block">'+
                       '<p>Popup created dynamically.</p>'+
-                      '<p><a href="#" class="close-popup">Close me</a></p>'+
+                      '<p><a href="#" class="close-popup">Close me</a></p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>Lorem ipsum dolor ...</p>'+
                     '</div>'+
                   '</div>'
   myApp.popup(popupHTML);
