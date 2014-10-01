@@ -377,6 +377,8 @@ function addEntry(post_id) {
 
 function getDeal(post_id,name,title,page_id,cover) {
 	
+var width = $$( window ).width();
+alert(width);
 
 mainView.loadPage('deal.html');
 document.getElementById("dealnavbar").innerHTML = '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=10&height=10" style="border-radius:50%;"/>' + name;
