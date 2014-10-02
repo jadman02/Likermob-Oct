@@ -365,7 +365,7 @@ mainView.loadContent(
         '    <div class="page-content" style="background-image: url(\''+ cover  +'\');background-size: 100%;background-repeat: no-repeat;">' +
         
         '      <div class="content-block" style="background:transparent;">' +
-        '        <div class="content-block-inner">' +
+        '        <div class="content-block-inner" style="background:transparent;">' +
                       '<p>'+ title +'</p>'+
         '          <p>Here is a dynamic page created on ' + new Date() + ' !</p>' +
         '          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>Go <a href="#" class="back">back</a> or go to <a href="services.html">Services</a>.</p>' +
