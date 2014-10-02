@@ -362,10 +362,9 @@ mainView.loadContent(
         '  <!-- Page, data-page contains page name-->' +
         '  <div data-page="dynamic-pages" class="page">' +
         '    <!-- Scrollable page content-->' +
-        '    <div class="page-content">' +
+        '    <div class="page-content" style="background-image: url(\''+ cover  +'\');">' +
         '      <div class="content-block">' +
         '        <div class="content-block-inner">' +
-        '<img src="'+ cover +'" style="width:100%;"/>'+
                       '<p>'+ title +'</p>'+
         '          <p>Here is a dynamic page created on ' + new Date() + ' !</p>' +
         '          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>Go <a href="#" class="back">back</a> or go to <a href="services.html">Services</a>.</p>' +
