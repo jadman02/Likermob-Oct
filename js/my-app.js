@@ -350,12 +350,12 @@ function addEntry(post_id) {
 
 function getDeal(post_id,name,title,page_id,cover) {
 
-var like_list = localStorage.getItem("allEntries");
-alert (like_list);
-        if ($$.inArray(post_id, like_list)!='-1') {
-            alert(post_id + ' is in the array!');
+    var names = ['vadim', 'thomas', 'tanya', 'timur', 'eve', 'kate', 'karen', 'peter'];
+    var name ='vadim';
+        if ($$.inArray(name, names)!='-1') {
+            alert(name + ' is in the array!');
         } else {
-            alert(post_id + ' is NOT in the array...');
+            alert(name + ' is NOT in the array...');
         }
 
 
