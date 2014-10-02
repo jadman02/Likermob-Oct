@@ -349,6 +349,10 @@ function addEntry(post_id) {
 }
 
 function getDeal(post_id,name,title,page_id,cover) {
+
+var entry  = localStorage.getItem("entry");
+ 
+alert(entry); 
  
 var imageList = [100,200,300,400,500];
 var index = imageList.indexOf(200); // 1
