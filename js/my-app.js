@@ -352,20 +352,20 @@ function getDeal(post_id,name,title,page_id,cover) {
 
 
 
-var data = '{"name": "mkyong","age": 30,"address": {"streetAddress": "88 8nd Street","city": "New York"},"phoneNumber": [{"type": "home","number": "111 111-1111"},{"type": "fax","number": "222 222-2222"}]}';
+var data = localStorage.getItem("allEntries");
  
 	var json = JSON.parse(data);
  
-	alert(json["name"]); //mkyong
-	alert(json.name); //mkyong
+	alert(json["post_id"][0]); //mkyong
+	//alert(json.name); //mkyong
  
-	alert(json.address.streetAddress); //88 8nd Street
-	alert(json["address"].city); //New York
+	//alert(json.address.streetAddress); //88 8nd Street
+//	alert(json["address"].city); //New York
  
-	alert(json.phoneNumber[0].number); //111 111-1111
-	alert(json.phoneNumber[1].type); //fax
+	//alert(json.phoneNumber[0].number); //111 111-1111
+	//alert(json.phoneNumber[1].type); //fax
  
-	alert(json.phoneNumber.number); //undefined
+	//alert(json.phoneNumber.number); //undefined
 
  
 var imageList = [100,200,300,400,500];
