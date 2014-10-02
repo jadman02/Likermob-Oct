@@ -351,17 +351,12 @@ function addEntry(post_id) {
 function getDeal(post_id,name,title,page_id,cover) {
 
 var like_list = localStorage.getItem("allEntries");
-
+alert (like_list);
         if ($$.inArray(post_id, like_list)!='-1') {
             alert(post_id + ' is in the array!');
         } else {
             alert(post_id + ' is NOT in the array...');
         }
-
- var like_list = localStorage.getItem("allEntries");
-            for (i = 0; i < response.data.length; i++) {
-                like_list.push(response.data[i].id);
-            }
 
 
 mainView.loadContent(
