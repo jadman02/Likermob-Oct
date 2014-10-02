@@ -377,8 +377,8 @@ function addEntry(post_id) {
 
 function getDeal(post_id,name,title,page_id,cover) {
 
-var popupHTML ='<div class="popup" style="margin:0;">'+
-                    '<div class="navbar"><div class="navbar-inner"><div class="left"><a href="index.html" class="back" icon-only><i class="pe-7s-angle-left-circle pe-lg"></i></a></div><div class="right"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/>' + name + '</div></div></div>'+
+var popupHTML ='<div class="popup" style="padding:0px;">'+
+                    '<div class="navbar" style="position:fixed;"><div class="navbar-inner"><div class="left"><a href="index.html" class="back" icon-only><i class="pe-7s-angle-left-circle pe-lg"></i></a></div><div class="right"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/>' + name + '</div></div></div>'+
                     '<div class="content-block">'+
                       '<img src="'+ cover +'" style="width:100%;"/>'+
                       '<p>'+ title +'</p>'+
