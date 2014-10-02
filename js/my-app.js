@@ -350,14 +350,10 @@ function addEntry(post_id) {
 
 function getDeal(post_id,name,title,page_id,cover) {
  
+var imageList = [100,200,300,400,500];
+var index = imageList.indexOf(200); // 1
 
-    var names = ['vadim', 'thomas', 'tanya', 'timur', 'eve', 'kate', 'karen', 'peter'];
-    var person ='vadim';
-        if (names.indexOf(person)='-1') {
-            alert(person + ' is in the array!');
-        } else {
-            alert(person + ' is NOT in the array...');
-        }
+alert (index);
 
 
 mainView.loadContent(
