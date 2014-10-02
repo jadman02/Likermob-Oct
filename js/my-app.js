@@ -352,7 +352,7 @@ function getDeal(post_id,name,title,page_id,cover) {
 
 var entry  = localStorage.getItem("allEntries");
  
-alert(entry[0]); 
+alert(existingEntries); 
  
 var imageList = [100,200,300,400,500];
 var index = imageList.indexOf(200); // 1
