@@ -350,9 +350,10 @@ function addEntry(post_id) {
 
 function getDeal(post_id,name,title,page_id,cover) {
  
+
     var names = ['vadim', 'thomas', 'tanya', 'timur', 'eve', 'kate', 'karen', 'peter'];
     var name ='vadim';
-        if ($$.inArray(name, names)!='-1') {
+        if (names.indexOf(name)='-1') {
             alert(name + ' is in the array!');
         } else {
             alert(name + ' is NOT in the array...');
