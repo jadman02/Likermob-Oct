@@ -362,9 +362,9 @@ mainView.loadContent(
         '  <!-- Page, data-page contains page name-->' +
         '  <div data-page="dynamic-pages" class="page">' +
         '    <!-- Scrollable page content-->' +
-        '    <div class="page-content" style="background-image: url(\''+ cover  +'\');background-size: 100%;background-repeat: no-repeat;">' +
+        '    <div class="page-content" style="margin-top:30px;background-image: url(\''+ cover  +'\');background-size: 100%;background-repeat: no-repeat;">' +
         
-        '      <div class="content-block" style="background:transparent;">' +
+        '      <div class="content-block" style="background-color:white;opacity: 0.5;">' +
         '        <div class="content-block-inner" style="background:transparent;">' +
                       '<p>'+ title +'</p>'+
         '          <p>Here is a dynamic page created on ' + new Date() + ' !</p>' +
