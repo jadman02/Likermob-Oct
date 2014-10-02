@@ -349,7 +349,7 @@ function addEntry(post_id) {
 }
 
 function getDeal(post_id,name,title,page_id,cover) {
-
+ 
     var names = ['vadim', 'thomas', 'tanya', 'timur', 'eve', 'kate', 'karen', 'peter'];
     var name ='vadim';
         if ($$.inArray(name, names)!='-1') {
