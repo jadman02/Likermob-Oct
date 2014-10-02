@@ -364,8 +364,8 @@ mainView.loadContent(
         '    <!-- Scrollable page content-->' +
         '    <div class="page-content" style="margin-top:30px;background-image: url(\''+ cover  +'\');background-size: 100%;background-repeat: no-repeat;">' +
         
-        '      <div class="content-block" style="background-color:white;opacity: 0.5;">' +
-        '        <div class="content-block-inner" style="background:transparent;opacity: 1;">' +
+        '      <div class="content-block">' +
+        '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);>' +
                       '<p>'+ title +'</p>'+
         '          <p>Here is a dynamic page created on ' + new Date() + ' !</p>' +
         '          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>Go <a href="#" class="back">back</a> or go to <a href="services.html">Services</a>.</p>' +
