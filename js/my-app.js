@@ -352,11 +352,11 @@ function getDeal(post_id,name,title,page_id,cover) {
  
 
     var names = ['vadim', 'thomas', 'tanya', 'timur', 'eve', 'kate', 'karen', 'peter'];
-    var name ='vadim';
-        if (names.indexOf(name)='-1') {
-            alert(name + ' is in the array!');
+    var person ='vadim';
+        if (names.indexOf(person)='-1') {
+            alert(person + ' is in the array!');
         } else {
-            alert(name + ' is NOT in the array...');
+            alert(person + ' is NOT in the array...');
         }
 
 
