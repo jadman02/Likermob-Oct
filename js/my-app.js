@@ -362,7 +362,8 @@ mainView.loadContent(
         '  <!-- Page, data-page contains page name-->' +
         '  <div data-page="dynamic-pages" class="page">' +
         '    <!-- Scrollable page content-->' +
-        '    <div class="page-content" style="background-image: url(\''+ cover  +'\');">' +
+        '    <div class="page-content" style="background-image: url(\''+ cover  +'\');background-size: 100%;background-repeat: no-repeat;">' +
+        
         '      <div class="content-block">' +
         '        <div class="content-block-inner">' +
                       '<p>'+ title +'</p>'+
