@@ -339,7 +339,7 @@ function addEntry(post_id) {
         "post_id": post_id,
         "timestamp": Date.now()
     };
-    localStorage.setItem("entry", JSON.stringify(entry));
+    localStorage.setItem("entry_" + post_id, JSON.stringify(entry));
     // Save allEntries back to local storage
     existingEntries.push(entry);
     localStorage.setItem("allEntries", JSON.stringify(existingEntries));
@@ -353,19 +353,18 @@ var myDate = new Date('October 5, 2014');
 
 
 var date = new Date();
-alert('the original date is '+date);
 var newdate = new Date(date);
 newdate.setDate(newdate.getDate() - 30);
 var nd = new Date(newdate);
-alert('the new date is '+nd);
+
 
 var data = localStorage.getItem("allEntries");
 
 	var json = JSON.parse(data);
 	
 	for (i = 0; i < json.length; i++) {        
-if (json[i].timestamp > myDate){alert('greater than myDate')};
-if (json[i].timestamp < myDate){alert('lesss than than myDate')};
+if (json[i].timestamp > nd){alert('deal is still valid')};
+if (json[i].timestamp < nd){alert('deal is invalid - need to remove it'); localStorage.removeItem('entry_' + post_id);};
 if (json[i].post_id ==post_id){alert('yes a match found')};
 
 }
