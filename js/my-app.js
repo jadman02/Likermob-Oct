@@ -352,13 +352,12 @@ function getDeal(post_id,name,title,page_id,cover) {
 
 
 var data = localStorage.getItem("allEntries");
- 
- alert('data:' + data);
+
 	var json = JSON.parse(data);
 	
 	for (i = 0; i < json.length; i++) {        
 
-alert(json[i].post_id);
+if (json[i].post_id ==post_id){alert('yes a match found')};
 
 }
 	
