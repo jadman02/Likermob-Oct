@@ -334,7 +334,7 @@ $$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','post_id=xyz',
 function addEntry(post_id) {
     // Parse any JSON previously stored in allEntries
     var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
-    if(existingEntries == null) existingEntries = "";
+    if(existingEntries == null) existingEntries = [];
     var entry = {
         "post_id": post_id,
         "timestamp": Date.now()
