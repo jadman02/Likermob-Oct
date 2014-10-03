@@ -167,7 +167,6 @@ $$("#loader-container").hide();
 for (i = 0; i < 5; i++) {        
 
 
-
 $$( '#result' ).append('<li class="swipeout"><img src="'+ response[i][14] +'" style="width:100%;"/><div class="swipeout-content"><a href="#" onclick="getDeal(\''+ response[i][2]  +'\',\''+ response[i][16]  +'\',\''+ response[i][3]  +'\',\''+ response[i][1]  +'\',\''+ response[i][14]  +'\')" class="item-content item-link link"><div class="item-media"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ response[i][4] +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-blue swipeout-delete swipeout-overswipe" style="-webkit-border-top-right-radius: 1000px;-moz-border-radius-topright: 1000px;border-top-right-radius: 1000px;" onclick="likeButton(\''+ response[i][2]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton()" class="swipeout-delete swipeout-overswipe" style="-webkit-border-top-left-radius: 1000px;-moz-border-radius-topleft: 1000px;border-top-left-radius: 1000px;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');
 
 }
@@ -356,10 +355,17 @@ var data = localStorage.getItem("allEntries");
  
  alert('data:' + data);
 	var json = JSON.parse(data);
- alert('json:' + data);
-	alert(json[0].post_id);
-	alert(json[1].post_id);
-	alert(json[2].post_id);//mkyong
+	
+	for (i = 0; i < json.length; i++) {        
+
+alert(json[i].post_id);
+
+}
+	
+// alert('json:' + data);
+	
+//	alert(json[1].post_id);
+//	alert(json[2].post_id);//mkyong
 	//alert(json.name); //mkyong
  
 	//alert(json.address.streetAddress); //88 8nd Street
@@ -371,10 +377,10 @@ var data = localStorage.getItem("allEntries");
 	//alert(json.phoneNumber.number); //undefined
 
  
-var imageList = [100,200,300,400,500];
-var index = imageList.indexOf(200); // 1
+//var imageList = [100,200,300,400,500];
+//var index = imageList.indexOf(200); // 1
 
-alert (index);
+//alert (index);
 
 
 mainView.loadContent(
