@@ -351,10 +351,7 @@ function getDeal(post_id,name,title,page_id,cover) {
 
 var myDate = new Date('October 5, 2014');
 
-var now = new Date();
-now.setDate(now.getDate()-30);
 
-alert(now):
 
 
 var data = localStorage.getItem("allEntries");
