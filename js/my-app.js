@@ -351,10 +351,11 @@ function getDeal(post_id,name,title,page_id,cover) {
 
 var myDate = new Date('October 5, 2014');
 
-var dd = new Date();
-dd.setMonth(dd.getMonth() - 1);
+var now = new Date();
+now.setDate(now.getDate()-30);
 
-alert(dd):
+alert(now):
+
 
 var data = localStorage.getItem("allEntries");
 
