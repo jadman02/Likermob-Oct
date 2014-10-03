@@ -339,7 +339,7 @@ function addEntry(post_id) {
         "post_id": post_id,
         "timestamp": Date.now()
     };
-    localStorage.setItem("entry_" + post_id, JSON.stringify(entry));
+    localStorage.setItem("entry", JSON.stringify(entry));
     // Save allEntries back to local storage
     existingEntries.push(entry);
     localStorage.setItem("allEntries", JSON.stringify(existingEntries));
@@ -364,7 +364,7 @@ var data = localStorage.getItem("allEntries");
 	
 	for (i = 0; i < json.length; i++) {        
 if (json[i].timestamp > nd){alert('deal is still valid')};
-if (json[i].timestamp < nd){alert('deal is invalid - need to remove it'); localStorage.removeItem('entry_' + post_id);};
+if (json[i].timestamp < nd){alert('deal is invalid - need to remove it'); localStorage.removeItem('entry');};
 if (json[i].post_id ==post_id){alert('yes a match found')};
 
 }
