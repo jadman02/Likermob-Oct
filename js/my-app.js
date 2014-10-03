@@ -354,9 +354,12 @@ function getDeal(post_id,name,title,page_id,cover) {
 
 var data = localStorage.getItem("allEntries");
  
+ alert('data:' + data);
 	var json = JSON.parse(data);
- 
-	alert(json["post_id"][0]); //mkyong
+ alert('json:' + data);
+	alert(json[0].post_id);
+	alert(json[1].post_id);
+	alert(json[2].post_id);//mkyong
 	//alert(json.name); //mkyong
  
 	//alert(json.address.streetAddress); //88 8nd Street
