@@ -349,14 +349,15 @@ function addEntry(post_id) {
 
 function getDeal(post_id,name,title,page_id,cover) {
 
-
+var myDate = new Date('October 5, 2014');
 
 var data = localStorage.getItem("allEntries");
 
 	var json = JSON.parse(data);
 	
 	for (i = 0; i < json.length; i++) {        
-
+if (json[i].timestamp > myDate){alert('greater than myDate')};
+if (json[i].timestamp < myDate){alert('lesss than than myDate')};
 if (json[i].post_id ==post_id){alert('yes a match found')};
 
 }
