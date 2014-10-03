@@ -351,6 +351,11 @@ function getDeal(post_id,name,title,page_id,cover) {
 
 var myDate = new Date('October 5, 2014');
 
+var d = new Date();
+d.setMonth(d.getMonth() - 1);
+
+alert(d):
+
 var data = localStorage.getItem("allEntries");
 
 	var json = JSON.parse(data);
