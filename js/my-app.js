@@ -352,7 +352,12 @@ function getDeal(post_id,name,title,page_id,cover) {
 var myDate = new Date('October 5, 2014');
 
 
-
+var date = new Date('2011','01','02');
+alert('the original date is '+date);
+var newdate = new Date(date);
+newdate.setDate(newdate.getDate() - 7);
+var nd = new Date(newdate);
+alert('the new date is '+nd);
 
 var data = localStorage.getItem("allEntries");
 
