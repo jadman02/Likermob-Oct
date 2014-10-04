@@ -366,7 +366,7 @@ var data = localStorage.getItem("allEntries");
 //if (json[i].timestamp < nd){alert('deal is still valid')};
 //if (json[i].timestamp > nd){alert('deal is invalid - need to remove it'); localStorage.removeItem('entry');};
 if (json[i].post_id ==post_id){alert('you like this deal')};
-else {alert('you dont like this deal);}
+else {alert('you dont like this deal');}
 
 }
 	
