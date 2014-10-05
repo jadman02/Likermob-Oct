@@ -46,13 +46,7 @@ if (isEmpty==="") alert('The deal is empty');
 
 });
 
-myApp.onPageBeforeRemove('deal', function (page) {
 
-alert('leaving deal page');
-
-$$( "#result li" ).removeClass( "disabled" );
-
-});
 
 
 
