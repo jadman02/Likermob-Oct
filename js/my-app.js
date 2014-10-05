@@ -96,7 +96,9 @@ myApp.init();
 
     
 
-
+$$('#getDeal').on('click', function (e) {
+    alert('clicked getDeal');
+});
 
 
 var mainView = myApp.addView('.view-main', {
