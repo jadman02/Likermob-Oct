@@ -350,6 +350,12 @@ function addEntry(post_id) {
 }
 
 
+function removeDeal(){
+	
+	
+	$$('.page[data-page="deal"]').remove();
+}
+
 
 function getDeal(post_id,name,title,page_id,cover) {
 
@@ -401,7 +407,7 @@ mainView.loadContent(
         '<!-- Top Navbar-->' +
         '<div class="navbar">' +
         '  <div class="navbar-inner">' +
-        '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
+        '    <div class="left"><a href="#" class="back link" onclick="removeDeal()"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="right" onclick="getBusiness(\''+ page_id  +'\')"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/>' + name + '</div>' +
         '  </div>' +
         '</div>' +
