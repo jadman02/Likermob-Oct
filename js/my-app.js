@@ -38,12 +38,21 @@ myApp.onPageInit('deal', function (page) {
 
 alert('on deal page');
 
+$$( "#result li" ).addClass( "disabled" );
+
 var isEmpty = document.getElementById('dealnavbar').value;
 
 if (isEmpty==="") alert('The deal is empty');
 
 });
 
+myApp.pageBeforeRemove('deal', function (page) {
+
+alert('leaving deal page');
+
+$$( "#result li" ).removeClass( "disabled" );
+
+});
 
 
 
@@ -352,7 +361,7 @@ function addEntry(post_id) {
 
 function getDeal(post_id,name,title,page_id,cover) {
 
-$$( "#result li" ).addClass( "disabled" );
+
 
 var myDate = new Date('October 5, 2014');
 
