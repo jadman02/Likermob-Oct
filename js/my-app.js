@@ -156,6 +156,7 @@ alert('on about page');
 
 function functionEmpty() {
 $$(".load_more").removeAttr("disabled", "disabled");
+$$( "#result li" ).removeClass( "disabled" );
 $$(".load_previous").attr("disabled", "disabled");
 var track_click = 0;
 
@@ -347,15 +348,11 @@ function addEntry(post_id) {
 	
 }
 
-function activateClick(){
-	
-	document.getElementById('getDeal').style.pointerEvents = 'auto';
-	
-}
+
 
 function getDeal(post_id,name,title,page_id,cover) {
 
-document.getElementById('getDeal').style.pointerEvents = 'none';
+$$( "#result li" ).addClass( "disabled" );
 
 var myDate = new Date('October 5, 2014');
 
