@@ -38,7 +38,7 @@ myApp.onPageInit('deal', function (page) {
 
 alert('on deal page');
 
-$$( "#result li" ).addClass( "disabled" );
+
 
 var isEmpty = document.getElementById('dealnavbar').value;
 
