@@ -347,6 +347,12 @@ function addEntry(post_id) {
 	
 }
 
+activateClick(){
+	
+	document.getElementById('getDeal').style.pointerEvents = 'auto';
+	
+}
+
 function getDeal(post_id,name,title,page_id,cover) {
 
 document.getElementById('getDeal').style.pointerEvents = 'none';
