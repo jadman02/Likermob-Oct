@@ -409,7 +409,7 @@ mainView.loadContent(
         '</div>' +
         '<div class="pages">' +
         '  <!-- Page, data-page contains page name-->' +
-        '  <div data-page="dynamic-pages" class="page">' +
+        '  <div data-page="dynamic-pages" class="page" data-page="deal">' +
         '    <!-- Scrollable page content-->' +
         '    <div class="page-content" style="margin-top:30px;background-image: url(\''+ cover  +'\');background-size: 100%;background-repeat: no-repeat;">' +
         
