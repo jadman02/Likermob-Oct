@@ -96,9 +96,7 @@ myApp.init();
 
     
 
-$$('#getDeal').on('click', function (e) {
-    alert('clicked getDeal');
-});
+
 
 
 var mainView = myApp.addView('.view-main', {
@@ -351,7 +349,7 @@ function addEntry(post_id) {
 
 function getDeal(post_id,name,title,page_id,cover) {
 
-$$("#getDeal").off('click');
+document.getElementById('getDeal').style.pointerEvents = 'none';
 
 var myDate = new Date('October 5, 2014');
 
