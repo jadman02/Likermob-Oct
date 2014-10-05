@@ -362,37 +362,6 @@ function addEntry(post_id) {
 
 function getDeal(post_id,name,title,page_id,cover) {
 
-mainView.loadContent(
-        '<!-- Top Navbar-->' +
-        '<div class="navbar">' +
-        '  <div class="navbar-inner">' +
-        '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-        '    <div class="right" onclick="getBusiness(\''+ page_id  +'\')"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/>' + name + '</div>' +
-        '  </div>' +
-        '</div>' +
-        '<div class="pages">' +
-        '  <!-- Page, data-page contains page name-->' +
-        '  <div data-page="deal" class="page">' +
-        '    <!-- Scrollable page content-->' +
-        '    <div class="page-content" style="margin-top:30px;background-image: url(\''+ cover  +'\');background-size: 100%;background-repeat: no-repeat;">' +
-        
-        '      <div class="content-block" style="padding-top:40px;">' +
-        '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
-                      '<a href="#" class="button no-like-button" style="display:none;" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
-                      '<a href="#" class="button active yes-like-button" onclick=""><i class="pe-7s-like pe-2x"></i></a>' + 
-                      '<p>'+ title +'</p>'+
-        '          <p>Here is a dynamic page created on ' + new Date() + ' !</p>' +
-        '          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>Go <a href="#" class="back">back</a> or go to <a href="services.html">Services</a>.</p>' +
-        '        </div>' +
-        '      </div>' +
-        '    </div>' +
-        '  </div>' +
-        '</div>'
-    );
-
-
-
-
 
 var myDate = new Date('October 5, 2014');
 
@@ -410,7 +379,17 @@ var data = localStorage.getItem("allEntries");
 	for (i = 0; i < json.length; i++) {        
 //if (json[i].timestamp < nd){alert('deal is still valid')};
 //if (json[i].timestamp > nd){alert('deal is invalid - need to remove it'); localStorage.removeItem('entry');};
-if (json[i].post_id == post_id){$$( ".yes-like-button" ).show();$$( ".no-like-button" ).hide();}
+if (json[i].post_id == post_id){
+	
+var button-type = '<a href="#" class="button no-like-button" style="display:none;" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>';
+	
+}; 
+if (json[i].post_id != post_id){
+
+var button-type = '<a href="#" class="button active yes-like-button" onclick=""><i class="pe-7s-like2 pe-2x"></i></a>';	
+	
+}; 
+
 
 
 }
@@ -434,6 +413,40 @@ if (json[i].post_id == post_id){$$( ".yes-like-button" ).show();$$( ".no-like-bu
 //var index = imageList.indexOf(200); // 1
 
 //alert (index);
+
+
+
+mainView.loadContent(
+        '<!-- Top Navbar-->' +
+        '<div class="navbar">' +
+        '  <div class="navbar-inner">' +
+        '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
+        '    <div class="right" onclick="getBusiness(\''+ page_id  +'\')"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/>' + name + '</div>' +
+        '  </div>' +
+        '</div>' +
+        '<div class="pages">' +
+        '  <!-- Page, data-page contains page name-->' +
+        '  <div data-page="deal" class="page">' +
+        '    <!-- Scrollable page content-->' +
+        '    <div class="page-content" style="margin-top:30px;background-image: url(\''+ cover  +'\');background-size: 100%;background-repeat: no-repeat;">' +
+        
+        '      <div class="content-block" style="padding-top:40px;">' +
+        '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
+                      button-type + 
+                      '<p>'+ title +'</p>'+
+        '          <p>Here is a dynamic page created on ' + new Date() + ' !</p>' +
+        '          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>Go <a href="#" class="back">back</a> or go to <a href="services.html">Services</a>.</p>' +
+        '        </div>' +
+        '      </div>' +
+        '    </div>' +
+        '  </div>' +
+        '</div>'
+    );
+
+
+
+
+
 
 
 
