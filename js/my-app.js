@@ -381,12 +381,12 @@ var data = localStorage.getItem("allEntries");
 //if (json[i].timestamp > nd){alert('deal is invalid - need to remove it'); localStorage.removeItem('entry');};
 if (json[i].post_id == post_id){
 	
-var button-type = '<a href="#" class="button no-like-button" style="display:none;" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>';
+var button-type = 'like2';
 	
 }
 else{
 
-var button-type = '<a href="#" class="button active yes-like-button" onclick=""><i class="pe-7s-like2 pe-2x"></i></a>';	
+var button-type = 'share';	
 	
 }
 
@@ -432,7 +432,7 @@ mainView.loadContent(
         
         '      <div class="content-block" style="padding-top:40px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
-                      button-type + 
+                      '<a href="#" class="button no-like-button" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-'+ button-type +' pe-2x"></i></a>' + 
                       '<p>'+ title +'</p>'+
         '          <p>Here is a dynamic page created on ' + new Date() + ' !</p>' +
         '          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>Go <a href="#" class="back">back</a> or go to <a href="services.html">Services</a>.</p>' +
