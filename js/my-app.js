@@ -347,7 +347,7 @@ function addEntry(post_id) {
 	
 }
 
-activateClick(){
+function activateClick(){
 	
 	document.getElementById('getDeal').style.pointerEvents = 'auto';
 	
