@@ -383,12 +383,12 @@ if (json[i].post_id == post_id){
 	
 var button-type = '<a href="#" class="button no-like-button" style="display:none;" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>';
 	
-}; 
-if (json[i].post_id != post_id){
+}
+else{
 
 var button-type = '<a href="#" class="button active yes-like-button" onclick=""><i class="pe-7s-like2 pe-2x"></i></a>';	
 	
-}; 
+}
 
 
 
