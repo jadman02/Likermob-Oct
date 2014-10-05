@@ -34,13 +34,17 @@ mainView.hideNavbar();
 
 
 
-myApp.onPageInit('dynamic-pages', function (page) {
+myApp.onPageInit('deal', function (page) {
 
 alert('on deal page');
 
 });
 
+myApp.onPageBeforeRemove('deal', function (page) {
 
+alert('off deal page');
+
+});
 
 
 
