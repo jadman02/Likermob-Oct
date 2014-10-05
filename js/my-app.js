@@ -37,12 +37,15 @@ mainView.hideNavbar();
 myApp.onPageInit('deal', function (page) {
 
 alert('on deal page');
+$$( "#result li" ).addClass( "disabled" );
+
 
 });
 
 myApp.onPageBeforeRemove('deal', function (page) {
 
 alert('off deal page - cool');
+$$( "#result li" ).removeClass( "disabled" );
 
 });
 
