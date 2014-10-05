@@ -422,7 +422,7 @@ mainView.loadContent(
         
         '      <div class="content-block" style="padding-top:40px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
-                      '<a href="#" class="button" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
+                      '<a href="#" class="button" style="width:20px;height:20px;border-radius:50%;" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
                       '<p>'+ title +'</p>'+
         '          <p>Here is a dynamic page created on ' + new Date() + ' !</p>' +
         '          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>Go <a href="#" class="back">back</a> or go to <a href="services.html">Services</a>.</p>' +
