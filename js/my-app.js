@@ -46,7 +46,7 @@ if (isEmpty==="") alert('The deal is empty');
 
 });
 
-myApp.pageBeforeRemove('deal', function (page) {
+myApp.onPageBeforeRemove('deal', function (page) {
 
 alert('leaving deal page');
 
