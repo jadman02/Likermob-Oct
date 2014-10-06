@@ -529,9 +529,10 @@ mainView.loadContent(
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
         '    <div class="page-content" style="z-index: 1;">' +
-        '      <div class="content-block" style="padding-top:40px;">' +
+           '<div id="cover-div"></div>' +
+        '      <div class="content-block">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
-       '<div id="cover-div"></div>' +
+    
         '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/><h1>'+ name +'</h1>' +
         '          <p>yoyoyoyoy<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>Here is a dynamic page created on ' + new Date() + ' !</p>' +
         '        </div>' +
