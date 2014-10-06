@@ -500,7 +500,7 @@ $$( ".page-content" ).toggleClass( "hide" );
 
 function getBusiness(page_id,latitude,longitude) {
 
-$$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(response){
+
 
 
 
@@ -521,7 +521,7 @@ mainView.loadContent(
         '    <div class="page-content" style="z-index: 1;">' +
         '      <div class="content-block" style="padding-top:40px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
-        '          <p>Data: '+response[0][2] + response[0][3] +'yoyoyoyoy<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>Here is a dynamic page created on ' + new Date() + ' !</p>' +
+        '          <p>yoyoyoyoy<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>Here is a dynamic page created on ' + new Date() + ' !</p>' +
         '        </div>' +
         '      </div>' +
         '    </div>' +
@@ -534,7 +534,8 @@ mainView.loadContent(
     
 
 
-
+$$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(response){
+	alert('Data: '+response[0][2] + response[0][3]);
 });
 
 
