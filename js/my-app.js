@@ -508,8 +508,8 @@ $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=
 
 $$.getJSON('https://graph.facebook.com/363053000439943?fields=cover', function(response){
 	
-	var res= JSON.parse(response);
-               alert(res[0].cover["source"]);
+	var json = JSON.parse(response);
+	alert(json.cover.source);
 });
 
 
