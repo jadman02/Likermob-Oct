@@ -487,9 +487,10 @@ else {
 
 
 function openMap() {
+
+$$( ".page-content" ).toggleClass( "hide" );
 	
-	  $$( ".page-content" ).css( "display", "none" );
-	  $$( ".map-canvas" ).css( "height", "100%" );
+
 	
 	
 }
