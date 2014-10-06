@@ -175,7 +175,7 @@ var singlequote = str.replace(/'/g, "qqqq");
 someText = str.replace(/(\r\n|\n|\r)/gm,"<br />");
 
 
-$$( '#result' ).append('<li class="swipeout"><img onclick="getDeal(\''+ response[i][2]  +'\',\''+ response[i][16]  +'\',\''+ response[i][3]  +'\',\''+ response[i][1]  +'\',\''+ response[i][14]  +'\',\''+ singlequote  +'\')" src="'+ response[i][14] +'" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal" onclick="getDeal(\''+ response[i][2]  +'\',\''+ response[i][16]  +'\',\''+ response[i][3]  +'\',\''+ response[i][1]  +'\',\''+ response[i][14]  +'\',\''+ singlequote  +'\')" class="item-content item-link link"><div class="item-media"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ someText +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-blue swipeout-delete swipeout-overswipe" style="-webkit-border-top-right-radius: 1000px;-moz-border-radius-topright: 1000px;border-top-right-radius: 1000px;" onclick="likeButton(\''+ response[i][2]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton()" class="swipeout-delete swipeout-overswipe" style="-webkit-border-top-left-radius: 1000px;-moz-border-radius-topleft: 1000px;border-top-left-radius: 1000px;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');
+$$( '#result' ).append('<li class="swipeout"><img onclick="getDeal(\''+ response[i][2]  +'\',\''+ response[i][16]  +'\',\''+ response[i][3]  +'\',\''+ response[i][1]  +'\',\''+ response[i][14]  +'\',\''+ singlequote  +'\')" src="'+ response[i][14] +'" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal" onclick="getDeal(\''+ response[i][2]  +'\',\''+ response[i][16]  +'\',\''+ response[i][3]  +'\',\''+ response[i][1]  +'\',\''+ response[i][14]  +'\',\''+ singlequote  +'\')" class="item-content item-link link"><div class="item-media"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ someText +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-blue swipeout-delete swipeout-overswipe" style="-webkit-border-top-right-radius: 1000px;-moz-border-radius-topright: 1000px;border-top-right-radius: 1000px;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton()" class="swipeout-delete swipeout-overswipe" style="-webkit-border-top-left-radius: 1000px;-moz-border-radius-topleft: 1000px;border-top-left-radius: 1000px;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');
 
 }
 track_click++;
@@ -254,16 +254,16 @@ track_click++;
 
 
 
-var date = new Date();
-var newdate = new Date(date);
-newdate.setDate(newdate.getDate() - 30);
-var nd = new Date(newdate);
+var date_today = new Date();
+//var newdate = new Date(date);
+//newdate.setDate(newdate.getDate() - 30);
+//var nd = new Date(newdate);
 
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
 for (i = 0; i < existingEntries.length; i++) {        
 
-if (existingEntries[i].timestamp < nd){alert('deal is invalid - need to remove it');}
-if (existingEntries[i].timestamp > nd){existingEntries.splice(i,1);alert('deleted the item from the array');}
+if (existingEntries[i].expiry < date_today){alert('deal is invalid - need to remove it');}
+if (existingEntries[i].expiry > date_today){existingEntries.splice(i,1);alert('deleted the item from the array');}
 
 }
 localStorage.setItem("allEntries", JSON.stringify(existingEntries));
@@ -330,9 +330,9 @@ elem.value = response.result.formatted_address;
 
 
 
-function likeButton(post_id) {
+function likeButton(post_id,expiry) {
 like(post_id);
-addEntry(post_id);
+addEntry(post_id,expiry);
 }
 
 
@@ -350,13 +350,13 @@ $$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','post_id=xyz',
 
 
 
-function addEntry(post_id) {
+function addEntry(post_id,expiry) {
     // Parse any JSON previously stored in allEntries
     var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
     if(existingEntries == null) existingEntries = [];
     var entry = {
         "post_id": post_id,
-        "timestamp": Date.now()
+        "expiry": expiry
     };
     localStorage.setItem("entry", JSON.stringify(entry));
     // Save allEntries back to local storage
@@ -374,7 +374,7 @@ function addEntry(post_id) {
 //}
 
 
-function getDeal(post_id,name,title,page_id,cover,singlequote) {
+function getDeal(post_id,name,title,page_id,cover,singlequote,expiry) {
 
 var description = singlequote.replace(/qqqq/g, "'");
 
@@ -402,7 +402,7 @@ if (json[i].post_id == post_id){
         
         '      <div class="content-block" style="padding-top:40px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
-                      '<a href="#" class="button like-button" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
+                      '<a href="#" class="button like-button" onclick="likeButton(\''+ post_id  +'\',\''+ expiry  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
                       '<p>You like this'+ title +'</p>'+
                       '<p>'+ description +'</p>'+
         '        </div>' +
@@ -433,7 +433,7 @@ else {
         
         '      <div class="content-block" style="padding-top:40px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
-                      '<a href="#" class="button like-button" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
+                      '<a href="#" class="button like-button" onclick="likeButton(\''+ post_id  +'\',\''+ expiry  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
                       '<p>You dont like this'+ title +'</p>'+
                       '<p>'+ description +'</p>'+
         '        </div>' +
