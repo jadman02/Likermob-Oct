@@ -398,8 +398,8 @@ if (json[i].post_id == post_id){
         '    <!-- Scrollable page content-->' +
         '    <div class="page-content" style="margin-top:30px;background-image: url(\''+ cover  +'\');background-size: 100%;background-repeat: no-repeat;">' +
         
-        '      <div class="content-block" style="padding-top:20px;">' +
-        '        <div class="content-block-inner" style="padding-top:20px;background-color:rgba(255,255,255,.4);">' +
+        '      <div class="content-block" style="padding-top:40px;">' +
+        '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
                       '<a href="#" class="button like-button" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
                       '<p>You like this'+ title +'</p>'+
                       '<p>'+ description +'</p>'+
@@ -429,8 +429,8 @@ else {
         '    <!-- Scrollable page content-->' +
         '    <div class="page-content" style="margin-top:30px;background-image: url(\''+ cover  +'\');background-size: 100%;background-repeat: no-repeat;">' +
         
-        '      <div class="content-block" style="padding-top:20px;">' +
-        '        <div class="content-block-inner" style="padding-top:20px;background-color:rgba(255,255,255,.4);">' +
+        '      <div class="content-block" style="padding-top:40px;">' +
+        '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
                       '<a href="#" class="button like-button" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
                       '<p>You dont like this'+ title +'</p>'+
                       '<p>'+ description +'</p>'+
