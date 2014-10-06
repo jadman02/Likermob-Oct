@@ -266,8 +266,8 @@ var data1 = localStorage.getItem("allEntries");
 var json1 = JSON.parse(data1);
 for (i = 0; i < json1.length; i++) {        
 
-if (json1[i].timestamp < nd){alert('deal is still valid');}
-if (json1[i].timestamp > nd){alert('deal is invalid - need to remove it');}
+if (json1[i].timestamp < nd){alert('deal is invalid - need to remove it');}
+if (json1[i].timestamp > nd){localStorage.removeItem('entry');}
 }
 
 
