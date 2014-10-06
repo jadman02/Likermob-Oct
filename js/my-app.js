@@ -489,8 +489,9 @@ else {
 function openMap() {
 
 $$( ".page-content" ).toggleClass( "hide" );
+$$( "#map-canvas" ).toggleClass( "grand" );
 	
-
+google.maps.event.trigger(map, "resize");
 	
 	
 }
