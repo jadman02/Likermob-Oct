@@ -509,7 +509,6 @@ mainView.loadContent(
         '<div class="navbar">' +
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-        '<div class="center"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/></div>' +
         '    <div class="right"><a href="#" class="link" onclick="openMap();"><i class="pe-7s-map-marker pe-lg" style="color:#ff8000"></i> Map</a>' +
         '  </div>' +
         '</div>' +
@@ -521,6 +520,7 @@ mainView.loadContent(
         '    <div class="page-content" style="z-index: 1;">' +
         '      <div class="content-block" style="padding-top:40px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
+        '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/><h1>'+ name +'</h1>' +
         '          <p>yoyoyoyoy<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>Here is a dynamic page created on ' + new Date() + ' !</p>' +
         '        </div>' +
         '      </div>' +
