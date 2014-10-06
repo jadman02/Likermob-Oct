@@ -383,7 +383,7 @@ var data = localStorage.getItem("allEntries");
 	var json = JSON.parse(data);
 	
 	for (i = 0; i < json.length; i++) {        
-if (json[i].post_id == 174238599281322_782520161786493){alert('this deal identified')}
+if (json[i].post_id == 174238599281322_782520161786493){alert('this deal identified');}
 //if (json[i].timestamp < nd){alert('deal is still valid')};
 //if (json[i].timestamp > nd){alert('deal is invalid - need to remove it'); localStorage.removeItem('entry');};
 
