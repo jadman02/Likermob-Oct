@@ -247,7 +247,15 @@ track_click++;
 
 
 
-var date_today = new Date();
+
+
+}
+
+
+
+function removeLikes(){
+	
+	var date_today = new Date();
 //var newdate = new Date(date);
 //newdate.setDate(newdate.getDate() - 30);
 //var nd = new Date(newdate);
@@ -260,12 +268,8 @@ if (existingEntries[i].expiry < date_today){existingEntries.splice(i,1);alert('d
 
 }
 localStorage.setItem("allEntries", JSON.stringify(existingEntries));
-
+	
 }
-
-
-
-
 
 
 
