@@ -340,13 +340,14 @@ $$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','post_id=xyz',
 	
 }
 
+localStorage['movie'+movieID] = 'yes';
 
 function addEntry(post_id) {
     // Parse any JSON previously stored in allEntries
     var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
     if(existingEntries == null) existingEntries = [];
     var entry = {
-        post_id: post_id,
+        "post_id": post_id,
         "timestamp": Date.now()
     };
     localStorage.setItem("entry", JSON.stringify(entry));
@@ -382,6 +383,7 @@ var data = localStorage.getItem("allEntries");
 	var json = JSON.parse(data);
 	
 	for (i = 0; i < json.length; i++) {        
+if (json[i].post_id == 174238599281322_782520161786493){alert('this deal identified')}
 //if (json[i].timestamp < nd){alert('deal is still valid')};
 //if (json[i].timestamp > nd){alert('deal is invalid - need to remove it'); localStorage.removeItem('entry');};
 
