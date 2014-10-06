@@ -346,8 +346,8 @@ function addEntry(post_id) {
     var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
     if(existingEntries == null) existingEntries = [];
     var entry = {
-        "post_id": post_id,
-        "timestamp": Date.now()
+        'post_id_' + post_id: post_id,
+        'timestamp': Date.now()
     };
     localStorage.setItem("entry", JSON.stringify(entry));
     // Save allEntries back to local storage
@@ -384,6 +384,7 @@ var data = localStorage.getItem("allEntries");
 	for (i = 0; i < json.length; i++) {        
 //if (json[i].timestamp < nd){alert('deal is still valid')};
 //if (json[i].timestamp > nd){alert('deal is invalid - need to remove it'); localStorage.removeItem('entry');};
+
 if (json[i].post_id == post_id){
 	
 	mainView.loadContent(
