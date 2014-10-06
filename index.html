@@ -18,6 +18,35 @@
 <!-- Optional - Adds useful class to manipulate icon font display -->
 <link rel="stylesheet" href="css/helper.css">
 
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<style>
+      #map-canvas {
+        height: 40px;
+        width:100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script>
+
+function initialize() {
+  var myLatlng = new google.maps.LatLng(51.508742,-0.120850);
+  var mapOptions = {
+    zoom: 13,
+    center: myLatlng
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map
+  });
+  
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
   </head>
   <body>
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
