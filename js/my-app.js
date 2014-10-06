@@ -161,17 +161,6 @@ alert('on about page');
 function functionEmpty() {
 	
 	
-	var data = localStorage.getItem("allEntries");
-
-	var json = JSON.parse(data);
-	
-	for (i = 0; i < json.length; i++) {        
-
-if (json[i].timestamp < nd){alert('deal is still valid');}
-if (json[i].timestamp > nd){alert('deal is invalid - need to remove it');}
-}
-	
-	
 $$(".load_more").removeAttr("disabled", "disabled");
 $$( "#result li" ).removeClass( "disabled" );
 $$(".load_previous").attr("disabled", "disabled");
@@ -267,6 +256,19 @@ track_click++;
 });
 
 
+
+var date = new Date();
+var newdate = new Date(date);
+newdate.setDate(newdate.getDate() - 30);
+var nd = new Date(newdate);
+
+var data1 = localStorage.getItem("allEntries");
+var json1 = JSON.parse(data1);
+for (i = 0; i < json1.length; i++) {        
+
+if (json1[i].timestamp < nd){alert('deal is still valid');}
+if (json1[i].timestamp > nd){alert('deal is invalid - need to remove it');}
+}
 
 
 }
@@ -382,14 +384,6 @@ function addEntry(post_id) {
 function getDeal(post_id,name,title,page_id,cover,singlequote) {
 
 var description = singlequote.replace(/qqqq/g, "'");
-var myDate = new Date('October 5, 2014');
-
-
-var date = new Date();
-var newdate = new Date(date);
-newdate.setDate(newdate.getDate() - 30);
-var nd = new Date(newdate);
-
 
 var data = localStorage.getItem("allEntries");
 
