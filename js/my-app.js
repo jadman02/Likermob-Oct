@@ -384,6 +384,30 @@ var data = localStorage.getItem("allEntries");
 //if (json[i].timestamp < nd){alert('deal is still valid')};
 //if (json[i].timestamp > nd){alert('deal is invalid - need to remove it'); localStorage.removeItem('entry');};
 if (json[i].post_id == post_id){
+}
+
+}
+	
+// alert('json:' + data);
+	
+//	alert(json[1].post_id);
+//	alert(json[2].post_id);//mkyong
+	//alert(json.name); //mkyong
+ 
+	//alert(json.address.streetAddress); //88 8nd Street
+//	alert(json["address"].city); //New York
+ 
+	//alert(json.phoneNumber[0].number); //111 111-1111
+	//alert(json.phoneNumber[1].type); //fax
+ 
+	//alert(json.phoneNumber.number); //undefined
+
+ 
+//var imageList = [100,200,300,400,500];
+//var index = imageList.indexOf(200); // 1
+
+//alert (index);
+
 
 	mainView.loadContent(
         '<!-- Top Navbar-->' +
@@ -414,69 +438,6 @@ if (json[i].post_id == post_id){
     );
 
 	return;
-	
-	
-}
-else{
-
-mainView.loadContent(
-        '<!-- Top Navbar-->' +
-        '<div class="navbar">' +
-        '  <div class="navbar-inner">' +
-        '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-        '    <div class="right" onclick="getBusiness(\''+ page_id  +'\')"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/>' + name + '</div>' +
-        '  </div>' +
-        '</div>' +
-        '<div class="pages">' +
-        '  <!-- Page, data-page contains page name-->' +
-        '  <div data-page="deal" class="page">' +
-        '    <!-- Scrollable page content-->' +
-        '    <div class="page-content" style="margin-top:30px;background-image: url(\''+ cover  +'\');background-size: 100%;background-repeat: no-repeat;">' +
-        
-        '      <div class="content-block" style="padding-top:40px;">' +
-        '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
-                      '<a href="#" class="button no-like-button" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
-                      '<p>You dont like this page'+ title +'</p>'+
-                      '<p>'+ description +'</p>'+
-        '          <p>Here is a dynamic page created on ' + new Date() + ' !</p>' +
-        '          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>Go <a href="#" class="back">back</a> or go to <a href="services.html">Services</a>.</p>' +
-        '        </div>' +
-        '      </div>' +
-        '    </div>' +
-        '  </div>' +
-        '</div>'
-    );
-
-	return;
-	
-}
-
-
-
-}
-	
-// alert('json:' + data);
-	
-//	alert(json[1].post_id);
-//	alert(json[2].post_id);//mkyong
-	//alert(json.name); //mkyong
- 
-	//alert(json.address.streetAddress); //88 8nd Street
-//	alert(json["address"].city); //New York
- 
-	//alert(json.phoneNumber[0].number); //111 111-1111
-	//alert(json.phoneNumber[1].type); //fax
- 
-	//alert(json.phoneNumber.number); //undefined
-
- 
-//var imageList = [100,200,300,400,500];
-//var index = imageList.indexOf(200); // 1
-
-//alert (index);
-
-
-
 
 
 
