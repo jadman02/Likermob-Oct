@@ -502,7 +502,7 @@ mainView.loadContent(
         '<div class="navbar">' +
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-        '    <div class="right"><a href="#" class="link" onclick="openMap();"><i class="pe-7s-marker pe-lg" style="color:#ff8000"></i> Map</a>' +
+        '    <div class="right"><a href="#" class="link" onclick="openMap();"><i class="pe-7s-map-marker pe-lg" style="color:#ff8000"></i> Map</a>' +
         '  </div>' +
         '</div>' +
         '<div class="pages">' +
