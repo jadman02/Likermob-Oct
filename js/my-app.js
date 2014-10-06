@@ -68,7 +68,7 @@ $$('#numPeople').keyup(function(){
 
 $$.getJSON('https://maps.googleapis.com/maps/api/place/autocomplete/json?input='+ this.value +'&types=(cities)&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
 $$("#resulty li").remove();
-for (i = 0; i < 5; i++) 
+for (i = 0; i < 10; i++) 
 { 
 	
 
@@ -169,7 +169,7 @@ $$.getJSON('http://www.smilesavers.net.au/jsonp.php?callback=?', function(respon
 // Store
 localStorage.setItem("total_pages", response.length);
 $$("#loader-container").hide();
-for (i = 0; i < 5; i++) {        
+for (i = 0; i < 10; i++) {        
 
 var str = response[i][4];
 var singlequote = str.replace(/'/g, "qqqq");
@@ -195,8 +195,8 @@ $$.getJSON('http://www.smilesavers.net.au/jsonp.php?callback=?', function(respon
 $$("#result li").remove();
 
 
-var start = track_click * 5;
-var finish = start + 5;
+var start = track_click * 10;
+var finish = start + 10;
 
 for (i = start; i < finish; i++) {        
 $$( '#result' ).append('<li><div class="item-media"><img src="http://graph.facebook.com/'+response[i][2]+'/picture?width=120&height=120" /></div><a href="#" class="item-link item-content"><div class="item-inner">'+ '<div class="item-title-row"><div class="item-title">Yellow Submarine</div><div class="item-after">$15</div></div><div class="item-subtitle">Beatles</div><div class="item-text">Lorem ipsum dolor sit amet...</div></div></a><div class="item-input"><input type="text" placeholder="Write a comment" style="width:70%"></div><a href="#" class="button" style="width:30%;border-radius:50%;"><i class="pe-7s-like2 pe-2x"></i></a></li>');
@@ -222,7 +222,7 @@ $$( '#result' ).append('<li><div class="item-media"><img src="http://graph.faceb
 $$(".load_more").click(function (e) {
 
 var number_pages = localStorage.getItem("total_pages");
-var stop = Math.ceil(number_pages / 5);
+var stop = Math.ceil(number_pages / 10);
 
 if (track_click >= (stop-1)) {
 $$(".load_more").attr("disabled", "disabled");
@@ -234,8 +234,8 @@ $$.getJSON('http://www.smilesavers.net.au/jsonp.php?callback=?', function(respon
 $$("#result li").remove();
 
 
-var start = track_click * 5;
-var finish = start + 5;
+var start = track_click * 10;
+var finish = start + 10;
 
 for (i = start; i < finish; i++) {        
 $$( '#result' ).append('<li><a href="#" class="item-link item-content"><div class="item-media"><img src="http://graph.facebook.com/'+response[i][2]+'/picture?width=120&height=120" /></div><div class="item-inner">'+ '<div class="item-title-row"><div class="item-title">Yellow Submarine</div><div class="item-after">$15</div></div><div class="item-subtitle">Beatles</div><div class="item-text">Lorem ipsum dolor sit amet...</div></div></a><div class="item-input"><input type="text" placeholder="Write a comment" style="width:70%"></div><a href="#" class="button" style="width:30%;border-radius:50%;"><i class="pe-7s-like2 pe-2x"></i></a></li>');
@@ -399,9 +399,8 @@ if (json[i].post_id == post_id){
         '    <div class="page-content" style="margin-top:30px;background-image: url(\''+ cover  +'\');background-size: 100%;background-repeat: no-repeat;">' +
         
         '      <div class="content-block" style="padding-top:20px;">' +
-        '<a href="#" class="button like-button" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
         '        <div class="content-block-inner" style="padding-top:20px;background-color:rgba(255,255,255,.4);">' +
-                      
+                      '<a href="#" class="button like-button" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
                       '<p>You like this'+ title +'</p>'+
                       '<p>'+ description +'</p>'+
         '        </div>' +
@@ -431,9 +430,8 @@ else {
         '    <div class="page-content" style="margin-top:30px;background-image: url(\''+ cover  +'\');background-size: 100%;background-repeat: no-repeat;">' +
         
         '      <div class="content-block" style="padding-top:20px;">' +
-        '<a href="#" class="button like-button" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
         '        <div class="content-block-inner" style="padding-top:20px;background-color:rgba(255,255,255,.4);">' +
-                      
+                      '<a href="#" class="button like-button" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
                       '<p>You dont like this'+ title +'</p>'+
                       '<p>'+ description +'</p>'+
         '        </div>' +
