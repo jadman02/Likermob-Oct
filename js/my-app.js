@@ -493,7 +493,7 @@ mainView.loadContent(
         '<div class="navbar">' +
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-        '    <div class="right"><i class="pe-7s-home pe-lg" style="color:#ff8000"></i>' +
+        '    <div class="right"><a href="#" class="link"><i class="pe-7s-marker pe-lg" style="color:#ff8000"></i> Map</a><a href="#" class="link"><i class="pe-7s-home pe-lg" style="color:#ff8000"></i></a>' +
         '  </div>' +
         '</div>' +
         '<div class="pages">' +
