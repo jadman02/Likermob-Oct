@@ -501,7 +501,7 @@ mainView.loadContent(
         '  <div data-page="business" class="page">' +
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
-        '    <div class="page-content" style="margin-top:120px;z-index: 1;">' +
+        '    <div class="page-content" style="margin-top:150px;z-index: 1;">' +
         '      <div class="content-block">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
         '          <p>yoyoyoyoy<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>Here is a dynamic page created on ' + new Date() + ' !</p>' +
