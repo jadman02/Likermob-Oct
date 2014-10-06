@@ -506,7 +506,7 @@ $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=
 	alert('Data: '+response[0][2] + response[0][3]);
 });
 
-$$.getJSON('https://graph.facebook.com/363053000439943?fields=cover', function(response){
+$$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
 	
 	var coverpic = response["cover"]["source"];
 	$$("#cover-div").append('<img src="' + coverpic + '" style="width:100%;">');
@@ -520,18 +520,18 @@ mainView.loadContent(
         '<div class="navbar">' +
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-        '    <div class="right"><i class="pe-7s-map-marker pe-lg" style="color:#ff8000"></i><div class="item-input" onclick="openMap();"><label class="label-switch"><input type="checkbox"><div class="checkbox"></div></label></div>' +
+        '    <div class="right"><div class="item-input" onclick="openMap();"><label class="label-switch"><input type="checkbox"><div class="checkbox"></div></label></div>' +
         '  </div>' +
         '</div>' +
         '<div class="pages">' +
         '  <!-- Page, data-page contains page name-->' +
         '  <div data-page="business" class="page">' +
         '    <!-- Scrollable page content-->' +
-'<div id="cover-div"></div>' +
 '<div id="map-canvas"></div>' +
         '    <div class="page-content" style="z-index: 1;">' +
         '      <div class="content-block" style="padding-top:40px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
+       '<div id="cover-div"></div>' +
         '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/><h1>'+ name +'</h1>' +
         '          <p>yoyoyoyoy<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>Here is a dynamic page created on ' + new Date() + ' !</p>' +
         '        </div>' +
