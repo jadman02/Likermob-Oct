@@ -34,6 +34,8 @@
 <access origin="api.facebook.com"/>
 <access origin="m.facebook.com"/>
 <access origin="facebook.com"/>
+<access origin="maps.googleapis.com"/>
+
  
  
  <preference name="orientation" value="portrait" />
