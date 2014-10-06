@@ -486,6 +486,14 @@ else {
 }
 
 
+function openMap() {
+	
+	  $$( ".page-content" ).css( "display", "none" );
+	  $$( ".map-canvas" ).css( "height", "100%" );
+	
+	
+}
+
 function getBusiness(page_id) {
 
 mainView.loadContent(
@@ -493,7 +501,7 @@ mainView.loadContent(
         '<div class="navbar">' +
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-        '    <div class="right"><a href="#" class="link"><i class="pe-7s-marker pe-lg" style="color:#ff8000"></i> Map</a><a href="#" class="link"><i class="pe-7s-home pe-lg" style="color:#ff8000"></i></a>' +
+        '    <div class="right"><a href="#" class="link" onclick="openMap();"><i class="pe-7s-marker pe-lg" style="color:#ff8000"></i> Map</a>' +
         '  </div>' +
         '</div>' +
         '<div class="pages">' +
