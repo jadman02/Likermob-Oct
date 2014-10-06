@@ -267,7 +267,7 @@ var json1 = JSON.parse(data1);
 for (i = 0; i < json1.length; i++) {        
 
 if (json1[i].timestamp < nd){alert('deal is invalid - need to remove it');}
-if (json1[i].timestamp > nd){json.splice(i,1);}
+if (json1[i].timestamp > nd){json1.splice(i,1);}
 }
 
 
