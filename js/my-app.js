@@ -175,7 +175,7 @@ var str = response[i][4];
 var singlequote = "'" + str.replace(/'/g, "qqqq") + "'";
 //var description = "'" + singlequote.replace(/(\r\n|\n|\r)/gm,"") + "'";
 
-$$( '#result' ).append('<li class="swipeout"><img src="'+ response[i][14] +'" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal" onclick="getDeal(\''+ response[i][2]  +'\',\''+ response[i][16]  +'\',\''+ response[i][3]  +'\',\''+ response[i][1]  +'\',\''+ response[i][14]  +'\','+ response[i][4] +')" class="item-content item-link link"><div class="item-media"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ response[i][4] +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-blue swipeout-delete swipeout-overswipe" style="-webkit-border-top-right-radius: 1000px;-moz-border-radius-topright: 1000px;border-top-right-radius: 1000px;" onclick="likeButton(\''+ response[i][2]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton()" class="swipeout-delete swipeout-overswipe" style="-webkit-border-top-left-radius: 1000px;-moz-border-radius-topleft: 1000px;border-top-left-radius: 1000px;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');
+$$( '#result' ).append('<li class="swipeout"><img src="'+ response[i][14] +'" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal" onclick="getDeal(\''+ response[i][2]  +'\',\''+ response[i][16]  +'\',\''+ response[i][3]  +'\',\''+ response[i][1]  +'\',\''+ response[i][14]  +'\','+ singlequote +')" class="item-content item-link link"><div class="item-media"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ response[i][4] +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-blue swipeout-delete swipeout-overswipe" style="-webkit-border-top-right-radius: 1000px;-moz-border-radius-topright: 1000px;border-top-right-radius: 1000px;" onclick="likeButton(\''+ response[i][2]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton()" class="swipeout-delete swipeout-overswipe" style="-webkit-border-top-left-radius: 1000px;-moz-border-radius-topleft: 1000px;border-top-left-radius: 1000px;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');
 
 }
 track_click++;
@@ -365,6 +365,8 @@ function addEntry(post_id) {
 
 function getDeal(post_id,name,title,page_id,cover,description) {
 
+var singlequote = "'" + description.replace(/qqqq/g, "'") + "'";
+
 var myDate = new Date('October 5, 2014');
 
 
@@ -401,7 +403,7 @@ if (json[i].post_id == post_id){
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
                       '<a href="#" class="button like-button" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
                       '<p>You like this'+ title +'</p>'+
-                      '<p>You like this'+ description +'</p>'+
+                      '<p>You like this'+ singlequote +'</p>'+
         '          <p>Here is a dynamic page created on ' + new Date() + ' !</p>' +
         '          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>Go <a href="#" class="back">back</a> or go to <a href="services.html">Services</a>.</p>' +
         '        </div>' +
@@ -434,7 +436,7 @@ else {
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
                       '<a href="#" class="button like-button" onclick="likeButton(\''+ post_id  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
                       '<p>You dont like this'+ title +'</p>'+
-                      '<p>You like this'+ description +'</p>'+
+                      '<p>You like this'+ singlequote +'</p>'+
         '          <p>Here is a dynamic page created on ' + new Date() + ' !</p>' +
         '          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>Go <a href="#" class="back">back</a> or go to <a href="services.html">Services</a>.</p>' +
         '        </div>' +
