@@ -235,9 +235,6 @@ function like(post_id) {
         openFB.api({
             method: 'POST',
             path: '/' + post_id + '/likes',
-            success: function(data) {
-                alert(JSON.stringify(data));
-            },
             error: errorHandler});
         
         
