@@ -32,21 +32,17 @@ mainView.hideNavbar();
 
 });
 
-
+myApp.onPageInit('business', function (page) {
+alert('on business page');
+initialize();
+});
 
 myApp.onPageInit('deal', function (page) {
-
-
 $$( "#result li" ).addClass( "disabled" );
-
-
 });
 
 myApp.onPageBeforeRemove('deal', function (page) {
-
-
 $$( "#result li" ).removeClass( "disabled" );
-
 });
 
 
@@ -505,7 +501,7 @@ mainView.loadContent(
         '</div>' +
         '<div class="pages">' +
         '  <!-- Page, data-page contains page name-->' +
-        '  <div data-page="dynamic-pages" class="page">' +
+        '  <div data-page="business" class="page">' +
         '    <!-- Scrollable page content-->' +
         '<div id="map-canvas"></div>' +
         '    <div class="page-content">' +
