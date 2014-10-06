@@ -506,6 +506,13 @@ $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=
 	alert('Data: '+response[0][2] + response[0][3]);
 });
 
+$$.getJSON('https://graph.facebook.com/363053000439943?fields=cover', function(response){
+	alert('Data: '+response[0][2] + response[0][3]);
+});
+
+
+
+
 mainView.loadContent(
         '<!-- Top Navbar-->' +
         '<div class="navbar">' +
