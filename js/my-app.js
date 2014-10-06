@@ -346,8 +346,8 @@ function addEntry(post_id) {
     var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
     if(existingEntries == null) existingEntries = [];
     var entry = {
-        'post_id_' + post_id: post_id,
-        'timestamp': Date.now()
+        post_id: post_id,
+        "timestamp": Date.now()
     };
     localStorage.setItem("entry", JSON.stringify(entry));
     // Save allEntries back to local storage
