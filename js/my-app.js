@@ -262,8 +262,8 @@ var date_today = new Date();
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
 for (i = 0; i < existingEntries.length; i++) {        
 
-if (existingEntries[i].expiry < date_today){alert('deal is invalid - need to remove it');}
-if (existingEntries[i].expiry > date_today){existingEntries.splice(i,1);alert('deleted the item from the array');}
+if (existingEntries[i].expiry > date_today){alert('deal is invalid - need to remove it');}
+if (existingEntries[i].expiry < date_today){existingEntries.splice(i,1);alert('deleted the item from the array');}
 
 }
 localStorage.setItem("allEntries", JSON.stringify(existingEntries));
