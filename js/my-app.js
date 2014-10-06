@@ -489,8 +489,6 @@ else {
 function openMap() {
 
 $$( ".page-content" ).toggleClass( "hide" );
-$$( "#map-canvas" ).toggleClass( "grand" );
-	initialize();
 
 	
 	
