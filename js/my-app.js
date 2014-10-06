@@ -34,7 +34,7 @@ mainView.hideNavbar();
 
 
 
-myApp.onPageInit('deal', function (page) {
+myApp.onPageAfterAnimation('deal', function (page) {
 $$( "#result li" ).addClass( "disabled" );
 });
 
