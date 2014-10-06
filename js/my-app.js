@@ -351,12 +351,13 @@ $$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','post_id=xyz',
 
 
 function addEntry(post_id,expiry) {
+	var timestamp = new Date(expiry).getTime() / 1000;
     // Parse any JSON previously stored in allEntries
     var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
     if(existingEntries == null) existingEntries = [];
     var entry = {
         "post_id": post_id,
-        "expiry": expiry
+        "expiry": timestamp
     };
     localStorage.setItem("entry", JSON.stringify(entry));
     // Save allEntries back to local storage
