@@ -507,6 +507,7 @@ mainView.loadContent(
         '  <!-- Page, data-page contains page name-->' +
         '  <div data-page="dynamic-pages" class="page">' +
         '    <!-- Scrollable page content-->' +
+        '<div id="map-canvas"></div>' +
         '    <div class="page-content">' +
         '      <div class="content-block">' +
         '        <div class="content-block-inner">' +
