@@ -365,7 +365,7 @@ function addEntry(post_id) {
 
 function getDeal(post_id,name,title,page_id,cover,description) {
 
-var singlequote = "'" + description.replace(/qqqq/g, "'") + "'";
+var singlequote = description.replace(/qqqq/g, "'");
 
 var myDate = new Date('October 5, 2014');
 
