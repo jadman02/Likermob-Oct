@@ -500,11 +500,16 @@ $$( ".page-content" ).toggleClass( "hide" );
 
 function getBusiness(page_id,latitude,longitude) {
 
+$$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(response){
+
+
+
 mainView.loadContent(
         '<!-- Top Navbar-->' +
         '<div class="navbar">' +
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
+        '<div class="center"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/></div>' +
         '    <div class="right"><a href="#" class="link" onclick="openMap();"><i class="pe-7s-map-marker pe-lg" style="color:#ff8000"></i> Map</a>' +
         '  </div>' +
         '</div>' +
@@ -526,21 +531,19 @@ mainView.loadContent(
     initialize(latitude,longitude);
 	return;
 
+    
+//alert('Your name is '+response[0][2] + response[0][3]);
+
+
+});
+
+
 
 
 
 //document.getElementById("dealresult").innerHTML = '<img src="'+ cover +'" style="width:100%;margin-top:30px;"/><br/><br/><h1>'+ title + '</h1><br/><br/><p>p1</p><br/><br/><p>p2</p><br/><br/><p>p3</p><br/><br/><p>p4</p>';
 
-//$$.getJSON('http://www.smilesavers.net.au/getdeal.php?callback=?', 'post_id=' + post_id, function(response){
-
-
-
-
-    
-//alert('Your name is '+response[0][2] + response[0][3]);
-
-
-//});	
+	
 	
 	
 }
@@ -551,7 +554,7 @@ function initialize(latitude,longitude) {
 	
   var myLatlng = new google.maps.LatLng(latitude,longitude);
   var mapOptions = {
-    zoom: 12,
+    zoom: 15,
     center: myLatlng
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
