@@ -171,7 +171,7 @@ localStorage.setItem("total_pages", response.length);
 $$("#loader-container").hide();
 for (i = 0; i < 5; i++) {        
 
-var str = \''+ response[i][4]  +'\';
+var str = "'" + response[i][4]  + "'";
 var singlequote = str.replace("'", "qqqq");
 var description = singlequote.replace("/n", "</br>");
 
