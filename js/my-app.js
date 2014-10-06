@@ -493,7 +493,7 @@ mainView.loadContent(
         '<div class="navbar">' +
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-        '    <div class="right" onclick="getBusiness(\''+ page_id  +'\')"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/></div>' +
+        '    <div class="right"><i class="pe-7s-home pe-lg" style="color:#ff8000"></i>' +
         '  </div>' +
         '</div>' +
         '<div class="pages">' +
@@ -501,7 +501,7 @@ mainView.loadContent(
         '  <div data-page="business" class="page">' +
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
-        '    <div class="page-content" style="margin-top:150px;z-index: 1;">' +
+        '    <div class="page-content" style="z-index: 1;">' +
         '      <div class="content-block">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
         '          <p>yoyoyoyoy<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>Here is a dynamic page created on ' + new Date() + ' !</p>' +
