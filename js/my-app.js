@@ -257,19 +257,20 @@ track_click++;
 
 
 
+
 var date = new Date();
 var newdate = new Date(date);
 newdate.setDate(newdate.getDate() - 30);
 var nd = new Date(newdate);
 
-var data1 = localStorage.getItem("allEntries");
-var json1 = JSON.parse(data1);
-for (i = 0; i < json1.length; i++) {        
+var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+for (i = 0; i < existingEntries.length; i++) {        
 
-if (json1[i].timestamp < nd){alert('deal is invalid - need to remove it');}
-if (json1[i].timestamp > nd){json1.splice(i,1);alert('deleted the item from the array');}
+if (existingEntries[i].timestamp < nd){alert('deal is invalid - need to remove it');}
+if (existingEntries[i].timestamp > nd){json1.splice(i,1);alert('deleted the item from the array');}
+
 }
-
+localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 
 }
 
