@@ -267,7 +267,7 @@ var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
 for (i = 0; i < existingEntries.length; i++) {        
 
 if (existingEntries[i].timestamp < nd){alert('deal is invalid - need to remove it');}
-if (existingEntries[i].timestamp > nd){json1.splice(i,1);alert('deleted the item from the array');}
+if (existingEntries[i].timestamp > nd){existingEntries.splice(i,1);alert('deleted the item from the array');}
 
 }
 localStorage.setItem("allEntries", JSON.stringify(existingEntries));
