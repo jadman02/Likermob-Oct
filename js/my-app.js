@@ -389,7 +389,7 @@ if (json[i].post_id == post_id){
         '<div class="navbar">' +
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-        '    <div class="right" onclick="getBusiness(\''+ page_id  +'\',\''+ latitude  +'\',\''+ longitude  +'\')"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/>' + name + '</div>' +
+        '    <div class="right" onclick="getBusiness(\''+ page_id  +'\',\''+ latitude  +'\',\''+ longitude  +'\',\''+ name  +'\')"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/>' + name + '</div>' +
         '  </div>' +
         '</div>' +
         '<div class="pages">' +
@@ -420,7 +420,7 @@ else {
         '<div class="navbar">' +
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-        '    <div class="right" onclick="getBusiness(\''+ page_id  +'\',\''+ latitude  +'\',\''+ longitude  +'\')"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/>' + name + '</div>' +
+        '    <div class="right" onclick="getBusiness(\''+ page_id  +'\',\''+ latitude  +'\',\''+ longitude  +'\',\''+ name  +'\')"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/>' + name + '</div>' +
         '  </div>' +
         '</div>' +
         '<div class="pages">' +
@@ -498,11 +498,13 @@ $$( ".page-content" ).toggleClass( "hide" );
 	
 }
 
-function getBusiness(page_id,latitude,longitude) {
+function getBusiness(page_id,latitude,longitude,name) {
 
 
 
-
+$$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(response){
+	alert('Data: '+response[0][2] + response[0][3]);
+});
 
 mainView.loadContent(
         '<!-- Top Navbar-->' +
@@ -534,9 +536,7 @@ mainView.loadContent(
     
 
 
-$$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(response){
-	alert('Data: '+response[0][2] + response[0][3]);
-});
+
 
 
 
