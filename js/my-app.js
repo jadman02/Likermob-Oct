@@ -521,9 +521,12 @@ function getBusiness(page_id,latitude,longitude,name) {
 
 
 
-$$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(response){
+$$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
 alert('hi');
+alert(res[0][6]);
+
+
 	
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
 	
@@ -555,7 +558,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
         '<p class="buttons-row theme-orange" style="margin-top:-50px;"><a href="#" class="button active"><i class="pe-7s-star pe-2x"></i></a><a href="#" class="button active"><i class="pe-7s-call pe-2x"></i></a><a href="#" class="button active"><i class="pe-7s-share pe-2x"></i></a></p>' + 
         '</br></br></br></br></br></br></br>'+
         '<div class="content-block-title">Contact</div><div class="list-block media-list"><ul>' + 
-        '<li><a href="#" class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=50&height=50" style="border-radius:50%;margin-right:10px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ name +'</div></div><div class="item-subtitle">'+ response[0][6] + ' ' + response[0][7] + ' ' +  response[0][8] + '</div><div class="item-text">'+ response[0][9] + ' ' + response[0][10] + ' ' + response[0][11]+'</div></div></a></li>' +
+        '<li><a href="#" class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=50&height=50" style="border-radius:50%;margin-right:10px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ name +'</div></div><div class="item-subtitle">'+ res[0][6] + ' ' + res[0][7] + ' ' +  res[0][8] + '</div><div class="item-text">'+ res[0][9] + ' ' + res[0][10] + ' ' + res[0][11]+'</div></div></a></li>' +
         '</ul></div>' +
 
         '<div class="content-block-title">Current Deals</div><div class="slider-container slider-container-business slider-2 slider-init"><div class="slider-pagination"></div><div class="slider-wrapper"><div id="deals-here"></div></div></div>'+
