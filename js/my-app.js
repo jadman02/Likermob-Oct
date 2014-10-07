@@ -1,7 +1,6 @@
 // Initialize your app
 var myApp = new Framework7({
   cache:false,
-  ajaxLinks: "a.ajax",
   uniqueHistory:true,
   init: false //Disable App's automatica initialization
 });
@@ -546,7 +545,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
         '    <div class="page-content cover-business" style="z-index: 1;margin-top:30px;">' +
         '      <div class="content-block" style="padding-top:40px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
-        '<a href="#" class="button" style="margin-top:-50px;" onclick=""><i class="pe-7s-star pe-2x"></i></a>' + 
+        '<p class="buttons-row theme-orange" style="margin-top:-50px;"><a href="#" class="button"><i class="pe-7s-star pe-2x"></i></a><a href="#" class="button active"><i class="pe-7s-call pe-2x"></i></a><a href="#" class="button"><i class="pe-7s-map-marker pe-2x"></i></a></p>' + 
         '</br></br></br></br></br></br></br>'+
         '<div class="content-block-title">Contact</div><div class="list-block media-list"><ul>' + 
         '<li><a href="#" class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=50&height=50" style="border-radius:50%;margin-right:10px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ name +'</div></div><div class="item-subtitle">'+ response[0][6] + ' ' + response[0][7] + ' ' +  response[0][8] + '</div><div class="item-text">'+ response[0][9] + ' ' + response[0][10] + ' ' + response[0][11]+'</div></div></a></li>' +
