@@ -513,9 +513,20 @@ function getBusiness(page_id,latitude,longitude,name) {
 
 
 
+
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(response){
 	
+$$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
 	
+	
+	
+	var coverpic = response["cover"]["source"];
+	alert('got the pic' + coverpic);
+	$$( '.cover-business' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
+	$$( '.cover-business' ).css( 'background-size', '100%' );
+	$$( '.cover-business' ).css( 'background-repeat', 'no-repeat' );
+	
+});	
 	
 	mainView.loadContent(
         '<!-- Top Navbar-->' +
@@ -551,17 +562,7 @@ $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=
 	
 });
 
-$$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
-	
-	
-	
-	var coverpic = response["cover"]["source"];
-	alert('got the pic' + coverpic);
-	$$( '.cover-business' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
-	$$( '.cover-business' ).css( 'background-size', '100%' );
-	$$( '.cover-business' ).css( 'background-repeat', 'no-repeat' );
-	
-});
+
 
 
 
