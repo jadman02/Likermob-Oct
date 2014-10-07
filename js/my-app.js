@@ -7,7 +7,12 @@ var myApp = new Framework7({
 var $$ = Dom7;
 
 
-	
+myApp.onPageInit('index', function (page) {
+
+
+    functionEmpty();
+
+});	
 
 
 myApp.onPageInit('register', function (page) {
@@ -87,12 +92,6 @@ alert('pulled down');
 });
 
 
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady() {
-    askLocation();
-    functionEmpty();
-}
 
     var mySlider2 = myApp.slider('.slider-2', {
   pagination:'.slider-2 .slider-pagination',
