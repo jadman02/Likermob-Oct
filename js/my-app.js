@@ -513,9 +513,9 @@ $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
 	
 	var coverpic = response["cover"]["source"];
-	$$( '.page-content' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
-	$$( '.page-content' ).css( 'background-size', '100%' );
-	$$( '.page-content' ).css( 'background-repeat', 'no-repeat' );
+	$$( '.cover-business' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
+	$$( '.cover-business' ).css( 'background-size', '100%' );
+	$$( '.cover-business' ).css( 'background-repeat', 'no-repeat' );
 	
 });
 
@@ -535,7 +535,7 @@ mainView.loadContent(
         '  <div data-page="business" class="page">' +
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
-        '    <div class="page-content" style="z-index: 1;margin-top:30px;">' +
+        '    <div class="page-content cover-business" style="z-index: 1;margin-top:30px;">' +
         '      <div class="content-block" style="padding-top:40px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
     
