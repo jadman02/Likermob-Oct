@@ -523,7 +523,7 @@ function getBusiness(page_id,latitude,longitude,name) {
 
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(response){
 
-alert(hi);
+alert('hi');
 alert(response[1][4]);	
 	
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
