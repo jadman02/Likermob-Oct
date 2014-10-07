@@ -1,5 +1,6 @@
 // Initialize your app
 var myApp = new Framework7({
+  cache:false,
   init: false //Disable App's automatica initialization
 });
 
