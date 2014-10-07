@@ -34,9 +34,7 @@ myApp.onPageBeforeRemove('deal', function (page) {
 $$( "#result li" ).removeClass( "disabled" );
 });
 
-myApp.onPageBeforeRemove('business', function (page) {
-alert('closed');
-});
+
 
 
 
