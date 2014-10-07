@@ -567,12 +567,12 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
     );
     initialize(latitude,longitude);
     
-    for (i = 1; i < response.length; i++) {
+    //for (i = 1; i < response.length; i++) {
     	
-    	$$( '#deals-here' ).append( '<div class="slider-slide slider-slide-business"><span>Slide 1</span></div>' );
+    //	$$( '#deals-here' ).append( '<div class="slider-slide slider-slide-business"><span>Slide 1</span></div>' );
 
     	
-    }
+    //}
     
 	return;
 	
