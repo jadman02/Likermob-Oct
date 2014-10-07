@@ -2,6 +2,7 @@
 var myApp = new Framework7({
   cache:false,
   uniqueHistory:true,
+  dynamicNavbar: true,
   init: false //Disable App's automatica initialization
 });
 
@@ -32,6 +33,10 @@ $$( "#result li" ).addClass( "disabled" );
 
 myApp.onPageBeforeRemove('deal', function (page) {
 $$( "#result li" ).removeClass( "disabled" );
+});
+
+myApp.onPageBeforeRemove('business', function (page) {
+alert('closed');
 });
 
 
