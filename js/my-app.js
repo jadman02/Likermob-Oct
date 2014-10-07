@@ -2,6 +2,7 @@
 var myApp = new Framework7({
   cache:false,
   ajaxLinks: "a.ajax",
+  uniqueHistory:true,
   init: false //Disable App's automatica initialization
 });
 
