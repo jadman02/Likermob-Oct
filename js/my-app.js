@@ -70,6 +70,23 @@ $$( '#resulty' ).append('<li class="item-content"><div class="item-media"></div>
 //And now we initialize app
 myApp.init();
 
+
+// Pull to refresh content
+var ptrContent = $$('.pull-to-refresh-content');
+ 
+// Add 'refresh' listener on it
+ptrContent.on('refresh', function (e) {
+    // Emulate 2s loading
+    setTimeout(function () {
+
+alert('pulled down');
+
+        // When loading done, we need to reset it
+        myApp.pullToRefreshDone();
+    }, 2000);
+});
+
+
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
