@@ -514,7 +514,6 @@ function getBusiness(page_id,latitude,longitude,name) {
 
 
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(response){
-	alert('Data: '+response[0][2] + response[0][3]);
 	
 	
 	
@@ -537,7 +536,7 @@ $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=
     
         '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/><h1>'+ name +'</h1>' +
         
-        '<div class="content-block-title">'+name+'</div><div class="list-block media-list"><ul><li><a href="#" class="item-link item-content"><div class="item-inner"><div class="item-title-row"><div class="item-title">Facebook</div><div class="item-after">17:14</div></div><div class="item-subtitle">'+ response[0][5] + response[0][6] + response[0][7] + response[0][8] + response[0][9] + response[0][10] + response[0][11]+'</div><div class="item-text">Lorem ipsum dolor sit amet...</div></div></a></li></ul></div>' +
+        '<div class="content-block-title">'+name+'</div><div class="list-block media-list"><ul><li><a href="#" class="item-content"><div class="item-inner"><div class="item-title-row"><div class="item-title">Facebook</div></div><div class="item-subtitle">'+ response[0][5] + response[0][6] + response[0][7] + response[0][8] + response[0][9] + response[0][10] + response[0][11]+'</div><div class="item-text">Lorem ipsum dolor sit amet...</div></div></a></li></ul></div>' +
 
         '          <p>2/30 First Street Clayton South</p>' +
         '<div class="content-block-title">Current Deals</div><div class="slider-container slider-2 slider-init"><div class="slider-pagination"></div><div class="slider-wrapper"><div class="slider-slide"><span>Slide 1</span></div><div class="slider-slide"><span>Slide 2</span></div><div class="slider-slide"><span>Slide 3</span></div><div class="slider-slide"><span>Slide 4</span></div><div class="slider-slide"><span>Slide 5</span></div></div></div>'+
