@@ -2,8 +2,6 @@
 var myApp = new Framework7({
   cache:false,
   uniqueHistory:true,
-  dynamicNavbar: true,
-  preloadPreviousPage:false,
   init: false //Disable App's automatica initialization
 });
 
@@ -112,7 +110,8 @@ ptrContent.on('refresh', function (e) {
 
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
-    dynamicNavbar: true
+    dynamicNavbar: true,
+  preloadPreviousPage:false
 });
 
 	
