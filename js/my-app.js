@@ -8,20 +8,6 @@ var $$ = Dom7;
 
 
 	
-	//Now we add our callback for initial page
-myApp.onPageInit('index', function (page) {
-  //Do something here with home page
-
-
-functionEmpty();
-
-
-
-
-
-
-
-});
 
 
 myApp.onPageInit('register', function (page) {
@@ -87,7 +73,8 @@ myApp.init();
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-    alert('device is ready');
+    askLocation();
+    functionEmpty();
 }
 
     var mySlider2 = myApp.slider('.slider-2', {
