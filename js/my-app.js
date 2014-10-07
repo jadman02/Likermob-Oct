@@ -84,7 +84,7 @@ ptrContent.on('refresh', function (e) {
     // Emulate 2s loading
     setTimeout(function () {
 
-    functionEmpty();
+    alert('pulled down');
 
         // When loading done, we need to reset it
         myApp.pullToRefreshDone();
