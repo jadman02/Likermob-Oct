@@ -525,10 +525,10 @@ $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=
 
 alert('hi');
 
-for (i = 0; i < 10; i++) {  
-alert(res[i][4]);	
-	
-}
+
+alert(res[1][4]);
+alert(res[2][4]);
+
 
 
 
