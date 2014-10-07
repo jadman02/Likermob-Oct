@@ -3,6 +3,7 @@ var myApp = new Framework7({
   cache:false,
   uniqueHistory:true,
   dynamicNavbar: true,
+  preloadPreviousPage:false,
   init: false //Disable App's automatica initialization
 });
 
