@@ -524,7 +524,13 @@ function getBusiness(page_id,latitude,longitude,name) {
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
 alert('hi');
-alert(res[1][4]);
+
+for (i = 0; i < 10; i++) {  
+alert(res[i][4]);	
+	
+}
+
+
 
 
 	
