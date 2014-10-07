@@ -523,6 +523,7 @@ function getBusiness(page_id,latitude,longitude,name) {
 
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(response){
 	
+	
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
 	
 	
@@ -556,7 +557,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
         '<li><a href="#" class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=50&height=50" style="border-radius:50%;margin-right:10px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ name +'</div></div><div class="item-subtitle">'+ response[0][6] + ' ' + response[0][7] + ' ' +  response[0][8] + '</div><div class="item-text">'+ response[0][9] + ' ' + response[0][10] + ' ' + response[0][11]+'</div></div></a></li>' +
         '</ul></div>' +
 
-        '<div class="content-block-title">Current Deals</div><div class="slider-container slider-container-business slider-2 slider-init"><div class="slider-pagination"></div><div class="slider-wrapper"><div class="slider-slide slider-slide-business"><span>Slide 1</span></div><div class="slider-slide slider-slide-business"><span>Slide 2</span></div><div class="slider-slide slider-slide-business"><span>Slide 3</span></div><div class="slider-slide slider-slide-business"><span>Slide 4</span></div><div class="slider-slide slider-slide-business"><span>Slide 5</span></div></div></div>'+
+        '<div class="content-block-title">Current Deals</div><div class="slider-container slider-container-business slider-2 slider-init"><div class="slider-pagination"></div><div class="slider-wrapper"><div id="deals-here"></div></div></div>'+
         '        </div>' +
         '      </div>' +
         '    </div>' +
@@ -564,6 +565,14 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
         '</div>'
     );
     initialize(latitude,longitude);
+    
+    for (i = 1; i < response.length; i++) {
+    	
+    	$$( '#deals-here' ).append( '<div class="slider-slide slider-slide-business"><span>Slide 1</span></div>' );
+
+    	
+    }
+    
 	return;
 	
 });
