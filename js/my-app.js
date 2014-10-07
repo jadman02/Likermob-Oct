@@ -531,8 +531,8 @@ mainView.loadContent(
         '  <div data-page="business" class="page">' +
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
-        '    <div class="page-content" style="z-index: 1;">' +
-        '      <div class="content-block">' +
+        '    <div class="page-content" style="z-index: 1;margin-top:30px;">' +
+        '      <div class="content-block" style="padding-top:40px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
     
         '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/><h1>'+ name +'</h1>' +
