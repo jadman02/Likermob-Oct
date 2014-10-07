@@ -542,6 +542,7 @@ mainView.loadContent(
         '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/><h1>'+ name +'</h1>' +
         '          <p>2/30 First Street Clayton South</p>' +
         '<div class="content-block-title">Current Deals</div><div class="slider-container slider-2 slider-init"><div class="slider-pagination"></div><div class="slider-wrapper"><div class="slider-slide"><span>Slide 1</span></div><div class="slider-slide"><span>Slide 2</span></div><div class="slider-slide"><span>Slide 3</span></div><div class="slider-slide"><span>Slide 4</span></div><div class="slider-slide"><span>Slide 5</span></div></div></div>'+
+        '<div class="content-block-title">Past Deals</div><div class="slider-container slider-2 slider-init"><div class="slider-pagination"></div><div class="slider-wrapper"><div class="slider-slide"><span>Slide 1</span></div><div class="slider-slide"><span>Slide 2</span></div><div class="slider-slide"><span>Slide 3</span></div><div class="slider-slide"><span>Slide 4</span></div><div class="slider-slide"><span>Slide 5</span></div></div></div>'+
         '        </div>' +
         '      </div>' +
         '    </div>' +
