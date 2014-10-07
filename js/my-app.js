@@ -420,7 +420,7 @@ if (json[i].post_id == post_id){
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
                       '<a href="#" class="button like-button" style="margin-top:-50px;" onclick="likeButton(\''+ post_id  +'\',\''+ expiry  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
                       '<p>You like this'+ title +'</p>'+
-                      '<p>'+ description +'</p>'+
+                      //'<p>'+ description +'</p>'+
         '        </div>' +
         '      </div>' +
         '    </div>' +
@@ -451,7 +451,7 @@ else {
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
                       '<a href="#" class="button like-button" style="margin-top:-50px;" onclick="likeButton(\''+ post_id  +'\',\''+ expiry  +'\')"><i class="pe-7s-like2 pe-2x"></i></a>' + 
                       '<p>You dont like this'+ title +'</p>'+
-                      '<p>'+ description +'</p>'+
+                      //'<p>'+ description +'</p>'+
         '        </div>' +
         '      </div>' +
         '    </div>' +
