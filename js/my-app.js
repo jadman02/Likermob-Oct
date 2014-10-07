@@ -13,7 +13,6 @@ myApp.onPageInit('index', function (page) {
   //Do something here with home page
 
 
-askLocation();
 functionEmpty();
 
 
@@ -85,6 +84,11 @@ $$( '#resulty' ).append('<li class="item-content"><div class="item-media"></div>
 //And now we initialize app
 myApp.init();
 
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+    alert('device is ready');
+}
 
     var mySlider2 = myApp.slider('.slider-2', {
   pagination:'.slider-2 .slider-pagination',
