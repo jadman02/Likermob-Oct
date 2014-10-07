@@ -515,7 +515,11 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 	
 });
 
-
+var mySlider2 = myApp.slider('.slider-2', {
+  pagination:'.slider-2 .slider-pagination',
+  spaceBetween: 20,
+  slidesPerView: 2
+});
 
 
 mainView.loadContent(
