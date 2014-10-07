@@ -509,7 +509,7 @@ else {
 
 
 function openMap() {
-
+initialize(latitude,longitude);
 $$( ".page-content" ).toggleClass( "hide" );
 
 	
@@ -539,7 +539,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
         '<div class="navbar">' +
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-        '    <div class="right"><div class="item-input" onclick="openMap();"><label class="label-switch"><input type="checkbox"><div class="checkbox"></div></label></div>' +
+        '    <div class="right"><div class="item-input" onclick="openMap(latitude,longitude);"><label class="label-switch"><input type="checkbox"><div class="checkbox"></div></label></div>' +
         '  </div>' +
         '</div>' +
         '<div class="pages">' +
@@ -563,7 +563,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
         '  </div>' +
         '</div>'
     );
-    initialize(latitude,longitude);
+    
 	return;
 	
 });
