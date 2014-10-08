@@ -80,11 +80,7 @@ $$( '#resulty' ).append('<li class="item-content"><div class="item-media"></div>
 //And now we initialize app
 myApp.init();
 
-$$('.prompt-ok').on('click', function () {
-    myApp.prompt('What is your name?', function (value) {
-        myApp.alert('Your name is "' + value + '". You clicked Ok button');
-    });
-});
+
 
 // Pull to refresh content
 var ptrContent = $$('.pull-to-refresh-content');
@@ -629,6 +625,12 @@ function initialize(latitude,longitude) {
   });
 }
 
+
+	$$('.prompt-ok').on('click', function () {
+    myApp.prompt('What is your name?', function () {
+        myApp.alert('Your name is. You clicked Ok button');
+    });
+});
 
 function focusLocation(){
 	
