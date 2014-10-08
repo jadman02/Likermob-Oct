@@ -35,6 +35,7 @@ $$( "#result li" ).removeClass( "disabled" );
 
 myApp.onPageBeforeRemove('business', function (page) {
 $$( ".business" ).remove();
+functionEmpty();
 });
 
 
