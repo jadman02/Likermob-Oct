@@ -90,11 +90,11 @@ ptrContent.on('refresh', function (e) {
     // Emulate 2s loading
     setTimeout(function () {
 
-    alert('pulled down');
+    functionEmpty();
 
         // When loading done, we need to reset it
         myApp.pullToRefreshDone();
-    }, 2000);
+    }, 1000);
 });
 
 
