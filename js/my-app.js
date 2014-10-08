@@ -525,9 +525,9 @@ $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=
 
 
 
-var latitude = \''+ res[i][13]  +'\';
-var longitude = \''+ res[i][14]  +'\';
-var name = \''+ res[i][2]  +'\';
+var latitude = \''+ res[0][13]  +'\';
+var longitude = \''+ res[0][14]  +'\';
+var name = \''+ res[0][2]  +'\';
 
 
 	
