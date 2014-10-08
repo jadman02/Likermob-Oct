@@ -177,6 +177,8 @@ var str = response[i][4];
 var singlequote = str.replace(/'/g, "qqqq");
 //var description = "'" + singlequote.replace(/(\r\n|\n|\r)/gm,"") + "'";
 
+alert(singlequote);
+
 someText = str.replace(/(\r\n|\n|\r)/gm,"<br />");
 
 //onclick="getDeal(\''+ response[i][2]  +'\',\''+ response[i][16]  +'\',\''+ response[i][3]  +'\',\''+ response[i][1]  +'\',\''+ response[i][14]  +'\',\''+ response[i][10]  +'\',\''+ response[i][11]  +'\',\''+ response[i][6]  +'\')"
@@ -629,7 +631,7 @@ function initialize(latitude,longitude) {
 function popUp(name,description){
 
 
-myApp.prompt(name, description, function (value) {
+myApp.prompt('name:' + name, 'description:' + description, function (value) {
         myApp.alert('Your comment is: "' + value + '". You clicked Ok button');
     });
 
