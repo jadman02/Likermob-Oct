@@ -628,12 +628,18 @@ function initialize(latitude,longitude) {
   });
 }
 
+
+ myApp.prompt('What is your name?', 'Custom Title', function (value) {
+        myApp.alert('Your name is "' + value + '". You clicked Ok button');
+    });
+
 function popUp(title,description){
 
 
 myApp.modal({
     title:  title,
     text: description,
+    afterText: '<div class="item-input"><input type="text"></div>',
     buttons: [
       {
         text: '<i class="pe-7s-like2 pe-2x"></i>',
