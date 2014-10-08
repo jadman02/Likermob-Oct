@@ -641,7 +641,7 @@ function popUp(title,description,page_id){
 myApp.modal({
     title:  title,
     text: description,
-    afterText: '<input id="commentbox" type="text" placeholder="Enter comment" style="width:100%;">',
+    afterText: '<input id="commentbox" type="text" placeholder="Enter comment" style="margin-top:10px;">',
     buttons: [
       {
         text: '<i class="pe-7s-like2 pe-lg"></i>',
@@ -653,7 +653,7 @@ myApp.modal({
         }
       },
       {
-        text: '<i class="pe-7s-info pe-lg"></i>',
+        text: '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/>',
         onClick: function() {
           getBusiness(page_id);
         }
