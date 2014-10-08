@@ -631,14 +631,40 @@ function initialize(latitude,longitude) {
 function popUp(title,description){
 
 
-myApp.prompt(description, title, function (value) {
-        myApp.alert('Your comment is: "' + value + '". You clicked Ok button');
-    });
+myApp.modal({
+    title:  title,
+    text: description,
+    buttons: [
+      {
+        text: '<i class="pe-7s-like2 pe-2x"></i>',
+        onClick: function() {
+          myApp.alert('You clicked first button!')
+        }
+      },
+      {
+        text: '<i class="pe-7s-info pe-2x"></i>',
+        onClick: function() {
+          myApp.alert('You clicked second button!')
+        }
+      },
+      {
+        text: '<i class="pe-7s-like2 pe-2x pe-rotate-180"></i>',
+        bold: true,
+        onClick: function() {
+          myApp.alert('You clicked third button!')
+        }
+      },
+    ]
+  })
+
+
 
 
 	
 	
 }
+
+
 
 
 function focusLocation(){
