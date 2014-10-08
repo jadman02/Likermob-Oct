@@ -641,7 +641,7 @@ function popUp(title,description,page_id){
 myApp.modal({
     title:  title,
     text: description,
-    afterText: '<input id="commentbox" type="text" placeholder="Enter comment" style="margin-top:10px;">',
+    afterText: '<input id="commentbox" type="text" placeholder="Enter comment" style="margin-top:10px;padding:30px;">',
     buttons: [
       {
         text: '<i class="pe-7s-like2 pe-lg"></i>',
