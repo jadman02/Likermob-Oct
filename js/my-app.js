@@ -661,10 +661,10 @@ myApp.modal({
         bold: true,
         onClick: function() {
           myApp.alert('You clicked third button!')
-        },
-        {
-        text: '<i class="pe-7s-close pe-2x"></i>',
-        bold: true,
+        }
+      },
+      {
+        text: '<i class="pe-7s-info pe-2x"></i>',
         onClick: function() {
           myApp.alert('You clicked fourth button!')
         }
