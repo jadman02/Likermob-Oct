@@ -627,11 +627,12 @@ function initialize(latitude,longitude) {
 
 function popUp(){
 
-	$$('.prompt-ok').on('click', function () {
+
+
     myApp.prompt('What is your name?', function () {
         myApp.alert('Your name is. You clicked Ok button');
     });
-});	
+	
 	
 }
 
