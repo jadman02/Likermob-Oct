@@ -654,7 +654,7 @@ myApp.modal({
         text: '<i class="pe-7s-info pe-2x"></i>',
         onClick: function() {
           alert(page_id);
-          myApp.alert('You clicked second button!');
+          getBusiness(page_id,'-37.867512','144.978973','yo');
         }
       },
       {
