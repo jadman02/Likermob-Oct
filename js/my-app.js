@@ -35,7 +35,9 @@ $$( "#result li" ).removeClass( "disabled" );
 });
 
 
-
+myApp.onPageBeforeRemove('deal', function (page) {
+$$( ".business" ).remove();
+});
 
 
 
@@ -538,7 +540,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 	
 	mainView.loadContent(
         '<!-- Top Navbar-->' +
-        '<div class="navbar">' +
+        '<div class="navbar business">' +
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="right"><div class="item-input" onclick="openMap();"><label class="label-switch"><input type="checkbox"><div class="checkbox"></div></label></div>' +
@@ -546,7 +548,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
         '</div>' +
         '<div class="pages">' +
         '  <!-- Page, data-page contains page name-->' +
-        '  <div data-page="business" class="page">' +
+        '  <div data-page="business" class="page business">' +
         '    <!-- Scrollable page content-->' +
 '<div id="map-canvas"></div>' +
         '    <div class="page-content cover-business" style="z-index: 1;margin-top:30px;">' +
