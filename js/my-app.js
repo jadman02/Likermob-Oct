@@ -641,10 +641,10 @@ function popUp(title,description,page_id){
 myApp.modal({
     title:  title,
     text: description,
-    afterText: '<div class="item-input"><input id="commentbox" type="text"></div>',
+    afterText: '<input id="commentbox" type="text" placeholder="Enter comment" style="width:100%;">',
     buttons: [
       {
-        text: '<i class="pe-7s-like2 pe-2x"></i>',
+        text: '<i class="pe-7s-like2 pe-lg"></i>',
         onClick: function() {
           
           var comment = $$("#commentbox").val();
@@ -653,13 +653,13 @@ myApp.modal({
         }
       },
       {
-        text: '<i class="pe-7s-info pe-2x"></i>',
+        text: '<i class="pe-7s-info pe-lg"></i>',
         onClick: function() {
           getBusiness(page_id);
         }
       },
       {
-        text: '<i class="pe-7s-like2 pe-2x pe-rotate-180"></i>',
+        text: '<i class="pe-7s-like2 pe-lg pe-rotate-180"></i>',
         bold: true,
         onClick: function() {
         	
