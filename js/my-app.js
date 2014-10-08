@@ -629,7 +629,7 @@ function initialize(latitude,longitude) {
 function popUp(page_id,description){
 
 
-myApp.prompt(description, name, function (value) {
+myApp.prompt('description', 'name', function (value) {
         myApp.alert('Your comment is: "' + value + '". You clicked Ok button');
     });
 
