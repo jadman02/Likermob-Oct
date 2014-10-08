@@ -629,8 +629,8 @@ function popUp(){
 
 
 
-    myApp.prompt('What is your name?', function () {
-        myApp.alert('Your name is. You clicked Ok button');
+myApp.prompt('What is your name?', function (value) {
+        myApp.alert('Your name is "' + value + '". You clicked Ok button');
     });
 	
 	
