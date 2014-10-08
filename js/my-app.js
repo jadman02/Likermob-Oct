@@ -520,6 +520,7 @@ function getBusiness(page_id) {
 
 
 $$("#result li").remove();
+$$("#loader-container").show();
 
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
