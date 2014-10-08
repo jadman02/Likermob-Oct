@@ -35,6 +35,10 @@ $$( "#result li" ).removeClass( "disabled" );
 });
 
 
+myApp.onPageBeforeRemove('business', function (page) {
+document.removeChild(document.documentElement);
+});
+
 
 
 
