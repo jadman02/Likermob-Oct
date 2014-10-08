@@ -639,12 +639,15 @@ function popUp(title,description){
 myApp.modal({
     title:  title,
     text: description,
-    afterText: '<div class="item-input"><input type="text"></div>',
+    afterText: '<div class="item-input"><input id="commentbox" type="text"></div>',
     buttons: [
       {
         text: '<i class="pe-7s-like2 pe-2x"></i>',
         onClick: function() {
-          myApp.alert('You clicked first button!')
+          
+          var comment = $$("#commentbox").val();
+          
+          myApp.alert('You clicked first button!' + comment)
         }
       },
       {
