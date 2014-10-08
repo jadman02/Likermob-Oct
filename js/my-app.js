@@ -556,8 +556,10 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
         '<div class="content-block-title">Contact</div><div class="list-block media-list"><ul>' + 
         '<li><a href="#" class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=50&height=50" style="border-radius:50%;margin-right:10px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ name +'</div></div><div class="item-subtitle">'+ res[0][6] + ' ' + res[0][7] + ' ' +  res[0][8] + '</div><div class="item-text">'+ res[0][9] + ' ' + res[0][10] + ' ' + res[0][11]+'</div></div></a></li>' +
         '</ul></div>' +
-
-        '<div class="content-block-title">Current Deals</div><div class="slider-container slider-container-business slider-2"><div class="slider-pagination"></div><div class="slider-wrapper"><div id="deals-here"></div></div></div>'+
+	'<div class="list-block media-list"><ul><div id="deals-here"></div></ul></div>' +
+        '<div class="content-block-title">Current Deals</div>'+
+        
+        
         '        </div>' +
         '      </div>' +
         '    </div>' +
@@ -568,16 +570,12 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
     
     for (i = 1; i < res.length; i++) {
     	
-    	$$( '#deals-here' ).append( '<div class="slider-slide slider-slide-business"><span>Slide 1</span></div>' );
+    	$$( '#deals-here' ).append( '<li><a href="#" class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=50&height=50" style="border-radius:50%;margin-right:10px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[i][3] + '</div></div><div class="item-subtitle">'+ res[i][16] + '</div><div class="item-text">'+ res[i][4] + '</div></div></a></li>' );
 
     	
     }
     
-        var mySlider2 = myApp.slider('.slider-2', {
-  pagination:'.slider-2 .slider-pagination',
-  spaceBetween: 20,
-  slidesPerView: 2
-});
+
 
     
 	return;
