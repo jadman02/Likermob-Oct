@@ -35,9 +35,6 @@ $$( "#result li" ).removeClass( "disabled" );
 });
 
 
-myApp.onPageBeforeRemove('business', function (page) {
-document.removeChild(document.documentElement);
-});
 
 
 
@@ -344,7 +341,7 @@ elem.value = response.result.formatted_address;
 
 function likeButton(post_id,expiry) {
 like(post_id);
-addEntry(post_id,expiry);
+//addEntry(post_id,expiry);
 }
 
 
