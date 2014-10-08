@@ -104,8 +104,7 @@ ptrContent.on('refresh', function (e) {
 
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
-    dynamicNavbar: true,
-  preloadPreviousPage:false
+    dynamicNavbar: true
 });
 
 	
