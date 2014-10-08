@@ -90,7 +90,7 @@ ptrContent.on('refresh', function (e) {
     // Emulate 2s loading
     setTimeout(function () {
 
-    functionEmpty();
+    alert('pulled');
 
         // When loading done, we need to reset it
         myApp.pullToRefreshDone();
@@ -516,7 +516,7 @@ $$( ".page-content" ).toggleClass( "hide" );
 	
 }
 
-function getBusiness(page_id,latitude,longitude,name) {
+function getBusiness(page_id) {
 
 
 
@@ -558,7 +558,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);"">' +
         '<p class="buttons-row theme-orange" style="margin-top:-50px;"><a href="#" class="button active"><i class="pe-7s-star pe-2x"></i></a><a href="#" class="button active"><i class="pe-7s-call pe-2x"></i></a><a href="#" class="button active"><i class="pe-7s-share pe-2x"></i></a></p>' + 
         '<div class="content-block-title">Contact</div><div class="list-block media-list"><ul>' + 
-        '<li><a href="#" class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=50&height=50" style="border-radius:50%;margin-right:10px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ name +'</div></div><div class="item-subtitle">'+ res[0][6] + ' ' + res[0][7] + ' ' +  res[0][8] + '</div><div class="item-text">'+ res[0][9] + ' ' + res[0][10] + ' ' + res[0][11]+'</div></div></a></li>' +
+        '<li><a href="#" class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=50&height=50" style="border-radius:50%;margin-right:10px;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ res[0][1] +'</div></div><div class="item-subtitle">'+ res[0][6] + ' ' + res[0][7] + ' ' +  res[0][8] + '</div><div class="item-text">'+ res[0][9] + ' ' + res[0][10] + ' ' + res[0][11]+'</div></div></a></li>' +
         '</ul></div>' +
 	        '<div class="content-block-title">Current Deals</div>'+
 	'<div class="list-block media-list"><ul><div id="deals-here"></div></ul></div>' +
@@ -571,7 +571,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
         '  </div>' +
         '</div>'
     );
-    initialize(latitude,longitude);
+    initialize(res[0][13],res[0][14]);
     
     for (i = 1; i < res.length; i++) {
     	
@@ -654,7 +654,7 @@ myApp.modal({
         text: '<i class="pe-7s-info pe-2x"></i>',
         onClick: function() {
           alert(page_id);
-          getBusiness(page_id,'-37.867512','144.978973','yo');
+          getBusiness(page_id);
         }
       },
       {
