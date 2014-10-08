@@ -653,21 +653,16 @@ myApp.modal({
       {
         text: '<i class="pe-7s-info pe-2x"></i>',
         onClick: function() {
-          myApp.alert('You clicked second button!')
+          alert(page_id);
+          myApp.alert('You clicked second button!');
         }
       },
       {
         text: '<i class="pe-7s-like2 pe-2x pe-rotate-180"></i>',
         bold: true,
         onClick: function() {
-        	alert(page_id);
+        	
           myApp.alert('You clicked third button!')
-        }
-      },
-      {
-        text: '<i class="pe-7s-info pe-2x"></i>',
-        onClick: function() {
-          myApp.alert('You clicked fourth button!')
         }
       },
     ]
