@@ -653,7 +653,7 @@ myApp.modal({
         }
       },
       {
-        text: '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;"/>',
+        text: '<i class="pe-7s-info pe-lg"></i>',
         onClick: function() {
           getBusiness(page_id);
         }
