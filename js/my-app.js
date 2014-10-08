@@ -631,7 +631,7 @@ function initialize(latitude,longitude) {
 function popUp(name,description){
 
 
-myApp.prompt('name:' + name, 'description:' + description, function (value) {
+myApp.prompt(name, description, function (value) {
         myApp.alert('Your comment is: "' + value + '". You clicked Ok button');
     });
 
