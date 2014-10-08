@@ -525,9 +525,9 @@ $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=
 
 
 
-var latitude = res[i][13];
-var longitude = res[i][14];
-var name = res[i][2];
+var latitude = \''+ res[i][13]  +'\';
+var longitude = \''+ res[i][14]  +'\';
+var name = \''+ res[i][2]  +'\';
 
 
 	
@@ -655,8 +655,8 @@ myApp.modal({
       {
         text: '<i class="pe-7s-info pe-2x"></i>',
         onClick: function() {
+          alert(page_id);
           getBusiness(page_id);
-          myApp.alert('You clicked second button!')
         }
       },
       {
