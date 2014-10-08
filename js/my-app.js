@@ -523,11 +523,6 @@ function getBusiness(page_id,latitude,longitude,name) {
 
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
-alert('hi');
-
-
-alert(res[1][4]);
-alert(res[2][4]);
 
 
 
@@ -576,12 +571,12 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
     );
     initialize(latitude,longitude);
     
-    //for (i = 1; i < response.length; i++) {
+    for (i = 1; i < response.length; i++) {
     	
-    //	$$( '#deals-here' ).append( '<div class="slider-slide slider-slide-business"><span>Slide 1</span></div>' );
+    	$$( '#deals-here' ).append( '<div class="slider-slide slider-slide-business"><span>Slide 1</span></div>' );
 
     	
-    //}
+    }
     
 	return;
 	
