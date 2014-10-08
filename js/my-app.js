@@ -1,7 +1,5 @@
 // Initialize your app
 var myApp = new Framework7({
-  cache:false,
-  uniqueHistory:true,
   init: false //Disable App's automatica initialization
 });
 
@@ -35,7 +33,7 @@ $$( "#result li" ).removeClass( "disabled" );
 });
 
 
-myApp.onPageBeforeRemove('deal', function (page) {
+myApp.onPageBeforeRemove('business', function (page) {
 $$( ".business" ).remove();
 });
 
