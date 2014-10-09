@@ -24,12 +24,13 @@ mainView.hideNavbar();
 
 
 
-myApp.onPageAfterAnimation('deal', function (page) {
-$$( "#result li" ).addClass( "disabled" );
+myApp.onPageInit('location', function (page) {
+$$("#resulty li").remove();
 });
 
-myApp.onPageBeforeRemove('deal', function (page) {
-$$( "#result li" ).removeClass( "disabled" );
+myApp.onPageBeforeRemove('location', function (page) {
+$$("#loader-container").show();
+functionEmpty();
 });
 
 
@@ -707,4 +708,9 @@ localStorage.setItem("search", search);
 localStorage.setItem("category", category);	
 localStorage.setItem("order", order);	
 
+}
+
+function clearEmpty() {
+	
+	
 }
