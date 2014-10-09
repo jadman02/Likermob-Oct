@@ -168,6 +168,7 @@
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
+<a href="#" class="button" onclick="getInfo()">Get Info</a>
 
 <ul id="result"></ul></div>
 
@@ -247,8 +248,8 @@
             path: '/me',
             success: function(data) {
                 console.log(JSON.stringify(data));
-                document.getElementById("userName").innerHTML = data.name;
-                document.getElementById("userPic").src = 'http://graph.facebook.com/' + data.id + '/picture?type=small';
+                alert(data.name);
+                alert('http://graph.facebook.com/' + data.id + '/picture?type=small');
             },
             error: errorHandler});
     }
