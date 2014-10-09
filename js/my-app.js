@@ -640,13 +640,13 @@ function popUp(title,description,page_id){
 
 var user_name = localStorage.getItem('user_name');
 var uid = localStorage.getItem('uid');
-
+var clear_description = description.replace(/qqqq/g, "'");
 
 
 myApp.modal({
     title: '<span style="padding-left:15px;padding-right:15px;">' + title + '</span>',
-    text: '<span style="padding-left:15px;padding-right:15px;">' + description + '</span>',
-    afterText: '<div style="border-top:1px solid #ccc;width:270px;background-image:url(\'http://graph.facebook.com/' + uid + '/picture?type=small\');background-repeat:none;"><input id="commentbox" type="text" placeholder="Comment on Facebook" style="margin-left:40px;margin-bottom:-15px;border:none;text-align:center;border-radius:none; padding-top:15px;padding-bottom:15px;margin-top:0px;font-size:14px;width:255px;"></div>',
+    text: '<span style="padding-left:15px;padding-right:15px;">' + clear_description + '</span>',
+    afterText: '<div style="height:50px;border-top:1px solid #ccc;width:270px;background-image:url(\'http://graph.facebook.com/' + uid + '/picture?type=small\');background-repeat:none;"><input id="commentbox" type="text" placeholder="Comment on Facebook" style="margin-left:40px;margin-bottom:-15px;border:none;text-align:center;border-radius:none; padding-top:15px;padding-bottom:15px;margin-top:0px;font-size:14px;width:255px;"></div>',
     buttons: [
       {
         text: '<i class="pe-7s-like2 pe-lg"></i>',
