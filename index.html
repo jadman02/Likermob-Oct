@@ -234,6 +234,7 @@
 						localStorage.setItem("register", "register");
 						mainView.loadPage('location.html');
 						mainView.showNavbar();
+						getInfo();
 						
                     } else {
                         alert('Facebook login failed: ' + response.error);
@@ -252,7 +253,6 @@
                 localStorage.setItem("user_name", data.name);
                 //alert('http://graph.facebook.com/' + data.id + '/picture?type=small');
                 localStorage.setItem("uid", data.id);
-                alert('set');
                 
             },
             error: errorHandler});
