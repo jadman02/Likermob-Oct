@@ -646,7 +646,7 @@ var clear_description = description.replace(/qqqq/g, "'");
 myApp.modal({
     title: '<div style="padding-left:25px;padding-right:25px;">' + title + '</div>',
     text: '<div style="padding-left:25px;padding-right:25px;">' + clear_description + '</div>',
-    afterText: '<div style="height:30px;border-top:1px solid #ccc;width:270px;background-image:url(\'http://graph.facebook.com/' + uid + '/picture?type=small\');background-repeat:no-repeat;"><input id="commentbox" type="text" placeholder="Comment on Facebook" style="margin-left:50px;border:none;text-align:center;border-radius:none; height:30px;margin-top:0px;font-size:14px;width:205px;"></div>',
+    afterText: '<div style="margin-bottom:-15px;height:50px;border-top:1px solid #ccc;width:270px;background-image:url(\'http://graph.facebook.com/' + uid + '/picture?type=small\');background-repeat:no-repeat;"><input id="commentbox" type="text" placeholder="Comment on Facebook" style="margin-left:50px;border:none;text-align:center;border-radius:none; height:40px;margin-top:0px;font-size:14px;width:205px;"></div>',
     buttons: [
       {
         text: '<i class="pe-7s-like2 pe-lg"></i>',
