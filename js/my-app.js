@@ -670,7 +670,7 @@ myApp.modal({
         bold: true,
         onClick: function() {
 alert('you deleted:' + deleted);
-        	//$$(deleted).remove();
+        	$$("'" + deleted + "'").remove();
         	//myApp.swipeoutDelete('.el' + post_id);
         	closeButton();
         }
