@@ -91,6 +91,7 @@ ptrContent.on('refresh', function (e) {
     // Emulate 2s loading
   //  setTimeout(function () {
 $$("#result li").remove();
+$$("#loader-container").show();
     functionEmpty();
 
         // When loading done, we need to reset it
