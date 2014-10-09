@@ -25,7 +25,7 @@ mainView.hideNavbar();
 
 
 myApp.onPageInit('location', function (page) {
-$$("#resulty li").remove();
+$$("#result li").remove();
 });
 
 myApp.onPageBeforeRemove('location', function (page) {
