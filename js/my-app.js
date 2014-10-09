@@ -646,7 +646,7 @@ var clear_description = description.replace(/qqqq/g, "'");
 myApp.modal({
     title: '<div style="padding-left:25px;padding-right:25px;"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;padding-top:5px;padding-right:5px;"/>' + title + '</div>',
     text: '<div style="padding-left:25px;padding-right:25px;">' + clear_description + '</div>',
-    afterText: '<div style="margin-top:5px;margin-bottom:-15px;height:50px;border-top:1px solid #ccc;width:270px;background-image:url(\'http://graph.facebook.com/' + uid + '/picture?type=small\');background-repeat:no-repeat;"><input id="commentbox" type="text" placeholder="Comment on Facebook" style="margin-left:50px;border:none;text-align:center;border-radius:none; height:44px;margin-top:0px;font-size:14px;width:205px;"></div>',
+    afterText: '<div style="margin-top:10px;margin-bottom:-15px;height:50px;border-top:1px solid #ccc;width:270px;background-image:url(\'http://graph.facebook.com/' + uid + '/picture?type=small\');background-repeat:no-repeat;"><input id="commentbox" type="text" placeholder="Comment on Facebook" style="margin-left:50px;border:none;border-radius:0px; height:44px;margin-top:0px;font-size:14px;width:205px;"></div>',
     buttons: [
       {
         text: '<i class="pe-7s-like2 pe-lg"></i>',
