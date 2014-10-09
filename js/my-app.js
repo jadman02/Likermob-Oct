@@ -643,7 +643,7 @@ function popUp(title,description,page_id,post_id){
 var user_name = localStorage.getItem('user_name');
 var uid = localStorage.getItem('uid');
 var clear_description = description.replace(/qqqq/g, "'");
-
+var deleted = "'.s_" + post_id + "'";
 
 myApp.modal({
     title: '<div style="margin-left:25px;margin-right:25px;"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;padding-top:5px;padding-right:5px;"/>' + title + '</div>',
@@ -670,7 +670,7 @@ myApp.modal({
         bold: true,
         onClick: function() {
 
-        	$$('\'.s_'+ post_id\').remove();
+        	$$(deleted).remove();
         	//myApp.swipeoutDelete('.el' + post_id);
         	closeButton();
         }
