@@ -89,13 +89,13 @@ var ptrContent = $$('.pull-to-refresh-content');
 // Add 'refresh' listener on it
 ptrContent.on('refresh', function (e) {
     // Emulate 2s loading
-    setTimeout(function () {
-
+  //  setTimeout(function () {
+$$("#result li").remove();
     functionEmpty();
 
         // When loading done, we need to reset it
         myApp.pullToRefreshDone();
-    }, 1000);
+ //   }, 500);
 });
 
 
