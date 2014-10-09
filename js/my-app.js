@@ -669,7 +669,7 @@ myApp.modal({
         text: '<i class="pe-7s-like2 pe-lg pe-rotate-180"></i>',
         bold: true,
         onClick: function() {
-        	$$('.s_'+ post_id).remove();
+        	myApp.swipeoutDelete('.s_'+ post_id);
         	//myApp.swipeoutDelete('.el' + post_id);
         	closeButton();
         }
