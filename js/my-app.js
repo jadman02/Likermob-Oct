@@ -642,7 +642,7 @@ function popUp(title,description,page_id){
 myApp.modal({
     title: '<span style="padding-left:15px;padding-right:15px;">' + title + '</span>',
     text: '<span style="padding-left:15px;padding-right:15px;">' + description + '</span>',
-    afterText: '<div style="border-top:1px solid #ccc;width:100%"><input id="commentbox" type="text" placeholder="Comment on Facebook" style="margin-bottom:-15px;width:100%;border:none;text-align:center;border-radius:none;padding:20px; margin-top:-5px;font-size:14px;width:270px;"></div>',
+    afterText: '<div style="border-top:1px solid #ccc;width:100%"><input id="commentbox" type="text" placeholder="Comment on Facebook" style="margin-bottom:-15px;border:none;text-align:center;border-radius:none;padding:20px; margin-top:0px;font-size:14px;width:270px;"></div>',
     buttons: [
       {
         text: '<i class="pe-7s-like2 pe-lg"></i>',
