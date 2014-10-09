@@ -654,13 +654,18 @@ myApp.modal({
           
           var comment = $$("#commentbox").val();
           
-          myApp.alert('You clicked first button!' + comment)
+          myApp.alert('You clicked first button!' + comment);
+          myApp.swipeoutDelete('.s_'+ id);
+          like(post_id);
+          
+          
         }
       },
       {
         text: '<i class="pe-7s-info pe-lg"></i>',
         onClick: function() {
           getBusiness(page_id);
+          
         }
       },
       {
