@@ -660,7 +660,7 @@ myApp.modal({
           
           if (message1) {
           alert(message1);
-   comment(post_id);
+   comment(post_id,'this is a cool message');
    myApp.alert('You clicked first button!' + message1);
           myApp.swipeoutDelete('.s_'+ post_id);
           like(post_id);
