@@ -656,10 +656,10 @@ myApp.modal({
         text: '<i class="pe-7s-like2 pe-lg"></i>',
         onClick: function() {
           
-          var comment = $$("#commentbox").val();
+          var message == $$("#commentbox").val();
           
-          if (comment) {
-    alert('this is the comment' + comment)
+          if (message) {
+   comment(post_id,message);
 } else {
     alert('no comment was entered')
 }
