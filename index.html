@@ -291,18 +291,17 @@ function like(post_id) {
     function comment(post_id,message) {
         
         alert('reached comment function');
-        openFB.api(
-    {
+        
+        openFB.api({
         method: 'POST',
         path: '/' + post_id + '/comments',
         params: {
             message: 'Testing the Facebook Graph API'
         },
         success: successHandler,
-        error: errorHandler
-    });
+        error: errorHandler});
         
-        
+        alert('posted comment');
         
     }
 
