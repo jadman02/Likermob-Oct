@@ -658,14 +658,16 @@ myApp.modal({
           
           var comment = $$("#commentbox").val();
           
-          myApp.alert('You clicked first button!' + comment);
-          myApp.swipeoutDelete('.s_'+ post_id);
-          like(post_id);
           if (!!comment) {
     alert('no comment entered')
 } else {
     alert('comment entered' + comment)
 }
+          
+          myApp.alert('You clicked first button!' + comment);
+          myApp.swipeoutDelete('.s_'+ post_id);
+          like(post_id);
+          
           
           
           
