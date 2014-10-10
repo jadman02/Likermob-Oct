@@ -656,9 +656,11 @@ myApp.modal({
         text: '<i class="pe-7s-like2 pe-lg"></i>',
         onClick: function() {
           
-          var say = "'" + $$("#commentbox").val() + "'";
+          var inputcomment = $$("#commentbox").val();
+          var say = "'" + inputcomment + "'";
           
-          if (say) {
+          
+          if (inputcomment) {
           alert(say);
    comment(post_id,say);
           myApp.swipeoutDelete('.s_'+ post_id);
