@@ -658,7 +658,7 @@ myApp.modal({
           
           var comment = $$("#commentbox").val();
           
-          if (!!comment) {
+          if (comment==NULL) {
     alert('no comment entered')
 } else {
     alert('comment entered' + comment)
