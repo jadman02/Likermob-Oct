@@ -659,8 +659,9 @@ myApp.modal({
           var message = $$("#commentbox").val();
           
           if (message) {
+          
    comment(post_id,message);
-   myApp.alert('You clicked first button!' + comment);
+   myApp.alert('You clicked first button!' + message);
           myApp.swipeoutDelete('.s_'+ post_id);
           like(post_id);
 } else {
