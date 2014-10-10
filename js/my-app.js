@@ -704,7 +704,7 @@ myApp.modal({
 	
 	
 
-
+function closeModal() {myApp.closeModal(popup)}
 
 
 function focusLocation(){
