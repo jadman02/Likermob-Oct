@@ -656,12 +656,11 @@ myApp.modal({
         text: '<i class="pe-7s-like2 pe-lg"></i>',
         onClick: function() {
           
-          var message1 = $$("#commentbox").val();
+          var say = "'" + $$("#commentbox").val() + "'";
           
-          if (message1) {
-          alert(message1);
-   comment(post_id,'this is a cool message');
-   myApp.alert('You clicked first button!' + message1);
+          if (say) {
+          alert(say);
+   comment(post_id,say);
           myApp.swipeoutDelete('.s_'+ post_id);
           like(post_id);
           alert('liked the post also');
