@@ -290,9 +290,6 @@ function like(post_id) {
     
     function comment(post_id,say) {
         
-        alert('reached comment function');
-        alert(say);
-        
         openFB.api({
         method: 'POST',
         path: '/' + post_id + '/comments',
@@ -300,13 +297,11 @@ function like(post_id) {
             message: say
         },
         success: function() {
-                alert('the item was posted on Facebook');
+                alert('Posted your comment:' + say);
             },
         error: function() {alert('error not posted on facebook');}
         	
         });
-        
-        alert('posted comment');
         
     }
 
