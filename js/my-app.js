@@ -657,17 +657,14 @@ myApp.modal({
         onClick: function() {
           
           var inputcomment = $$("#commentbox").val();
-          var say = "'" + inputcomment + "'";
           
           
           if (inputcomment) {
-          alert(say);
    comment(post_id,inputcomment);
           myApp.swipeoutDelete('.s_'+ post_id);
           like(post_id);
-          alert('liked the post also');
 } else {
-    alert('no comment was entered')
+    alert('Oops! Please enter a comment to get this deal...')
 }
           
           
