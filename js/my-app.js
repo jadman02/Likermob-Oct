@@ -662,7 +662,7 @@ myApp.modal({
           
           if (inputcomment) {
           alert(say);
-   comment(post_id,say);
+   comment(post_id,inputcomment);
           myApp.swipeoutDelete('.s_'+ post_id);
           like(post_id);
           alert('liked the post also');
