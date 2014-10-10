@@ -299,7 +299,9 @@ function like(post_id) {
             message: 'Testing the Facebook Graph API'
         },
         success: successHandler,
-        error: errorHandler});
+        error: function(response) {alert('error: ' + response.error);}
+        	
+        });
         
         alert('posted comment');
         
