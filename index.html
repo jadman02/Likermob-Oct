@@ -288,7 +288,7 @@ function like(post_id) {
     
     
     
-    function comment(post_id,message1) {
+    function comment(post_id) {
         
         alert('reached comment function');
         
@@ -298,8 +298,10 @@ function like(post_id) {
         params: {
             message: 'Testing the Facebook Graph API'
         },
-        success: successHandler,
-        error: function(response) {alert('error: ' + response.error);}
+        success: function() {
+                alert('the item was posted on Facebook');
+            },
+        error: function() {alert('error not posted on facebook');}
         	
         });
         
