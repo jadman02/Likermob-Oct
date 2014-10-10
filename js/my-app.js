@@ -658,10 +658,10 @@ myApp.modal({
           
           var comment = $$("#commentbox").val();
           
-          if (comment==null) {
-    alert('no comment entered')
+          if (comment) {
+    alert('this is the comment' + comment)
 } else {
-    alert('comment entered' + comment)
+    alert('no comment was entered')
 }
           
           myApp.alert('You clicked first button!' + comment);
