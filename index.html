@@ -288,7 +288,7 @@ function like(post_id) {
     
     
     
-    function comment(post_id) {
+    function comment(post_id,say) {
         
         alert('reached comment function');
         
@@ -296,7 +296,7 @@ function like(post_id) {
         method: 'POST',
         path: '/' + post_id + '/comments',
         params: {
-            message: 'Testing the Facebook Graph API'
+            message: say
         },
         success: function() {
                 alert('the item was posted on Facebook');
