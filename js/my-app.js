@@ -662,9 +662,9 @@ myApp.modal({
           myApp.swipeoutDelete('.s_'+ post_id);
           like(post_id);
           if (!!comment) {
-    alert("no comment entered")
+    alert('no comment entered')
 } else {
-    alert("comment entered" + comment)
+    alert('comment entered' + comment)
 }
           
           
