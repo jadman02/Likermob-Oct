@@ -285,6 +285,22 @@ function like(post_id) {
         
         
     }
+    
+    
+    
+    function comment(post_id,message) {
+        
+        openFB.api({
+            method: 'POST',{
+        "message": "This is a test comment"
+    },
+            path: '/' + post_id + '/comments',
+            error: errorHandler});
+        
+        
+        
+        
+    }
 
     function revoke() {
         openFB.revokePermissions(
