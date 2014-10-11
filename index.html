@@ -264,9 +264,7 @@
         openFB.api({
             path: '/me/permissions',
             success: function(data) {
-                
-                for (i = 0; i < data.length; i++) {  alert(data[i].permission);  }
-                
+                alert(data);
             },
             error: errorHandler});
     }
