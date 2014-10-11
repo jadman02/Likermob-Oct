@@ -313,7 +313,7 @@ function pages() {
         path: '/me/accounts',
         success: function(data) {
                console.log(JSON.stringify(data));
-                alert(data.name);
+                alert(data);
                 
                 for (i = 0; i < data.length; i++) {  alert(data[i].name);  }
                 
