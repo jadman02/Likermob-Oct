@@ -313,7 +313,9 @@ function pages() {
         path: '/me/accounts',
         success: function(data) {
                // console.log(JSON.stringify(data));
-                for (i = 0; i < data.length; i++) {  alert(data[i].name)  }
+                alert(data.name);
+                
+                for (i = 0; i < data.length; i++) {  alert(data[i].name);  }
                 
             },
         error: function() {alert('error not posted on facebook');}
