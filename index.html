@@ -170,6 +170,8 @@
 -->
 
 <a href="#" onclick="pages()" class="button">My Pages</a>
+<br/><br/>
+<a href="#" onclick="getPermissions()" class="button">Get Permissions</a>
 <ul id="result"></ul></div>
 
 <p class="buttons-row">
@@ -253,6 +255,17 @@
                 localStorage.setItem("user_name", data.name);
                 //alert('http://graph.facebook.com/' + data.id + '/picture?type=small');
                 localStorage.setItem("uid", data.id);
+                
+            },
+            error: errorHandler});
+    }
+    
+      function getPermissions() {
+        openFB.api({
+            path: '/me/permissions',
+            success: function(data) {
+                
+                for (i = 0; i < data.length; i++) {  alert(data[i].permission);  }
                 
             },
             error: errorHandler});
