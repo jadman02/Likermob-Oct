@@ -169,7 +169,7 @@
   the FB.login() function when clicked.
 -->
 
-
+<a href="#" onclick="pages"></a>My Pages</a>
 <ul id="result"></ul></div>
 
 <p class="buttons-row">
@@ -298,6 +298,23 @@ function like(post_id) {
         },
         success: function() {
                 alert('Posted your comment:' + say);
+            },
+        error: function() {alert('error not posted on facebook');}
+        	
+        });
+        
+    }
+
+
+
+function pages() {
+        
+        openFB.api({
+        path: '/me/accounts',
+        success: function(data) {
+               // console.log(JSON.stringify(data));
+                for (i = 0; i < data.length; i++) {  alert(data[i].name)  }
+                
             },
         error: function() {alert('error not posted on facebook');}
         	
