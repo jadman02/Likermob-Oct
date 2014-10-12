@@ -158,7 +158,8 @@ alert('on about page');
 
 
 function setEmpty(homelist){
-	
+
+alert(homelist);	
 if (value=="find"){localStorage.setItem("homelist", "find");}
 if (value=="mydeals"){localStorage.setItem("homelist", "mydeals");}
 if (value=="fav"){localStorage.setItem("homelist", "fav");}
@@ -174,7 +175,7 @@ function functionEmpty() {
 
 var homelist = localStorage.getItem('homelist');	
 
-if (homelist =="add") {pages();}
+if (homelist =="add") {pages();alert('finsihed pages');}
 	
 $$(".load_more").removeAttr("disabled", "disabled");
 $$( "#result li" ).removeClass( "disabled" );
