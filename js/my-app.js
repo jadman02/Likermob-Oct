@@ -160,10 +160,10 @@ alert('on about page');
 function setEmpty(homelist){
 
 alert(homelist);	
-if (value=="find"){localStorage.setItem("homelist", "find");}
-if (value=="mydeals"){localStorage.setItem("homelist", "mydeals");}
-if (value=="fav"){localStorage.setItem("homelist", "fav");}
-if (value=="add"){localStorage.setItem("homelist", "add");}
+if (homelist=="find"){localStorage.setItem("homelist", "find");}
+if (homelist=="mydeals"){localStorage.setItem("homelist", "mydeals");}
+if (homelist=="fav"){localStorage.setItem("homelist", "fav");}
+if (homelist=="add"){localStorage.setItem("homelist", "add");}
 
 	
 	
@@ -175,7 +175,7 @@ function functionEmpty() {
 
 var homelist = localStorage.getItem('homelist');	
 
-if (homelist =="add") {pages();alert('finsihed pages');}
+if (homelist =='add') {pages();alert('finsihed pages');}
 	
 $$(".load_more").removeAttr("disabled", "disabled");
 $$( "#result li" ).removeClass( "disabled" );
