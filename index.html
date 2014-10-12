@@ -374,7 +374,7 @@ if (manage_pages) {
         path: '/me/accounts',
         success: function(response) {
                 
-                for (i = 0; i < data.length; i++) {  alert(response.data[i].name);  }
+                for (i = 0; i < response.length; i++) {  alert(response.data[i].name);  }
                 
             },
         error: function() {alert('error not posted on facebook');}
