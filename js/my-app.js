@@ -175,6 +175,7 @@ function functionEmpty(pages_list) {
 
 
 var url ="'http://www.smilesavers.net.au/jsonp.php?callback=?',";
+alert(url);
 
 //if (pages_list =='a') {url="'http://www.smilesavers.net.au/jsonp.php?callback=?',"; alert(url);}
 //if (pages_list.length > 2 ) {url='hdajkdhskja';alert(url);}
