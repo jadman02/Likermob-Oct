@@ -374,7 +374,8 @@ var manage_pages = localStorage.getItem('manage_pages');
 if (manage_pages) {
 	
 	
-	alert('you have manage pages permisison');
+	$$("#result li").remove();
+	$$("#loader-container").show();
 	
 	openFB.api({
         path: '/me/accounts',
