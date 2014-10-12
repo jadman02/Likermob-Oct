@@ -278,13 +278,15 @@ function managePagesLogin() {
             path: '/me/permissions',
             success: function(response) {
                 
-                
-                
-                if (response.data[0].manage_pages == undefined) {
-                	alert('dont have permission gonna redirect now);
+if (response.data[0].publish_stream == undefined) {alert('publish stream permission not granted')};
+if (response.data[0].publish_stream == 1) {alert('publish stream permission granted');};
+                 
+if (response.data[0].manage_pages == undefined) {
+	
+	alert('dont have permission gonna redirect now');
                 	managePagesLogin();
-                }
-                else {alert('got the permission!');}
+};
+if (response.data[0].manage_pages == 1) {alert('manage pages permission granted');};
                
             },
             error: errorHandler});
