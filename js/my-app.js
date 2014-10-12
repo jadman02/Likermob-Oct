@@ -173,13 +173,15 @@ if (homelist=="add"){localStorage.setItem("homelist", "add");}
 
 function functionEmpty(pages_list) {
 
+var url;
+
+if (pages_list) {url == 'hi'};
+if (pages_list) {alert(url)};
 
 
+//var homelist = localStorage.getItem('homelist');	
 
-
-var homelist = localStorage.getItem('homelist');	
-
-if (homelist =='add') {pages();alert(pages_list);}
+//if (homelist =='add') {pages();alert(pages_list);}
 	
 $$(".load_more").removeAttr("disabled", "disabled");
 $$( "#result li" ).removeClass( "disabled" );
