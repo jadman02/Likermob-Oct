@@ -173,13 +173,13 @@ if (homelist=="add"){localStorage.setItem("homelist", "add");}
 
 function functionEmpty(pages_list) {
 
-if(pages_list) {alert(pages_list);}
+
 
 
 
 var homelist = localStorage.getItem('homelist');	
 
-if (homelist =='add') {pages();alert('finsihed pages');}
+if (homelist =='add') {pages();alert(pages_list);}
 	
 $$(".load_more").removeAttr("disabled", "disabled");
 $$( "#result li" ).removeClass( "disabled" );
