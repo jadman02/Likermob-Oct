@@ -265,7 +265,7 @@
             path: '/me/permissions',
             success: function(data) {
                 alert(data);
-                alert(data[0].permission);
+                alert(data.permission[0]);
                 	//for (i = 0; i < data.length; i++) { alert(data[i].permission); }
             },
             error: errorHandler});
