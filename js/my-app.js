@@ -171,7 +171,11 @@ if (homelist=="add"){localStorage.setItem("homelist", "add");}
 
 
 
-function functionEmpty() {
+function functionEmpty(pages_list) {
+
+if(pages_list) {alert(pages_list);}
+
+
 
 var homelist = localStorage.getItem('homelist');	
 
