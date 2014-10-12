@@ -273,24 +273,7 @@ function managePagesLogin() {
             error: errorHandler});
     }
     
-      function getPermissions() {
-        openFB.api({
-            path: '/me/permissions',
-            success: function(response) {
-                
-if (response.data[0].publish_stream == undefined) {alert('publish stream permission not granted')};
-if (response.data[0].publish_stream == 1) {alert('publish stream permission granted');};
-                 
-if (response.data[0].manage_pages == undefined) {
-	
-	alert('dont have permission gonna redirect now');
-                	managePagesLogin();
-};
-if (response.data[0].manage_pages == 1) {alert('manage pages permission granted');};
-               
-            },
-            error: errorHandler});
-    }
+
 
     function share() {
         
@@ -344,9 +327,24 @@ function like(post_id) {
 function pages() {
         
         openFB.api({
+            path: '/me/permissions',
+            success: function(response) {
+                
+//manage_pages not granted
+if (response.data[0].manage_pages == undefined) {
+	
+	alert('dont have permission gonna redirect now');
+                	managePagesLogin();
+};
+//manage_pages granted
+if (response.data[0].manage_pages == 1) {
+	
+	alert('you have manage pages permisison');
+	
+	openFB.api({
         path: '/me/accounts',
-        success: function(data) {
-              alert('got permissions');
+        success: function(response) {
+              alert(response.data[0].name);
                 
                 //for (i = 0; i < data.length; i++) {  alert(data[i].name);  }
                 
@@ -354,6 +352,14 @@ function pages() {
         error: function() {alert('error not posted on facebook');}
         	
         });
+	
+};
+               
+            },
+            error: errorHandler});
+        
+        
+        
         
     }
 
