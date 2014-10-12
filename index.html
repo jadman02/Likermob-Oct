@@ -264,12 +264,11 @@
         openFB.api({
             path: '/me/permissions',
             success: function(response) {
-                var perms = response.data[0];
-                if (perms.publish_stream) {                
-               alert('permission granted';)
-            } else {                
-               alert('permission not granted';)
-            }   
+                
+                if (response.data[0].publish_stream == undefined) {alert('permission not granted')};
+                if (response.data[0].publish_stream == 1) {alert('permission granted');};
+                
+               
             },
             error: errorHandler});
     }
