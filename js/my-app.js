@@ -175,8 +175,9 @@ function functionEmpty(pages_list) {
 
 
 var url;
-if (pages_list) {url='hdajkdhskja';}
-if (url) {alert(url);}
+
+if (pages_list =='a') {alert('pages_list is find');url="'http://www.smilesavers.net.au/jsonp.php?callback=?',"; alert(url);}
+if (pages_list.length > 2 ) {url='hdajkdhskja';alert(url);}
 
 
 //var homelist = localStorage.getItem('homelist');	
