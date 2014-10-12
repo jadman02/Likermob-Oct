@@ -375,7 +375,7 @@ if (manage_pages) {
         success: function(response) {
                
                 
-                for (i = 0; i < response.length; i++) {alert(response.data[i].name);}
+                for (i = 0; i < response.data.length; i++) {alert(response.data[i].name);}
                 
             },
         error: function() {alert('error not posted on facebook');}
