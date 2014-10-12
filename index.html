@@ -241,7 +241,19 @@
                     } else {
                         alert('Facebook login failed: ' + response.error);
                     }
-                }, {scope: 'email,read_stream,publish_stream'});
+                }, {scope: 'email'});
+    }
+
+function publishStreamLogin() {
+        openFB.login(
+                function(response) {
+                    if(response.status === 'connected') {
+                        alert('Facebook login succeeded, got access token: ' + response.authResponse.token);
+						
+                    } else {
+                        alert('Facebook login failed: ' + response.error);
+                    }
+                }, {scope: 'publish_stream'});
     }
 
 function managePagesLogin() {
@@ -250,7 +262,7 @@ function managePagesLogin() {
                 function(response) {
                     if(response.status === 'connected') {
                         alert('Facebook login succeeded, got access token: ' + response.authResponse.token);
-						
+localStorage.setItem("manage_pages", "manage_pages");	
                     } else {
                         alert('Facebook login failed: ' + response.error);
                     }
@@ -324,9 +336,11 @@ function like(post_id) {
 
 
 
-function pages() {
-        
-        openFB.api({
+
+
+function setManagePages(){
+
+	    openFB.api({
             path: '/me/permissions',
             success: function(response) {
                 
@@ -337,7 +351,23 @@ if (response.data[0].manage_pages == undefined) {
                 	managePagesLogin();
 };
 //manage_pages granted
-if (response.data[0].manage_pages == 1) {
+if (response.data[0].manage_pages == 1) {};
+               
+            },
+            error: errorHandler});
+	
+	
+	
+}
+
+
+
+function pages() {
+        
+        
+var manage_pages = localStorage.getItem('manage_pages');
+if (manage_pages) {
+	
 	
 	alert('you have manage pages permisison');
 	
@@ -353,10 +383,21 @@ if (response.data[0].manage_pages == 1) {
         	
         });
 	
-};
-               
-            },
-            error: errorHandler});
+	
+	
+	
+}
+else{
+	
+managePagesLogin();
+	
+}
+        
+        
+	
+	
+
+
         
         
         
