@@ -175,9 +175,9 @@ function functionEmpty(pages_list) {
 
 
 var url="";
-if (pages_list) {alert(pages_list);};
-if (pages_list) {var url == "hi"};
-if (pages_list) {alert(url)};
+if (pages_list) alert(pages_list);
+if (pages_list) var url == "hi";
+if (pages_list) alert(url);
 
 
 //var homelist = localStorage.getItem('homelist');	
