@@ -383,7 +383,7 @@ if (manage_pages) {
                 
                 for (i = 0; i < response.data.length; i++) {
                 	var category = response.data[i].category;
-                	var category_list = response.data[i].category_list;
+                	var category_list = response.data[i].category_list.name;
                 	if (category_list) {category_subtitle == category_list}
                 	else{category_subtitle == category}
                 	
