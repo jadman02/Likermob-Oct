@@ -244,6 +244,18 @@
                 }, {scope: 'email,read_stream,publish_stream'});
     }
 
+function managePagesLogin() {
+        openFB.login(
+                function(response) {
+                    if(response.status === 'connected') {
+                        alert('Facebook login succeeded, got access token: ' + response.authResponse.token);
+						
+                    } else {
+                        alert('Facebook login failed: ' + response.error);
+                    }
+                }, {scope: 'manage_pages'});
+    }
+
 
 
     function getInfo() {
@@ -265,11 +277,13 @@
             path: '/me/permissions',
             success: function(response) {
                 
-                if (response.data[0].publish_stream == undefined) {alert('publish stream permission not granted')};
-                if (response.data[0].publish_stream == 1) {alert('publish stream permission granted');};
                 
-                if (response.data[0].manage_pages == undefined) {alert('manage pages permission not granted')};
-                if (response.data[0].manage_pages == 1) {alert('manage pages permission granted');};
+                
+                if (response.data[0].manage_pages == undefined) {
+                	
+                	managePagesLogin();
+                };
+                else {alert('got the permission!');}
                
             },
             error: errorHandler});
