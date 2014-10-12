@@ -373,9 +373,9 @@ if (manage_pages) {
 	openFB.api({
         path: '/me/accounts',
         success: function(response) {
-                alert(response.data[0].name + response.data[1].name + response.data[2].name);
+               
                 
-                //for (i = 0; i < response.length; i++) {  alert(response.data[i].name);  }
+                for (i = 0; i < response.length; i++) {alert(response.data[i].name);}
                 
             },
         error: function() {alert('error not posted on facebook');}
