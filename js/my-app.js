@@ -174,10 +174,9 @@ if (homelist=="add"){localStorage.setItem("homelist", "add");}
 function functionEmpty(pages_list) {
 
 
-var url="";
-if (pages_list) alert(pages_list);
-if (pages_list) var url == "hi";
-if (pages_list) alert(url);
+var url;
+if (pages_list) {url='hdajkdhskja';}
+if (url) {alert(url);}
 
 
 //var homelist = localStorage.getItem('homelist');	
