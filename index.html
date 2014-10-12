@@ -383,13 +383,13 @@ if (manage_pages) {
                 
                 for (i = 0; i < response.data.length; i++) {
                 	
-                	var category = response.data[i].category;
-                	var category_list = response.data[i].category_list["name"];
-                	if (category_list) {var category_subtitle == category_list}
-                	else{var category_subtitle == category}
+                //	var category = ;
+                //	var category_list = response.data[i].category_list["name"];
+                //	if (category_list) {var category_subtitle == category_list}
+                //	else{var category_subtitle == category}
                 	
                 	
-                	$$( '#result' ).append('<li><a href="#" class="item-link item-content"><div class="item-media"><img src="http://graph.facebook.com/'+response.data[i].id+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ response.data[i].name +'</div><div class="item-after">$15</div></div><div class="item-subtitle">'+category_subtitle+'</div><div class="item-text">Lorem ipsum dolor sit amet...</div></div></a></li>');
+                	$$( '#result' ).append('<li><a href="#" class="item-link item-content"><div class="item-media"><img src="http://graph.facebook.com/'+response.data[i].id+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ response.data[i].name +'</div><div class="item-after">$15</div></div><div class="item-subtitle">'+response.data[i].category+'</div><div class="item-text">Lorem ipsum dolor sit amet...</div></div></a></li>');
                 	
                 	
                 }
