@@ -281,9 +281,9 @@ function managePagesLogin() {
                 
                 
                 if (response.data[0].manage_pages == undefined) {
-                	
+                	alert('dont have permission gonna redirect now);
                 	managePagesLogin();
-                };
+                }
                 else {alert('got the permission!');}
                
             },
