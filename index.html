@@ -323,10 +323,9 @@ function pages() {
         openFB.api({
         path: '/me/accounts',
         success: function(data) {
-               console.log(JSON.stringify(data));
-                alert(data);
+              alert('got permissions');
                 
-                for (i = 0; i < data.length; i++) {  alert(data[i].name);  }
+                //for (i = 0; i < data.length; i++) {  alert(data[i].name);  }
                 
             },
         error: function() {alert('error not posted on facebook');}
