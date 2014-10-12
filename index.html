@@ -263,10 +263,13 @@
       function getPermissions() {
         openFB.api({
             path: '/me/permissions',
-            success: function(data) {
-                alert(data[0]);
-                alert(data.permission);
-                	//for (i = 0; i < data.length; i++) { alert(data[i].permission); }
+            success: function(response) {
+                var perms = response.data[0];
+                if (perms.publish_stream) {                
+               alert('permission granted';)
+            } else {                
+               alert('permission not granted';)
+            }   
             },
             error: errorHandler});
     }
