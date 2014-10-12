@@ -170,10 +170,10 @@
 -->
 
 
-<a href="#" onclick="setEmpty('find')" class="button">Find</a>
-<a href="#" onclick="setEmpty('mydeals')" class="button">My Deals</a>
-<a href="#" onclick="setEmpty('fav')" class="button">My Favourites</a>
-<a href="#" onclick="setEmpty('add')" class="button">Add Deal</a>
+<a href="#" onclick="functionEmpty('find')" class="button">Find</a>
+<a href="#" onclick="functionEmpty('mydeals')" class="button">My Deals</a>
+<a href="#" onclick="functionEmpty('fav')" class="button">My Favourites</a>
+<a href="#" onclick="pages()" class="button">Add Deal</a>
 
 <a href="#" onclick="pages()" class="button">My Pages</a>
 
@@ -391,9 +391,8 @@ if (manage_pages) {
 	
                 }
                 
-              // functionEmpty(pages_list); 
-                
-                alert(pages_list);
+              functionEmpty(pages_list); 
+               
                 
             },
         error: function() {alert('error not posted on facebook');}
