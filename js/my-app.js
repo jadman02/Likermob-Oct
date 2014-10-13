@@ -173,13 +173,13 @@ if (homelist=="add"){localStorage.setItem("homelist", "add");}
 
 function functionEmpty(pages_list) {
 
-
+$$("#result li").remove();
 var data_send = '';
 var domain = 'jsonp';
 
 alert(domain);
-if (pages_list) {alert(pages_list);domain == 'pepe';alert(domain);}
-//if (pages_list.length > 2) {alert(pages_list);url == "'http://www.smilesavers.net.au/getpages.php?callback=?'";}
+if (pages_list == 'a') {alert('you clicked a');domain == 'jsonp';alert(domain);}
+if (pages_list.length > 2) {alert('you clicked add deal');domain == 'getpages';data_send == pages_list; alert(domain);alert(data_send);}
 
 
 
@@ -188,7 +188,6 @@ if (pages_list) {alert(pages_list);domain == 'pepe';alert(domain);}
 //if (homelist =='add') {pages();alert(pages_list);}
 	
 $$(".load_more").removeAttr("disabled", "disabled");
-$$( "#result li" ).removeClass( "disabled" );
 $$(".load_previous").attr("disabled", "disabled");
 var track_click = 0;
 
