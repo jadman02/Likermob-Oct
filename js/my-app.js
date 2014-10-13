@@ -174,9 +174,9 @@ var domain;
 
 function functionEmpty(pages_list) {
 
-if (pages_list=='undefined') {alert('undefined');};
-if (pages_list == 'a') {alert('a');};
-if (pages_list.length > 2) {alert('add deal');};
+//if (pages_list=='undefined') {alert('undefined');};
+if (pages_list.length < 3) {alert('a');};
+if (pages_list.length > 3) {alert('add deal');};
 
 
 //if (pages_list="undefined") {domain = "jsonp";data_send = "";};
