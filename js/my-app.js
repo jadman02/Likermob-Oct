@@ -191,7 +191,7 @@ $$( "#result li" ).removeClass( "disabled" );
 $$(".load_previous").attr("disabled", "disabled");
 var track_click = 0;
 
-$$.getJSON(url, function(response){
+$$.getJSON(\''+ url  +'\', function(response){
 
 // Store
 localStorage.setItem("total_pages", response.length);
