@@ -172,9 +172,9 @@ if (homelist=="add"){localStorage.setItem("homelist", "add");}
 
 
 function functionEmpty(pages_list) {
+//pages_list=' + pages_list
 
-
-var data_send = 'pages_list=' + pages_list;
+var data_send = '';
 var domain = 'getpages';
 
 alert(domain);
