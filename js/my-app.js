@@ -188,7 +188,7 @@ $$( "#result li" ).removeClass( "disabled" );
 $$(".load_previous").attr("disabled", "disabled");
 var track_click = 0;
 
-$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
+$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', function(response){
 
 // Store
 localStorage.setItem("total_pages", response.length);
