@@ -176,7 +176,7 @@ function functionEmpty(pages_list) {
 //"pages_list=\'174238599281322\',\'50245567013\'"
 
 
-var data_send = 'pages_list=99993630530004399439999,99991075984494080049999';
+var data_send = 'pages_list=' + pages_list;
 var domain = 'getpages';
 
 alert(domain);
