@@ -174,12 +174,13 @@ if (homelist=="add"){localStorage.setItem("homelist", "add");}
 function functionEmpty(pages_list) {
 
 
-var data_send = '';
-var domain = '';
+var data_send = '$pages_list=' + pages_list;
+var domain = 'getpages';
 
 alert(domain);
-if (pages_list == 'a') {alert('you clicked a');domain = 'jsonp';alert(domain);}
-if (pages_list.length > 2) {alert('you clicked add deal');domain = 'getpages';data_send == '$pages_list=' + pages_list; alert(domain);alert(data_send);}
+alert(data_send);
+//if (pages_list == 'a') {alert('you clicked a');domain = 'jsonp';alert(domain);}
+//if (pages_list.length > 2) {alert('you clicked add deal');domain = 'getpages';data_send == '$pages_list=' + pages_list; alert(domain);alert(data_send);}
 
 
 
