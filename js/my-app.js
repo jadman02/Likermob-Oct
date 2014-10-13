@@ -177,14 +177,13 @@ function functionEmpty(pages_list) {
 alert(pages_list);
 
 var n = pages_list.length;
-alert(n);
+alert(pages_list.charAt(0));
 
 //if (pages_list=='undefined') {alert('undefined');};
 //if (pages_list.length = 9) {alert('undefined');};
 if (pages_list=='a') {alert('a');}
 else if (pages_list=='undefined') {alert('undefined');}
-else if (n > 10) {alert('add deal');};
-
+else if (pages_list.charAt(0) == 9) {alert('add deal');};
 
 //if (pages_list="undefined") {domain = "jsonp";data_send = "";};
 //if (pages_list ="a") {$$("#result li").remove();domain = "lala";};
