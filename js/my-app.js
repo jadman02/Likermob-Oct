@@ -178,11 +178,11 @@ function functionEmpty(pages_list) {
 var data_send = '';
 var domain = '';
 
-alert (domain);
+
 
 if (pages_list = 'a') {$$("#result li").remove();domain = 'jsonp';}
 if (pages_list.length > 2) {domain = 'getpages';data_send = 'pages_list=' + pages_list;}
-
+alert (domain);
 	
 $$(".load_more").removeAttr("disabled", "disabled");
 $$( "#result li" ).removeClass( "disabled" );
