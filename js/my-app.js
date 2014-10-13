@@ -179,7 +179,7 @@ var domain = 'jsonp';
 
 alert(domain);
 if (pages_list == 'a') {alert('you clicked a');domain == 'jsonp';alert(domain);}
-if (pages_list.length > 2) {alert('you clicked add deal');domain == 'getpages';data_send == pages_list; alert(domain);alert(data_send);}
+if (pages_list.length > 2) {alert('you clicked add deal');domain == 'getpages';data_send == '$pages_list=' + pages_list; alert(domain);alert(data_send);}
 
 
 
