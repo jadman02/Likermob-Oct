@@ -175,7 +175,7 @@ function functionEmpty(pages_list) {
 
 
 var data_send = '';
-var domain = 'jsonp';
+var domain = '';
 
 alert(domain);
 if (pages_list == 'a') {alert('you clicked a');domain == 'jsonp';alert(domain);}
