@@ -173,7 +173,7 @@ if (homelist=="add"){localStorage.setItem("homelist", "add");}
 
 function functionEmpty(pages_list) {
 
-
+alert(pages_list);
 
 var data_send = '';
 var domain = 'jsonp';
@@ -181,8 +181,9 @@ var domain = 'jsonp';
 
 
 //if (pages_list = 'b') {$$("#result li").remove();domain = 'jsonp';}
-if (pages_list.length > 2) {domain == 'getpages';data_send = 'pages_list=' + pages_list;}
+if (pages_list.length > 2) {domain = 'getpages';data_send = 'pages_list=' + pages_list;}
 alert ('domain value is:'+domain);
+alert ('data_send value is:'+data_send);
 	
 $$(".load_more").removeAttr("disabled", "disabled");
 $$( "#result li" ).removeClass( "disabled" );
