@@ -174,7 +174,7 @@ if (homelist=="add"){localStorage.setItem("homelist", "add");}
 function functionEmpty(pages_list) {
 
 
-
+var data_send = '';
 var domain = 'jsonp';
 alert(domain);
 //if (pages_list) {alert('on a');}
@@ -194,7 +194,7 @@ var track_click = 0;
 
 
 
-$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', '',function(response){
+$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
 
 // Store
 localStorage.setItem("total_pages", response.length);
