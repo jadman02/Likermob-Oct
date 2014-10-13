@@ -175,7 +175,7 @@ function functionEmpty(pages_list) {
 
 
 var url;
-if (pages_list) alert(pages_list);
+if (pages_list) {alert(pages_list);url == "'http://www.smilesavers.net.au/jsonp.php?callback=?'";}
 
 
 
@@ -225,7 +225,7 @@ $$(".load_more").removeAttr("disabled", "disabled");
 
 track_click--;
 
-$$.getJSON('http://www.smilesavers.net.au/jsonp.php?callback=?', function(response){
+$$.getJSON(url, function(response){
 $$("#result li").remove();
 
 
