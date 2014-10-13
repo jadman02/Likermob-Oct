@@ -229,7 +229,7 @@ $$(".load_more").removeAttr("disabled", "disabled");
 
 track_click--;
 
-$$.getJSON(url, function(response){
+$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
 $$("#result li").remove();
 
 
