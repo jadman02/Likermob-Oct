@@ -171,7 +171,7 @@ if (homelist=="add"){localStorage.setItem("homelist", "add");}
 
 
 
-function functionEmpty(pages_list) {
+function functionEmpty() {
 
 
 //var url ='http://www.smilesavers.net.au/jsonp.php?callback=?';
