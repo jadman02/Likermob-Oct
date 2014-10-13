@@ -174,9 +174,8 @@ var domain;
 
 function functionEmpty(pages_list) {
 
-alert(pages_list);
 
-var n = pages_list.length;
+alert(pages_list.substring(0,1));
 alert(pages_list.charAt(0));
 
 //if (pages_list=='undefined') {alert('undefined');};
