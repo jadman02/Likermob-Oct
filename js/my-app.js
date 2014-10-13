@@ -173,8 +173,10 @@ if (homelist=="add"){localStorage.setItem("homelist", "add");}
 
 function functionEmpty(pages_list) {
 
+//"pages_list=\'174238599281322\',\'50245567013\'"
 
-var data_send = "pages_list=\'174238599281322\',\'50245567013\'";
+
+var data_send = '174238599281322';
 var domain = 'getpages';
 
 alert(domain);
