@@ -181,7 +181,7 @@ alert(pages_list);
 //if (pages_list=='undefined') {alert('undefined');};
 //if (pages_list.length = 9) {alert('undefined');};
 if (pages_list=='a') {alert('got to a in the function');}
-if (pages_list=='undefined') {alert('undefined');}
+if (typeof pages_list === 'undefined') {alert('undefined');}
 if (pages_list instanceof Array) {alert('add deal');};
 
 //if (pages_list="undefined") {domain = "jsonp";data_send = "";};
