@@ -190,7 +190,7 @@ $$(".load_more").removeAttr("disabled", "disabled");
 $$( "#result li" ).removeClass( "disabled" );
 $$(".load_previous").attr("disabled", "disabled");
 var track_click = 0;
-
+alert(url);
 $$.getJSON(url, function(response){
 
 // Store
