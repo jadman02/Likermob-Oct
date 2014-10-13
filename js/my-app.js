@@ -195,7 +195,7 @@ var track_click = 0;
 
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
-$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data_send +'',function(response){
+$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', '',function(response){
 
 // Store
 localStorage.setItem("total_pages", response.length);
