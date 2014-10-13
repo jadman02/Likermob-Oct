@@ -174,20 +174,11 @@ var domain;
 
 function functionEmpty(pages_list) {
 
-
-var str = "99HELLO WORLD";
-var res = str.charAt(0)
-
-alert(res);
-
-alert(pages_list.substring(0,1));
-alert(pages_list.charAt(0));
-
 //if (pages_list=='undefined') {alert('undefined');};
 //if (pages_list.length = 9) {alert('undefined');};
-if (pages_list=='a') {alert('a');}
+if (pages_list=='a') {alert('got to a in the function');}
 else if (pages_list=='undefined') {alert('undefined');}
-else if (pages_list.charAt(0) == 9) {alert('add deal');};
+else if (page_list.charAt(0) == '9') {alert('add deal');};
 
 //if (pages_list="undefined") {domain = "jsonp";data_send = "";};
 //if (pages_list ="a") {$$("#result li").remove();domain = "lala";};
