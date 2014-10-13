@@ -180,13 +180,13 @@ alert(pages_list);
 
 //if (pages_list=='undefined') {alert('undefined');};
 //if (pages_list.length = 9) {alert('undefined');};
-if (pages_list=='a') {alert('got to a in the function');}
-if (typeof pages_list === 'undefined') {alert('undefined');}
-if (pages_list instanceof Array) {alert('add deal');};
+if (pages_list=='a') {domain = "jsonp";data_send = "";}
+if (typeof pages_list === 'undefined') {domain = "jsonp";data_send = "";}
+if (pages_list instanceof Array) {domain = "getpages";data_send = "pages_list=" + pages_list;};
 
-//if (pages_list="undefined") {domain = "jsonp";data_send = "";};
+//if (pages_list="undefined") {};
 //if (pages_list ="a") {$$("#result li").remove();domain = "lala";};
-//if (pages_list.length > 2) {domain = "getpages";data_send = "pages_list=" + pages_list;};
+//if (pages_list.length > 2) {};
 //alert ('domain value is:'+domain);
 //alert ('data_send value is:'+data_send);
 	
