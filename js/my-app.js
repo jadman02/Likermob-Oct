@@ -175,8 +175,8 @@ function functionEmpty(pages_list) {
 
 
 
-var url = "'http://www.smilesavers.net.au/jsonp.php?callback=?'";
-alert(url);
+var domain = 'jsonp';
+alert(domain);
 //if (pages_list) {alert('on a');}
 //if (pages_list.length > 2) {alert(pages_list);url == "'http://www.smilesavers.net.au/getpages.php?callback=?'";}
 
@@ -190,8 +190,8 @@ $$(".load_more").removeAttr("disabled", "disabled");
 $$( "#result li" ).removeClass( "disabled" );
 $$(".load_previous").attr("disabled", "disabled");
 var track_click = 0;
-alert(url);
-$$.getJSON(url, function(response){
+
+$$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', function(response){
 
 // Store
 localStorage.setItem("total_pages", response.length);
