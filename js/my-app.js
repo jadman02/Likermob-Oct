@@ -176,11 +176,14 @@ function functionEmpty(pages_list) {
 
 alert(pages_list);
 
+var n = pages_list.length;
+alert(n);
+
 //if (pages_list=='undefined') {alert('undefined');};
 //if (pages_list.length = 9) {alert('undefined');};
 if (pages_list=='a') {alert('a');}
 else if (pages_list=='undefined') {alert('undefined');}
-else if (pages_list.length > 10) {alert('add deal');};
+else if (n > 10) {alert('add deal');};
 
 
 //if (pages_list="undefined") {domain = "jsonp";data_send = "";};
