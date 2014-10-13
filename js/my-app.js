@@ -173,7 +173,7 @@ if (homelist=="add"){localStorage.setItem("homelist", "add");}
 
 function functionEmpty(pages_list) {
 
-$$("#result li").remove();
+
 var data_send = '';
 var domain = 'jsonp';
 
