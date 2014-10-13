@@ -176,7 +176,7 @@ function functionEmpty(pages_list) {
 
 
 var data_send = '';
-var domain = '';
+var domain = 'jsonp';
 
 if (pages_list == 'a') {$$("#result li").remove();domain = 'jsonp';}
 if (pages_list.length > 2) {domain = 'getpages';data_send = 'pages_list=' + pages_list;}
