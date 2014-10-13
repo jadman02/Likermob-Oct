@@ -180,8 +180,8 @@ alert(pages_list);
 
 
 if (pages_list="undefined") {domain = "jsonp";data_send = "";}
-if (pages_list = "a") {$$("#result li").remove();domain = "jsonp";}
-if (pages_list.length > 2) {domain = "getpages";data_send = "pages_list=" + pages_list;}
+if (pages_list = "a") {$$("#result li").remove();domain = "lala";}
+if (pages_list.length > 2) {domain == "getpages";data_send == "pages_list=" + pages_list;}
 alert ('domain value is:'+domain);
 alert ('data_send value is:'+data_send);
 	
