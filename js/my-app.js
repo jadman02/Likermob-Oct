@@ -10,7 +10,7 @@ var $$ = Dom7;
 myApp.onPageInit('index', function (page) {
 
 
-    functionEmpty('jsonp');
+    functionEmpty();
 
 });	
 
