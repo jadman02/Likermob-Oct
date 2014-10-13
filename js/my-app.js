@@ -174,21 +174,9 @@ var domain;
 
 function functionEmpty(pages_list) {
 
-alert(pages_list);
-
-
-
-//if (pages_list=='undefined') {alert('undefined');};
-//if (pages_list.length = 9) {alert('undefined');};
 if (pages_list=='a') {$$("#result li").remove();domain = "jsonp";data_send = "";}
 if (typeof pages_list === 'undefined') {domain = "jsonp";data_send = "";}
 if (pages_list instanceof Array) {domain = "getpages";data_send = "pages_list=" + pages_list;};
-
-//if (pages_list="undefined") {};
-//if (pages_list ="a") {$$("#result li").remove();domain = "lala";};
-//if (pages_list.length > 2) {};
-//alert ('domain value is:'+domain);
-//alert ('data_send value is:'+data_send);
 	
 $$(".load_more").removeAttr("disabled", "disabled");
 $$( "#result li" ).removeClass( "disabled" );
