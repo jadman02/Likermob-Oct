@@ -173,16 +173,11 @@ if (homelist=="add"){localStorage.setItem("homelist", "add");}
 
 function functionEmpty(pages_list) {
 
-//"pages_list=\'174238599281322\',\'50245567013\'"
+var data_send = ''pages_list=' + pages_list';
+var domain = '';
 
-
-var data_send = 'pages_list=' + pages_list;
-var domain = 'getpages';
-
-alert(domain);
-alert(data_send);
-//if (pages_list == 'a') {alert('you clicked a');domain = 'jsonp';alert(domain);}
-//if (pages_list.length > 2) {alert('you clicked add deal');domain = 'getpages';data_send == '$pages_list=' + pages_list; alert(domain);alert(data_send);}
+if (pages_list == 'a') {$$("#result li").remove();domain = 'jsonp';}
+if (pages_list.length > 2) {domain = 'getpages';data_send = 'pages_list=' + pages_list;}
 
 
 
