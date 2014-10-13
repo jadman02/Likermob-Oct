@@ -175,6 +175,11 @@ var domain;
 function functionEmpty(pages_list) {
 
 
+var str = "99HELLO WORLD";
+var res = str.charAt(0)
+
+alert(res);
+
 alert(pages_list.substring(0,1));
 alert(pages_list.charAt(0));
 
