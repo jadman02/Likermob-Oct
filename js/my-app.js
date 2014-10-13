@@ -169,14 +169,14 @@ if (homelist=="add"){localStorage.setItem("homelist", "add");}
 	
 }
 
-
+var data_send;
+var domain;
 
 function functionEmpty(pages_list) {
 
 alert(pages_list);
 
-var data_send;
-var domain;
+
 
 
 if (pages_list="undefined") {domain = "jsonp";data_send = "";}
