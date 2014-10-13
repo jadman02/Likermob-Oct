@@ -176,8 +176,9 @@ function functionEmpty(pages_list) {
 
 var data_send = '';
 var domain = 'jsonp';
+
 alert(domain);
-//if (pages_list) {alert('on a');}
+if (pages_list) {alert('on a');var domain == 'pepe';alert(domain);}
 //if (pages_list.length > 2) {alert(pages_list);url == "'http://www.smilesavers.net.au/getpages.php?callback=?'";}
 
 
