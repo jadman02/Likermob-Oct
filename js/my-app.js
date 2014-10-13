@@ -182,7 +182,7 @@ var domain = '';
 
 if (pages_list = 'b') {$$("#result li").remove();domain = 'jsonp';}
 if (pages_list.length > 2) {domain = 'getpages';data_send = 'pages_list=' + pages_list;}
-alert (domain);
+alert ('domain value is:'+domain);
 	
 $$(".load_more").removeAttr("disabled", "disabled");
 $$( "#result li" ).removeClass( "disabled" );
