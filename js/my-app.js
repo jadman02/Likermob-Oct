@@ -180,7 +180,7 @@ var domain = '';
 
 
 
-if (pages_list = 'b') {$$("#result li").remove();domain = 'jsonp';}
+//if (pages_list = 'b') {$$("#result li").remove();domain = 'jsonp';}
 if (pages_list.length > 2) {domain = 'getpages';data_send = 'pages_list=' + pages_list;}
 alert ('domain value is:'+domain);
 	
