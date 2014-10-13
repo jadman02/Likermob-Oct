@@ -174,10 +174,13 @@ var domain;
 
 function functionEmpty(pages_list) {
 
+alert(pages_list);
+
 //if (pages_list=='undefined') {alert('undefined');};
 //if (pages_list.length = 9) {alert('undefined');};
-if (pages_list.length < 10) {alert('a');};
-if (pages_list.length > 10) {alert('add deal');};
+if (pages_list=='a') {alert('a');}
+else if (pages_list=='undefined') {alert('undefined');}
+else {alert('add deal');};
 
 
 //if (pages_list="undefined") {domain = "jsonp";data_send = "";};
