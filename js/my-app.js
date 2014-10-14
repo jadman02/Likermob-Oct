@@ -676,7 +676,7 @@ var clear_description = description.replace(/qqqq/g, "'");
 
 
 myApp.modal({
-    title: '<a class="button" style="float:right;border:none;" href="#" onclick="closeModal();"><i class="pe-7s-close pe-lg"></i></a><div style="margin-left:25px;margin-right:25px;"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;padding-top:5px;padding-right:5px;"/>' + title + '</div>',
+    title: '<a class="button" style="float:right;border:none;margin-top:-10px;" href="#" onclick="closeModal();"><i class="pe-7s-close pe-lg"></i></a><div style="margin-left:25px;margin-right:25px;"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;padding-top:5px;padding-right:5px;"/>' + title + '</div>',
     text: '<div style="padding-left:25px;padding-right:25px;">' + clear_description + '</div>',
     afterText: '<div style="margin-top:10px;margin-bottom:-15px;height:49px;border-top:1px solid #ccc;width:270px;background-image:url(\'http://graph.facebook.com/' + uid + '/picture?type=small\');background-repeat:no-repeat;"><input id="commentbox" type="text" placeholder="Comment on Facebook" style="margin-left:49px;border:none;border-radius:0px; height:43px;margin-top:0px;font-size:14px;width:205px;"></div>',
     buttons: [
@@ -727,7 +727,71 @@ myApp.modal({
 	
 }
 
+function popUp(title,description,page_id,post_id){
 
+
+var user_name = localStorage.getItem('user_name');
+var uid = localStorage.getItem('uid');
+var clear_description = description.replace(/qqqq/g, "'");
+
+
+myApp.modal({
+    title: '<a class="button" style="float:right;border:none;margin-top:-10px;" href="#" onclick="closeModal();"><i class="pe-7s-close pe-lg"></i></a><div style="margin-left:25px;margin-right:25px;"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-right:10px;padding-top:5px;padding-right:5px;"/>' + title + '</div>',
+    text: '<div style="padding-left:25px;padding-right:25px;">' + clear_description + '</div>',
+    afterText: '<div style="margin-top:10px;margin-bottom:-15px;height:49px;border-top:1px solid #ccc;width:270px;background-image:url(\'http://graph.facebook.com/' + uid + '/picture?type=small\');background-repeat:no-repeat;"><input id="commentbox" type="text" placeholder="Comment on Facebook" style="margin-left:49px;border:none;border-radius:0px; height:43px;margin-top:0px;font-size:14px;width:205px;"></div>',
+    buttons: [
+      {
+        text: '<i class="pe-7s-like2 pe-lg"></i>',
+        onClick: function() {
+          
+          var inputcomment = $$("#commentbox").val();
+          
+          
+          if (inputcomment) {
+   comment(post_id,inputcomment);
+          myApp.swipeoutDelete('.s_'+ post_id);
+          like(post_id);
+} else {
+    alert('Oops! Please enter a comment to get this deal...')
+}
+          
+          
+          
+          
+          
+          
+        }
+      },
+      {
+        text: '<i class="pe-7s-info pe-lg"></i>',
+        onClick: function() {
+          getBusiness(page_id);
+          
+        }
+      },
+      {
+        text: '<i class="pe-7s-close-circle pe-lg"></i>',
+        bold: true,
+        onClick: function() {
+        	myApp.confirm('Are you sure want to permanently delete this deal?', 'Delete?, 
+      function () {
+        myApp.alert('You clicked Ok button');
+      },
+      function () {
+        myApp.alert('You clicked Cancel button');
+      }
+    );
+        }
+      },
+    ]
+  })
+
+
+
+
+	
+	
+}
 
 	
 	
