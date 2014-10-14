@@ -188,6 +188,11 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 // Store
 localStorage.setItem("total_pages", response.length);
 $$("#loader-container").hide();
+
+if (pages_list instanceof Array) {
+
+$$( '#result' ).append('<li><a href="#" class="button button-big">Big Button </a></li>');
+}
 for (i = 0; i < 10; i++) {        
 
 var str = response[i][4];
