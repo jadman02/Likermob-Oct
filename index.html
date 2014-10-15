@@ -383,17 +383,19 @@ if (manage_pages) {
                
                 
                 var pages_list = [];
-                var names_list = [];
+                
+                
+                $$( '#add_container' ).append('<div class="content-block"><div class="buttons-row"><!-- Link to 1st tab, active --><a href="#tab1" class="tab-link active button">Review</a><!-- Link to 2nd tab --><a href="#tab2" class="tab-link button">Add</a></div></div><div class="tabs"><div id="tab1" class="tab active"><ul id="container_list"></ul></div><div id="tab2" class="tab"><p>Add Deal</p></div></div>');
                 
                 for (i = 0; i < response.data.length; i++) {
                 
                 pages_list.push("999999"+ response.data[i].id +"999999");
-                 names_list.push(response.name[i].id);
+               $$( '#pages_list' ).append('<option>'+ response.data[i].name +'</option>');
                 
-                	//$$( '#result' ).append('<li><a href="#" class="item-link item-content"><div class="item-media"><img src="http://graph.facebook.com/'+response.data[i].id+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ response.data[i].name +'</div><div class="item-after">$15</div></div><div class="item-subtitle">'+response.data[i].category+'</div><div class="item-text">Lorem ipsum dolor sit amet...</div></div></a></li>');
+                	
 	
                 }
-              functionEmpty(pages_list,names_list); 
+              functionEmpty(pages_list); 
                
                 
             },
