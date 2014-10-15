@@ -376,7 +376,7 @@ if (manage_pages) {
 	
 	$$("#result li").remove();
 	$$("#loader-container").show();
-	
+	$$( '#add_container' ).append('<div class="content-block"><div class="buttons-row"><!-- Link to 1st tab, active --><a href="#tab1" class="tab-link active button">Review</a><!-- Link to 2nd tab --><a href="#tab2" class="tab-link button">Add</a></div></div><div class="tabs"><div id="tab1" class="tab active"><ul id="container_list"></ul></div><div id="tab2" class="tab"><div class="content-block-title">Labels and inputs</div><div class="list-block"><ul><!-- Text inputs --><li><div class="item-content"><div class="item-inner"><div class="item-title label">Name</div><div class="item-input"><input type="text" placeholder="Your name"></div></div></div></li><li><div class="item-content"><div class="item-inner"><div class="item-title label">E-mail</div><div class="item-input"><input type="email" placeholder="E-mail"></div></div></div></li></ul></div></div></div>');
 	openFB.api({
         path: '/me/accounts',
         success: function(response) {
@@ -385,7 +385,7 @@ if (manage_pages) {
                 var pages_list = [];
                 
                 
-                $$( '#add_container' ).append('<div class="content-block"><div class="buttons-row"><!-- Link to 1st tab, active --><a href="#tab1" class="tab-link active button">Review</a><!-- Link to 2nd tab --><a href="#tab2" class="tab-link button">Add</a></div></div><div class="tabs"><div id="tab1" class="tab active"><ul id="container_list"></ul></div><div id="tab2" class="tab"><div class="content-block-title">Labels and inputs</div><div class="list-block"><ul><!-- Text inputs --><li><div class="item-content"><div class="item-inner"><div class="item-title label">Name</div><div class="item-input"><input type="text" placeholder="Your name"></div></div></div></li><li><div class="item-content"><div class="item-inner"><div class="item-title label">E-mail</div><div class="item-input"><input type="email" placeholder="E-mail"></div></div></div></li></ul></div></div></div>');
+                
                 
                 for (i = 0; i < response.data.length; i++) {
                 
