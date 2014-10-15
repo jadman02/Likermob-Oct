@@ -191,12 +191,6 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 localStorage.setItem("total_pages", response.length);
 $$("#loader-container").hide();
 
-if (pages_list instanceof Array) {
-
-
-
-$$( '#add_container' ).append('<div class="content-block"><div class="buttons-row"><!-- Link to 1st tab, active --><a href="#tab1" class="tab-link active button">Review</a><!-- Link to 2nd tab --><a href="#tab2" class="tab-link button">Add</a></div></div><div class="tabs"><div id="tab1" class="tab active"><ul id="container_list"></ul></div><div id="tab2" class="tab"><p>Add Deal</p></div></div>');
-}
 for (i = 0; i < 10; i++) {        
 
 var str = response[i][4];
