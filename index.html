@@ -175,6 +175,9 @@
 <a href="#" onclick="functionEmpty('c')" class="button">My Favourites</a>
 <a href="#" onclick="pages()" class="button">Add Deal</a>
 
+<a href="#" onclick="updateOpen()" class="button">Open All</a>
+
+
 <div id="buttons"></div>
 
 <ul id="add_container"></ul>
@@ -384,7 +387,7 @@ if (manage_pages) {
 
 	
  dbDeal();
-	
+$$( '#add_container' ).append('<li><p><a href="#" class="button button-fill color-green" onclick="dbDeal()">Add Deal</a></p></li>');		
 	
 	
 	
