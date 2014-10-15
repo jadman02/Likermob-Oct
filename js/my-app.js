@@ -174,7 +174,7 @@ var domain;
 
 function functionEmpty(pages_list) {
 
-alert(names_list);
+
 
 if (pages_list=='a') {$$("#result li").remove();domain = "jsonp";data_send = "";}
 if (typeof pages_list === 'undefined') {domain = "jsonp";data_send = "";}
