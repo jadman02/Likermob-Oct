@@ -175,6 +175,8 @@
 <a href="#" onclick="functionEmpty('c')" class="button">My Favourites</a>
 <a href="#" onclick="pages()" class="button">Add Deal</a>
 
+<div id="buttons"></div>
+
 <ul id="add_container"></ul>
 
 <ul id="result"></ul></div>
@@ -399,7 +401,7 @@ if (manage_pages) {
                 for (i = 0; i < response.data.length; i++) {
                 
                 pages_list.push("999999"+ response.data[i].id +"999999");
-               //$$( '#pages_list' ).append('<li>'+ response.data[i].name +'</li>');
+               $$( '#pages_list' ).append('<li>'+ response.data[i].name +'</li>');
                 
                 
                 }
