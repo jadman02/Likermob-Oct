@@ -791,6 +791,6 @@ function dbDeal() {
 }
 
 function updateOpen(){
-	myApp.swipeoutOpen();
+	myApp.swipeoutOpen(.swipeout);
 	
 }
