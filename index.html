@@ -385,12 +385,12 @@ if (manage_pages) {
                 var pages_list = [];
                 
                 
-                $$( '#add_container' ).append('<div class="content-block"><div class="buttons-row"><!-- Link to 1st tab, active --><a href="#tab1" class="tab-link active button">Review</a><!-- Link to 2nd tab --><a href="#tab2" class="tab-link button">Add</a></div></div><div class="tabs"><div id="tab1" class="tab active"><ul id="container_list"></ul></div><div id="tab2" class="tab"><ul id="pages_list"></ul></div></div>');
+                $$( '#add_container' ).append('<div class="content-block"><div class="buttons-row"><!-- Link to 1st tab, active --><a href="#tab1" class="tab-link active button">Review</a><!-- Link to 2nd tab --><a href="#tab2" class="tab-link button">Add</a></div></div><div class="tabs"><div id="tab1" class="tab active"><ul id="container_list"></ul></div><div id="tab2" class="tab"><div class="content-block-title">Post a Deal for Likers</div><div class="list-block"><ul><!-- Text inputs --><li><div class="item-content"><div class="item-inner"><div class="item-title label">Select Page</div><div class="item-input"><select><option>Male</option><option>Female</option></select></div></div></div></li><li><div class="item-content"><div class="item-inner"><div class="item-title label">Title</div><div class="item-input"><input type="text" placeholder="Deal Title"></div></div></div></li><li><div class="item-content"><div class="item-inner"><div class="item-title label">Description</div><div class="item-input"><input type="text" placeholder="Deal Description"></div></div></div></li><li><div class="item-content"><div class="item-inner"><div class="item-title label">Terms</div><div class="item-input"><input type="text" placeholder="Terms and Conditions"></div></div></div></li><!-- Switch (Checkbox) --><li><div class="item-content"><div class="item-inner"><div class="item-title label">Comment required</div><div class="item-input"><label class="label-switch"><input type="checkbox"><div class="checkbox"></div></label></div></div></div></li><!-- Select --><li><div class="item-content"><div class="item-inner"><div class="item-title label">Category</div><div class="item-input"><select><option>Male</option><option>Female</option></select></div></div></div></li><!-- Date --><li><div class="item-content"><div class="item-inner"><div class="item-title label">Expiry Date</div><div class="item-input"><input type="date" placeholder="Deal will be removed after this date.."></div></div></div></li></ul></div></div></div>');
                 
                 for (i = 0; i < response.data.length; i++) {
                 
                 pages_list.push("999999"+ response.data[i].id +"999999");
-               $$( '#pages_list' ).append('<li>'+ response.data[i].name +'</li>');
+               //$$( '#pages_list' ).append('<li>'+ response.data[i].name +'</li>');
                 
                 	
 	
@@ -414,6 +414,10 @@ managePagesLogin();
 }
         
         
+
+
+
+
 	
 
 
