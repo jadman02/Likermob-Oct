@@ -383,15 +383,17 @@ if (manage_pages) {
                
                 
                 var pages_list = [];
+                var names_list = [];
                 
                 for (i = 0; i < response.data.length; i++) {
                 
                 pages_list.push("999999"+ response.data[i].id +"999999");
+                 names_list.push(response.name[i].id);
                 
                 	//$$( '#result' ).append('<li><a href="#" class="item-link item-content"><div class="item-media"><img src="http://graph.facebook.com/'+response.data[i].id+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row"><div class="item-title">'+ response.data[i].name +'</div><div class="item-after">$15</div></div><div class="item-subtitle">'+response.data[i].category+'</div><div class="item-text">Lorem ipsum dolor sit amet...</div></div></a></li>');
 	
                 }
-              functionEmpty(pages_list); 
+              functionEmpty(pages_list,names_list); 
                
                 
             },
