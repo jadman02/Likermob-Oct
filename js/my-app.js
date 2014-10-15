@@ -843,7 +843,7 @@ myApp.modal({
       function () {
         myApp.alert('You clicked Cancel button');
       }
-        }
+    );
       },
     ]
   })
