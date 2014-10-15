@@ -178,7 +178,7 @@ function functionEmpty(pages_list) {
 
 if (pages_list=='a') {$$("#result li").remove();domain = "jsonp";data_send = "";}
 if (typeof pages_list === 'undefined') {domain = "jsonp";data_send = "";}
-if (pages_list instanceof Array) {domain = "getpages";data_send = "pages_list=" + pages_list;};
+if (pages_list instanceof Array) {alert('add deal');domain = "getpages";data_send = "pages_list=" + pages_list;};
 	
 $$(".load_more").removeAttr("disabled", "disabled");
 $$( "#result li" ).removeClass( "disabled" );
