@@ -911,3 +911,15 @@ function getPhoto(){
       options);
 	
 }
+
+function capturePhoto(){
+	alert('photo-pre');
+    navigator.camera.getPicture(uploadPhoto,null,{sourceType:1,quality:60});
+    alert('photo-post');
+}
+
+function uploadPhoto(data){
+    // this is where you would send the image file to server
+    //output image to screen
+        cameraPic.src = "data:image/jpeg;base64," + data;
+    }
