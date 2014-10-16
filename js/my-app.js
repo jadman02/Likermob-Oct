@@ -836,7 +836,8 @@ myApp.modal({
         text: '<i class="pe-7s-close-circle pe-lg"></i>',
         bold: true,
         onClick: function() {
-        	myApp.confirm('Are you sure?', 'Custom Title', 
+        	
+myApp.confirm('Are you sure?', 'Custom Title', 
       function () {
         myApp.alert('You clicked Ok button');
       },
@@ -844,6 +845,9 @@ myApp.modal({
         myApp.alert('You clicked Cancel button');
       }
     );
+
+
+        }
       },
     ]
   })
