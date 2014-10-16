@@ -873,6 +873,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
 	$$( '.cover-add' ).css( 'background-repeat', 'no-repeat' );
+
 	
 });
 }
