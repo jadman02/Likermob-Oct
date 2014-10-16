@@ -775,7 +775,7 @@ function dbDeal(page_id) {
         '    <div class="page-content cover-add" style="margin-top:30px;background-size: 100%;background-repeat: no-repeat;">' +
         
         '      <div class="content-block" style="padding-top:40px;">' +
-        '<a href="#" class="button disabled" id="add_button" style="height:80px;border:none;margin:0 auto;margin-top:-100px;"><i class="pe-7s-plus pe-5x"></i></a>' +       
+        '<a href="#" class="button disabled" onclick="addPhoto()" id="add_button" style="height:80px;border:none;margin:0 auto;margin-top:-100px;"><i class="pe-7s-plus pe-5x"></i></a>' +       
         '<div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
                       
                      
@@ -889,37 +889,28 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 });
 }
 
-function getPhoto(){
+function addPhoto(){
 	
-	if (!navigator.camera) {
-      alert("Camera API not supported", "Error");
-      return;
-  }
-  var options =   {   quality: 50,
-                      destinationType: Camera.DestinationType.DATA_URL,
-                      sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Album
-                      encodingType: 0     // 0=JPG 1=PNG
-                  };
-
-  navigator.camera.getPicture(
-      function(imgData) {
-          alert('data:image/jpeg;base64,'+imgData);
-      },
-      function() {
-          alert('Error taking picture', 'Error');
-      },
-      options);
-	
+	var buttons = [
+        {
+            text: 'Take New Photo',
+            bold: true
+        },
+        {
+            text: 'Choose From Phone',
+            bold: true
+        },
+        {
+            text: 'Choose From Facebook',
+            onClick: function () {
+                facebookPhotos();
+            }
+        },
+        {
+            text: 'Cancel',
+            color: 'red'
+        },
+    ];
+    myApp.actions(buttons);
 }
 
-function capturePhoto(){
-	alert('photo-pre');
-    navigator.camera.getPicture(uploadPhoto,null,{sourceType:1,quality:60});
-    alert('photo-post');
-}
-
-function uploadPhoto(data){
-    // this is where you would send the image file to server
-    //output image to screen
-        cameraPic.src = "data:image/jpeg;base64," + data;
-    }
