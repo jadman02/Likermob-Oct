@@ -873,6 +873,8 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
 	$$( '.cover-add' ).css( 'background-repeat', 'no-repeat' );
+	$$('.a_' + page_id ).removeClass('.total_list');
+	$$('.total_list').remove();
 	$$( '.a_' + page_id ).css( 'background-color', '#5ac8fa' );
 
 	
