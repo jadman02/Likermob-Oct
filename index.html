@@ -53,97 +53,55 @@
     
     
        <!--cordova.js is automatically injected by the Cordova build process-->
-<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
 <script type="text/javascript" charset="utf-8">
 
-    var pictureSource;   // picture source
-    var destinationType; // sets the format of returned value
+function capturePhoto(){
+    navigator.camera.getPicture(uploadPhoto,null,{sourceType:1,quality:60});
+}
 
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready",onDeviceReady,false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-    	alert('evice ready');
-        pictureSource=navigator.camera.PictureSourceType;
-        destinationType=navigator.camera.DestinationType;
+function uploadPhoto(data){
+    // this is where you would send the image file to server
+    //output image to screen
+        cameraPic.src = "data:image/jpeg;base64," + data;
     }
 
-    // Called when a photo is successfully retrieved
-    //
-    function onPhotoDataSuccess(imageData) {
-      // Uncomment to view the base64-encoded image data
-      // console.log(imageData);
+navigator.notification.alert(message, alertCallback, [title], [buttonName]);
 
-      // Get image handle
-      //
-      var smallImage = document.getElementById('smallImage');
+navigator.notification.alert(
+        'Your Photo has been uploaded', // message
+        okay,                           // callback
+        'Photo Uploaded',               // title
+        'OK'                            // buttonName
+    );
 
-      // Unhide image elements
-      //
-      smallImage.style.display = 'block';
-
-      // Show the captured photo
-      // The in-line CSS rules are used to resize the image
-      //
-      smallImage.src = "data:image/jpeg;base64," + imageData;
+function uploadPhoto(data){
+    // this is where you would send the image file to server
+        cameraPic.src = "data:image/jpeg;base64," + data;
+        // Successful upload to the server
+        navigator.notification.alert(
+            'Your Photo has been uploaded',  // message
+            okay,                           // callback
+            'Photo Uploaded',              // title
+            'OK'                          // buttonName
+        );
+        // upload has failed Fail
+        /*
+        if (failedToUpload){
+        navigator.notification.alert(
+            'Your Photo has failed to upload',
+            failedDismissed,
+            'Photo Not Uploaded',
+            'OK'
+            );
+        }
+        */
     }
-
-    // Called when a photo is successfully retrieved
-    //
-    function onPhotoURISuccess(imageURI) {
-      // Uncomment to view the image file URI
-      // console.log(imageURI);
-
-      // Get image handle
-      //
-      var largeImage = document.getElementById('largeImage');
-
-      // Unhide image elements
-      //
-      largeImage.style.display = 'block';
-
-      // Show the captured photo
-      // The in-line CSS rules are used to resize the image
-      //
-      largeImage.src = imageURI;
-    }
-
-    // A button will call this function
-    //
-    function capturePhoto() {
-      // Take picture using device camera and retrieve image as base64-encoded string
-      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
-        destinationType: destinationType.DATA_URL });
-    }
-
-    // A button will call this function
-    //
-    function capturePhotoEdit() {
-      // Take picture using device camera, allow edit, and retrieve image as base64-encoded string
-      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
-        destinationType: destinationType.DATA_URL });
-    }
-
-    // A button will call this function
-    //
-    function getPhoto(source) {
-      // Retrieve image file location from specified source
-      navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
-        destinationType: destinationType.FILE_URI,
-        sourceType: source });
-    }
-
-    // Called if something bad happens.
-    //
-    function onFail(message) {
-      alert('Failed because: ' + message);
+    function okay(){
+        // Do something
     }
 
     </script>
-    
   </head>
   <body>
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
@@ -274,13 +232,12 @@
 <div id="myImage"></div>
 
 
-<a href="#" class="button" onclick="capturePhoto();">Capture Photo</a> <br>
-    <a href="#" class="button" onclick="capturePhotoEdit();">Capture Editable Photo</a> <br>
-    <a href="#" class="button" onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</a><br>
-    <a href="#" class="button" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</a><br>
-    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
-    <img style="display:none;" id="largeImage" src="" />
-
+<div id="camera">
+    <a href="#" class="camera-control button" onclick="capturePhoto();">Capture Photo</button>
+    <div style="text-align:center;margin:20px;">
+        <img id="cameraPic" src="" style="width:auto;height:120px;"></img>
+    </div>
+</div>
 
 <div id="buttons"></div>
 
