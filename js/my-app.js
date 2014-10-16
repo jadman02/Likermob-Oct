@@ -9,17 +9,7 @@ var $$ = Dom7;
 
 myApp.onPageInit('index', function (page) {
 
-    var pictureSource;   // picture source
-    var destinationType; // sets the format of returned value 
 
-    // Wait for PhoneGap to connect with the device
-    //
-
-
-
-
-        pictureSource=navigator.camera.PictureSourceType;
-        destinationType=navigator.camera.DestinationType;
 
 
 
@@ -897,7 +887,17 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 }
 
 
+    var pictureSource;   // picture source
+    var destinationType; // sets the format of returned value 
 
+    // Wait for PhoneGap to connect with the device
+    //
+
+
+
+
+        pictureSource=navigator.camera.PictureSourceType;
+        destinationType=navigator.camera.DestinationType;
 
 
     // Called when a photo is successfully retrieved
