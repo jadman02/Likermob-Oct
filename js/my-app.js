@@ -769,7 +769,7 @@ function dbDeal(page_id) {
         '    <div class="page-content cover-add" style="margin-top:30px;background-size: 100%;background-repeat: no-repeat;">' +
         
         '      <div class="content-block" style="padding-top:40px;">' +
-        '<a href="#" class="button" style="margin:0 auto;margin-top:-50px;"><i class="pe-7s-plus pe-5x"></i></a>' +       
+        '<a href="#" class="button" style="height:80px;border:none;margin:0 auto;margin-top:-50px;"><i class="pe-7s-plus pe-5x"></i></a>' +       
         '<div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
                       
                      
