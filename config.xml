@@ -20,6 +20,11 @@
 <gap:plugin name="org.apache.cordova.inappbrowser">
 <gap:plugin name="org.apache.cordova.camera"/>
 
+
+<feature name="Camera">
+    <param name="ios-package" value="CDVCamera" />
+</feature>
+
     <feature name="http://api.phonegap.com/1.0/geolocation"/>
     <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/notification"/>
