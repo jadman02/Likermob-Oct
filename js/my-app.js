@@ -775,7 +775,7 @@ function dbDeal(page_id) {
         '    <div class="page-content cover-add" style="margin-top:30px;background-size: 100%;background-repeat: no-repeat;">' +
         
         '      <div class="content-block" style="padding-top:40px;">' +
-        '<a href="#" class="button disabled" onclick="addPhoto()" id="add_button" style="height:80px;border:none;margin:0 auto;margin-top:-100px;"><i class="pe-7s-plus pe-5x"></i></a>' +       
+        '<a href="#" class="button disabled" onclick="facebookPhotos()" id="add_button" style="height:80px;border:none;margin:0 auto;margin-top:-100px;"><i class="pe-7s-plus pe-5x"></i></a>' +       
         '<div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
                       
                      
