@@ -769,9 +769,10 @@ function dbDeal(page_id) {
         '    <div class="page-content cover-add" style="margin-top:30px;background-size: 100%;background-repeat: no-repeat;">' +
         
         '      <div class="content-block" style="padding-top:40px;">' +
-        '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
+        '<i class="pe-7s-plus pe-3x "></i>' +'       
+        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
                       
-                     '<i class="pe-7s-plus pe-3x " style="margin-top:-150px;"></i>' +
+                     
                      '<div class="content-block-title" style="margin-top:-20px;">Step 1: Select Page</div>'+
                      '<div style="text-align:center;margin:0 auto;width:100%;" id="add-loader-container"><span class="preloader"></span></div>'+
                        '<div class="list-block" style="margin-top:-5px;"><ul id="pages_list"></ul></div>' +
