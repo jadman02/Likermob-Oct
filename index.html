@@ -296,6 +296,19 @@ localStorage.setItem("manage_pages", "manage_pages");
             error: errorHandler});
     }
     
+        function facebookPhotos(page_id) {
+        openFB.api({
+            path: '/' + page_id + '?fields=photos',
+            success: function(response) {
+                
+                alert('got through');
+                alert(response.photo[0].data["id"]);
+                
+               
+                
+            },
+            error: errorHandler});
+    }
 
 
     function share() {
