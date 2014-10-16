@@ -15,7 +15,7 @@ myApp.onPageInit('index', function (page) {
 
 
     functionEmpty();
-
+ onDeviceReady();
 
 
 });	
