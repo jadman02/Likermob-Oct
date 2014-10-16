@@ -786,27 +786,6 @@ function dbDeal() {
         '  </div>' +
         '</div>'
     );
-    
-    openFB.api({
-        path: '/me/accounts',
-        success: function(response) {
-               
-                
-                
-                
-                
-                for (i = 0; i < response.data.length; i++) {
-                
-               $$( '#pages_list' ).append('<li>'+ response.data[i].name +'</li>');
-                
-                
-                }
-               
-                
-            },
-        error: function() {alert('error not posted on facebook');}
-        	
-        });
 	
 	
 }
