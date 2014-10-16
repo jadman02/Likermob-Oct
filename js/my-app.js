@@ -16,8 +16,7 @@ myApp.onPageInit('index', function (page) {
 
     functionEmpty();
 
- pictureSource=navigator.camera.PictureSourceType;
-        destinationType=navigator.camera.DestinationType;
+
 
 });	
 
