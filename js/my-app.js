@@ -15,7 +15,7 @@ myApp.onPageInit('index', function (page) {
 
 
     functionEmpty();
- onDeviceReady();
+
 
 
 });	
@@ -892,6 +892,8 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 
  var pictureSource;   // picture source
     var destinationType; // sets the format of returned value
+    
+    document.addEventListener("deviceready",onDeviceReady,false);
     
     function onDeviceReady() {
        alert('device ready');
