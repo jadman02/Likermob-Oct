@@ -890,17 +890,17 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 }
 
 function getPhoto(){
-navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+navigator.camera.getPicture(onSuccess1, onFail1, { quality: 50,
     destinationType: Camera.DestinationType.DATA_URL
 });
 }
 
-function onSuccess(imageData) {
+function onSuccess1(imageData) {
 	alert('success');
     var image = document.getElementById('myImage');
     image.src = "data:image/jpeg;base64," + imageData;
 }
 
-function onFail(message) {
+function onFail1(message) {
     alert('Failed because: ' + message);
 }
