@@ -771,7 +771,7 @@ function dbDeal(page_id) {
         '      <div class="content-block" style="padding-top:40px;">' +
         '        <div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
                       
-                     '<i class="pe-7s-plus pe-3x "></i>' +
+                     '<i class="pe-7s-plus pe-3x " style="margin-top:-70px;"></i>' +
                      '<div class="content-block-title" style="background-color:white;">Step 1: Select Page</div>'+
                      '<div style="text-align:center;margin:0 auto;width:100%;" id="add-loader-container"><span class="preloader"></span></div>'+
                        '<div class="list-block" style="margin-top:-5px;"><ul id="pages_list"></ul></div>' +
