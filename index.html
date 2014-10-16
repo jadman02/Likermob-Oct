@@ -176,13 +176,12 @@
 <a href="#" onclick="pages()" class="button">Add Deal</a>
 
 
-<div id="camera">
-    <a href="#" class="camera-control button" onclick="capturePhoto();">Capture Photo</a>
- 
-    <div style="text-align:center;margin:20px;">
-        <img id="cameraPic" src="" style="width:auto;height:120px;"></img>
-    </div>
-</div>
+<a href="#" class="button" onclick="capturePhoto();">Capture Photo</a> <br>
+    <a href="#" class="button" onclick="capturePhotoEdit();">Capture Editable Photo</a> <br>
+    <a href="#" class="button" onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</a><br>
+    <a href="#" class="button" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</a><br>
+    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+    <img style="display:none;" id="largeImage" src="" />
 
 
 
