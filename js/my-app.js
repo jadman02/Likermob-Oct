@@ -15,7 +15,7 @@ myApp.onPageInit('index', function (page) {
 
 
     functionEmpty();
-
+onDeviceReady();
 
 
 });	
@@ -890,13 +890,86 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 }
 
 
-function capturePhoto(){
-    navigator.camera.getPicture(uploadPhoto,null,{sourceType:1,quality:60});
-}
+ var pictureSource;   // picture source
+    var destinationType; // sets the format of returned value
+   
+    
+    function onDeviceReady() {
+       alert('device ready');
+        pictureSource=navigator.camera.PictureSourceType;
+        destinationType=navigator.camera.DestinationType;
+    }
 
-function uploadPhoto(data){
-// this is where you would send the image file to server
- 
-//output image to screen
-    cameraPic.src = "data:image/jpeg;base64," + data;
-}
+    // Called when a photo is successfully retrieved
+    //
+    function onPhotoDataSuccess(imageData) {
+      
+      alert('imageData');
+      // Uncomment to view the base64 encoded image data
+      // console.log(imageData);
+
+      // Get image handle
+      //
+      var smallImage = document.getElementById('smallImage');
+
+      // Unhide image elements
+      //
+      smallImage.style.display = 'block';
+
+      // Show the captured photo
+      // The inline CSS rules are used to resize the image
+      //
+      smallImage.src = "data:image/jpeg;base64," + imageData;
+    }
+
+    // Called when a photo is successfully retrieved
+    //
+    function onPhotoURISuccess(imageURI) {
+      // Uncomment to view the image file URI 
+      // console.log(imageURI);
+ alert('imageURI');
+      // Get image handle
+      //
+      var largeImage = document.getElementById('largeImage');
+
+      // Unhide image elements
+      //
+      largeImage.style.display = 'block';
+
+      // Show the captured photo
+      // The inline CSS rules are used to resize the image
+      //
+      largeImage.src = imageURI;
+    }
+
+    // A button will call this function
+    //
+    function capturePhoto() {
+      alert('capturePhoto');
+      // Take picture using device camera and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50 });
+    }
+
+    // A button will call this function
+    //
+    function capturePhotoEdit() {
+      alert('capturePhotoEdit');
+      // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true }); 
+    }
+
+    // A button will call this function
+    //
+    function getPhoto(source) {
+     alert('getPhoto');
+      // Retrieve image file location from specified source
+      navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, 
+        destinationType: destinationType.FILE_URI,
+        sourceType: source });
+    }
+
+    // Called if something bad happens.
+    // 
+    function onFail(message) {
+      alert('Failed because: ' + message);
+    }
