@@ -315,14 +315,10 @@ localStorage.setItem("manage_pages", "manage_pages");
                 
                 }
                
-               var myPhotoBrowser = app.photoBrowser({
-    zoom: 400,
-    photos: ["'"+photos_list+"'"]
-});   
-myPhotoBrowser.open(); // open photo browser
+ 
                 
                 
-               alert(photos_list);
+               alert("'"+photos_list+"'");
                 
             },
             error: errorHandler});
