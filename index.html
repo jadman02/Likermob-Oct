@@ -309,10 +309,10 @@ localStorage.setItem("manage_pages", "manage_pages");
                 alert('got through');
                alert(response);
                
-                for (i = 0; i < response.albums.data.length; i++) {
+                for (i = 0; i < response.albums.data.photos.data.length; i++) {
                 
-                $$( '#pages_list' ).append('<li><img src="'+ response.albums.data[0].photos.data[i].source +'"/></li>');
-                photos_list.push("'" + response.albums.data[0].photos.data[i].source + "'");
+                $$( '#pages_list' ).append('<li><img src="'+ response.albums.data.photos.data[i].source +'"/></li>');
+                photos_list.push("'" + response.albums.data.photos.data[i].source + "'");
                
              
                 
