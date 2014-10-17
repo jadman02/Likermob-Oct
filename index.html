@@ -320,13 +320,12 @@ localStorage.setItem("manage_pages", "manage_pages");
  photo_browser = photos_list + ','
                 
                 
-               alert(photo_browser);
                 
                           
-//var myPhotoBrowserStandalone = myApp.photoBrowser({
-  //  photos : ["'"+photos_list+"'"]
-//});
-//myPhotoBrowserStandalone.open();
+var myPhotoBrowserStandalone = myApp.photoBrowser({
+    photos : [photo_browser]
+});
+myPhotoBrowserStandalone.open();
                               
                 
             },
