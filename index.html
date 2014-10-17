@@ -298,7 +298,7 @@ localStorage.setItem("manage_pages", "manage_pages");
     
         function facebookPhotos(page_id) {
         openFB.api({
-            path: '/573184906025652?fields=photos',
+            path: '/573184906025652?fields=photos&access_token=' + response.authResponse.token,
             success: function(response) {
                 
                 alert('got through');
