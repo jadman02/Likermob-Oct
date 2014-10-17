@@ -301,11 +301,15 @@ localStorage.setItem("manage_pages", "manage_pages");
             path: '/573184906025652?fields=photos&',
             success: function(response) {
                 
+                var photos_list = [];
+                
+                
                 alert('got through');
                
                
                 for (i = 0; i < response.photos.data.length; i++) {
-                alert(response.photos.data[i].picture);
+                photos_list.push(response.photos.data[i].picture);
+               
              
                 
                 
@@ -313,7 +317,7 @@ localStorage.setItem("manage_pages", "manage_pages");
                
                 
                 
-               
+               alert(photos_list);
                 
             },
             error: errorHandler});
