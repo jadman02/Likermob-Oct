@@ -311,7 +311,7 @@ localStorage.setItem("manage_pages", "manage_pages");
                
                 for (i = 0; i < response.photos.data.length; i++) {
                 
-                $$( '#pages_list' ).append('<li><img src='+ response.photos.data[i].picture +'/></li>'
+                $$( '#pages_list' ).append('<li><img src='+ response.photos.data[i].picture +'/></li>');
                 photos_list.push("'" + response.photos.data[i].picture + "'");
                
              
