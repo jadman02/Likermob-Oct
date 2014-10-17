@@ -914,3 +914,13 @@ function addPhoto(){
     myApp.actions(buttons);
 }
 
+function photoBrowser(){
+	
+	
+	var myPhotoBrowser = app.photoBrowser({
+    zoom: 400,
+    photos: ['https://scontent-b-sjc.xx.fbcdn.net/hphotos-xpf1/t31.0-8/c0.97.851.315/p851x315/1511727_1476557992580679_2758729195389603974_o.jpg']
+});   
+myPhotoBrowser.open(); // open photo browser
+	
+}
