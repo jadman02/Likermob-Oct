@@ -297,21 +297,20 @@ localStorage.setItem("manage_pages", "manage_pages");
     }
     
         function facebookPhotos(page_id) {
-
-        
         openFB.api({
             path: '/573184906025652?fields=photos&',
             success: function(response) {
-                        var photos_list = [];
+                
                 alert('got through');
+               alert(response);
                
-                for (i = 0; i < response.photos.data.length; i++) {
-
-             photos_list.push(response.photos.data[i].id;
+                //for (i = 0; i < response.data.length; i++) {
+                //alert(response.data[i].id);
+             
                 
                 
-                }
-               alert(photos_list);
+                //}
+               
                 
                 
                
