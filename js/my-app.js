@@ -118,7 +118,13 @@ var mainView = myApp.addView('.view-main', {
 });
 
 	
-
+var myPhotoBrowserStandalone = myApp.photoBrowser({
+    photos : [
+        'http://lorempixel.com/1024/1024/sports/1/',
+        'http://lorempixel.com/1024/1024/sports/2/',
+        'http://lorempixel.com/1024/1024/sports/3/',
+    ]
+});
 
 
 
@@ -923,6 +929,6 @@ function photoBrowser(){
 	
 	
 
-myPhotoBrowser.open(); // open photo browser
+myPhotoBrowserStandalone.open();
 	
 }
