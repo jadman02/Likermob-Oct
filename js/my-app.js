@@ -758,7 +758,7 @@ localStorage.setItem("order", order);
 
 }
 
-function dbDeal(page_id) {
+function dbDeal() {
 
 			mainView.loadContent(
         '<!-- Top Navbar-->' +
@@ -875,7 +875,7 @@ function getCover(page_id){
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
 	
 	
-	
+	facebookPhotos(page_id);
 	var coverpic = response["cover"]["source"];
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
