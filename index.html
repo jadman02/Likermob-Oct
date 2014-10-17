@@ -322,6 +322,15 @@ localStorage.setItem("manage_pages", "manage_pages");
                 
                alert("'"+photos_list+"'");
                 
+                          
+                          var myPhotoBrowserStandalone = myApp.photoBrowser({
+    photos : [
+        'http://lorempixel.com/1024/1024/sports/1/',
+        'http://lorempixel.com/1024/1024/sports/2/',
+        'http://lorempixel.com/1024/1024/sports/3/',
+    ]
+});
+myPhotoBrowserStandalone.open();
                               
                 
             },
@@ -447,14 +456,7 @@ $$( '#add_container' ).append('<li><p><a href="#" onclick="pages()" class="butto
               
               functionEmpty(pages_list); 
                
-               var myPhotoBrowserStandalone = myApp.photoBrowser({
-    photos : [
-        'http://lorempixel.com/1024/1024/sports/1/',
-        'http://lorempixel.com/1024/1024/sports/2/',
-        'http://lorempixel.com/1024/1024/sports/3/',
-    ]
-});
-myPhotoBrowserStandalone.open();
+               
                 
             },
         error: function() {alert('error not posted on facebook');}
