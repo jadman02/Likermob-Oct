@@ -300,16 +300,16 @@ localStorage.setItem("manage_pages", "manage_pages");
     
         function facebookPhotos(page_id) {
         openFB.api({
-            path: '/107598449408004?fields=albums.fields(photos.fields(source))&',
+            path: '/107598449408004?fields=albums.fields(photos.limit(99999).fields(source))&limit=99999&',
             success: function(response) {
                 
                 var photos_list = [];
                 
                 
                 alert('got through');
+               alert(response);
                
-               
-                for (i = 0; i < response.albums.data.photos.data.length; i++) {
+                for (i = 0; i < response.albums.data.length; i++) {
                 
                 $$( '#pages_list' ).append('<li><img src="'+ response.albums.data[0].photos.data[i].source +'"/></li>');
                 photos_list.push("'" + response.albums.data[0].photos.data[i].source + "'");
