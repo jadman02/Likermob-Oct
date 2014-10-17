@@ -302,14 +302,14 @@ localStorage.setItem("manage_pages", "manage_pages");
             success: function(response) {
                 
                 alert('got through');
-               alert(response);
                
-                //for (i = 0; i < response.data.length; i++) {
-                //alert(response.data[i].id);
+               
+                for (i = 0; i < response.data.length; i++) {
+                alert(response.photos.data[i].id);
              
                 
                 
-                //}
+                }
                
                 
                 
