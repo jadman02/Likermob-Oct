@@ -323,6 +323,9 @@ localStorage.setItem("manage_pages", "manage_pages");
                 
                           
 var myPhotoBrowserStandalone = myApp.photoBrowser({
+    onImageLoaded: function(photobrowser, slide, image){
+      alert(image);
+    },
     photos : photos_list
 });
 myPhotoBrowserStandalone.open();
