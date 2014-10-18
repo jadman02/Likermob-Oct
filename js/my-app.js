@@ -6,7 +6,18 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
-
+myApp.takePicture: function() {
+      navigator.camera.getPicture( function( imageURI ) {
+        alert( imageURI );
+      },
+      function( message ) {
+        alert( message );
+      },
+      {
+        quality: 50,
+        destinationType: Camera.DestinationType.FILE_URI
+      });
+    }
 
 myApp.onPageInit('index', function (page) {
 
