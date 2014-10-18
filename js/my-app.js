@@ -924,17 +924,15 @@ function addPhoto(){
 function photoBrowser(){
 	
 	
-	navigator.camera.getPicture(onSuccess1, onFail1, { quality: 50 }); 
-	alert('got past this point');
-
-	function onSuccess1(imageData1) {
-   alert('got through imagedata');
-    alert("data:image/jpeg;base64," + imageData1);
-}
-
-function onFail1(message1) {
-    alert('Failed because: ' + message1);
-}
+navigator.customCamera.getPicture(filename, function success(fileUri) {
+    alert("File location: " + fileUri);
+}, function failure(error) {
+    alert(error);
+}, {
+    quality: 80,
+    targetWidth: 120,
+    targetHeight: 120
+});
 	
 	
 }
