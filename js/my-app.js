@@ -224,6 +224,7 @@ $$( '#add_container' ).append('<li class="swipeout s_'+ response[i][2] +'"><img 
 
 
 }
+
 track_click++;
 $$(".load_more").show();
 $$(".load_previous").show();
@@ -914,4 +915,18 @@ function addPhoto(){
     myApp.actions(buttons);
 }
 
+function photoBrowser(){
+	
+	
+	navigator.camera.getPicture(onSuccess, onFail, { quality: 50 }); 
+	
+}
+
+function onSuccess(imageData) {
+    alert("data:image/jpeg;base64," + imageData);
+}
+
+function onFail(message) {
+    alert('Failed because: ' + message);
+}
 
