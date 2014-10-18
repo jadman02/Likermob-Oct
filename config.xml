@@ -18,12 +18,10 @@
 <gap:platform name="ios" />
  
 <gap:plugin name="org.apache.cordova.inappbrowser">
+<gap:plugin name="com.performanceactive.plugins.camera" />
 
 
 
-<feature name="Camera">
-    <param name="ios-package" value="CDVCamera" />
-</feature>
 
     <feature name="http://api.phonegap.com/1.0/geolocation"/>
     <feature name="http://api.phonegap.com/1.0/network"/>
