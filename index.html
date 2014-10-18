@@ -347,9 +347,7 @@ var modal = myApp.modal({
       },
     ]
   })
-  myApp.slider($$(modal).find('.slider-container'), {onSlideChangeEnd(myApp.slider) : function() {/Do something when you touch the slide
-      alert('OMG you touch the slide!') 
-    }, pagination: '.slider-pagination'});
+  myApp.slider($$(modal).find('.slider-container'), {pagination: '.slider-pagination'});
                 
             },
             error: errorHandler});
