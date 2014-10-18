@@ -6,19 +6,6 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
-takePicture: function() {
-      navigator.camera.getPicture( function( imageURI ) {
-        alert( imageURI );
-      },
-      function( message ) {
-        alert( message );
-      },
-      {
-        quality: 50,
-        destinationType: Camera.DestinationType.FILE_URI
-      });
-    }
-
 myApp.onPageInit('index', function (page) {
 
 
@@ -26,21 +13,6 @@ myApp.onPageInit('index', function (page) {
 
 
     functionEmpty();
-
-
-	
-alert('photo_browser');
-	
-navigator.camera.getPicture( function( imageURI ) {
-        document.getElementById("photoresult").innerHTML = imageURI;
-      },
-      function( message ) {
-       document.getElementById("photoresult").innerHTML = message;
-      },
-      {
-        quality: 50,
-        destinationType: Camera.DestinationType.FILE_URI
-      });
 	
 	
 
@@ -114,6 +86,43 @@ $$( '#resulty' ).append('<li class="item-content"><div class="item-media"></div>
  
 //And now we initialize app
 myApp.init();
+
+
+var app = {
+	
+	 // Application Constructor
+    initialize1: function() {
+        this.bindEvents();
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicity call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+       alert('deviceready');
+    },
+	
+	
+    takePicture: function() {
+      navigator.camera.getPicture( function( imageURI ) {
+        alert( imageURI );
+      },
+      function( message ) {
+        alert( message );
+      },
+      {
+        quality: 50,
+        destinationType: Camera.DestinationType.FILE_URI
+      });
+    }
+};
 
 
 
