@@ -310,31 +310,31 @@ localStorage.setItem("manage_pages", "manage_pages");
                 
                 for (j = 0; j < response.albums.data[i].photos.data.length; j++) {
                 	
-                	$$( '#pages_list' ).append('<li><img style="width:50%;float:left;padding:20px;" src="'+ response.albums.data[i].photos.data[j].picture +'"/></li>');
-                	
+                	//$$( '#pages_list' ).append('<li><img style="width:50%;float:left;padding:20px;" src="'+ response.albums.data[i].photos.data[j].picture +'"/></li>');
+                photos_list.push("'" + response.albums.data[i].photos.data[j].picture + "'");	
                 	
                 }
                 
                 
-                //photos_list.push("'" + response.albums.data.photos.data[i].source + "'");
+                
                
              
                 
                 
                 }
                
- //photo_browser = photos_list + ','
-                
-         //       alert(photo_browser);
+ photo_browser = photos_list + ','
+               
+               alert(photo_browser);
                 
                           
-//var myPhotoBrowserStandalone = myApp.photoBrowser({
-  //  onImageLoaded: function(photobrowser, slide, image){
-  //    alert(image);
-  //  },
-  //  photos : photos_list
-//});
-//myPhotoBrowserStandalone.open();
+var myPhotoBrowserStandalone = myApp.photoBrowser({
+    onImageLoaded: function(photobrowser, slide, image){
+      alert(image);
+    },
+    photos : photo_browser
+});
+myPhotoBrowserStandalone.open();
                               
                 
             },
