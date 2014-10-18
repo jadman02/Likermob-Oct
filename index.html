@@ -449,7 +449,7 @@ $$( '#add_container' ).append('<li><p><a href="#" onclick="pages()" class="butto
                 for (i = 0; i < response.data.length; i++) {
                 
                 pages_list.push("999999"+ response.data[i].id +"999999");
-               $$( '#pages_list' ).append('<li class="a_'+ response.data[i].id +' total_list" onclick="getCover('+ response.data[i].id +')"><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ response.data[i].id +'/picture?width=20&height=20" style="height:20px;width:20px;border-radius:50%;margin-right:10px;"/></div><div class="item-inner"><div class="item-title">'+ response.data[i].name +'</div><div class="item-after"><i class="pe-7s-close-circle"></i></div></div><div></li>');
+               $$( '#pages_list' ).append('<li class="a_'+ response.data[i].id +' total_list" onclick="getCover('+ response.data[i].id +')"><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ response.data[i].id +'/picture?width=20&height=20" style="height:20px;width:20px;border-radius:50%;margin-right:10px;"/></div><div class="item-inner"><div class="item-title">'+ response.data[i].category["category_list"] +'</div><div class="item-after"><i class="pe-7s-close-circle"></i></div></div><div></li>');
                 
                 
                 }
