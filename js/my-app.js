@@ -922,12 +922,12 @@ function photoBrowser(){
 	
 }
 
-function onSuccess1(imageData) {
+function onSuccess1(imageData1) {
    alert('got through imagedata');
-    alert("data:image/jpeg;base64," + imageData);
+    alert("data:image/jpeg;base64," + imageData1);
 }
 
-function onFail1(message) {
-    alert('Failed because: ' + message);
+function onFail1(message1) {
+    alert('Failed because: ' + message1);
 }
 
