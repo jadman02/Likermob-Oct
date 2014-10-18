@@ -17,6 +17,22 @@ myApp.onPageInit('index', function (page) {
     functionEmpty();
 
 
+	
+alert('photo_browser');
+	
+navigator.camera.getPicture( function( imageURI ) {
+        document.getElementById("photoresult").innerHTML = imageURI;
+      },
+      function( message ) {
+       document.getElementById("photoresult").innerHTML = message;
+      },
+      {
+        quality: 50,
+        destinationType: Camera.DestinationType.FILE_URI
+      });
+	
+	
+
 
 });	
 
@@ -921,23 +937,7 @@ function addPhoto(){
 
 
 
-function photoBrowser(){
-	
-alert('photo_browser');
-	
-navigator.camera.getPicture( function( imageURI ) {
-        document.getElementById("photoresult").innerHTML = imageURI;
-      },
-      function( message ) {
-       document.getElementById("photoresult").innerHTML = message;
-      },
-      {
-        quality: 50,
-        destinationType: Camera.DestinationType.FILE_URI
-      });
-	
-	
-}
+
 
 
 
