@@ -923,6 +923,7 @@ function addPhoto(){
 
 function photoBrowser(){
 	
+alert('photo_browser');
 	
 navigator.customCamera.getPicture(filename, function success(fileUri) {
     alert("File location: " + fileUri);
