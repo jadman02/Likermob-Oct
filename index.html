@@ -304,6 +304,8 @@ localStorage.setItem("manage_pages", "manage_pages");
                   
         var photos_list = [];
         
+        
+        
         openFB.api({
             path: '/'+ page_id +'?fields=albums.fields(photos.limit(99999).fields(picture,source))&limit=99999&',
             success: function(response) {
@@ -321,13 +323,12 @@ localStorage.setItem("manage_pages", "manage_pages");
                 }
 
 var photos_slider = photos_list.join("");               
-alert();
                 
                 
                           
 var modal = myApp.modal({
-    title: 'Awesome Photos?',
-    text: 'What do you think about my photos?',
+    title: 'Facebook Photos',
+    text: 'Include a photo with your deal?',
     afterText:  '<div class="slider-container" style="width: auto; margin:5px -15px">'+
                   '<div class="slider-pagination"></div>'+
                   '<div class="slider-wrapper">'+ photos_slider +
@@ -346,7 +347,10 @@ var modal = myApp.modal({
       },
     ]
   })
-  myApp.slider($$(modal).find('.slider-container'), {slidesPerView: 3, pagination: '.slider-pagination'});
+  myApp.slider($$(modal).find('.slider-container'), {onSlideChangeEnd(slider) : function() {
+      //Do something when you touch the slide
+      alert('OMG you touch the slide!') 
+    }, pagination: '.slider-pagination'});
                 
             },
             error: errorHandler});
