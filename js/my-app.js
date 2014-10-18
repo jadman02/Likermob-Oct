@@ -918,15 +918,16 @@ function addPhoto(){
 function photoBrowser(){
 	
 	
-	navigator.camera.getPicture(onSuccess, onFail, { quality: 50 }); 
+	navigator.camera.getPicture(onSuccess1, onFail1, { quality: 50 }); 
 	
 }
 
-function onSuccess(imageData) {
+function onSuccess1(imageData) {
+   alert('got through imagedata');
     alert("data:image/jpeg;base64," + imageData);
 }
 
-function onFail(message) {
+function onFail1(message) {
     alert('Failed because: ' + message);
 }
 
