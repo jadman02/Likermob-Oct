@@ -314,11 +314,12 @@ localStorage.setItem("manage_pages", "manage_pages");
                 
                 for (j = 0; j < response.albums.data[i].photos.data.length; j++) {
                 	
-                	alert(response.albums.data[i].photos.data[j].source);
+                	$$( '#pages_list' ).append('<li><img src="'+ response.albums.data[i].photos.data[j].source +'"/></li>');
+                	
                 	
                 }
                 
-                //$$( '#pages_list' ).append('<li><img src="'+ response.albums.data.photos.data[i].source +'"/></li>');
+                
                 //photos_list.push("'" + response.albums.data.photos.data[i].source + "'");
                
              
