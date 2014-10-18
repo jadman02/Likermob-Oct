@@ -322,14 +322,13 @@ localStorage.setItem("manage_pages", "manage_pages");
                 
                 
                 }
-               
- photo_browser = photos_list + ',';
+               var photo_browser = photos_list + ',';
                
                alert(photo_browser);
                 
                           
 var myPhotoBrowserStandalone = myApp.photoBrowser({
-    photos : photos_list
+    photos : photo_browser
 });
 myPhotoBrowserStandalone.open();
                               
