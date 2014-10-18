@@ -315,13 +315,13 @@ localStorage.setItem("manage_pages", "manage_pages");
                 for (j = 0; j < response.albums.data[i].photos.data.length; j++) {
                 
                 	//$$( '#pages_list' ).append('<li><img style="wi'dth:50%;float:left;padding:20px;" src="'+ response.albums.data[i].photos.data[j].picture +'"/></li>');
-               	photos_list.join('<div class="slider-slide"><img src="'+ response.albums.data[i].photos.data[j].picture +'" height="130" /></div>');
+               	photos_list.push('<div class="slider-slide"><img src="'+ response.albums.data[i].photos.data[j].picture +'" height="130" /></div>');
                 	
                 }
                 }
 
-               
-alert(photos_list);
+var photos_slider = photos_list.join("");               
+alert();
                 
                 
                           
@@ -330,7 +330,7 @@ var modal = myApp.modal({
     text: 'What do you think about my photos?',
     afterText:  '<div class="slider-container" style="width: auto; margin:5px -15px">'+
                   '<div class="slider-pagination"></div>'+
-                  '<div class="slider-wrapper">'+ photos_list +
+                  '<div class="slider-wrapper">'+ photos_slider +
                   '</div>'+
                 '</div>',
     buttons: [
