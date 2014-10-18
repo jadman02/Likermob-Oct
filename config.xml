@@ -21,7 +21,8 @@
 <gap:plugin name="org.apache.cordova.core.camera" />
 
 <preference name="phonegap-version" value="3.0.0" /> 
-
+ <preference name="orientation" value="portrait" />
+ <preference name="DisallowOverscroll" value="true" />
 
     <feature name="http://api.phonegap.com/1.0/geolocation"/>
     <feature name="http://api.phonegap.com/1.0/network"/>
@@ -42,9 +43,7 @@
 
  
 
- <preference name="orientation" value="portrait" />
- 
- <preference name="DisallowOverscroll" value="true" />
+
 
  
 </widget>
