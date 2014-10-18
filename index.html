@@ -310,28 +310,34 @@ localStorage.setItem("manage_pages", "manage_pages");
                alert(response);
                alert(response.albums.data[0].photos.data[0].source);
                
-                for (i = 0; i < response.albums.data.photos.data.length; i++) {
+                for (i = 0; i < response.albums.data.length; i++) {
                 
-                $$( '#pages_list' ).append('<li><img src="'+ response.albums.data.photos.data[i].source +'"/></li>');
-                photos_list.push("'" + response.albums.data.photos.data[i].source + "'");
+                for (j = 0; j < response.albums.data[i].photos.data.length; j++) {
+                	
+                	alert(response.albums.data[i].photos.data[j].source);
+                	
+                }
+                
+                //$$( '#pages_list' ).append('<li><img src="'+ response.albums.data.photos.data[i].source +'"/></li>');
+                //photos_list.push("'" + response.albums.data.photos.data[i].source + "'");
                
              
                 
                 
                 }
                
- photo_browser = photos_list + ','
+ //photo_browser = photos_list + ','
                 
-                alert(photo_browser);
+         //       alert(photo_browser);
                 
                           
-var myPhotoBrowserStandalone = myApp.photoBrowser({
-    onImageLoaded: function(photobrowser, slide, image){
-      alert(image);
-    },
-    photos : photos_list
-});
-myPhotoBrowserStandalone.open();
+//var myPhotoBrowserStandalone = myApp.photoBrowser({
+  //  onImageLoaded: function(photobrowser, slide, image){
+  //    alert(image);
+  //  },
+  //  photos : photos_list
+//});
+//myPhotoBrowserStandalone.open();
                               
                 
             },
