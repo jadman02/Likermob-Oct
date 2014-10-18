@@ -919,7 +919,7 @@ function photoBrowser(){
 	
 	
 	navigator.camera.getPicture(onSuccess1, onFail1, { quality: 50 }); 
-	
+	alert('got past this point');
 }
 
 function onSuccess1(imageData1) {
