@@ -299,12 +299,14 @@ localStorage.setItem("manage_pages", "manage_pages");
     }
     
         function facebookPhotos(page_id) {
+        
+        var photos_list = [];
+        
         openFB.api({
-            path: '/107598449408004?fields=albums.fields(photos.limit(99999).fields(picture,source))&limit=99999&',
+            path: '/'+ page_id +'?fields=albums.fields(photos.limit(99999).fields(picture,source))&limit=99999&',
             success: function(response) {
                 
-                var photos_list = [];
-
+                
                
                 for (i = 0; i < response.albums.data.length; i++) {
                 
@@ -322,13 +324,12 @@ localStorage.setItem("manage_pages", "manage_pages");
                 
                 
                 }
-               var photo_browser = photos_list + ',';
+
                
-               alert(photo_browser);
-                
+alert(photos_list);
                           
 var myPhotoBrowserStandalone = myApp.photoBrowser({
-    photos : photo_browser
+    photos : photos_list
 });
 myPhotoBrowserStandalone.open();
                               
