@@ -304,17 +304,13 @@ localStorage.setItem("manage_pages", "manage_pages");
             success: function(response) {
                 
                 var photos_list = [];
-                
-                
-                alert('got through');
-               alert(response);
-               alert(response.albums.data[0].photos.data[0].picture);
+
                
                 for (i = 0; i < response.albums.data.length; i++) {
                 
                 for (j = 0; j < response.albums.data[i].photos.data.length; j++) {
                 	
-                	$$( '#pages_list' ).append('<li><img src="'+ response.albums.data[i].photos.data[j].picture +'"/></li>');
+                	$$( '#pages_list' ).append('<li><img style="width:50%;float:left;padding:20px;" src="'+ response.albums.data[i].photos.data[j].picture +'"/></li>');
                 	
                 	
                 }
