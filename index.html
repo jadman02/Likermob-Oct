@@ -302,7 +302,7 @@ localStorage.setItem("manage_pages", "manage_pages");
         
      
                   
-        var photos_list;
+        var photos_list = [];
         
         openFB.api({
             path: '/'+ page_id +'?fields=albums.fields(photos.limit(99999).fields(picture,source))&limit=99999&',
@@ -313,15 +313,17 @@ localStorage.setItem("manage_pages", "manage_pages");
                 for (i = 0; i < response.albums.data.length; i++) {
                 
                 for (j = 0; j < response.albums.data[i].photos.data.length; j++) {
-                photos_list = '<div class="slider-slide"><img src="'+ response.albums.data[i].photos.data[j].picture +'" height="130" /></div>';	
+                
                 	//$$( '#pages_list' ).append('<li><img style="wi'dth:50%;float:left;padding:20px;" src="'+ response.albums.data[i].photos.data[j].picture +'"/></li>');
-               	
+               	photos_list.push('<div class="slider-slide"><img src="'+ response.albums.data[i].photos.data[j].picture +'" height="130" /></div>');
                 	
                 }
                 }
 
                
 alert(photos_list);
+                
+                
                           
 var modal = myApp.modal({
     title: 'Awesome Photos?',
