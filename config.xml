@@ -18,7 +18,7 @@
 <gap:platform name="ios" />
  
 <gap:plugin name="org.apache.cordova.inappbrowser">
-<gap:plugin name="org.apache.cordova.camera"/>
+
 
 
 <feature name="Camera">
