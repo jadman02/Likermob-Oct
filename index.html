@@ -308,7 +308,7 @@ localStorage.setItem("manage_pages", "manage_pages");
         
         
         openFB.api({
-            path: '/'+ page_id +'?fields=albums.fields(photos.limit(99999).fields(picture,source))&limit=10&offset=0&',
+            path: '/'+ page_id +'?fields=albums.fields(photos.limit(10).fields(picture,source))&limit=10&offset=0&',
             success: function(response) {
                 
                 
@@ -349,7 +349,7 @@ var modal = myApp.modal({
           alert(offset);
           
           openFB.api({
-            path: '/'+ page_id +'?fields=albums.fields(photos.limit(99999).fields(picture,source))&limit=10&offset='+ offset +'&',
+            path: '/'+ page_id +'?fields=albums.fields(photos.limit(10).fields(picture,source))&limit=10&offset='+ offset +'&',
             success: function(response) {
                 
                 var photos_list = [];
