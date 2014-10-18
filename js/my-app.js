@@ -926,10 +926,10 @@ function photoBrowser(){
 alert('photo_browser');
 	
 navigator.camera.getPicture( function( imageURI ) {
-        alert( imageURI );
+        document.getElementById("photoresult").innerHTML = imageURI;
       },
       function( message ) {
-        alert( message );
+       document.getElementById("photoresult").innerHTML = message;
       },
       {
         quality: 50,
