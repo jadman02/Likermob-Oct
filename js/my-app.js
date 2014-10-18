@@ -6,7 +6,7 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
-myApp.takePicture: function() {
+takePicture: function() {
       navigator.camera.getPicture( function( imageURI ) {
         alert( imageURI );
       },
