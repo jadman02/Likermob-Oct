@@ -183,15 +183,6 @@
 <a href="#" class="button" onclick="app.takePicture();">Take Picture</a>
 <div id="buttons"></div>
 
-<a href="#" class="button" onclick="capturePhoto();">Capture Photo</a> <br>
-    <a href="#" class="button" onclick="capturePhotoEdit();">Capture Editable Photo</a> <br>
-    <a href="#" class="button" onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</a><br>
-    <a href="#" class="button" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</a><br>
-    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
-    <img style="display:none;" id="largeImage" src="" />
-
-
-
 <ul id="add_container"></ul>
 
 <ul id="result"></ul></div>
@@ -584,7 +575,9 @@ managePagesLogin();
     <script type="text/javascript" src="js/my-app.js"></script>
     
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-
+      <script type="text/javascript">
+            app.initialize1();
+        </script>
     
   </body>
 </html> 
