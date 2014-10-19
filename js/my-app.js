@@ -884,7 +884,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 	
 
 	element1 = document.getElementById("#add_button");
-	element1.addEventListener("click", facebookPhotos(page_id))
+	element1.addEventListener("click", facebookPhotos(page_id));
 	var coverpic = response["cover"]["source"];
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
