@@ -917,7 +917,7 @@ function addPhoto(page_id){
         },
         text: 'Browse Facebook Photos',
             onClick: function () {
-               facebookPhotos('+page_id+');
+               facebookPhotos(page_id);
             }
         },
         {
