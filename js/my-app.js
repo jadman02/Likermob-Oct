@@ -88,41 +88,6 @@ $$( '#resulty' ).append('<li class="item-content"><div class="item-media"></div>
 myApp.init();
 
 
-var app = {
-	
-	 // Application Constructor
-    initialize1: function() {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicity call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-       alert('deviceready');
-    },
-	
-	
-    takePicture: function() {
-      navigator.camera.getPicture( function( imageURI ) {
-        alert( imageURI );
-      },
-      function( message ) {
-        alert( message );
-      },
-      {
-        quality: 50,
-        destinationType: Camera.DestinationType.FILE_URI
-      });
-    }
-};
 
 
 
@@ -924,6 +889,15 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 
 	
 });
+}
+
+function removeCover(){
+
+	
+mainView.router.refreshPage();
+
+	
+
 }
 
 function addPhoto(){
