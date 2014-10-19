@@ -551,8 +551,8 @@ else {
 function showDateTime(){
 
 
-        if (document.getElementById('#checkbox').checked) {
-            alert("checked");$$('#checkbox').focus();
+        if (document.getElementById('checkbox').checked) {
+            alert("checked");$$('#datetime').focus();
         } else {
             alert("You didn't check it! Let me check it for you.");
         }
