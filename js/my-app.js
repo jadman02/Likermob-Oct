@@ -953,7 +953,7 @@ function addPhoto(){
 
 
 
-photoBrowser() {
+function photoBrowser() {
 	
 	
 	navigator.camera.getPicture( function( imageURI ) {
