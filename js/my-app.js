@@ -550,7 +550,8 @@ else {
 
 function showDateTime(){
 	
-	$$('#datetime').focus(); 
+if ($$('#datetime').is(":checked")) {	$$('#datetime').focus(); }
+else {alert('not checked')}	
 }
 
 
