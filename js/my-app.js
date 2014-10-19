@@ -964,9 +964,14 @@ function getCover(page_id){
 
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
+var phone = document.getElementById("phoneinput");
+phone.value = res[0][4];
 
-	
-alert(res[0][6],res[0][7])
+var email = document.getElementById("emailinput");
+email.value = res[0][16];
+
+var website = document.getElementById("websiteinput");
+website.value = res[0][15];
 	
 	
 });
