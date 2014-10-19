@@ -888,11 +888,13 @@ myApp.confirm('Are you sure you want to permanently delete this deal?', 'Delete?
 
 
 function getCover(page_id){
-$$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,location,category', function(response){
+$$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,location,category,category_list', function(response){
 	
 var category_rec;	
-if (response["category"]) {category_rec = response["category"]}
-else if (response["category_list"]) {category_rec = response["category_list"]["name"]}
+if (response["category"]) {category_rec == response["category"]};
+else if (response["category_list"]) {category_rec == response["category_list"]["name"]};
+
+alert(category_rec);
 	
 $$('#add_button').remove();
 
