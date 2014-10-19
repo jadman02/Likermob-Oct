@@ -979,8 +979,8 @@ function getPhoto() {
       },
       {
         quality: 50,
-        destinationType: destinationType.FILE_URI,
-        sourceType: pictureSource.PHOTOLIBRARY
+        destinationType: navigator.camera.DestinationType.FILE_URI,
+        sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
       });
     }
 
