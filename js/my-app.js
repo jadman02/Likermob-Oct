@@ -885,7 +885,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 	
 $$('#add_button').remove();
 
-	document.getElementById("coverbutton").innerHTML = '<a href="#" class="button disabled" onclick="facebookPhotos('+page_id+')" id="add_button" style="height:80px;border:none;margin:0 auto;margin-top:-100px;"><i class="pe-7s-plus pe-5x"></i></a>';
+	document.getElementById("coverbutton").innerHTML = '<a href="#" class="button disabled" onclick="addPhoto('+page_id+')" id="add_button" style="height:80px;border:none;margin:0 auto;margin-top:-100px;"><i class="pe-7s-plus pe-5x"></i></a>';
 	
 	var coverpic = response["cover"]["source"];
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
@@ -900,26 +900,32 @@ $$('#add_button').remove();
 });
 }
 
-function addPhoto(){
+function addPhoto(page_id){
 	
 	var buttons = [
         {
-            text: 'Take New Photo',
-            bold: true
-        },
-        {
-            text: 'Choose From Phone',
-            bold: true
-        },
-        {
-            text: 'Choose From Facebook',
+            text: 'Take a Photo',
             onClick: function () {
-                facebookPhotos();
+                photoBrowser();
+            }
+        },
+        {
+            text: 'Choose from Library',
+            onClick: function () {
+                getPhoto();
+            }
+        },
+        text: 'Browse Facebook Photos',
+            onClick: function () {
+               facebookPhotos('+page_id+');
             }
         },
         {
             text: 'Cancel',
-            color: 'red'
+            color: 'red',
+            onClick: function () {
+                myApp.alert('Cancel clicked');
+            }
         },
     ];
     myApp.actions(buttons);
