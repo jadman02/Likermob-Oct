@@ -552,9 +552,9 @@ function showDateTime(){
 
 
         if (document.getElementById('checkbox').checked) {
-            alert("checked");$$('#datetime').focus();
+            alert("changing from checked to unchecked");
         } else {
-            alert("You didn't check it! Let me check it for you.");
+            $$('#datetime').focus();
         }
 
 	
