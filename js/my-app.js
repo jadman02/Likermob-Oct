@@ -549,9 +549,15 @@ else {
 }
 
 function showDateTime(){
+
+
+        if (document.getElementById('#datetime').checked) {
+            alert("checked");$$('#datetime').focus();
+        } else {
+            alert("You didn't check it! Let me check it for you.");
+        }
+
 	
-if ($$('#datetime').is(":checked")) {	$$('#datetime').focus(); }
-else {alert('not checked')}	
 }
 
 
