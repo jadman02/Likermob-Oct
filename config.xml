@@ -18,9 +18,7 @@
 <gap:platform name="ios" />
  
 <gap:plugin name="org.apache.cordova.inappbrowser"/>
-<feature name="Camera">
-    <param name="ios-package" value="CDVCamera" />
-</feature>
+<gap:plugin name="org.apache.cordova.core.camera" />
 
 
  <preference name="orientation" value="portrait" />
@@ -29,7 +27,6 @@
     <feature name="http://api.phonegap.com/1.0/geolocation"/>
     <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/notification"/>
-    <feature name="http://api.phonegap.com/1.0/camera"/>
  <feature name="http://api.phonegap.com/1.0/file"/>
  
 <access origin="*" />
