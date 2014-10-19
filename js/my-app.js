@@ -968,15 +968,15 @@ function getCover(page_id){
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
 
-if (res[0][4]){
+
 var phone = document.getElementById("phoneinput");
-phone.value = res[0][4];}
-if (res[0][16]){
+phone.value = res[0][4];
+
 var email = document.getElementById("emailinput");
-email.value = res[0][16];}
-if (res[0][15){
+email.value = res[0][16];
+
 var website = document.getElementById("websiteinput");
-website.value = res[0][15];}
+website.value = res[0][15];
 	
 	
 });
