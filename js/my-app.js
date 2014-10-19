@@ -892,9 +892,11 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,location,categ
 	
 
 var category_rec;	
+var category_list = response.category_list[0].name;
+var category = response["category"];
 
-if (response["category"]) {category_rec = response["category"]}
-if (response.category_list[0].name) {category_rec = response.category_list[0].name}
+if (category_list === 'undefined') {category_rec = category}
+else {category_rec = category_list}
 
 alert(category_rec);
 	
