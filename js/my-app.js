@@ -405,6 +405,8 @@ $$.getJSON('https://maps.googleapis.com/maps/api/place/details/json?placeid='+ p
 
 $$("#resulta li").remove();
 
+alert(response.result.geometry.location.lat)
+
 var elem = document.getElementById("fulladdress");
 elem.value = response.result.formatted_address;
 
