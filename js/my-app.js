@@ -899,7 +899,7 @@ alert(category_rec);
 $$('#add_button').remove();
 
 	document.getElementById("coverbutton").innerHTML = '<a href="#" class="button" onclick="addPhoto('+page_id+')" style="height:80px;border:none;margin:0 auto;margin-top:-100px;"><i class="pe-7s-plus pe-5x"></i></a>';
-	$$('#category_rec_value').val(catergory_rec);
+	$$('#category_rec_value').val(category_rec);
 	var coverpic = response["cover"]["source"];
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
