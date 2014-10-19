@@ -892,7 +892,6 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,location,categ
 	
 
 var category_rec;	
-alert(response.category_list[0].name);
 
 if (response["category"]) category_rec = response["category"];
 if (response.category_list[0].name) category_rec = response.category_list[0].name;
@@ -903,7 +902,7 @@ $$('#add_button').remove();
 
 	document.getElementById("coverbutton").innerHTML = '<a href="#" class="button" onclick="addPhoto('+page_id+')" style="height:80px;border:none;margin:0 auto;margin-top:-100px;"><i class="pe-7s-plus pe-5x"></i></a>';
 	$$('#category_rec_value').val(category_rec);
-	$$('#select option[value="'+ category_rec +'"]').text(category_rec)
+	$$('#category_rec_value option[value="'+ category_rec +'"]').text(category_rec)
 	var coverpic = response["cover"]["source"];
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
