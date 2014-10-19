@@ -781,7 +781,7 @@ function dbDeal() {
         '    <div class="page-content cover-add" style="margin-top:30px;background-size: 100%;background-repeat: no-repeat;">' +
         
         '      <div class="content-block" style="padding-top:40px;">' +
-        '<a href="#" class="button disabled" onclick="" id="add_button" style="height:80px;border:none;margin:0 auto;margin-top:-100px;"><i class="pe-7s-plus pe-5x"></i></a>' +       
+        '<a href="#" class="button disabled" onclick="facebookPhotos(<span id="spanid"></span>)" id="add_button" style="height:80px;border:none;margin:0 auto;margin-top:-100px;"><i class="pe-7s-plus pe-5x"></i></a>' +       
         '<div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
                       
                      
@@ -789,6 +789,8 @@ function dbDeal() {
                      '<div style="text-align:center;margin:0 auto;width:100%;" id="add-loader-container"><span class="preloader"></span></div>'+
                        '<div class="list-block" style="margin-top:-5px;"><ul id="pages_list"></ul></div>' +
                      '<div class="content-block-title">Step 2: Create Deal</div><div class="list-block"><ul><!-- Text inputs --><li><div class="item-content"><div class="item-inner"><div class="item-title label">Select Page</div><div class="item-input"><select><option>Male</option><option>Female</option></select></div></div></div></li><li><div class="item-content"><div class="item-inner"><div class="item-title label">Title</div><div class="item-input"><input type="text" placeholder="Deal Title"></div></div></div></li><li class="align-top"><div class="item-content"><div class="item-inner"><div class="item-title label">Description</div><div class="item-input"><textarea placeholder="Deal Description"></textarea></div></div></div></li><li><div class="item-content"><div class="item-inner"><div class="item-title label">Terms</div><div class="item-input"><input type="text" placeholder="Terms and Conditions"></div></div></div></li><!-- Switch (Checkbox) --><li><div class="item-content"><div class="item-inner"><div class="item-title label">Comment required</div><div class="item-input"><label class="label-switch"><input type="checkbox"><div class="checkbox"></div></label></div></div></div></li><!-- Select --><li><div class="item-content"><div class="item-inner"><div class="item-title label">Category</div><div class="item-input"><select><option>Male</option><option>Female</option></select></div></div></div></li><!-- Date --><li><div class="item-content"><div class="item-inner"><div class="item-title label">Expiry Date</div><div class="item-input"><input type="date" placeholder="Deal will be removed after this date.."></div></div></div></li></ul></div>	'+
+                     '<div class="content-block-title">Step 3: Schedule Post</div>'+
+                     '<div class="content-block-title">Step 4: </div>'+
                      //'<div class="list-block"><ul><li><div class="item-content"><div class="item-inner"><div class="item-title label">Name</div><div class="item-input"><input type="text" name="name"></div></div></div></li></ul></div>' +
                       
                       
@@ -881,7 +883,7 @@ function getCover(page_id){
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
 	
 	
-	
+	document.getElementById("spanid").innerHTML = page_id;
 	var coverpic = response["cover"]["source"];
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
@@ -893,15 +895,6 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 
 	
 });
-}
-
-function removeCover(){
-
-	
-mainView.router.refreshPage();
-
-	
-
 }
 
 function addPhoto(){
