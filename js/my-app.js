@@ -892,12 +892,13 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,location,categ
 	
 
 var category_rec;	
-var category_list; 
+var category_list = response.category_list[0].name; 
+var category = response["category"]; 
 
 
 
-if (category) {category_rec = response["category"]}
-if (category_list) {category_list = response.category_list[0].name; category_rec = category_list}
+if (category) {category_rec = category}
+if (category_list) {category_rec = category_list}
 
 alert(category_rec);
 	
