@@ -608,10 +608,11 @@ function showAddress(){
 
 
         if (document.getElementById('addressbox').checked) {
-            $$( "#fulladdress" ).addClass( "disabled" );
+            
+            $$('#fulladdress').blur();
             
         } else {
-             $$( "#fulladdress" ).removeClass( "disabled" );
+             
             $$('#fulladdress').focus();
         }
 
