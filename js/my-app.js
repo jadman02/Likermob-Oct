@@ -901,6 +901,10 @@ $$('#add_button').remove();
 function addPhoto(page_id){
 	
 	var buttons = [
+         {
+            text: 'Change Image',
+            label: true
+        },
         {
             text: 'Take a Photo',
             onClick: function () {
