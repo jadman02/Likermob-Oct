@@ -895,10 +895,9 @@ var category_rec;
 var category_list = response.category_list[0].name;
 var category = response["category"];
 
-if (category_list === 'undefined') {category_rec = category}
-else {category_rec = category_list}
+if (category_list === 'undefined') {alert('no category_list');}
+if (category_list) {alert(category_list);}
 
-alert(category_rec);
 	
 $$('#add_button').remove();
 
