@@ -760,6 +760,10 @@ localStorage.setItem("order", order);
 
 }
 
+$$('#add_button').on('click', function (e) {
+   alert('Show facebook photos');
+});
+
 function dbDeal() {
 
 			mainView.loadContent(
@@ -777,7 +781,7 @@ function dbDeal() {
         '    <div class="page-content cover-add" style="margin-top:30px;background-size: 100%;background-repeat: no-repeat;">' +
         
         '      <div class="content-block" style="padding-top:40px;">' +
-        '<a href="#" class="button disabled" onclick="facebookPhotos()" id="add_button" style="height:80px;border:none;margin:0 auto;margin-top:-100px;"><i class="pe-7s-plus pe-5x"></i></a>' +       
+        '<a href="#" class="button disabled" onclick="" id="add_button" style="height:80px;border:none;margin:0 auto;margin-top:-100px;"><i class="pe-7s-plus pe-5x"></i></a>' +       
         '<div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
                       
                      
@@ -877,7 +881,7 @@ function getCover(page_id){
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
 	
 	
-	facebookPhotos(page_id);
+	
 	var coverpic = response["cover"]["source"];
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
