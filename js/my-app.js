@@ -960,12 +960,12 @@ myApp.confirm('Are you sure you want to permanently delete this deal?', 'Delete?
 
 function getCover(page_id){
 
-$$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
+//$$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 	
-	alert(res[0][13],res[0][14])
+//	alert(res[0][13],res[0][14])
 	
 	
-});
+//});
 
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,location', function(response){
 	
