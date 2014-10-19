@@ -549,8 +549,8 @@ else {
 }
 
 function showDateTime(){
-$$( "#datetime" ).click();	
 	
+	$$('#datetime').focus(); 
 }
 
 
