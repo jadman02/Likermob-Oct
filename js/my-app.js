@@ -843,7 +843,7 @@ function dbDeal() {
 //alert(n + ' ' + time);
 
  
-        </li>
+
 
 			mainView.loadContent(
         '<!-- Top Navbar-->' +
