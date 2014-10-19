@@ -970,7 +970,7 @@ $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=
 
 
 var phone = document.getElementById("phoneinput");
-phone.value = '9';
+phone.value = '9 9';
 
 var email = document.getElementById("emailinput");
 email.value = res[0][16];
