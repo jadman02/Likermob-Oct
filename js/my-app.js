@@ -552,7 +552,7 @@ function showDateTime(){
 
 
         if (document.getElementById('checkbox').checked) {
-            alert("changing from checked to unchecked");
+            $$('#datetime').val("");
         } else {
             $$('#datetime').focus();
         }
@@ -777,11 +777,11 @@ $$('#add_button').on('click', function (e) {
 });
 
 function dbDeal() {
-var date = new Date();
-var n = date.toDateString();
-var time = date.toLocaleTimeString();
+//var date = new Date();
+//var n = date.toDateString();
+//var time = date.toLocaleTimeString();
 
-alert(n + ' ' + time);
+//alert(n + ' ' + time);
 
 
 			mainView.loadContent(
