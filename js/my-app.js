@@ -970,23 +970,18 @@ function photoBrowser() {
 }
 
 function getPhoto(source) {
-      // Retrieve image file location from specified source
-      navigator.camera.getPicture(onPhotoURISuccess, onFail1, { quality: 50,
+     
+     navigator.camera.getPicture( function( imageURI ) {
+        alert( imageURI );
+      },
+      function( message ) {
+        alert( message );
+      },
+      {
+        quality: 50,
         destinationType: destinationType.FILE_URI,
-        sourceType: source });
-    }
-
-function onPhotoURISuccess(imageURI) {
-      // Uncomment to view the image file URI
-      // console.log(imageURI);
-
-      // Get image handle
-      //
-     alert(imageURI);
-    }
-
-function onFail1(message1) {
-      alert('Failed because: ' + message1);
+        sourceType: pictureSource.PHOTOLIBRARY
+      });
     }
 
 
