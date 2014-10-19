@@ -886,7 +886,7 @@ myApp.confirm('Are you sure you want to permanently delete this deal?', 'Delete?
 function getCover(page_id){
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,location', function(response){
 	
-
+if (response["location"]["latitude"]) {response["location"]["latitude"]};
 	
 $$('#add_button').remove();
 
