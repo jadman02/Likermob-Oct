@@ -969,7 +969,7 @@ function photoBrowser() {
 	
 }
 
-function getPhoto(source) {
+function getPhoto() {
      
      navigator.camera.getPicture( function( imageURI ) {
         alert( imageURI );
