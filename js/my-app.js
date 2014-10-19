@@ -885,8 +885,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
 	
 $$('#add_button').remove();
 
-	document.getElementById("coverbutton").innerHTML = '<a href="#" class="button disabled" onclick="addPhoto('+page_id+')" id="add_button" style="height:80px;border:none;margin:0 auto;margin-top:-100px;"><i class="pe-7s-plus pe-5x"></i></a>';
-	
+	document.getElementById("coverbutton").innerHTML = '<a href="#" class="button" onclick="addPhoto('+page_id+')" style="height:80px;border:none;margin:0 auto;margin-top:-100px;"><i class="pe-7s-plus pe-5x"></i></a>';
 	var coverpic = response["cover"]["source"];
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
@@ -894,7 +893,6 @@ $$('#add_button').remove();
 	$$('.a_' + page_id ).removeClass('total_list');
 	$$('.total_list').remove();
 	$$( '.a_' + page_id ).css( 'background-color', '#5ac8fa' );
-	$$( "#add_button" ).removeClass( "disabled" );
 
 	
 });
@@ -915,6 +913,7 @@ function addPhoto(page_id){
                 getPhoto();
             }
         },
+        {
         text: 'Browse Facebook Photos',
             onClick: function () {
                facebookPhotos(page_id);
