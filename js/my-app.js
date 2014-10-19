@@ -32,7 +32,7 @@ for (i = 0; i < 10; i++)
 	
 
 	
-$$( '#resulta' ).append('<a href="#" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')"><li class="item-content"><div class="item-title">' + response.predictions[i].description + '</div></li></a>');
+$$( '#resulta' ).append('<a href="#" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')"><li class="item-content"><div class="item-inner"><div class="item-title">' + response.predictions[i].description + '</div></div></li></a>');
 }
 });
 });
