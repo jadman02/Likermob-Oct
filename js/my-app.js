@@ -770,7 +770,8 @@ var currentDate = new Date();
   var day = currentDate.getDate();
   var month = currentDate.getMonth() + 1;
   var year = currentDate.getFullYear();
-  date_today= day + "/" + month + "/" + year;
+  date_today= year + "-" + month + "-" + day;
+  alert(date_today);
 
 			mainView.loadContent(
         '<!-- Top Navbar-->' +
