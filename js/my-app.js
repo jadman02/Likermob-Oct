@@ -21,7 +21,7 @@ myApp.onPageInit('index', function (page) {
 
 myApp.onPageInit('add_deal', function (page) {
 
-alert('add deal page');
+
 //Autocomplete JSON Google
 $$('#fulladdress').keyup(function(){
 
@@ -32,7 +32,7 @@ for (i = 0; i < 10; i++)
 	
 
 	
-$$( '#resulta' ).append('<li class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title button" style="margin-left:15px;" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')">' + response.predictions[i].description + '</div></div></li>');
+$$( '#resulta' ).append('<li class="item-content"><div class="button" style="margin-left:15px;" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')">' + response.predictions[i].description + '</div></li>');
 }
 });
 });
