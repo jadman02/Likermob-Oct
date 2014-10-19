@@ -782,6 +782,7 @@ function dbDeal() {
         
         '      <div class="content-block" style="padding-top:40px;">' +
         '<a href="#" class="button disabled" id="add_button" style="height:80px;border:none;margin:0 auto;margin-top:-100px;"><i class="pe-7s-plus pe-5x"></i></a>' +       
+        '<div id="coverbutton"></div>'+
         '<div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
                       
                      
@@ -882,9 +883,10 @@ myApp.confirm('Are you sure you want to permanently delete this deal?', 'Delete?
 function getCover(page_id){
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
 	
+$$('#add_button').remove();
 
-	element1 = document.getElementById("#add_button");
-	element1.addEventListener("click", facebookPhotos(page_id));
+	document.getElementById("coverbutton").innerHTML = '<a href="#" class="button disabled" onclick="facebookPhotos('+page_id+')" id="add_button" style="height:80px;border:none;margin:0 auto;margin-top:-100px;"><i class="pe-7s-plus pe-5x"></i></a>';
+	
 	var coverpic = response["cover"]["source"];
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
