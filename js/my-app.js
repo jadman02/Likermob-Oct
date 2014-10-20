@@ -812,7 +812,7 @@ function closeModal() {myApp.closeModal()}
 
 
 function focusLocation(id){
-	
+alert(id);	
 var elem = document.getElementById(id);
 elem.value = "";
 }
