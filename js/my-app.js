@@ -414,25 +414,21 @@ $$("#resulta li").remove();
 //alert(response.result.address_components[2].short_name);
 
 function extractFromAdress(components, type){
-    for (var i=0; i<components.length; i++)
-        for (var j=0; j<components[i].types.length; j++)
-            if (components[i].types[j]==type) document.getElementById(components[i].type).value = components[i].long_name;
+for (var i=0; i<components.length; i++)
+ for (var j=0; j<components[i].types.length; j++)
+      if (components[i].types[j]==type) return components[i].long_name;
+ return "";
 }
 
-//function extractFromAdress(components, type){
- //   for (var i=0; i<components.length; i++)
-   //     for (var j=0; j<components[i].types.length; j++)
-     //       if (components[i].types[j]==type) return components[i].long_name;
-  //  return "";
-//}
 
 
-var postCode = extractFromAdress(response.result.address_components, "postal_code");
 var postCode = extractFromAdress(response.result.address_components, "postal_code");
 var street = extractFromAdress(response.result.address_components, "route");
 var town = extractFromAdress(response.result.address_components, "locality");
 var country = extractFromAdress(response.result.address_components, "country");
 
+alert(postCode);
+alert(route);
 
 var elem = document.getElementById("fulladdress");
 elem.value = response.result.formatted_address;
