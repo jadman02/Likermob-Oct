@@ -407,6 +407,11 @@ $$("#resulta li").remove();
 
  $$('.addresshide').show();
 
+alert(response.result.address_components[0].short_name);
+alert(response.result.address_components[1].short_name);
+alert(response.result.address_components[2].short_name);
+
+
 var elem = document.getElementById("fulladdress");
 elem.value = response.result.formatted_address;
 
