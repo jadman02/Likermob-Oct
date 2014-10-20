@@ -421,14 +421,36 @@ for (var i=0; i<components.length; i++)
 }
 
 
-
+var subpremise = extractFromAdress(response.result.address_components, "subpremise");
+var street_number = extractFromAdress(response.result.address_components, "street_number");
 var postCode = extractFromAdress(response.result.address_components, "postal_code");
 var street = extractFromAdress(response.result.address_components, "route");
 var town = extractFromAdress(response.result.address_components, "locality");
+var state = extractFromAdress(response.result.address_components, "administrative_area_level_1");
 var country = extractFromAdress(response.result.address_components, "country");
 
-alert(postCode);
-alert(route);
+
+
+var unit = document.getElementById("subpremise");
+unit.value = subpremise;
+
+var house = document.getElementById("street_number");
+house.value = street_number;
+
+var road = document.getElementById("route");
+road.value = street;
+
+var zip = document.getElementById("postal_code");
+zip.value = postCode;
+
+var suburb = document.getElementById("locality");
+suburb.value = town;
+
+var region = document.getElementById("administrative_area_level_1");
+region.value = state;
+
+var nation = document.getElementById("country");
+nation.value = town;
 
 var elem = document.getElementById("fulladdress");
 elem.value = response.result.formatted_address;
