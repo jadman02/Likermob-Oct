@@ -421,13 +421,13 @@ for (var i=0; i<components.length; i++)
 }
 
 
-var subpremise = extractFromAdress(response.result.address_components, "subpremise");
-var street_number = extractFromAdress(response.result.address_components, "street_number");
+//var subpremise = extractFromAdress(response.result.address_components, "subpremise");
+//var street_number = extractFromAdress(response.result.address_components, "street_number");
 var postCode = extractFromAdress(response.result.address_components, "postal_code");
-var street = extractFromAdress(response.result.address_components, "route");
-var town = extractFromAdress(response.result.address_components, "locality");
-var state = extractFromAdress(response.result.address_components, "administrative_area_level_1");
-var country = extractFromAdress(response.result.address_components, "country");
+//var street = extractFromAdress(response.result.address_components, "route");
+// town = extractFromAdress(response.result.address_components, "locality");
+//var state = extractFromAdress(response.result.address_components, "administrative_area_level_1");
+//var country = extractFromAdress(response.result.address_components, "country");
 
 
 
