@@ -405,7 +405,7 @@ $$.getJSON('https://maps.googleapis.com/maps/api/place/details/json?placeid='+ p
 
 $$("#resulta li").remove();
 
- $$('.row').show();
+ $$('.addresshide').show();
 
 var elem = document.getElementById("fulladdress");
 elem.value = response.result.formatted_address;
