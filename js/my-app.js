@@ -641,12 +641,13 @@ function showAddress(){
 
         if (document.getElementById('addressbox').checked) {
             
+            
             //$$('#fulladdress').blur();
             $$('.addresshide').hide();
             
         } else {
-             
-            //$$('#fulladdress').focus();
+             openSearch();
+            $$('#fulladdress').focus();
         }
 
 	
