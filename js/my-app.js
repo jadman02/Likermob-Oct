@@ -860,7 +860,15 @@ function focusLocation(id){
 	
 var elem = document.getElementById(id);
 elem.value = "";
-mainView.hideNavbar();
+
+ var popupHTML = '<div class="popup">'+
+                    '<div class="content-block">'+
+                      '<p>Popup created dynamically.</p>'+
+                      '<p><a href="#" class="close-popup">Close me</a></p>'+
+                    '</div>'+
+                  '</div>'
+  myApp.popup(popupHTML);
+
 }
 
 
