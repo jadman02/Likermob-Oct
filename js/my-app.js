@@ -920,7 +920,7 @@ function dbDeal() {
                      '<div class="content-block-title"><div class="content-block-inner" style="text-align:center;">5: Contact Details </div></div><div class="list-block"><ul><li><div class="item-content"><div class="item-media" style="width:20px;"><i class="pe-7s-call pe-lg"></i></div><div class="item-inner"><div class="item-input"><input placeholder="Phone" id="phoneinput" type="tel"></div></div></div></li><li><div class="item-content"><div class="item-media" style="width:20px;"><i class="pe-7s-mail pe-lg"></i></div><div class="item-inner"><div class="item-input"><input placeholder="Email" id="emailinput" type="email"></div></div></div></li><li><div class="item-content"><div class="item-media" style="width:20px;"><i class="pe-7s-mouse pe-lg" style="margin-left:5px;"></i></div><div class="item-inner"><div class="item-input"><input type="text" placeholder="Website" id="websiteinput"></div></div></div></li></ul></div>'+
                      //'<div class="list-block"><ul><li><div class="item-content"><div class="item-inner"><div class="item-title label">Name</div><div class="item-input"><input type="text" name="name"></div></div></div></li></ul></div>' +
                       
-                      '<input id="postal_code"  type="text" value="222">' +
+                      
 
                       
 
