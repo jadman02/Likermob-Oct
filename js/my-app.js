@@ -1140,7 +1140,7 @@ openSearch() {
 	 var popupHTML = '<div class="popup">'+
                     '<div class="content-block">'+
                       '<p>Popup created dynamically.</p>'+
-                      '<input style="margin-left:20px;border:none;" id="fulladdress2" type="text" placeholder="i.e. 3 Smith St">' +
+                      '<input style="margin-left:20px;border:none;" id="fulladdress" type="text" placeholder="i.e. 3 Smith St">' +
                       '<span id="resulta" style="border:none;"></span>' +
                       '<p><a href="#" class="close-popup">Close me</a></p>'+
                     '</div>'+
