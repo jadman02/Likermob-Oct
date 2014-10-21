@@ -1132,13 +1132,14 @@ function openSearch() {
 	 var popupHTML = '<div class="popup">'+
              
             
-
+'<div class="navbar"><div class="navbar-inner"><div class="left"><i class="pe-7s-search pe-lg"></i></div><div class="center"><input onkeyup="searchPlaces();" style="margin-left:20px;border:none;" id="fulladdress" type="text" placeholder="i.e. 3 Smith St"></div></div></div>' +
                     '<div class="content-block">'+
-                     '<div class="list-block"><ul><!-- Text inputs --><li><div class="item-content"><div class="item-inner"><i class="pe-7s-search pe-lg"></i><div class="item-input"><input onkeyup="searchPlaces();" style="margin-left:20px;border:none;" id="fulladdress" type="text" placeholder="i.e. 3 Smith St"></div></div></div></li><span id="resulta" style="border:none;"></span></ul></div>'+
+                     '<div class="list-block"><ul><!-- Text inputs --><span id="resulta" style="border:none;"></span></ul></div>'+
                      
                     '</div>'+
-                  '</div>'
                   '<div class="toolbar"><div class="toolbar-inner"><a href="#" class="close-popup"><i class="icon icon-back"></i><span>Back</span></a></div></div>' +
+                  '</div>'
+                  
   myApp.popup(popupHTML);
 	
 }
