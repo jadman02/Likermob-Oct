@@ -428,8 +428,6 @@ road.value = street;
 var zip = document.getElementById("postal_code");
 zip.value = postCode;
 
-alert(postCode);
-
 var suburb = document.getElementById("locality");
 suburb.value = town;
 
