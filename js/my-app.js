@@ -1154,7 +1154,7 @@ for (i = 0; i < 10; i++)
 	
 
 	
-$$( '#resulta' ).append('<li class="item-content" style="font-size:16px;"><a href="#" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')"><div class="item-inner"><div class="item-title">' + response.predictions[i].description + '</div></div></a></li>');
+$$( '#resulta' ).append('<li class="item-content" style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;"><a href="#" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')"><div class="item-inner"><div class="item-title">' + response.predictions[i].description + '</div></div></a></li>');
 }
 });
 
