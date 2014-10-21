@@ -1125,12 +1125,24 @@ datePicker.show(options, function(date){
 
 function openSearch() {
 
-//Autocomplete JSON Google
-$$('#fulladdress').keyup(function(){
 
-alert('keyup');
+	 var popupHTML = '<div class="popup">'+
+                    '<div class="content-block">'+
+                      '<p>Popup created dynamically.</p>'+
+                     '<div class="list-block"><ul><!-- Text inputs --><li><div class="item-content"><div class="item-inner"><label class="label-switch" onclick="showAddress();"><input type="checkbox" id="addressbox"><div class="checkbox"></div></label><div class="item-input"><input onkeyup="searchPlaces();" style="margin-left:20px;border:none;" id="fulladdress" type="text" placeholder="i.e. 3 Smith St"></div></div></div></li><span id="resulta" style="border:none;"></span></ul></div>'+
+                     
+                      '<p><a href="#" class="close-popup">Close me</a></p>'+
+                    '</div>'+
+                  '</div>'
+  myApp.popup(popupHTML);
+	
+}
 
-$$.getJSON('https://maps.googleapis.com/maps/api/place/autocomplete/json?input='+ this.value +'&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
+function searchPlaces(){
+	
+var searchvalue = document.getElementById('fulladdress').value;
+
+$$.getJSON('https://maps.googleapis.com/maps/api/place/autocomplete/json?input='+ searchvalue +'&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
 $$("#resulta li").remove();
 for (i = 0; i < 10; i++) 
 { 
@@ -1140,16 +1152,6 @@ for (i = 0; i < 10; i++)
 $$( '#resulta' ).append('<li class="item-content" style="font-size:16px;"><a href="#" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')"><div class="item-inner"><div class="item-title">' + response.predictions[i].description + '</div></div></a></li>');
 }
 });
-});
-	
-	 var popupHTML = '<div class="popup">'+
-                    '<div class="content-block">'+
-                      '<p>Popup created dynamically.</p>'+
-                     '<div class="list-block"><ul><!-- Text inputs --><li><div class="item-content"><div class="item-inner"><label class="label-switch" onclick="showAddress();"><input type="checkbox" id="addressbox"><div class="checkbox"></div></label><div class="item-input"><input style="margin-left:20px;border:none;" id="fulladdress" type="text" placeholder="i.e. 3 Smith St"></div></div></div></li><span id="resulta" style="border:none;"></span></ul></div>'+
-                     
-                      '<p><a href="#" class="close-popup">Close me</a></p>'+
-                    '</div>'+
-                  '</div>'
-  myApp.popup(popupHTML);
+
 	
 }
