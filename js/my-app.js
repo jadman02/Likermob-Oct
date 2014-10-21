@@ -1150,12 +1150,7 @@ $$("#resulta li").remove();
 for (i = 0; i < 10; i++) 
 { 
 	
-<a href="#" class="item-link">
-  <div class="item-content">
-    <div class="item-media">...</div>
-    <div class="item-inner">...</div>
-  </div>
-</a>   
+
 	
 $$( '#resulta' ).append('<li style="font-size:16px;"><a href="#" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')" class="item-link"><div class="item-content"><div class="item-inner"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
 }
