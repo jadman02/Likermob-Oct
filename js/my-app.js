@@ -1133,7 +1133,7 @@ function openSearch() {
 '<form class="searchbar"><a href="#" class="close-popup" style="margin-right:5px;"><i class="icon icon-back"></i></a><div class="searchbar-input"><input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress"></div></form>'+
 '<div class="content-block">'+
 '<div class="list-block" style="margin-top:-30px;"><ul id="resulta" style="border:none;padding:0px;margin:0px;"></ul></div>'+
-'<a href="#" class="button disabled" id="search_button" style="position:absolute;border:none;margin:0 auto;top:50%;"><i class="pe-7s-search pe-5x" style="border-radius:50%;border:1px solid black;"></i></a>'+
+'<a href="#" class="button disabled" id="search_button" style="position:absolute;border:none;margin:0 auto;"><i class="pe-7s-search pe-5x" style="border-radius:50%;border:1px solid black;"></i></a>'+
 '</div>'+
 '</div>'
                   
