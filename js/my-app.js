@@ -1142,8 +1142,8 @@ $$( '#resulta' ).append('<li class="item-content" style="font-size:16px;"><a hre
 	 var popupHTML = '<div class="popup">'+
                     '<div class="content-block">'+
                       '<p>Popup created dynamically.</p>'+
-                      '<input style="margin-left:20px;border:none;" id="fulladdress" type="text" placeholder="i.e. 3 Smith St">' +
-                      '<span id="resulta" style="border:none;"></span>' +
+                     '<div class="list-block"><ul><!-- Text inputs --><li><div class="item-content"><div class="item-inner"><label class="label-switch" onclick="showAddress();"><input type="checkbox" id="addressbox"><div class="checkbox"></div></label><div class="item-input"><input style="margin-left:20px;border:none;" id="fulladdress" type="text" placeholder="i.e. 3 Smith St"></div></div></div></li><span id="resulta" style="border:none;"></span></ul></div>'+
+                     
                       '<p><a href="#" class="close-popup">Close me</a></p>'+
                     '</div>'+
                   '</div>'
