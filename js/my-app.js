@@ -1131,7 +1131,7 @@ function openSearch() {
             //'<div class="navbar"><div class="navbar-inner"><div class="center">Awesome App</div></div></div>'+
 
                     '<div class="content-block">'+
-                     '<div class="list-block"><ul><!-- Text inputs --><li><div class="item-content"><div class="item-inner"><label class="label-switch" onclick="showAddress();"><input type="checkbox" id="addressbox"><div class="checkbox"></div></label><div class="item-input"><input onkeyup="searchPlaces();" style="margin-left:20px;border:none;" id="fulladdress" type="text" placeholder="i.e. 3 Smith St"></div></div></div></li><span id="resulta" style="border:none;"></span></ul></div>'+
+                     '<div class="list-block"><ul><!-- Text inputs --><li><div class="item-content"><div class="item-inner"><i class="pe-7s-search pe-lg"></i><div class="item-input"><input onkeyup="searchPlaces();" style="margin-left:20px;border:none;" id="fulladdress" type="text" placeholder="i.e. 3 Smith St"></div></div></div></li><span id="resulta" style="border:none;"></span></ul></div>'+
                      
                       '<p><a href="#" class="close-popup">Close me</a></p>'+
                     '</div>'+
