@@ -1129,7 +1129,7 @@ datePicker.show(options, function(date){
 function openSearch() {
 
 
-	 var popupHTML = '<div class="popup">'+
+	 var popupHTML = '<div class="popup" style="min-height:300px;">'+
 '<form class="searchbar"><a href="#" class="close-popup"><i class="icon icon-back" style="margin-right:10px;"></i></a><div class="searchbar-input"><input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress"></div></form>'+
 '<div class="content-block" style="min-height:300px;">'+
 '<a href="#" class="button disabled" id="search_button" style="position:absolute;border:none;"><i class="pe-7s-search pe-5x pe-va"></i></a>'+
