@@ -860,6 +860,7 @@ function focusLocation(id){
 	
 var elem = document.getElementById(id);
 elem.value = "";
+mainView.hideNavbar();
 }
 
 
