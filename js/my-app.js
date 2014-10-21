@@ -390,7 +390,7 @@ function saveAddress(place_id) {
 
 $$.getJSON('https://maps.googleapis.com/maps/api/place/details/json?placeid='+ place_id +'&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
 
-myApp.closeModal();
+
 $$("#resulta li").remove();
 
  $$('.addresshide').show();
@@ -1152,7 +1152,7 @@ for (i = 0; i < 10; i++)
 	
 
 	
-$$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;"><a href="#" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')" class="item-link"><div class="item-content"><div class="item-inner"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
+$$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;" class="close-popup"><a href="#" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')" class="item-link"><div class="item-content"><div class="item-inner"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
 }
 });
 
