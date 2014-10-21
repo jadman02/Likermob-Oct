@@ -501,7 +501,7 @@ $$( '#add_container' ).append('<li><p><a href="#" onclick="pages()" class="butto
                 pages_list.push("999999"+ response.data[i].id +"999999");
                //$$( '#pages_list' ).append('<li class="a_'+ response.data[i].id +' total_list" onclick="getCover('+ response.data[i].id +')"><div class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title">'+ +'</div><div class="item-after"><i class="pe-7s-close-circle"></i></div></div><div></li>');
                 
-                $$( '#pages_list' ).append('<option value="'+  response.data[i].id +'" data-option-image="http://graph.facebook.com/'+ response.data[i].id +'/picture?width=20&height=20">'+  response.data[i].name +'</option>');
+                $$( '#pages_list' ).append('<option value="apple" selected>Apple</option><option value="pineapple">Pineapple</option>');
                 }
               
               functionEmpty(pages_list); 
