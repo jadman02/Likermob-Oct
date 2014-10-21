@@ -438,7 +438,7 @@ var nation = document.getElementById("country");
 nation.value = town;
 
 var elem = document.getElementById("fulladdress2");
-elem.value = response.result.formatted_address;
+elem.innerHTML = response.result.formatted_address;
 
 var elem1 = document.getElementById("latitude_box");
 elem1.value = response.result.geometry.location.lat;
