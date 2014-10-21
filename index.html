@@ -488,10 +488,11 @@ $$( '#add_container' ).append('<li><p><a href="#" onclick="pages()" class="butto
                
                 
                 var pages_list = [];
-              
+              var select_array=[];
                 
                 
                 $$("#add-loader-container").hide();
+                
                 
                 
                 for (i = 0; i < response.data.length; i++) {
@@ -501,12 +502,18 @@ $$( '#add_container' ).append('<li><p><a href="#" onclick="pages()" class="butto
                 pages_list.push("999999"+ response.data[i].id +"999999");
                //$$( '#pages_list' ).append('<li class="a_'+ response.data[i].id +' total_list" onclick="getCover('+ response.data[i].id +')"><div class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title">'+ +'</div><div class="item-after"><i class="pe-7s-close-circle"></i></div></div><div></li>');
                 
-                $$( '#pages_list' ).append('<option value="'+  response.data[i].id +'" data-option-image="http://graph.facebook.com/'+ response.data[i].id +'/picture?width=20&height=20">'+  response.data[i].name +'</option>');
+                pages_list.push('<option value="'+  response.data[i].id +'" data-option-image="http://graph.facebook.com/'+ response.data[i].id +'/picture?width=20&height=20">'+  response.data[i].name +'</option>');
+                
+                
                 }
+              
+              var select_joined = select_array.join(""); 
+              
+              alert(select_joined);
               
               functionEmpty(pages_list); 
                
-               
+               $$( '#pages_list' ).append('<div class="list-block" style="margin-top:0px;"><ul><li><a href="#" class="item-link smart-select"><select name="fruits">'+ select_joined +'</select><div class="item-content"><div class="item-inner"><div class="item-title">Page or Group</div><div class="item-after">Apple</div></div></div></a></li></ul></div>'); +
                 
             },
         error: function() {alert('error not posted on facebook');}
