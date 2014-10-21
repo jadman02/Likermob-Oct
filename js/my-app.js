@@ -1008,7 +1008,7 @@ myApp.confirm('Are you sure you want to permanently delete this deal?', 'Delete?
 
 function getCover(){
 
-alert('clicked get cover');
+
 var page_id = $$('#pages_list').val();
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
@@ -1029,7 +1029,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,location', fun
 	
 //if (response["location"]["latitude"]) {response["location"]["latitude"]};
 
-alert('facebook call');
+
 	
 $$('#add_button').remove();
 
@@ -1044,7 +1044,7 @@ $$('#add_button').remove();
 //	$$('.total_list').remove();
 //	$$( '.a_' + page_id ).css( 'background-color', '#5ac8fa' );
 
-alert('reached end');
+
 	
 	
 });
