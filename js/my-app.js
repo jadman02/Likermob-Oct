@@ -1131,12 +1131,11 @@ function openSearch() {
 
 	 var popupHTML = '<div class="popup">'+
              
-            
-'<div class="navbar"><div class="navbar-inner"><div class="left"><i class="pe-7s-search pe-lg"></i></div><div class="center"><input onkeyup="searchPlaces();" style="margin-left:20px;border:none;" id="fulladdress" type="text" placeholder="i.e. 3 Smith St"></div></div></div>' +
+'<form class="searchbar"><div class="searchbar-input"><input type="search" placeholder="Search" onkeyup="searchPlaces();" id="fulladdress"><a href="#" class="searchbar-clear"></a></div><a href="#" class="searchbar-cancel">Cancel</a></form>' +            
                     '<div class="content-block">'+
                      '<div class="list-block"><ul><!-- Text inputs --><span id="resulta" style="border:none;"></span></ul></div>'+
                     '</div>'+
-                    '<form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar"><div class="searchbar-input"><input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a></div><a href="#" class="searchbar-cancel">Cancel</a></form>' +
+                    
                   '<div class="toolbar"><div class="toolbar-inner"><a href="#" class="close-popup"><i class="icon icon-back"></i><span>Back</span></a></div></div>' +
                   '</div>'
                   
