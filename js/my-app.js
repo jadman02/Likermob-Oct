@@ -22,22 +22,7 @@ myApp.onPageInit('index', function (page) {
 myApp.onPageInit('add_deal', function (page) {
 
 
-//Autocomplete JSON Google
-$$('#fulladdress').keyup(function(){
 
-alert('keyup');
-
-$$.getJSON('https://maps.googleapis.com/maps/api/place/autocomplete/json?input='+ this.value +'&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
-$$("#resulta li").remove();
-for (i = 0; i < 10; i++) 
-{ 
-	
-
-	
-$$( '#resulta' ).append('<li class="item-content" style="font-size:16px;"><a href="#" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')"><div class="item-inner"><div class="item-title">' + response.predictions[i].description + '</div></div></a></li>');
-}
-});
-});
 
 
 });
@@ -1140,7 +1125,22 @@ datePicker.show(options, function(date){
 
 function openSearch() {
 
+//Autocomplete JSON Google
+$$('#fulladdress').keyup(function(){
 
+alert('keyup');
+
+$$.getJSON('https://maps.googleapis.com/maps/api/place/autocomplete/json?input='+ this.value +'&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
+$$("#resulta li").remove();
+for (i = 0; i < 10; i++) 
+{ 
+	
+
+	
+$$( '#resulta' ).append('<li class="item-content" style="font-size:16px;"><a href="#" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')"><div class="item-inner"><div class="item-title">' + response.predictions[i].description + '</div></div></a></li>');
+}
+});
+});
 	
 	 var popupHTML = '<div class="popup">'+
                     '<div class="content-block">'+
