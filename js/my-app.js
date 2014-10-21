@@ -1125,7 +1125,7 @@ datePicker.show(options, function(date){
 function openSearch() {
 
 //Autocomplete JSON Google
-$$('#fulladdress').keyup(function(){
+$$('#fulladdress2').keyup(function(){
 
 $$.getJSON('https://maps.googleapis.com/maps/api/place/autocomplete/json?input='+ this.value +'&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
 $$("#resulta li").remove();
