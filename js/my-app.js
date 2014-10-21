@@ -1132,7 +1132,7 @@ function openSearch() {
 	 var popupHTML = '<div class="popup">'+
 '<form class="searchbar"><a href="#" class="close-popup"><i class="icon icon-back" style="margin-right:10px;"></i></a><div class="searchbar-input"><input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress"></div></form>'+
 '<div class="content-block" style="min-height:300px;">'+
-'<a href="#" class="button disabled" id="search_button" style="position:absolute;border:none;margin:0 auto;"><i class="pe-7s-search pe-5x"></i></a>'+
+'<a href="#" class="button disabled" id="search_button" style="position:absolute;border:none;"><i class="pe-7s-search pe-5x pe-va"></i></a>'+
 '<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resulta" style="border:none;padding:0px;margin:0px;"></ul></div>'+
 
 '</div>'+
