@@ -1,6 +1,6 @@
 // Initialize your app
 var myApp = new Framework7({
-  smartSelectSearchbar:true,
+  hideNavbarOnPageScroll:true,
   init: false //Disable App's automatica initialization
 });
 
