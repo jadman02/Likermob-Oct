@@ -503,7 +503,7 @@ $$( '#add_container' ).append('<li><p><a href="#" onclick="pages()" class="butto
                 
                 //$$( '#pages_list' ).append('<option onclick="getCover('+ response.data[i].id +')" value="'+ response.data[i].id +'" data-option-image="http://graph.facebook.com/'+ response.data[i].id +'/picture?width=20&height=20">'+ response.data[i].name +'</option>');
                 
-                $$( '#pages_list' ).append('<li onclick="getCover('+ response.data[i].id +')"><label class="label-radio item-content"><!-- Checked by default --><input type="radio" name="my-radio" value="Movies"><div class="item-media"><img src="http://graph.facebook.com/'+ response.data[i].id +'/picture?width=20&height=20"/></div><div class="item-inner"><div class="item-title">'+ response.data[i].name +'</div></div></label></li>');
+                $$( '#pages_list' ).append('<li onclick="getCover('+ response.data[i].id +')"><label class="label-radio item-content"><!-- Checked by default --><input type="radio" name="my-radio" value="Movies"><div class="item-media"><img src="http://graph.facebook.com/'+ response.data[i].id +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">'+ response.data[i].name +'</div></div></label></li>');
                 
                 	
                 }
