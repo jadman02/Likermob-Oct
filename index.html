@@ -20,14 +20,15 @@
 
 <style>
 
- input[type="datetime-local"]:before {
-    content: attr(placeholder);
-    color: #ccc;
-  }
 
-  input[type="datetime-local"]:focus:before, input[type="date"]:valid:before {
-    content: "Expiry";
-  }
+
+.dateclass.placeholderclass::before{
+
+    content:attr(placeholder);
+    background-color:#FFFFFF;
+}
+
+
      
      .hide {display:none;}
      
