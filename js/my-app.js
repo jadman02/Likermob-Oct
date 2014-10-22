@@ -1060,7 +1060,7 @@ $$('#add_button').remove();
 
 
 
-	document.getElementById("coverbutton").innerHTML = '<a href="#" class="button" onclick="addPhoto('+page_id+')" style="height:80px;margin:0 auto;border:none;margin-top:-100px;"><i class="pe-7s-plus pe-5x" style="border:radius:50%;background-color:white;color:#007aff;"></i></a>';
+	document.getElementById("coverbutton").innerHTML = '<a href="#" class="button" onclick="addPhoto('+page_id+')" style="height:80px;margin:0 auto;border:none;margin-top:-100px;"><i class="pe-7s-plus pe-5x" style="border-radius:50%;background-color:white;color:#007aff;"></i></a>';
 	var coverpic = response["cover"]["source"];
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
