@@ -20,7 +20,14 @@
 
 <style>
 
+ input[type="datetime-local"]:before {
+    content: attr(placeholder);
+    color: #aaa;
+  }
 
+  input[type="datetime-local"]:focus:before, input[type="date"]:valid:before {
+    content: "";
+  }
      
      .hide {display:none;}
      
