@@ -1030,10 +1030,10 @@ myApp.confirm('Are you sure you want to permanently delete this deal?', 'Delete?
 }
 
 
-function getCover(){
+function getCover(page_id){
 
 
-var page_id = $$('#pages_list').val();
+//var page_id = $$('#pages_list').val();
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
 
