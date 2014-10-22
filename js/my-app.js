@@ -906,7 +906,29 @@ function dbDeal() {
                       
  
 
+'<div class="buttons-row">'+
 
+        '<a href="#tab1" class="tab-link active button">Tab 1</a>'+
+
+       ' <a href="#tab2" class="tab-link button">Tab 2</a>'+
+
+        '<a href="#tab3" class="tab-link button">Tab 3</a>'+
+      '</div>'+
+
+'<div class="tabs">'+
+
+ ' <div class="tab active" id="tab1">'+
+'<p>First Tab <br/><br/><br/>Content Here</p>'+
+ ' </div>'+
+
+ ' <div class="tab" id="tab2">'+
+'<p>Second Tab <br/><br/><br/>Content Here</p>'+
+  '</div>'+
+
+  '<div class="tab" id="tab3">'+
+'<p>Third Tab <br/><br/><br/>Content Here</p>'+
+  '</div>'+
+'</div>  '+
 
                       
                        '<div class="content-block-title" style="margin-top:-20px;text-align:center;">1: Select Page or Group</div><div class="list-block"><ul id="pages_list"></ul></div>'+
