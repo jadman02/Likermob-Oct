@@ -918,7 +918,7 @@ function dbDeal() {
 '<div class="tabs">'+
 
  ' <div class="tab active" id="tab1">'+
-'<div class="content-block-title" style="margin-top:-20px;text-align:center;">1: Select Page or Group</div><div class="list-block"><ul id="pages_list"></ul></div>'+
+'<div class="content-block-title" style="text-align:center;">1: Select Page or Group</div><div class="list-block"><ul id="pages_list"></ul></div>'+
  ' </div>'+
 
  ' <div class="tab" id="tab2">'+
