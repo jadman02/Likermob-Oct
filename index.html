@@ -19,6 +19,15 @@
 <link rel="stylesheet" href="css/helper.css">
 
 <style>
+
+ input[type="datetime-local"]:before {
+    content: attr(placeholder);
+    color: #ccc;
+  }
+
+  input[type="datetime-local"]:focus:before, input[type="date"]:valid:before {
+    content: "Expiry";
+  }
      
      .hide {display:none;}
      
