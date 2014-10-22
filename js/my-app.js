@@ -914,7 +914,7 @@ function dbDeal() {
         '<a href="#tab3" class="tab-link button">Submit</a>'+
       '</div>'+
 
-'<div class="tabs-animated-wrap">' +
+
 
 '<div class="tabs">'+
 
@@ -933,7 +933,7 @@ function dbDeal() {
                      
   '</div>'+
 '</div>  '+
-'</div>  '+
+
 
                       
                        
@@ -1034,6 +1034,10 @@ myApp.confirm('Are you sure you want to permanently delete this deal?', 'Delete?
 
 
 function getCover(page_id){
+
+
+
+    myApp.showTab('#tab2');
 
 
 //var page_id = $$('#pages_list').val();
