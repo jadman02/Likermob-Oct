@@ -915,7 +915,7 @@ function dbDeal() {
       '</div>'+
 
 
-
+ '<div class="tabs-animated-wrap">'+
 '<div class="tabs">'+
 
  ' <div class="tab active" id="tab1">'+
@@ -932,6 +932,7 @@ function dbDeal() {
                      '<div class="content-block-title"><div class="content-block-inner" style="text-align:center;">4: Set Location </div></div><div class="list-block"><ul><!-- Text inputs --><li><div class="item-content" style="border:none;"><div class="item-inner"><label class="label-switch" onclick="showAddress();"><input type="checkbox" id="addressbox"><div class="checkbox"></div></label><div class="item-input" onclick="openSearch();$$(\'#fulladdress\').focus();" style="margin-left:20px;" id="fulladdress2"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Unit</div><div class="item-input"><input id="subpremise" type="text" placeholder="-"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Number</div><div class="item-input"><input placeholder="-" id="street_number" type="text"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Street</div><div class="item-input"><input placeholder="-" id="route" type="text"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Suburb</div><div class="item-input"><input placeholder="-" id="locality" type="text" value="ffff"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Postal Code</div><div class="item-input"><input placeholder="-" id="postal_code" type="text"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">State</div><div class="item-input"><input placeholder="-" id="administrative_area_level_1" type="text"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Country</div><div class="item-input"><input placeholder="-" id="country" type="text"></div></div></div></li></ul></div>'+
                      
   '</div>'+
+'</div>  '+
 '</div>  '+
 
 
@@ -1035,7 +1036,7 @@ myApp.confirm('Are you sure you want to permanently delete this deal?', 'Delete?
 
 function getCover(page_id){
 
-alert('new');
+
 
     myApp.showTab('#tab2');
 
