@@ -1068,7 +1068,7 @@ email.value = "";
 opt.value =  "";
 opt.text = "";
 
-if (res[0][8]) {address.value = "yes mama";}
+if (res[0][8] = "1") {alert('equals yes'); address.value = "yes mama";}
 
 //res[0][5] + ',' + res[0][6]  + ',' + res[0][7]  + ',' + res[0][9]  + ',' + res[0][10] ',' + res[0][11];
 
