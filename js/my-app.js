@@ -27,6 +27,11 @@ myApp.onPageInit('add_deal', function (page) {
 
 });
 
+myApp.onPageBeforeRemove('add_deal', function (page) {
+$$( ".business" ).remove();
+});
+
+
 myApp.onPageInit('register', function (page) {
 
 alert('on register page');
@@ -693,7 +698,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
         '    <div class="right"><div class="item-input" onclick="openMap();"><label class="label-switch"><input type="checkbox"><div class="checkbox"></div></label></div>' +
         '  </div>' +
         '</div>' +
-        '<div class="pages">' +
+        '<div class="pages business">' +
         '  <!-- Page, data-page contains page name-->' +
         '  <div data-page="business" class="page business">' +
         '    <!-- Scrollable page content-->' +
@@ -883,15 +888,15 @@ function dbDeal() {
 
 			mainView.loadContent(
         '<!-- Top Navbar-->' +
-        '<div class="navbar">' +
+        '<div class="navbar business">' +
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="center">Add Deal</div>' +
         '  </div>' +
         '</div>' +
-        '<div class="pages">' +
+        '<div class="pages business">' +
         '  <!-- Page, data-page contains page name-->' +
-        '  <div data-page="add_deal" class="page">' +
+        '  <div data-page="add_deal" class="page business">' +
         '    <!-- Scrollable page content-->' +
         '    <div class="page-content cover-add" style="margin-top:30px;background-size: 100%;background-repeat: no-repeat;">' +
         
