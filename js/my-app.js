@@ -938,8 +938,8 @@ function dbDeal() {
   '</div>'+
 
   '<div class="tab" id="tab3">'+
- '<div class="content-block-title"><div class="content-block-inner" style="text-align:center;">3: Schedule Post </div></div><div class="list-block"><ul><li><div class="item-content"><div class="item-inner" onclick="showDateTime();"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-input"><input type="datetime-local" id="datetime"></div></div></li></ul></div>'+
-                     '<div class="content-block-title"><div class="content-block-inner" style="text-align:center;">4: Set Location </div></div><div class="list-block"><ul><!-- Text inputs --><li><div class="item-content" style="border:none;"><div class="item-inner"><label class="label-switch" onclick="showAddress();"><input type="checkbox" id="addressbox"><div class="checkbox"></div></label><div class="item-input" onclick="openSearch();$$(\'#fulladdress\').focus();" style="margin-left:20px;" id="fulladdress2"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Unit</div><div class="item-input"><input id="subpremise" type="text" placeholder="-"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Number</div><div class="item-input"><input placeholder="-" id="street_number" type="text"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Street</div><div class="item-input"><input placeholder="-" id="route" type="text"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Suburb</div><div class="item-input"><input placeholder="-" id="locality" type="text" value="ffff"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Postal Code</div><div class="item-input"><input placeholder="-" id="postal_code" type="text"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">State</div><div class="item-input"><input placeholder="-" id="administrative_area_level_1" type="text"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Country</div><div class="item-input"><input placeholder="-" id="country" type="text"></div></div></div></li></ul></div> <a href="#" id="submitdealbutton" style="margin-top:-10px;" onclick="submit();" class="button active disabled">Submit</a>'+
+ '<div class="content-block-title"><div class="content-block-inner" style="text-align:center;">Schedule Post</div></div><div class="list-block"><ul><li><div class="item-content"><div class="item-inner" onclick="showDateTime();"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-input"><input type="datetime-local" id="datetime"></div></div></li></ul></div>'+
+                     '<div class="content-block-title"><div class="content-block-inner" style="text-align:center;">Set Location </div></div><div class="list-block"><ul><!-- Text inputs --><li><div class="item-content" style="border:none;"><div class="item-inner"><label class="label-switch" onclick="showAddress();"><input type="checkbox" id="addressbox"><div class="checkbox"></div></label><div class="item-input" onclick="openSearch();$$(\'#fulladdress\').focus();" style="margin-left:20px;" id="fulladdress2"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Unit</div><div class="item-input"><input id="subpremise" type="text" placeholder="-"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Number</div><div class="item-input"><input placeholder="-" id="street_number" type="text"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Street</div><div class="item-input"><input placeholder="-" id="route" type="text"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Suburb</div><div class="item-input"><input placeholder="-" id="locality" type="text" value="ffff"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Postal Code</div><div class="item-input"><input placeholder="-" id="postal_code" type="text"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">State</div><div class="item-input"><input placeholder="-" id="administrative_area_level_1" type="text"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Country</div><div class="item-input"><input placeholder="-" id="country" type="text"></div></div></div></li></ul></div> <a href="#" id="submitdealbutton" style="margin-top:-10px;" onclick="submit();" class="button active disabled">Submit</a>'+
                      
   '</div>'+
 '</div>  '+
@@ -1055,18 +1055,21 @@ function getCover(page_id){
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
 var phone = document.getElementById("phoneinput");
+var address = document.getElementById("fulladdress");
 var email = document.getElementById("emailinput");
 var phone = document.getElementById("phoneinput");
 var website = document.getElementById("websiteinput");
 var opt= document.getElementById('category_rec').options[0];
 
 phone.value = "";
+address.value = "";
 website.value = "";
 email.value = "";
 opt.value =  "";
 opt.text = "";
 
 email.value = res[0][16];
+email.value = res[0][5] + ',' + res[0][6]  + ',' + res[0][7]  + ',' + res[0][9]  + ',' + res[0][10] ',' + res[0][11];
 phone.value = res[0][4];
 website.value = res[0][15];
 opt.value =  res[0][17];
