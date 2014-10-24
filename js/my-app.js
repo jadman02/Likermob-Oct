@@ -1234,6 +1234,6 @@ else {alert('have not made required inputs' );}
 function gotoThree(){
 	
 	
-	
+	myApp.showTab('#tab3');
 	
 }
