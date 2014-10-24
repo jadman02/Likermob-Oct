@@ -1048,6 +1048,9 @@ function getCover(page_id){
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
 
+var categoryoption = document.getElementById("category_rec_value");
+categoryoption.value = "";
+categoryoption.value = res[0][17];
 
 var phone = document.getElementById("phoneinput");
 phone.value = "";
