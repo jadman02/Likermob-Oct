@@ -1068,7 +1068,7 @@ email.value = "";
 opt.value =  "";
 opt.text = "";
 
-if (res[0][8] == "1") {alert('address is set');}
+if (res[0][8] = "1") {alert('address is set');}
 else {alert('address is not set');}
 
 email.value = res[0][16];
