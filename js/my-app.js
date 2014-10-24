@@ -1156,7 +1156,7 @@ function photoBrowser() {
 function getPhoto() {
      
      navigator.camera.getPicture( function( imageURI ) {
-        alert( imageURI );
+        alert( 'the image url is:' + imageURI );
         $$( '.cover-add' ).css( 'background-image', 'url(\''+ imageURI  +'\')');
       },
       function( message ) {
