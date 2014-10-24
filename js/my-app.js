@@ -894,6 +894,7 @@ function dbDeal() {
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="center">Add Deal</div>' +
+       ' <div class="right"><a href="#"><i class="pe-7s-upload pe-lg"></i><span>Upload</span></a></div>' +
         '  </div>' +
         '</div>' +
         '<div class="pages business">' +
@@ -916,20 +917,13 @@ function dbDeal() {
 
 
 
-        '<a href="#tab1" class="tab-link active button"><span class="badge badge-red" style="margin-top:-10px;">5</span><br/>Pick</a>'+
+        '<a href="#tab1" class="tab-link active button">Pick</a>'+
 
        ' <a href="#tab2" class="tab-link button">Create</a>'+
 
         '<a href="#tab3" class="tab-link button">Customise</a>'+
       '</div>'+
-      
-      '<div class="buttons-row">'+
 
-
-
-        '<a href="#" class="tab-link button disabled">Submit</a>'+
-        
-      '</div>'+
 
 
  '<div class="tabs-animated-wrap">'+
