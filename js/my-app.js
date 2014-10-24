@@ -1068,7 +1068,15 @@ email.value = "";
 opt.value =  "";
 opt.text = "";
 
-if (res[0][8] = "1") {alert('equals yes'); address.value = "yes mama";}
+
+
+alert(res[0][8]);
+alert(res[0][5]);
+alert(res[0][6]);
+alert(res[0][7]);
+alert(res[0][9]);
+alert(res[0][10]);
+alert(res[0][11]);
 
 //res[0][5] + ',' + res[0][6]  + ',' + res[0][7]  + ',' + res[0][9]  + ',' + res[0][10] ',' + res[0][11];
 
