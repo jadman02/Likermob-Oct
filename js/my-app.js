@@ -1047,9 +1047,9 @@ myApp.confirm('Are you sure you want to permanently delete this deal?', 'Delete?
 function getCover(page_id){
 
 
-
+$$( '#tab2' ).removeClass( "disabled" );
     myApp.showTab('#tab2');
-$$( "#tab2" ).removeClass( "disabled" );
+
 
 //var page_id = $$('#pages_list').val();
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
