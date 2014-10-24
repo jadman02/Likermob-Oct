@@ -914,9 +914,9 @@ function dbDeal() {
 
         '<a href="#tab1" class="tab-link active button">Pick</a>'+
 
-       ' <a href="#tab2" class="tab-link button">Create</a>'+
+       ' <a href="#tab2" class="tab-link button disabled">Create</a>'+
 
-        '<a href="#tab3" class="tab-link button">Submit</a>'+
+        '<a href="#tab3" class="tab-link button disabled">Submit</a>'+
       '</div>'+
 
 
@@ -1049,7 +1049,7 @@ function getCover(page_id){
 
 
     myApp.showTab('#tab2');
-
+$$( "#tab2" ).removeClass( "disabled" );
 
 //var page_id = $$('#pages_list').val();
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
@@ -1227,7 +1227,7 @@ var description_i = document.getElementById("description_i");
 var terms_i = document.getElementById("terms_i");
 var expiry_i = document.getElementById("expiry_i");
 
-if((title_i.value != "") && (description_i.value != "") && (terms_i.value != "") && (expiry_i.value != "")){alert('completed required inputs');$$("#nextbutton").removeAttr("disabled", "disabled");}
+if((title_i.value != "") && (description_i.value != "") && (terms_i.value != "") && (expiry_i.value != "")){alert('completed required inputs');$$( "#nextbutton" ).removeClass( "disabled" );}
 else {alert('have not made required inputs' );}
 
 }
@@ -1236,5 +1236,5 @@ function gotoThree(){
 	
 	
 	myApp.showTab('#tab3');
-	
+	$$( "#tab3" ).removeClass( "disabled" );
 }
