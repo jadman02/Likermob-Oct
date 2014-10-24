@@ -916,11 +916,19 @@ function dbDeal() {
 
 
 
-        '<a href="#tab1" class="tab-link active button">Pick <i class="icon"><span class="badge badge-red">5</span></i></a>'+
+        '<a href="#tab1" class="tab-link active button">Pick <span class="badge badge-red">5</span></a>'+
 
        ' <a href="#tab2" class="tab-link button">Create</a>'+
 
-        '<a href="#tab3" class="tab-link button">Submit</a>'+
+        '<a href="#tab3" class="tab-link button">Customise</a>'+
+      '</div>'+
+      
+      '<div class="buttons-row">'+
+
+
+
+        '<a href="#" class="tab-link button disabled">Submit</a>'+
+        
       '</div>'+
 
 
