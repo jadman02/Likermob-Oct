@@ -1047,27 +1047,24 @@ function getCover(page_id){
 //var page_id = $$('#pages_list').val();
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
-
-
-var opt= document.getElementById('category_rec').options[0];
-     opt.value =  '';
-     opt.text = '';
-     opt.value =  res[0][17];
-     opt.text = res[0][17];
-
 var phone = document.getElementById("phoneinput");
-phone.value = "";
-phone.value = res[0][4];
-
 var email = document.getElementById("emailinput");
-email.value = "";
-email.value = res[0][16];
-
+var phone = document.getElementById("phoneinput");
 var website = document.getElementById("websiteinput");
+var opt= document.getElementById('category_rec').options[0];
+
+phone.value = "";
 website.value = "";
+email.value = "";
+opt.value =  "";
+opt.text = "";
+
+email.value = res[0][16];
+phone.value = res[0][4];
 website.value = res[0][15];
-	
-	
+opt.value =  res[0][17];
+opt.text = res[0][17];
+
 });
 
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,location', function(response){
