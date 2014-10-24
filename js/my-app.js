@@ -1060,7 +1060,7 @@ function getCover(page_id){
 
 
     myApp.showTab('#tab2');
-
+addPhoto(page_id);
 
 //var page_id = $$('#pages_list').val();
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
