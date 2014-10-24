@@ -1051,6 +1051,8 @@ $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=
 var categoryoption = document.getElementById("category_rec_value");
 categoryoption.value = "";
 categoryoption.value = res[0][17];
+document.getElementById('category_rec_value').options[0].text = "";
+document.getElementById('category_rec_value').options[0].text = res[0][17];
 
 var phone = document.getElementById("phoneinput");
 phone.value = "";
