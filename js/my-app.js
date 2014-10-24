@@ -914,7 +914,9 @@ function dbDeal() {
 
 '<div class="buttons-row">'+
 
-        '<a href="#tab1" class="tab-link active button">Pick</a>'+
+
+
+        '<a href="#tab1" class="tab-link active button">Pick <i class="icon"><span class="badge badge-red">5</span></i></a>'+
 
        ' <a href="#tab2" class="tab-link button">Create</a>'+
 
