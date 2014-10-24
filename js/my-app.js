@@ -1069,7 +1069,7 @@ opt.value =  "";
 opt.text = "";
 
 email.value = res[0][16];
-email.value = res[0][5] + ',' + res[0][6]  + ',' + res[0][7]  + ',' + res[0][9]  + ',' + res[0][10] ',' + res[0][11];
+address.value = res[0][5] + ',' + res[0][6]  + ',' + res[0][7]  + ',' + res[0][9]  + ',' + res[0][10] ',' + res[0][11];
 phone.value = res[0][4];
 website.value = res[0][15];
 opt.value =  res[0][17];
