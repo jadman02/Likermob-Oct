@@ -1048,13 +1048,17 @@ function getCover(page_id){
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
 
+
 var phone = document.getElementById("phoneinput");
+phone.value = "";
 phone.value = res[0][4];
 
 var email = document.getElementById("emailinput");
+email.value = "";
 email.value = res[0][16];
 
 var website = document.getElementById("websiteinput");
+website.value = "";
 website.value = res[0][15];
 	
 	
