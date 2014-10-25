@@ -1089,7 +1089,7 @@ opt.text = "Category";
 //res[0][5] + ',' + res[0][6]  + ',' + res[0][7]  + ',' + res[0][9]  + ',' + res[0][10] ',' + res[0][11];
 
 if (res[0][16]) {email.value = res[0][16];checkForm('email');}
-if (res[0][4]) {phone.value = res[0][4];checkForm('phone');}
+if (res[0][4]) {phone.value = res[0][4];checkForm('phone',6,25);}
 if (res[0][15]) {website.value = res[0][15];checkForm('website');}
 if (res[0][15]) {opt.value =  res[0][17];opt.text = res[0][17];checkForm('category');}
 
@@ -1099,10 +1099,11 @@ if (res[0][15]) {opt.value =  res[0][17];opt.text = res[0][17];checkForm('catego
 
 });
 
-$$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,location', function(response){
+$$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,location,category,category_list', function(response){
 	
 //if (response["location"]["latitude"]) {response["location"]["latitude"]};
 
+if (opt == "category"){alert(response["category"]);}
 
 	
 $$('#add_button').remove();
