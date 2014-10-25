@@ -1227,8 +1227,8 @@ $$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-righ
 function checkForm(id,min,max) {
 var input = document.getElementById(id + "_i").value;
 var length_string = input.length;
-if (length_string < min) { errorForm(1);}
-if (length_string > max) { errorForm(2);}
+if (length_string < min) { errorForm(1);document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(1);" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i class="pe-7s-attention pe-2x"></i></a>';}
+if (length_string > max) { errorForm(2);document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(2);" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i class="pe-7s-attention pe-2x"></i></a>';}
 if ((length_string > min) && (length_string < max)) {document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>'; }
 
 var title_i = document.getElementById("title_i");
