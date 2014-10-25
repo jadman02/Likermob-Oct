@@ -1239,8 +1239,8 @@ $$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-righ
 
 function checkForm(id,min,max) {
 var input = document.getElementById(id + "_i").value;
-var date_now = new Date();
-var tomorrow = date_now.setDate(date.getDate() + 1);
+var tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
 corrected_date = tomorrow.toISOString();
 
 if ((id=='category') && (input == 'category')) {$$( '#category_i' ).css( 'color', 'hsl(0, 0%, 70%)' );errorForm(4);document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
