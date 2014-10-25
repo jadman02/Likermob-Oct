@@ -1226,7 +1226,7 @@ $$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-righ
 
 function checkForm(id) {
 
-if (id = 'title') {alert('title completed');};
+if (id == 'title') {alert('title completed');};
 	
 var title_i = document.getElementById("title_i");
 var description_i = document.getElementById("description_i");
