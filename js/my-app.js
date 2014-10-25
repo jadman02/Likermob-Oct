@@ -1186,14 +1186,7 @@ function photoBrowser() {
 	
 	navigator.camera.getPicture( function( imageURI ) {
         $$( '.cover-add' ).css( 'background-image', 'url(\''+ imageURI  +'\')');
-        var img = new Image();
-     img.src = $$( '.cover-add' ).css('background-image').replace(/url\(|\)$|"/ig, '');
-     img.onload = function () {
-     	windowsize = $$(window).width();
-	height_image = ((img.height/img.width) * windowsize)-60;
-	alert(height_image);
-     $$( '.content-block' ).css( 'padding-top', height_image + 'px' );
- };
+moveCover();
       },
       function( message ) {
         alert( message );
@@ -1209,14 +1202,7 @@ function getPhoto() {
      
      navigator.camera.getPicture( function( imageURI ) {
         $$( '.cover-add' ).css( 'background-image', 'url(\''+ imageURI  +'\')');
-        var img = new Image();
-     img.src = $$( '.cover-add' ).css('background-image').replace(/url\(|\)$|"/ig, '');
-     img.onload = function () {
-     	windowsize = $$(window).width();
-	height_image = ((img.height/img.width) * windowsize)-60;
-	alert(height_image);
-     $$( '.content-block' ).css( 'padding-top', height_image + 'px' );
- };
+moveCover();
       },
       function( message ) {
         alert( message );
@@ -1319,4 +1305,16 @@ myApp.alert('You must set an expiry date in the future!','Error...');
 function successForm(id){
 	
 	
+}
+
+function moveCover(){
+	
+	var img = new Image();
+     img.src = $$( '.cover-add' ).css('background-image').replace(/url\(|\)$|"/ig, '');
+     img.onload = function () {
+     	windowsize = $$(window).width();
+	height_image = ((img.height/img.width) * windowsize)-60;
+	alert(height_image);
+     $$( '.content-block' ).css( 'padding-top', height_image + 'px' );
+ };
 }
