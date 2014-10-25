@@ -1240,7 +1240,7 @@ $$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-righ
 function checkForm(id,min,max) {
 var input = document.getElementById(id + "_i").value;
 
-if (id=='email'){checkEmail(input);return;}
+if (id=='email'){checkEmail("'"+input+"'");return;}
 
 if ((id=='category') && (input == 'category')) {$$( '#category_i' ).css( 'color', 'hsl(0, 0%, 70%)' );errorForm(4);document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
 if ((id=='category') && (input !== 'category')) {$$( '#category_i' ).css( 'color', 'black' );document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';return;}
