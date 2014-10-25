@@ -1229,17 +1229,13 @@ $$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-righ
 function checkForm(id,min,max) {
 var input = document.getElementById(id + "_i").value;
 var date_now = new Date();
-alert(input);
-alert(date_now);
-
-
 corrected_date = date_now.toISOString();
 
-alert(corrected_date);
+if (id=='expiry') {alert('you clicked on expiry');}
 
-if (input < corrected_date) {alert('input less than');}
-if (input > corrected_date) {alert('input greater');}
-if (input == corrected_date) {alert('the same');}
+if (input < corrected_date) {errorForm(3);document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';}
+if (input > corrected_date) {document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if (input == corrected_date) {errorForm(3);document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';}
 
 
 var length_string = input.length;
@@ -1275,6 +1271,9 @@ if (error == '2') {
 myApp.alert('Sorry that is too long!','Error...');
 }
 
+if (error == '3') {
+myApp.alert('You must set an expiry date in the future!','Error...');
+}
 
 
 }
