@@ -1227,7 +1227,8 @@ $$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-righ
 function checkForm(id) {
 var input = document.getElementById(id + "_i").value;
 var length_string = input.length;
-if ((id == 'title') && (length_string < 5)) { alert('Too few characters');}
+if (length_string < 5) { errorForm(1);}
+if (length_string > 10) { errorForm(2);}
 	
 var title_i = document.getElementById("title_i");
 var description_i = document.getElementById("description_i");
@@ -1245,4 +1246,21 @@ function gotoThree(){
 	myApp.showTab('#tab3');
 }
 
+function errorForm(error){
 
+if (error == '1') {
+myApp.alert('Sorry that is too short!');
+}
+
+if (error == '2') {
+myApp.alert('Sorry that is too long!');
+}
+
+
+
+}
+
+function successForm(id){
+	
+	
+}
