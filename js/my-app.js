@@ -1244,9 +1244,9 @@ corrected_date = date_now.toISOString();
 var cat = document.getElementById("category_rec");
 var category_value = cat.options[e.selectedIndex].value;
 
-
+alert(category_value)
 if ((id=='category') && (category_value == 'category')) {$$( '#category_rec' ).css( 'color', 'hsl(0, 0%, 70%)' );errorForm(4);document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';}
-if ((id=='category') && (category_value != 'category')) {$$( '#category_rec' ).css( 'color', 'black' );document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if ((id=='category') && (category_value !== 'category')) {$$( '#category_rec' ).css( 'color', 'black' );document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
 
 if ((id=='expiry') && (input < corrected_date)) {errorForm(3);document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';}
 if ((id=='expiry') && (input > corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
