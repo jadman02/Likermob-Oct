@@ -1083,18 +1083,18 @@ phone.value = "";
 //address.value = "";
 website.value = "";
 email.value = "";
-opt.value =  "";
-opt.text = "";
+opt.value =  "category";
+opt.text = "Category";
 
 //res[0][5] + ',' + res[0][6]  + ',' + res[0][7]  + ',' + res[0][9]  + ',' + res[0][10] ',' + res[0][11];
 
 if (res[0][16]) {email.value = res[0][16];checkForm('email');}
+if (res[0][4]) {phone.value = res[0][4];checkForm('phone');}
+if (res[0][15]) {website.value = res[0][15];checkForm('website');}
+if (res[0][15]) {opt.value =  res[0][17];opt.text = res[0][17];checkForm('category');}
 
 
-phone.value = res[0][4];
-website.value = res[0][15];
-opt.value =  res[0][17];
-opt.text = res[0][17];
+
 
 
 });
