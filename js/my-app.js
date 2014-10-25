@@ -1335,7 +1335,7 @@ function checkEmail(text,id) {
     }
 
 function checkWebsite(text,id) { 
-        var rex = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+        var rex = /(?<protocol>(http|ftp|https|ftps):\/\/)?(?<site>[\w\-_\.]+\.(?<tld>([0-9]{1,3})|([a-zA-Z]{2,3})|(aero|arpa|asia|coop|info|jobs|mobi|museum|name|travel))+(?<port>:[0-9]+)?\/?)((?<resource>[\w\-\.,@^%:/~\+#]*[\w\-\@^%/~\+#])(?<queryString>(\?[a-zA-Z0-9\[\]\-\._+%\$#\~',/]*=[a-zA-Z0-9\[\]\-\._+%\$#\~',/]*)+(&[a-zA-Z0-9\[\]\-\._+%\$#\~',/]*=[a-zA-Z0-9\[\]\-\._+%\$#\~',/]*)*)?)?/;
 
       
       if (rex.test(text)){document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';return;}
