@@ -1230,6 +1230,7 @@ function checkForm(id,min,max) {
 var input = document.getElementById(id + "_i").value;
 var date_now = new Date();
 alert(input);
+alert(date_now);
 var length_string = input.length;
 if (length_string < min) { errorForm(1);document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(1);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';}
 if (length_string > max) { errorForm(2);document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(2);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';}
