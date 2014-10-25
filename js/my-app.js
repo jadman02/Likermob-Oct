@@ -1252,11 +1252,11 @@ function gotoThree(){
 function errorForm(error){
 
 if (error == '1') {
-myApp.alert('Sorry that is too short!');
+myApp.alert('Sorry that is too short!',, 'Error...');
 }
 
 if (error == '2') {
-myApp.alert('Sorry that is too long!');
+myApp.alert('Sorry that is too long!','Error...');
 }
 
 
