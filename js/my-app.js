@@ -1115,7 +1115,11 @@ $$('#add_button').remove();
 //	$$('.total_list').remove();
 //	$$( '.a_' + page_id ).css( 'background-color', '#5ac8fa' );
 
+var img = new Image;
+img.src = $$('.cover-add').css('background-image').replace(/url\(|\)$/ig, "");
+var bgImgHeight = img.height;
 
+alert(bgImgHeight);
 	
 	
 });
