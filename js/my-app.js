@@ -1103,8 +1103,15 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,location,categ
 	
 //if (response["location"]["latitude"]) {response["location"]["latitude"]};
 
-//if (opt == "category"){alert(response["category"]);}
-alert(response["category"]);
+var phone = document.getElementById("phone_i");
+//var address = document.getElementById("fulladdress2");
+var email = document.getElementById("email_i");
+var phone = document.getElementById("phone_i");
+var website = document.getElementById("website_i");
+var opt= document.getElementById('category_i').options[0];
+
+if (opt == "category"){alert(response["category"]);}
+//alert(response["category"]);
 	
 $$('#add_button').remove();
 
