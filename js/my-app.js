@@ -1227,7 +1227,7 @@ $$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-righ
 function checkForm(id) {
 var input = document.getElementById(id + "_i").value;
 var length_string = input.length;
-if (id == 'title') { (if length_string < 5) {alert('Too few characters');} };
+if ((id == 'title') && (length_string < 5)) { alert('Too few characters');}
 	
 var title_i = document.getElementById("title_i");
 var description_i = document.getElementById("description_i");
