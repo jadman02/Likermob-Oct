@@ -1116,12 +1116,14 @@ $$('#add_button').remove();
 //	$$('.total_list').remove();
 //	$$( '.a_' + page_id ).css( 'background-color', '#5ac8fa' );
 
-var img = new Image;
-img.src = $$('.cover-add').css('background-image').replace(/url\(|\)$/ig, "");
-var bgImgWidth = img.width;
-var bgImgHeight = img.height;
+  var tmpImg = new Image();
+    tmpImg.src=coverpic; //or  document.images[i].src;
+    $$(tmpImg).one('load',function(){
+      orgWidth = tmpImg.width;
+      orgHeight = tmpImg.height;
+      alert(orgWidth+"x"+orgHeight);
+    });
 
-alert(bgImgHeight);
 
 
 	
