@@ -1119,10 +1119,9 @@ $$('#add_button').remove();
  var img = new Image();
      img.src = $$( '.cover-add' ).css('background-image').replace(/url\(|\)$|"/ig, '');
      img.onload = function () {
-     	alert(img.height);
      	windowsize = $$(window).width();
-     	alert(windowsize);
-	height_image = img.height-190;
+	height_image = (img.height/img.width) * windowsize;
+	alert(height_image);
      $$( '.content-block' ).css( 'padding-top', height_image + 'px' );
  };
 
