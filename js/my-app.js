@@ -1246,7 +1246,10 @@ function gotoThree(){
 
 function validateForm(id) {
 	
+	
+	
 	if (id == 'title') {
+		alert('validating');
 		var input = document.getElementById("title_i").value;
 		
 		if (input=='yes') {alert('yes entered');}
