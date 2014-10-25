@@ -896,7 +896,7 @@ function dbDeal() {
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="center">Add Deal</div>' +
-       ' <div class="right" style="display:none;"><a href="#"><i class="pe-7s-upload pe-2x" style="color:#ff3b30;"></i></a></div>' +
+       ' <div class="right"><a href="#"><i class="pe-7s-upload pe-2x" style="display:none;color:#ff3b30;"></i></a></div>' +
         '  </div>' +
         '</div>' +
         '<div class="pages business">' +
@@ -1067,7 +1067,7 @@ function getCover(page_id){
     myApp.showTab('#tab2');
 addPhoto(page_id);
 	
-$$('.right').show();
+$$('#upload').show();
 
 //var page_id = $$('#pages_list').val();
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
