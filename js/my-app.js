@@ -896,7 +896,7 @@ function dbDeal() {
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="center">Add Deal</div>' +
-       ' <div class="right"><a href="#"><i class="pe-7s-upload pe-2x"></i></a></div>' +
+       ' <div class="right"><a href="#"><i class="pe-7s-upload pe-2x" style="color:#ff3b30;"></i></a></div>' +
         '  </div>' +
         '</div>' +
         '<div class="pages business">' +
@@ -947,7 +947,7 @@ function dbDeal() {
 
   '<div class="tab" id="tab3">'+
  '<div class="content-block-title" style="text-align:center;margin-top:20px;">Customise deal</div>'+
- '<div class="list-block"><ul><li><div class="item-content"><div class="item-media" onclick="showDateTime();" style="width:50px;"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><p id="schedule" style="color:#777777">Schedule Post  <a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;"><i  class="pe-7s-info pe-2x"></i></a></p><span id="datetimespan" style="display:none;"><input type="datetime-local" id="datetime" style="width:150px;overflow:hidden;float:left;"> <a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a></span></div></div></div></li>'+
+ '<div class="list-block"><ul><li><div class="item-content"><div class="item-media" onclick="showDateTime();" style="width:50px;"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><p id="schedule" style="color:#777777">Schedule Post  <a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;"><i  class="pe-7s-info pe-2x"></i></a></p><span id="datetimespan" style="display:none;"><input type="datetime-local" id="datetime" style="width:150px;overflow:hidden;float:left;"> <a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a></span></div></div></div></li>'+
  '<li><div class="item-content"><div class="item-media" style="width:50px;"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><span style="color:#777777">Require Comment  <a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li>'+
  '</ul></div>' +
  //'<div class="list-block media-list"><ul><li><div class="item-content"><div class="item-media" onclick="showDateTime();"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-title-row"><div class="item-title" style="font-weight:normal"><input style="display:none;" type="datetime-local" id="datetime"><p id="schedule">Schedule Post</p></div><div class="item-after"><i class="pe-7s-info pe-2x"></i></div></div></div></div></li></ul></div>'+
