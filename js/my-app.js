@@ -1121,7 +1121,7 @@ var img = new Image();
     img.src = $$( '.cover-add' ).css('background-image').replace(/url\(|\)$|"/ig, '');
     img.onload = function () {
     //windowsize = $$(window).width();
-    var padding-top =  img.height/img.width * 320;
+    padding-top =  img.height/img.width * 320;
     $$( '.content-block' ).css( 'padding-top', padding-top + 'px' );
 };
     
