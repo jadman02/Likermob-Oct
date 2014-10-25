@@ -1111,15 +1111,17 @@ $$('#add_button').remove();
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
 	$$( '.cover-add' ).css( 'background-repeat', 'no-repeat' );
-	var img = new Image;
-img.src = coverpic;
-var bgImgHeight = img.height;
-	alert(bgImgHeight);
+
 //	$$('.a_' + page_id ).removeClass('total_list');
 //	$$('.total_list').remove();
 //	$$( '.a_' + page_id ).css( 'background-color', '#5ac8fa' );
 
+var img = new Image;
+img.src = $$('.cover-add').css('background-image').replace(/url\(|\)$/ig, "");
+var bgImgWidth = img.width;
+var bgImgHeight = img.height;
 
+alert(bgImgHeight);
 
 
 	
