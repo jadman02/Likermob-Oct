@@ -1120,7 +1120,8 @@ $$('#add_button').remove();
 var img = new Image();
     img.src = $$( '.cover-add' ).css('background-image').replace(/url\(|\)$|"/ig, '');
     img.onload = function () {
-    alert(img.width + ' ' + img.height);
+    height_image = img.height;
+    $$( '.content-block' ).css( 'padding-top', height_image );
 };
     
 
