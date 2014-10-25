@@ -896,7 +896,7 @@ function dbDeal() {
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="center">Add Deal</div>' +
-       ' <div class="right"><a href="#"><i class="pe-7s-upload pe-2x" style="display:none;color:#ff3b30;"></i></a></div>' +
+       ' <div class="right"><a href="#" style="display:none" id="upload"><i class="pe-7s-upload pe-2x" style="color:#ff3b30;"></i></a></div>' +
         '  </div>' +
         '</div>' +
         '<div class="pages business">' +
@@ -1232,8 +1232,14 @@ var date_now = new Date();
 alert(input);
 alert(date_now);
 
-if (input < date_now) {alert('input less than');}
-if (input > date_now) {alert('input greater');}
+
+corrected_date = date_now.toISOString();
+
+alert(corrected_date);
+
+if (input < corrected_date) {alert('input less than');}
+if (input > corrected_date) {alert('input greater');}
+if (input == corrected_date) {alert('the same');}
 
 
 var length_string = input.length;
