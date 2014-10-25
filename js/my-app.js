@@ -1314,7 +1314,6 @@ function moveCover(){
      img.onload = function () {
      	windowsize = $$(window).width();
 	height_image = ((img.height/img.width) * windowsize)-60;
-	alert(height_image);
      $$( '.content-block' ).css( 'padding-top', height_image + 'px' );
  };
 }
