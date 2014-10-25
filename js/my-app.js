@@ -1121,8 +1121,11 @@ var img = new Image();
     img.src = $$( '.cover-add' ).css('background-image').replace(/url\(|\)$|"/ig, '');
     img.onload = function () {
     alert(img.height);
-    //height_image = img.height-190;
-    //$$( '.content-block' ).css( 'padding-top', height_image + 'px' );
+    image_width = img.width;
+    image_height = img.height;
+    windowsize = $(window).width();
+    padding-top =  (image_height / image_width) * windowsize;
+    $$( '.content-block' ).css( 'padding-top', padding-top + 'px' );
 };
     
 
