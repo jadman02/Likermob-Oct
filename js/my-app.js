@@ -1335,7 +1335,7 @@ function checkEmail(text,id) {
     }
 
 function checkWebsite(text,id) { 
-        var rex = /(https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,})/;
+        var rex = /https?\:\/\/(?:www\.)?facebook\.com\/(\d+|[A-Za-z0-9\.]+)\/?/;
 
 var lowercase=text.toLowerCase();
       
