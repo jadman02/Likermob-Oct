@@ -1072,15 +1072,15 @@ $$('#upload').show();
 //var page_id = $$('#pages_list').val();
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
-var phone = document.getElementById("phoneinput");
-var address = document.getElementById("fulladdress2");
-var email = document.getElementById("emailinput");
-var phone = document.getElementById("phoneinput");
-var website = document.getElementById("websiteinput");
-var opt= document.getElementById('category_rec').options[0];
+var phone = document.getElementById("phone_i");
+//var address = document.getElementById("fulladdress2");
+var email = document.getElementById("email_i");
+var phone = document.getElementById("phone_i");
+var website = document.getElementById("website_i");
+var opt= document.getElementById('category_i').options[0];
 
 phone.value = "";
-address.value = "";
+//address.value = "";
 website.value = "";
 email.value = "";
 opt.value =  "";
