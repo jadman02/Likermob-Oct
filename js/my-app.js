@@ -1229,7 +1229,7 @@ var input = document.getElementById(id + "_i").value;
 var length_string = input.length;
 if (length_string < min) { errorForm(1);}
 if (length_string > max) { errorForm(2);}
-if ((length_string > min) && (length_string < max)) {document.getElementsByClassName(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>'; }
+if ((length_string > min) && (length_string < max)) {document.getElementsByClassName(id + "_c")[0].innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>'; }
 
 var title_i = document.getElementById("title_i");
 var description_i = document.getElementById("description_i");
