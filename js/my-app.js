@@ -1123,7 +1123,7 @@ var img = new Image();
     alert(img.height);
     image_width = img.width;
     image_height = img.height;
-    windowsize = $(window).width();
+    windowsize = $$(window).width();
     padding-top =  (image_height / image_width) * windowsize;
     $$( '.content-block' ).css( 'padding-top', padding-top + 'px' );
 };
