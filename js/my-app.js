@@ -1103,8 +1103,8 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,location,categ
 	
 //if (response["location"]["latitude"]) {response["location"]["latitude"]};
 
-if (opt == "category"){alert(response["category"]);}
-
+//if (opt == "category"){alert(response["category"]);}
+alert(response["category"]);
 	
 $$('#add_button').remove();
 
