@@ -421,8 +421,7 @@ var town = extractFromAdress(response.result.address_components, "locality");
 var state = extractFromAdress(response.result.address_components, "administrative_area_level_1");
 var country = extractFromAdress(response.result.address_components, "country");
 
-var unit = document.getElementById("subpremise_i");
-unit.value = subpremise;
+
 
 house = document.getElementById("street_number_i");
 house.value = street_number;
@@ -445,7 +444,7 @@ nation.value = country;
 var elem = document.getElementById("fulladdress2");
 elem.innerHTML = 'Set location';
 
-if (unit !=="") {document.getElementById("subpremise_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if (subpremise) {document.getElementById("subpremise_i").value = subpremise;document.getElementById("subpremise_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
 
 $$( '#fulladdress2' ).css( 'color', 'black' );
 document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';
