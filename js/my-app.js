@@ -1397,4 +1397,5 @@ if(id=='website'){myApp.alert('You may provide your website address for Likers t
 if(id=='link'){myApp.alert('You may provide a website link to your deal with full terms and conditions.','<i  class="pe-7s-link pe-2x"></i> Link');}
 if(id=='schedule'){myApp.alert('You may schedule a post up to 6 months in the future.','<i  class="pe-7s-date pe-2x"></i> Schedule Post');}
 if(id=='commenty'){myApp.alert('You may require users to comment on your post in order to get the deal.','<i  class="pe-7s-comment pe-2x"></i> Require Comment');}
+if(id=='address'){myApp.alert('If you provide an address, your deal will appear when the user searches for nearby results.','<i  class="pe-7s-comment pe-2x"></i> Require Comment');}
 }
