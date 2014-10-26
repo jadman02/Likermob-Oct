@@ -634,8 +634,7 @@ function showDateTime(){
             $$('#schedule_i').val("");
             $$('#datetimespan').hide();
             $$('#schedule').show();
-            $$( '#schedule' ).css( 'width', '150px' );
-            document.getElementById("schedule_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;" onclick="getInfo(\'commenty\')"><i  class="pe-7s-info pe-2x"></i></a>';
+            document.getElementById("schedule_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-20px;" onclick="getInfo(\'commenty\')"><i  class="pe-7s-info pe-2x"></i></a>';
             
         } else {
             $$('#schedule').hide();
