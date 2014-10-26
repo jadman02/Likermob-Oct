@@ -1325,7 +1325,7 @@ myApp.alert('Sorry that is too long!','Error');
 }
 
 if (error == '3') {
-myApp.alert('You must set a date in the future!','Error');
+myApp.alert('You must set a date at least 24 hours in the future!','Error');
 }
 
 if (error == '4') {
