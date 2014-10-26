@@ -1077,6 +1077,7 @@ var phone = document.getElementById("phone_i");
 var email = document.getElementById("email_i");
 var phone = document.getElementById("phone_i");
 var website = document.getElementById("website_i");
+var link = document.getElementById("link_i");
 var opt= document.getElementById('category_i').options[0];
 
 phone.value = "";document.getElementById("phone_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'phone\')"><i  class="pe-7s-info pe-2x"></i></a>';
