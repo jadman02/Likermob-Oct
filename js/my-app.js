@@ -634,7 +634,7 @@ function showDateTime(){
             $$('#schedule_i').val("");
             $$('#datetimespan').hide();
             $$('#schedule').show();
-            document.getElementById("schedule_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-20px;" onclick="getInfo(\'commenty\')"><i  class="pe-7s-info pe-2x"></i></a>';
+            document.getElementById("schedule_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-20px;" onclick="getInfo(\'schedule\')"><i  class="pe-7s-info pe-2x"></i></a>';
             
         } else {
             document.getElementById("schedule_c").innerHTML = '';
@@ -1381,14 +1381,15 @@ var lowercase=text.toLowerCase();
 
 function getInfo (id){
 
-if(id=='title'){myApp.alert('Choose something creative between 3-20 characters.','Title');}	
-if(id=='description'){myApp.alert('Create a deal for your Likers up to 140 characters.','Deal');}	
-if(id=='terms'){myApp.alert('Create the terms for your Likers up to 140 characters. Remember, the deal should be kosher for Facebook. You can provide a link to full Terms and Conditions below.','Terms');}	
-if(id=='expiry'){myApp.alert('Choose when the deal will expire.','Expiry');}	
-if(id=='category'){myApp.alert('Choose the category that best fits your deal, so Likers can find it.','Category');}
-if(id=='phone'){myApp.alert('You may provide a phone number for Likers to call you.','Phone');}	
-if(id=='email'){myApp.alert('You may provide an email for Likers to contact you.','Email');}	
-if(id=='website'){myApp.alert('You may provide your website address for Likers to find you.','Website');}	
-if(id=='link'){myApp.alert('You may provide a website link to your deal with full terms and conditions.','Link');}
-if(id=='schedule'){myApp.alert('You can schedule a post up to 6 months in the future.','Schedule Post');}
+if(id=='title'){myApp.alert('Choose something creative between 3-20 characters.','<i  class="pe-7s-pen pe-2x"></i> Title');}	
+if(id=='description'){myApp.alert('Create a deal for your Likers up to 140 characters.','<i  class="pe-7s-pen pe-2x"></i> Deal');}	
+if(id=='terms'){myApp.alert('Create the terms for your Likers up to 140 characters. Remember, the deal should be kosher for Facebook. You can provide a link to full Terms and Conditions below.','<i  class="pe-7s-pen pe-2x"></i> Terms');}	
+if(id=='expiry'){myApp.alert('Choose when the deal will expire.','<i  class="pe-7s-clock pe-2x"></i> Expiry');}	
+if(id=='category'){myApp.alert('Choose the category that best fits your deal, so Likers can find it.','<i  class="pe-7s-filter pe-2x"></i> Category');}
+if(id=='phone'){myApp.alert('You may provide a phone number for Likers to call you.','<i  class="pe-7s-call pe-2x"></i> Phone');}	
+if(id=='email'){myApp.alert('You may provide an email for Likers to contact you.','<i  class="pe-7s-mail pe-2x"></i> Email');}	
+if(id=='website'){myApp.alert('You may provide your website address for Likers to find you.','<i  class="pe-7s-mouse pe-2x"></i> Website');}	
+if(id=='link'){myApp.alert('You may provide a website link to your deal with full terms and conditions.','<i  class="pe-7s-link pe-2x"></i> Link');}
+if(id=='schedule'){myApp.alert('You may schedule a post up to 6 months in the future.','<i  class="pe-7s-date pe-2x"></i> Schedule Post');}
+if(id=='commenty'){myApp.alert('You may require users to comment on your post in order to get the deal.','<i  class="pe-7s-comment pe-2x"></i> Require Comment');}
 }
