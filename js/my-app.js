@@ -1094,6 +1094,12 @@ var website = document.getElementById("website_i");
 var link = document.getElementById("link_i");
 var opt= document.getElementById('category_i').options[0];
 var subpremise = document.getElementById("subpremise_i");
+var street_number = document.getElementById("street_number_i");
+var zip = document.getElementById("zip_i");
+var street = document.getElementById("route_i");
+var town = document.getElementById("locality_i");
+var state = document.getElementById("state_i");
+var country = document.getElementById("country_i");
 
 phone.value = "";document.getElementById("phone_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'phone\')"><i  class="pe-7s-info pe-2x"></i></a>';
 website.value = "";document.getElementById("website_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'website\')"><i  class="pe-7s-info pe-2x"></i></a>';
@@ -1103,8 +1109,14 @@ opt.text = "Category";
 link.value = "";document.getElementById("link_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'link\')"><i  class="pe-7s-info pe-2x"></i></a>';
 //res[0][5] + ',' + res[0][6]  + ',' + res[0][7]  + ',' + res[0][9]  + ',' + res[0][10] ',' + res[0][11];
 
-if(res[0][8]) {document.getElementById("addressbox").checked = true; $$('.addresshide').show();}
-if(res[0][5]) {subpremise.value = res[0][5];}
+if(res[0][8]) {document.getElementById("addressbox").checked = true; $$('.addresshide').show();document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if(res[0][5]) {subpremise.value = res[0][5];document.getElementById("subpremise_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if(res[0][6]) {street_number.value = res[0][5];document.getElementById("street_number_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if(res[0][7]) {route.value = res[0][5];document.getElementById("route_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if(res[0][9]) {locality.value = res[0][5];document.getElementById("locality_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if(res[0][10]) {zip.value = res[0][5];document.getElementById("zip_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if(res[0][11]) {state.value = res[0][5];document.getElementById("state_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if(res[0][12]) {country.value = res[0][5];document.getElementById("country_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
 
 if (res[0][16]) {email.value = res[0][16];checkForm('email');}
 if (res[0][4]) {phone.value = res[0][4];checkForm('phone',6,25);}
