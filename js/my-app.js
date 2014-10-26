@@ -413,7 +413,7 @@ for (var i=0; i<components.length; i++)
  return "";
 }
 
-var subpremise = extractFromAdress(response.result.address_components, "subpremise_i");
+var subpremise = extractFromAdress(response.result.address_components, "subpremise");
 var street_number = extractFromAdress(response.result.address_components, "street_number");
 var postCode = extractFromAdress(response.result.address_components, "postal_code");
 var street = extractFromAdress(response.result.address_components, "route");
