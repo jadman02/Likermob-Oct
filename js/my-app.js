@@ -947,7 +947,7 @@ function dbDeal() {
 
   '<div class="tab" id="tab3">'+
  '<div class="content-block-title" style="text-align:center;margin-top:20px;">Customise deal</div>'+
- '<div class="list-block"><ul><li><div class="item-content"><div class="item-media" onclick="showDateTime();" style="width:50px;"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><span id="schedule" style="color:hsl(0, 0%, 70%);font-size:16px;">Schedule Post  <a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;"><i  class="pe-7s-info pe-2x"></i></a></span><span id="datetimespan" style="display:none;"><input type="datetime-local" id="datetime" style="width:150px;overflow:hidden;float:left;"> <a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a></span></div></div></div></li>'+
+ '<div class="list-block"><ul><li><div class="item-content"><div class="item-media" onclick="showDateTime();" style="width:50px;"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><span id="schedule" style="color:hsl(0, 0%, 70%);font-size:16px;width:180px;">Schedule Post</span><span id="datetimespan" style="display:none;"><input type="datetime-local" id="datetime" onchange="checkForm(\'schedule\',3,20)" style="width:180px;overflow:hidden;float:left;"></span><span id="link_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'schedule\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li>'+
  '<li><div class="item-content"><div class="item-media" style="width:50px;"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><span style="color:hsl(0, 0%, 70%);font-size:16px;">Require Comment  <a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li>'+
  '</ul></div>' +
  //'<div class="list-block media-list"><ul><li><div class="item-content"><div class="item-media" onclick="showDateTime();"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-title-row"><div class="item-title" style="font-weight:normal"><input style="display:none;" type="datetime-local" id="datetime"><p id="schedule">Schedule Post</p></div><div class="item-after"><i class="pe-7s-info pe-2x"></i></div></div></div></div></li></ul></div>'+
@@ -1265,9 +1265,9 @@ var tomorrow = new Date();
 tomorrow.setDate(tomorrow.getDate() + 1);
 corrected_date = tomorrow.toISOString();
 
-if ((id=='expiry') && (input < corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
-if ((id=='expiry') && (input > corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';return;}
-if ((id=='expiry') && (input == corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
+if ((id=='expiry' || id=='schedule') && (input < corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
+if ((id=='expiry' || id=='schedule') && (input > corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';return;}
+if ((id=='expiry' || id=='schedule') && (input == corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
 
 
 var length_string = input.length;
@@ -1308,7 +1308,7 @@ myApp.alert('Sorry that is too long!','Error');
 }
 
 if (error == '3') {
-myApp.alert('You must set an expiry date in the future!','Error');
+myApp.alert('You must set a date in the future!','Error');
 }
 
 if (error == '4') {
@@ -1370,4 +1370,5 @@ if(id=='phone'){myApp.alert('You may provide a phone number for Likers to call y
 if(id=='email'){myApp.alert('You may provide an email for Likers to contact you.','Email');}	
 if(id=='website'){myApp.alert('You may provide your website address for Likers to find you.','Website');}	
 if(id=='link'){myApp.alert('You may provide a website link to your deal with full terms and conditions.','Link');}
+if(id=='schedule'){myApp.alert('You can schedule a post up to 6 months in the future.','Schedule Post');}
 }
