@@ -631,13 +631,13 @@ function showDateTime(){
 
 
         if (document.getElementById('checkbox').checked) {
-            $$('#datetime').val("");
+            $$('#schedule_i').val("");
             $$('#datetimespan').hide();
             $$('#schedule').show();
         } else {
             $$('#schedule').hide();
             $$('#datetimespan').show();
-            $$('#datetime').focus();
+            $$('#schedule_i').focus();
         }
 
 	
@@ -947,7 +947,7 @@ function dbDeal() {
 
   '<div class="tab" id="tab3">'+
  '<div class="content-block-title" style="text-align:center;margin-top:20px;">Customise deal</div>'+
- '<div class="list-block"><ul><li><div class="item-content"><div class="item-media" onclick="showDateTime();" style="width:50px;"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><span id="schedule" style="color:hsl(0, 0%, 70%);font-size:16px;width:180px;">Schedule Post <a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'schedule\')"><i  class="pe-7s-info pe-2x"></i></a></span><span id="datetimespan" style="display:none;"><input type="datetime-local" id="datetime" onchange="checkForm(\'schedule\',3,20)" style="width:180px;overflow:hidden;float:left;"><span id="schedule_c"></span></span></div></div></div></li>'+
+ '<div class="list-block"><ul><li><div class="item-content"><div class="item-media" onclick="showDateTime();" style="width:50px;"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><span id="schedule" style="color:hsl(0, 0%, 70%);font-size:16px;width:180px;">Schedule Post <a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'schedule\')"><i  class="pe-7s-info pe-2x"></i></a></span><span id="datetimespan" style="display:none;"><input type="datetime-local" id="schedule_i" onblur="checkForm(\'schedule\',3,20)" style="width:180px;overflow:hidden;float:left;"><span id="schedule_c"></span></span></div></div></div></li>'+
  '<li><div class="item-content"><div class="item-media" style="width:50px;"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><span style="color:hsl(0, 0%, 70%);font-size:16px;">Require Comment  <a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li>'+
  '</ul></div>' +
  //'<div class="list-block media-list"><ul><li><div class="item-content"><div class="item-media" onclick="showDateTime();"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-title-row"><div class="item-title" style="font-weight:normal"><input style="display:none;" type="datetime-local" id="datetime"><p id="schedule">Schedule Post</p></div><div class="item-after"><i class="pe-7s-info pe-2x"></i></div></div></div></div></li></ul></div>'+
