@@ -1103,7 +1103,7 @@ opt.text = "Category";
 link.value = "";document.getElementById("link_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'link\')"><i  class="pe-7s-info pe-2x"></i></a>';
 //res[0][5] + ',' + res[0][6]  + ',' + res[0][7]  + ',' + res[0][9]  + ',' + res[0][10] ',' + res[0][11];
 
-if(res[0][8]) {document.getElementById("addressbox").checked = true;openSearch();}
+if(res[0][8]) {document.getElementById("addressbox").checked = true; $$('.addresshide').show();}
 if(res[0][5]) {subpremise.value = res[0][5];}
 
 if (res[0][16]) {email.value = res[0][16];checkForm('email');}
