@@ -446,7 +446,7 @@ var elem = document.getElementById("fulladdress2");
 elem.innerHTML = 'Set location';
 
 $$( '#fulladdress2' ).css( 'color', 'black' );
-
+document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';
 var elem1 = document.getElementById("latitude_box");
 elem1.value = response.result.geometry.location.lat;
 
@@ -659,6 +659,7 @@ function showAddress(){
             $$( '#fulladdress2' ).css( 'color', 'hsl(0, 0%, 70%)' );
             
         } else {
+             
              openSearch();
             $$('#fulladdress').focus();
         }
