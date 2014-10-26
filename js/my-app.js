@@ -421,7 +421,7 @@ var town = extractFromAdress(response.result.address_components, "locality");
 var state = extractFromAdress(response.result.address_components, "administrative_area_level_1");
 var country = extractFromAdress(response.result.address_components, "country");
 
-if (subpremise !=='') {document.getElementById("subpremise_i").value = subpremise;document.getElementById("subpremise_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if (subpremise) {document.getElementById("subpremise_i").value = subpremise;document.getElementById("subpremise_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
 if (street_number !=='') {document.getElementById("street_number_i").value = street_number;document.getElementById("street_number_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
 if (zip !=='') {document.getElementById("zip_i").value = zip;document.getElementById("zip_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
 if (street !=='') {document.getElementById("route_i").value = street;document.getElementById("route_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
@@ -956,13 +956,13 @@ function dbDeal() {
  '<div class="list-block"><ul><li><div class="item-content"><div class="item-media" onclick="showDateTime();" style="width:50px;"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><span id="schedule" style="color:hsl(0, 0%, 70%);font-size:17px;width:150px;padding-top:5px;">Schedule post</span><span id="datetimespan" style="display:none;"><input type="datetime-local" id="schedule_i" onblur="checkForm(\'schedule\',3,20)" style="width:150px;overflow:hidden;float:left;"></span><span id="schedule_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;" onclick="getInfo(\'schedule\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li>'+
  '<li><div class="item-content"><div class="item-media" style="width:50px;"><label class="label-switch" onclick="commentClick()"><input type="checkbox" id="commentbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><span style="color:hsl(0, 0%, 70%);font-size:17px;width:150px;margin-top:5px;" id="commenty_i">Require comment </span><span id="commenty_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;" onclick="getInfo(\'commenty\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li>'+
  '<li><div class="item-content" style="border:none;"><div class="item-inner"><label class="label-switch" onclick="showAddress();"><input type="checkbox" id="addressbox"><div class="checkbox"></div></label><div class="item-input" onclick="openSearch();$$(\'#fulladdress\').focus();" style="width:150px;color:hsl(0, 0%, 70%);" id="fulladdress2">Add location</div><span id="address_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;" onclick="getInfo(\'address\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></li>'+
- '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Unit</div><div class="item-input"><input id="subpremise_i" type="tel" placeholder="-" style="width:50px;float:left;" onchange="checkForm(\'subpremise\',0,10)"><span id="subpremise_c"></span></div></div></div></li>'+
- '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Number</div><div class="item-input"><input placeholder="-" id="street_number_i" type="tel" style="width:50px;float:left;" onchange="checkForm(\'street_number\',0,10)"><span id="street_number_c"></span></div></div></div></li>'+
- '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Street</div><div class="item-input"><input placeholder="-" id="route_i" type="text" style="width:50px;float:left;" onchange="checkForm(\'route\',0,100)"><span id="route_c"></span></div></div></div></li>'+
+ '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Unit</div><div class="item-input"><input id="subpremise_i" type="tel" placeholder="-" style="width:140px;float:left;" onchange="checkForm(\'subpremise\',0,10)"><span id="subpremise_c"></span></div></div></div></li>'+
+ '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Number</div><div class="item-input"><input placeholder="-" id="street_number_i" type="tel" style="width:140px;float:left;" onchange="checkForm(\'street_number\',0,10)"><span id="street_number_c"></span></div></div></div></li>'+
+ '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Street</div><div class="item-input"><input placeholder="-" id="route_i" type="text" style="width:140px;float:left;" onchange="checkForm(\'route\',0,100)"><span id="route_c"></span></div></div></div></li>'+
  '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Suburb</div><div class="item-input"><input placeholder="-" id="locality_i" type="text" style="width:140px;float:left;" onchange="checkForm(\'locality\',0,10)"><span id="locality_c"></span></div></div></div></li>'+
 ' <li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Zip</div><div class="item-input"><input placeholder="-" id="zip_i" type="tel" style="width:140px;float:left;" onchange="checkForm(\'zip\',0,10)"><span id="zip_c"></span></div></div></div></li>'+
  '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">State</div><div class="item-input"><input placeholder="-" id="state_i" type="text" style="width:140px;float:left;" onchange="checkForm(\'state\',0,100)"><span id="state_c"></span></div></div></div></li>'+
- '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Country</div><div class="item-input"><input placeholder="-" id="country_i" type="text" style="width:160px;float:left;" onchange="checkForm(\'country\',0,100)"><span id="country_c"></span></div></div></div></li>'+
+ '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Country</div><div class="item-input"><input placeholder="-" id="country_i" type="text" style="width:140px;float:left;" onchange="checkForm(\'country\',0,100)"><span id="country_c"></span></div></div></div></li>'+
  '</ul></div>' +
  
 
@@ -1095,13 +1095,15 @@ var link = document.getElementById("link_i");
 var opt= document.getElementById('category_i').options[0];
 
 phone.value = "";document.getElementById("phone_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'phone\')"><i  class="pe-7s-info pe-2x"></i></a>';
-//address.value = "";
+
 website.value = "";document.getElementById("website_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'website\')"><i  class="pe-7s-info pe-2x"></i></a>';
 email.value = "";document.getElementById("email_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'email\')"><i  class="pe-7s-info pe-2x"></i></a>';
 opt.value =  "category";$$( '#category_i' ).css( 'color', 'hsl(0, 0%, 70%)' );document.getElementById("category_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'category\')"><i  class="pe-7s-info pe-2x"></i></a>';
 opt.text = "Category";
 link.value = "";document.getElementById("link_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'link\')"><i  class="pe-7s-info pe-2x"></i></a>';
 //res[0][5] + ',' + res[0][6]  + ',' + res[0][7]  + ',' + res[0][9]  + ',' + res[0][10] ',' + res[0][11];
+
+if(res[0][8]) {document.getElementById("addressbox").checked = true;}
 
 if (res[0][16]) {email.value = res[0][16];checkForm('email');}
 if (res[0][4]) {phone.value = res[0][4];checkForm('phone',6,25);}
@@ -1115,7 +1117,7 @@ if (res[0][18]) {link.value = res[0][18];checkForm('link');}
 
 });
 
-$$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,location,category,category_list', function(response){
+$$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
 	
 //if (response["location"]["latitude"]) {response["location"]["latitude"]};
 
@@ -1290,7 +1292,7 @@ var length_string = input.length;
 
 if (length_string < min) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(1);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';}
 if (length_string > max) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(2);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';}
-if ((id=='subpremise' || id=='title' || id=='description' || id=='terms' || id=='phone') && (length_string > min) && (length_string < max)) {document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>'; }
+if ((id=='subpremise' || id=='street_number' || id=='route' || id=='country' || id=='zip' || id=='state' || id=='locality' || id=='title' || id=='description' || id=='terms' || id=='phone') && (length_string > min) && (length_string < max)) {document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>'; }
 
 
 
