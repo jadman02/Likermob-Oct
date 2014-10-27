@@ -436,6 +436,7 @@ if (country) {document.getElementById("country_i").value = country;document.getE
 
 document.getElementById("fulladdress2").innerHTML = 'Add location';
 $$( '#fulladdress2' ).css( 'color', 'black' );
+document.getElementById("address_provided").value = '1'
 document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';
 document.getElementById("latitude_box").value = response.result.geometry.location.lat;
 document.getElementById("longitude_box").value = response.result.geometry.location.lng;
@@ -645,11 +646,13 @@ function showAddress(){
             //$$('#fulladdress').blur();
             $$('.addresshide').hide();
             $$( '#fulladdress2' ).css( 'color', 'hsl(0, 0%, 70%)' );
+            document.getElementById("address_provided").value = '0';
             
         } else {
              
              openSearch();
             $$('#fulladdress').focus();
+            document.getElementById("address_provided").value = '1';
         }
 
 	
@@ -908,7 +911,7 @@ function dbDeal() {
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="center">Add Deal</div>' +
-       ' <div class="right"><a href="#" style="display:none" id="upload" onclick="submitDeal();"><i class="pe-7s-upload pe-2x" style="color:#ff3b30;"></i></a></div>' +
+       ' <div class="right"><a href="#" id="upload" onclick="errorForm(7);"><i class="pe-7s-upload pe-2x" style="color:#ff3b30;"></i></a><a href="#" id="upload-ready" onclick="submitDeal();"><i class="pe-7s-upload pe-2x" style="color:#4cd964;"></i></a></div>' +
         '  </div>' +
         '</div>' +
         '<div class="pages business">' +
@@ -953,8 +956,8 @@ function dbDeal() {
 
 
 
-
- '<input id="latitude_box" type="hidden"><input id="longitude_box" type="hidden">' +
+//'<input id="cover" type="hidden"><input id="name" type="hidden"><input id="page_id" type="hidden"><input id="latitude_box" type="hidden"><input id="longitude_box" type="hidden">' +
+ '<input id="page_token" type="hidden"><input id="cover" type="hidden"><input id="address_provided" type="hidden"><input id="name" type="hidden"><input id="page_id" type="hidden"><input id="latitude_box" type="hidden"><input id="longitude_box" type="hidden">' +
   '</div>'+
 
   '<div class="tab" id="tab3">'+
@@ -1080,14 +1083,15 @@ myApp.confirm('Are you sure you want to permanently delete this deal?', 'Delete?
 }
 
 
-function getCover(page_id){
+function getCover(page_id,access_token){
 
 
 
     myApp.showTab('#tab2');
 addPhoto(page_id);
+document.getElementById("page_id").value = page_id;
+document.getElementById("page_token").value = access_token;
 	
-$$('#upload').show();
 
 //var page_id = $$('#pages_list').val();
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
@@ -1115,7 +1119,7 @@ opt.text = "Category";
 link.value = "";document.getElementById("link_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'link\')"><i  class="pe-7s-info pe-2x"></i></a>';
 //res[0][5] + ',' + res[0][6]  + ',' + res[0][7]  + ',' + res[0][9]  + ',' + res[0][10] ',' + res[0][11];
 
-if(res[0][8]) {document.getElementById("addressbox").checked = true; $$('.addresshide').show();document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if(res[0][8]) {document.getElementById("address_provided").value = '1';document.getElementById("addressbox").checked = true; $$('.addresshide').show();document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
 if(res[0][5]) {subpremise.value = res[0][5];document.getElementById("subpremise_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
 if(res[0][6]) {street_number.value = res[0][6];document.getElementById("street_number_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
 if(res[0][7]) {street.value = res[0][7];document.getElementById("route_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
@@ -1130,13 +1134,16 @@ if (res[0][15]) {website.value = res[0][15];checkForm('website');}
 if (res[0][17]) {opt.value =  res[0][17];opt.text = res[0][17];checkForm('category');}
 if (res[0][18]) {link.value = res[0][18];checkForm('link');}
 
-
+if (res[0][13]) {document.getElementById("latitude_box").value = res[0][13];}
+if (res[0][14]) {document.getElementById("longitude_box").value = res[0][14];}
 
 
 
 });
 
-$$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
+
+
+$$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,name', function(response){
 	
 //if (response["location"]["latitude"]) {response["location"]["latitude"]};
 
@@ -1156,6 +1163,8 @@ $$('#add_button').remove();
 
 	document.getElementById("coverbutton").innerHTML = '<a href="#" class="button" onclick="addPhoto('+page_id+')" style="height:80px;margin:0 auto;border:none;margin-top:-100px;"><i class="pe-7s-camera pe-5x" ></i></a>';
 	var coverpic = response["cover"]["source"];
+	document.getElementById("cover").value = coverpic;
+	document.getElementById("name").value = response["name"];
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
 	$$( '.cover-add' ).css( 'background-repeat', 'no-repeat' );
@@ -1313,20 +1322,17 @@ if (length_string < min) {document.getElementById(id + "_c").innerHTML = '<a hre
 if (length_string > max) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(2);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';}
 if ((id=='subpremise' || id=='street_number' || id=='route' || id=='country' || id=='zip' || id=='state' || id=='locality' || id=='title' || id=='description' || id=='terms' || id=='phone') && (length_string > min) && (length_string < max)) {document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>'; }
 
+var title_i = document.getElementById("title_i").value;
+var description_i = document.getElementById("description_i").value;
+var terms_i = document.getElementById("terms_i").value;
+var expiry_i = document.getElementById("expiry_i").value;
 
-
-	
-var title_i = document.getElementById("title_i");
-var description_i = document.getElementById("description_i");
-var terms_i = document.getElementById("terms_i");
-var expiry_i = document.getElementById("expiry_i");
-
-if((title_i.value != "") && (description_i.value != "") && (terms_i.value != "") && (expiry_i.value != "")){alert('completed required inputs');$$( "#nextbutton" ).removeClass( "disabled" );}
-else {alert('have not made required inputs' );}
+//if((title_i.length > 3) && (title_i.length < 20) && (description_i.length < 140) && (description_i.length > 5) && (terms_i.length > 5) && (terms_i.length < 140) && (expiry_i > corrected_date)){alert('everything ok');$$( '#upload' ).hide();$$( '#upload-ready' ).show();}
+//else {alert('everything not ok');$$( '#upload' ).show();$$( '#upload-ready' ).hide();}
 
 }
 
-$$( '#upload' ).css( 'color', '#4cd964' );
+
 
 function gotoThree(){
 	
@@ -1358,6 +1364,10 @@ myApp.alert('Please enter a valid email address','Error');
 
 if (error == '6') {
 myApp.alert('Please enter a valid website address','Error');
+}
+
+if (error == '7') {
+myApp.alert('In order to submit a deal, you must select a page and complete the minimum information required: Title, Deal Information, Terms and Expiry Date.','Error');
 }
 
 
@@ -1409,18 +1419,72 @@ if(id=='address'){myApp.alert('If you provide an address, your deal will appear 
 
 function submitDeal(){
 
-title = document.getElementById("title_i").value;	
+
+
+
+
+
+
+
+
+title = document.getElementById("title_i").value;
+description = document.getElementById("description_i").value;
+terms = document.getElementById("terms_i").value;
+expiry = document.getElementById("expiry_i").value;
+category = document.getElementById("category_i").value;
+phone = document.getElementById("phone_i").value;
+email = document.getElementById("email_i").value;
+website = document.getElementById("website_i").value;
+link = document.getElementById("link_i").value;
+
+cover = document.getElementById("cover").value;
+var page_token = document.getElementById("page_token").value;
+name = document.getElementById("name").value;
+page_id = document.getElementById("page_id").value;
+latitude = document.getElementById("latitude_box").value;
+longitude = document.getElementById("longitude_box").value;
+
+schedule = document.getElementById("schedule_i").value;
+
 subpremise = document.getElementById("subpremise_i").value;
-document.getElementById("street_number_i").value;
-document.getElementById("route_i").value;
-document.getElementById("zip_i").value;
-document.getElementById("locality_i").value;
-document.getElementById("state_i").value;
-document.getElementById("country_i").value;
+street_number = document.getElementById("street_number_i").value;
+street_name = document.getElementById("route_i").value;
+postcode = document.getElementById("zip_i").value;
+suburb = document.getElementById("locality_i").value;
+state = document.getElementById("state_i").value;
+country = document.getElementById("country_i").value;
+
+
+alert(page_token);
+
+
+openFB.apip({
+            method: 'POST',
+            path: '/1475871535982658/feed',
+            params: {
+                  name: title,
+  link: 'http://www.likermob.com',
+  picture: cover,
+  caption: 'via Likermob App - publish time 4.55',
+  description: description,
+  message: title,
+  to: '1475871535982658',
+  from: '1475871535982658',
+  application:'129670517205110',
+  scheduled_publish_time:'1414400371',
+  published: 'false',
+  access_token: 'CAACEdEose0cBAPc7aLf3WlEKHNhGMO3K2TuSZB4apLsLZAZBxPagWiW8b9QkEKh25CaBNfBzE1dEOtk65gSUqClbtvqjXlutQ432sOzTZBcZAeh2eAclXmBk3zhjT1OwMt7fIl4LZC3z2M4d4t5Mz1mg6WSMmk540xhsfEP3GEoIORjxORNw40mPdgZAQd4AcIZD'
+                
+                
+            },
+            success: function() {
+                alert('the item was posted on Facebook');
+            },
+            error: errorHandler});
 	
-$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title,function(res){
+$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title + '&description=' + description + '&terms=' + terms + '&expiry=' + expiry + '&category=' + category + '&phone=' + phone + '&email=' + email + '&website=' + website + '&link=' + link + '&cover=' + cover + '&name=' + name + '&page_id=' + page_id + '&latitude=' + latitude + '&longitude=' + longitude + '&schedule=' + schedule + '&subpremise=' + subpremise + '&street_number=' + street_number + '&street_name=' + street_name + '&postcode=' + postcode + '&suburb=' + suburb +  '&state=' + state + '&country=' + country,function(res){
     
-    alert('Your name is '+res.fullname);
+    alert('Your name is '+res.title);
 });
 	
 	
