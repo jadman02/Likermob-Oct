@@ -237,7 +237,6 @@ var openFB = (function () {
         xhr.open(method, url, true);
         xhr.send();
     }
-
     /**
      * Helper function to de-authorize the app
      * @param success
