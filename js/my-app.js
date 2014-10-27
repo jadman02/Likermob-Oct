@@ -66,7 +66,7 @@ alert('on location page');
 document.getElementsByName('numPeople')[0].placeholder=localStorage.getItem("position");
 
 var radius = localStorage.getItem('radius');
-if (!radius) {radius == 25}
+if (!radius) {radius == 25;}
 
 document.getElementById("amount").innerHTML = radius;
 
@@ -197,7 +197,7 @@ function functionEmpty(pages_list) {
 
 if (pages_list=='a') {$$("#result li").remove();domain = "jsonp";data_send = "";}
 if (typeof pages_list === 'undefined') {domain = "jsonp";data_send = "";}
-if (pages_list instanceof Array) {domain = "getpages";data_send = "pages_list=" + pages_list;};
+if (pages_list instanceof Array) {domain = "getpages";data_send = "pages_list=" + pages_list;}
 	
 $$(".load_more").removeAttr("disabled", "disabled");
 $$( "#result li" ).removeClass( "disabled" );
@@ -1099,7 +1099,6 @@ $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=
 var phone = document.getElementById("phone_i");
 //var address = document.getElementById("fulladdress2");
 var email = document.getElementById("email_i");
-var phone = document.getElementById("phone_i");
 var website = document.getElementById("website_i");
 var link = document.getElementById("link_i");
 var opt= document.getElementById('category_i').options[0];
@@ -1150,7 +1149,6 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,name', functio
 var phone = document.getElementById("phone_i");
 //var address = document.getElementById("fulladdress2");
 var email = document.getElementById("email_i");
-var phone = document.getElementById("phone_i");
 var website = document.getElementById("website_i");
 var opt= document.getElementById('category_i').options[0];
 
@@ -1419,32 +1417,32 @@ function submitDeal(){
 
 
 
-title = document.getElementById("title_i").value;
-description = document.getElementById("description_i").value;
-terms = document.getElementById("terms_i").value;
-expiry = document.getElementById("expiry_i").value;
-category = document.getElementById("category_i").value;
-phone = document.getElementById("phone_i").value;
-email = document.getElementById("email_i").value;
-website = document.getElementById("website_i").value;
-link = document.getElementById("link_i").value;
+var title = document.getElementById("title_i").value;
+var description = document.getElementById("description_i").value;
+var terms = document.getElementById("terms_i").value;
+var expiry = document.getElementById("expiry_i").value;
+var category = document.getElementById("category_i").value;
+var phone = document.getElementById("phone_i").value;
+var email = document.getElementById("email_i").value;
+var website = document.getElementById("website_i").value;
+var link = document.getElementById("link_i").value;
 
-cover = document.getElementById("cover").value;
+var cover = document.getElementById("cover").value;
 var page_token = document.getElementById("page_token").value;
-name = document.getElementById("name").value;
-page_id = document.getElementById("page_id").value;
-latitude = document.getElementById("latitude_box").value;
-longitude = document.getElementById("longitude_box").value;
+var name = document.getElementById("name").value;
+var page_id = document.getElementById("page_id").value;
+var latitude = document.getElementById("latitude_box").value;
+var longitude = document.getElementById("longitude_box").value;
 
-schedule = document.getElementById("schedule_i").value;
+var schedule = document.getElementById("schedule_i").value;
 
-subpremise = document.getElementById("subpremise_i").value;
-street_number = document.getElementById("street_number_i").value;
-street_name = document.getElementById("route_i").value;
-postcode = document.getElementById("zip_i").value;
-suburb = document.getElementById("locality_i").value;
-state = document.getElementById("state_i").value;
-country = document.getElementById("country_i").value;
+var subpremise = document.getElementById("subpremise_i").value;
+var street_number = document.getElementById("street_number_i").value;
+var street_name = document.getElementById("route_i").value;
+var postcode = document.getElementById("zip_i").value;
+var suburb = document.getElementById("locality_i").value;
+var state = document.getElementById("state_i").value;
+var country = document.getElementById("country_i").value;
 
 
 alert(page_token);
