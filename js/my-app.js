@@ -1458,7 +1458,7 @@ country = document.getElementById("country_i").value;
 alert(page_token);
 
 
-openFB.api({
+openFB.apip({
             method: 'POST',
             path: '/1475871535982658/feed',
             params: {
