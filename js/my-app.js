@@ -1321,12 +1321,12 @@ if (length_string < min) {document.getElementById(id + "_c").innerHTML = '<a hre
 if (length_string > max) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(2);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';}
 if ((id=='subpremise' || id=='street_number' || id=='route' || id=='country' || id=='zip' || id=='state' || id=='locality' || id=='title' || id=='description' || id=='terms' || id=='phone') && (length_string > min) && (length_string < max)) {document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>'; }
 
-var title_i = document.getElementById("title_i");
-var description_i = document.getElementById("description_i");
-var terms_i = document.getElementById("terms_i");
-var expiry_i = document.getElementById("expiry_i");
+var title_i = document.getElementById("title_i").value;
+var description_i = document.getElementById("description_i").value;
+var terms_i = document.getElementById("terms_i").value;
+var expiry_i = document.getElementById("expiry_i").value;
 
-if((title_i.length > 3) && (title_i.length < 20) && (description_i.length < 140) && (description_i.length > 5) && (terms_i.length > 5) && (terms_i.length < 140)){alert('everything ok');$$( '#upload' ).hide();$$( '#upload-ready' ).show();}
+if((title_i.length > 3) && (title_i.length < 20) && (description_i.length < 140) && (description_i.length > 5) && (terms_i.length > 5) && (terms_i.length < 140) && (expiry_i > corrected_date)){alert('everything ok');$$( '#upload' ).hide();$$( '#upload-ready' ).show();}
 else {alert('everything not ok');$$( '#upload' ).show();$$( '#upload-ready' ).hide();}
 
 }
