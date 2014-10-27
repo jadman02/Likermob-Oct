@@ -957,7 +957,7 @@ function dbDeal() {
 
 
 //'<input id="cover" type="hidden"><input id="name" type="hidden"><input id="page_id" type="hidden"><input id="latitude_box" type="hidden"><input id="longitude_box" type="hidden">' +
- '<input id="cover" type="text"><input id="address_provided" type="text"><input id="name" type="text"><input id="page_id" type="text"><input id="latitude_box" type="text"><input id="longitude_box" type="text">' +
+ '<input id="page_token" type="text"><input id="cover" type="text"><input id="address_provided" type="text"><input id="name" type="text"><input id="page_id" type="text"><input id="latitude_box" type="text"><input id="longitude_box" type="text">' +
   '</div>'+
 
   '<div class="tab" id="tab3">'+
@@ -1083,13 +1083,14 @@ myApp.confirm('Are you sure you want to permanently delete this deal?', 'Delete?
 }
 
 
-function getCover(page_id){
+function getCover(page_id,access_token){
 
 
 
     myApp.showTab('#tab2');
 addPhoto(page_id);
 document.getElementById("page_id").value = page_id;
+document.getElementById("page_token").value = access_token;
 	
 
 //var page_id = $$('#pages_list').val();
@@ -1452,13 +1453,9 @@ suburb = document.getElementById("locality_i").value;
 state = document.getElementById("state_i").value;
 country = document.getElementById("country_i").value;
 
-var page_token;
 
-$$.getJSON('https://graph.facebook.com/1475871535982658?fields=access_token', function(response){
-	
-	alert (response["access_token"]);
-	
-});
+
+
 
 openFB.api({
             method: 'POST',
