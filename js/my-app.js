@@ -1326,8 +1326,8 @@ var description_i = document.getElementById("description_i");
 var terms_i = document.getElementById("terms_i");
 var expiry_i = document.getElementById("expiry_i");
 
-if((title_i.length > 3) && (title_i.length < 20) && (description_i.length < 140) && (description_i.length > 5) && (terms_i.length > 5) && (terms_i.length < 140) && (expiry_i.value != "")){$$( '#upload' ).hide();$$( '#upload-ready' ).show();}
-else {$$( '#upload' ).show();$$( '#upload-ready' ).hide();}
+if((title_i.length > 3) && (title_i.length < 20) && (description_i.length < 140) && (description_i.length > 5) && (terms_i.length > 5) && (terms_i.length < 140) && (expiry_i.value != "")){alert('everything ok');$$( '#upload' ).hide();$$( '#upload-ready' ).show();}
+else {alert('everything not ok');$$( '#upload' ).show();$$( '#upload-ready' ).hide();}
 
 }
 
