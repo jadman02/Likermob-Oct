@@ -1465,7 +1465,7 @@ openFB.api({
                   name: title,
   link: 'http://www.likermob.com',
   picture: cover,
-  caption: 'via Likermob App - publish time 4.45',
+  caption: 'via Likermob App - publish time 4.55',
   description: description,
   message: title,
   to: '1475871535982658',
