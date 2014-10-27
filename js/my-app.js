@@ -1275,41 +1275,7 @@ $$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-righ
 
 
 function checkForm(id,min,max) {
-var input = document.getElementById(id + "_i").value;
-
-
-
-if (id=='email'){checkEmail(input,id);return;}
-if (id=='website'){checkWebsite(input,id);return;}
-if (id=='link'){checkWebsite(input,id);return;}
-
-
-if ((id=='category') && (input == 'category')) {$$( '#category_i' ).css( 'color', 'hsl(0, 0%, 70%)' );document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
-if ((id=='category') && (input !== 'category')) {$$( '#category_i' ).css( 'color', 'black' );document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';return;}
-
-var tomorrow = new Date();
-tomorrow.setDate(tomorrow.getDate() + 1);
-corrected_date = tomorrow.toISOString();
-
-if ((id=='expiry' || id=='schedule') && (input < corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
-if ((id=='expiry' || id=='schedule') && (input > corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';return;}
-if ((id=='expiry' || id=='schedule') && (input == corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
-
-
-var length_string = input.length;
-
-if (length_string < min) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(1);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';}
-if (length_string > max) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(2);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';}
-if ((id=='subpremise' || id=='street_number' || id=='route' || id=='country' || id=='zip' || id=='state' || id=='locality' || id=='title' || id=='description' || id=='terms' || id=='phone') && (length_string > min) && (length_string < max)) {document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>'; }
-
-var title_i = document.getElementById("title_i").value;
-var description_i = document.getElementById("description_i").value;
-var terms_i = document.getElementById("terms_i").value;
-var expiry_i = document.getElementById("expiry_i").value;
-
-//if((title_i.length > 3) && (title_i.length < 20) && (description_i.length < 140) && (description_i.length > 5) && (terms_i.length > 5) && (terms_i.length < 140) && (expiry_i > corrected_date)){alert('everything ok');$$( '#upload' ).hide();$$( '#upload-ready' ).show();}
-//else {alert('everything not ok');$$( '#upload' ).show();$$( '#upload-ready' ).hide();}
-
+alert('checkForm');
 }
 
 
