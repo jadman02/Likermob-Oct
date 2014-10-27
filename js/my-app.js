@@ -1280,44 +1280,7 @@ alert('checkForm');
 
 
 
-function gotoThree(){
-	
-	
-	myApp.showTab('#tab3');
-}
 
-function errorForm(error){
-
-if (error == '1') {
-myApp.alert('Sorry that is too short!','Error');
-}
-
-if (error == '2') {
-myApp.alert('Sorry that is too long!','Error');
-}
-
-if (error == '3') {
-myApp.alert('You must set a date at least 24 hours in the future!','Error');
-}
-
-if (error == '4') {
-myApp.alert('Please select the best category for your deal. Otherwise, select other.','Error');
-}
-
-if (error == '5') {
-myApp.alert('Please enter a valid email address','Error');
-}
-
-if (error == '6') {
-myApp.alert('Please enter a valid website address','Error');
-}
-
-if (error == '7') {
-myApp.alert('In order to submit a deal, you must select a page and complete the minimum information required: Title, Deal Information, Terms and Expiry Date.','Error');
-}
-
-
-}
 
 function moveCover(){
 	
@@ -1347,91 +1310,6 @@ var lowercase=text.toLowerCase();
       else {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(6);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
     }
 
-function getInfo (id){
-
-if(id=='title'){myApp.alert('Choose something creative between 3-20 characters.','<i  class="pe-7s-pen pe-2x"></i> Title');}	
-if(id=='description'){myApp.alert('Create a deal for your Likers up to 140 characters.','<i  class="pe-7s-pen pe-2x"></i> Deal');}	
-if(id=='terms'){myApp.alert('Create the terms for your Likers up to 140 characters. Remember, the deal should be kosher for Facebook. You can provide a link to full Terms and Conditions below.','<i  class="pe-7s-pen pe-2x"></i> Terms');}	
-if(id=='expiry'){myApp.alert('Choose when the deal will expire.','<i  class="pe-7s-clock pe-2x"></i> Expiry');}	
-if(id=='category'){myApp.alert('Choose the category that best fits your deal, so Likers can find it.','<i  class="pe-7s-filter pe-2x"></i> Category');}
-if(id=='phone'){myApp.alert('You may provide a phone number for Likers to call you.','<i  class="pe-7s-call pe-2x"></i> Phone');}	
-if(id=='email'){myApp.alert('You may provide an email for Likers to contact you.','<i  class="pe-7s-mail pe-2x"></i> Email');}	
-if(id=='website'){myApp.alert('You may provide your website address for Likers to find you.','<i  class="pe-7s-mouse pe-2x"></i> Website');}	
-if(id=='link'){myApp.alert('You may provide a website link to your deal with full terms and conditions.','<i  class="pe-7s-link pe-2x"></i> Link');}
-if(id=='schedule'){myApp.alert('You may schedule a post up to 6 months in the future.','<i  class="pe-7s-date pe-2x"></i> Schedule Post');}
-if(id=='commenty'){myApp.alert('You may require users to comment on your post in order to get the deal.','<i  class="pe-7s-comment pe-2x"></i> Require Comment');}
-if(id=='address'){myApp.alert('If you provide an address, your deal will appear when the user searches for nearby results.','<i  class="pe-7s-comment pe-2x"></i> Require Comment');}
-}
-
-function submitDeal(){
 
 
 
-
-
-
-
-
-
-title = document.getElementById("title_i").value;
-description = document.getElementById("description_i").value;
-terms = document.getElementById("terms_i").value;
-expiry = document.getElementById("expiry_i").value;
-category = document.getElementById("category_i").value;
-phone = document.getElementById("phone_i").value;
-email = document.getElementById("email_i").value;
-website = document.getElementById("website_i").value;
-link = document.getElementById("link_i").value;
-
-cover = document.getElementById("cover").value;
-var page_token = document.getElementById("page_token").value;
-name = document.getElementById("name").value;
-page_id = document.getElementById("page_id").value;
-latitude = document.getElementById("latitude_box").value;
-longitude = document.getElementById("longitude_box").value;
-
-schedule = document.getElementById("schedule_i").value;
-
-subpremise = document.getElementById("subpremise_i").value;
-street_number = document.getElementById("street_number_i").value;
-street_name = document.getElementById("route_i").value;
-postcode = document.getElementById("zip_i").value;
-suburb = document.getElementById("locality_i").value;
-state = document.getElementById("state_i").value;
-country = document.getElementById("country_i").value;
-
-
-alert(page_token);
-
-
-openFB.apip({
-            method: 'POST',
-            path: '/1475871535982658/feed',
-            params: {
-                  name: title,
-  link: 'http://www.likermob.com',
-  picture: cover,
-  caption: 'via Likermob App - publish time 4.55',
-  description: description,
-  message: title,
-  to: '1475871535982658',
-  from: '1475871535982658',
-  application:'129670517205110',
-  scheduled_publish_time:'1414400371',
-  published: 'false',
-  access_token: 'CAACEdEose0cBAPc7aLf3WlEKHNhGMO3K2TuSZB4apLsLZAZBxPagWiW8b9QkEKh25CaBNfBzE1dEOtk65gSUqClbtvqjXlutQ432sOzTZBcZAeh2eAclXmBk3zhjT1OwMt7fIl4LZC3z2M4d4t5Mz1mg6WSMmk540xhsfEP3GEoIORjxORNw40mPdgZAQd4AcIZD'
-                
-                
-            },
-            success: function() {
-                alert('the item was posted on Facebook');
-            },
-            error: errorHandler});
-	
-$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title + '&description=' + description + '&terms=' + terms + '&expiry=' + expiry + '&category=' + category + '&phone=' + phone + '&email=' + email + '&website=' + website + '&link=' + link + '&cover=' + cover + '&name=' + name + '&page_id=' + page_id + '&latitude=' + latitude + '&longitude=' + longitude + '&schedule=' + schedule + '&subpremise=' + subpremise + '&street_number=' + street_number + '&street_name=' + street_name + '&postcode=' + postcode + '&suburb=' + suburb +  '&state=' + state + '&country=' + country,function(res){
-    
-    alert('Your name is '+res.title);
-});
-	
-	
-}
