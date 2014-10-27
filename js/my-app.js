@@ -224,8 +224,8 @@ someText = str.replace(/(\r\n|\n|\r)/gm,"<br />");
 //onclick="getDeal(\''+ response[i][2]  +'\',\''+ response[i][16]  +'\',\''+ response[i][3]  +'\',\''+ response[i][1]  +'\',\''+ response[i][14]  +'\',\''+ response[i][10]  +'\',\''+ response[i][11]  +'\',\''+ response[i][6]  +'\')"
 
 if (pages_list=='a' || typeof pages_list === 'undefined') {
-if (type == 'comment') {$$( '#result' ).append('<li class="swipeout s_'+ response[i][2] +'"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="'+ response[i][14] +'" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-media" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#007aff;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff3b30;">'+ response[i][18] + '</span></div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ someText +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-blue swipeout-overswipe" style="-webkit-border-top-right-radius: 1000px;-moz-border-radius-topright: 1000px;border-top-right-radius: 1000px;" onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')"><i class="pe-7s-comment pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton()" class="swipeout-delete swipeout-overswipe" style="-webkit-border-top-left-radius: 1000px;-moz-border-radius-topleft: 1000px;border-top-left-radius: 1000px;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
-if (type=='like') {$$( '#result' ).append('<li class="swipeout s_'+ response[i][2] +'"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="'+ response[i][14] +'" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-media" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#007aff;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff3b30;">'+ response[i][18] + '</span></div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ someText +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-blue swipeout-delete swipeout-overswipe" style="-webkit-border-top-right-radius: 1000px;-moz-border-radius-topright: 1000px;border-top-right-radius: 1000px;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton()" class="swipeout-delete swipeout-overswipe" style="-webkit-border-top-left-radius: 1000px;-moz-border-radius-topleft: 1000px;border-top-left-radius: 1000px;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
+if (type == 'comment') {$$( '#result' ).append('<li class="swipeout s_'+ response[i][2] +'"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="'+ response[i][14] +'" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-media" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;">'+ response[i][18] + '</span></div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ someText +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-overswipe" style="background-color:#3b5998;-webkit-border-top-right-radius: 1000px;-moz-border-radius-topright: 1000px;border-top-right-radius: 1000px;" onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')"><i class="pe-7s-comment pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton()" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;-webkit-border-top-left-radius: 1000px;-moz-border-radius-topleft: 1000px;border-top-left-radius: 1000px;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
+if (type=='like') {$$( '#result' ).append('<li class="swipeout s_'+ response[i][2] +'"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="'+ response[i][14] +'" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-media" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;">'+ response[i][18] + '</span></div></div><div class="item-subtitle">'+ response[i][16] + '</div><div class="item-text">'+ someText +'</div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;-webkit-border-top-right-radius: 1000px;-moz-border-radius-topright: 1000px;border-top-right-radius: 1000px;" onclick="likeButton(\''+ response[i][2]  +'\',\''+ response[i][6]  +'\')"><i class="pe-7s-like2 pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton()" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;-webkit-border-top-left-radius: 1000px;-moz-border-radius-topleft: 1000px;border-top-left-radius: 1000px;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');}
 }
 
 
@@ -397,10 +397,15 @@ $$.getJSON('https://maps.googleapis.com/maps/api/place/details/json?placeid='+ p
 
 
 $$("#resulta li").remove();
+$$('.addresshide').show();
 
- $$('.addresshide').show();
-
-
+document.getElementById("subpremise_i").value ="";
+document.getElementById("street_number_i").value ="";
+document.getElementById("route_i").value ="";
+document.getElementById("zip_i").value ="";
+document.getElementById("locality_i").value ="";
+document.getElementById("state_i").value ="";
+document.getElementById("country_i").value ="";
 
 //alert(response.result.address_components[0].short_name);
 //alert(response.result.address_components[1].short_name);
@@ -415,41 +420,26 @@ for (var i=0; i<components.length; i++)
 
 var subpremise = extractFromAdress(response.result.address_components, "subpremise");
 var street_number = extractFromAdress(response.result.address_components, "street_number");
-var postCode = extractFromAdress(response.result.address_components, "postal_code");
+var zip = extractFromAdress(response.result.address_components, "postal_code");
 var street = extractFromAdress(response.result.address_components, "route");
 var town = extractFromAdress(response.result.address_components, "locality");
 var state = extractFromAdress(response.result.address_components, "administrative_area_level_1");
 var country = extractFromAdress(response.result.address_components, "country");
 
-var unit = document.getElementById("subpremise");
-unit.value = subpremise;
+if (subpremise) {document.getElementById("subpremise_i").value = subpremise;document.getElementById("subpremise_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if (street_number) {document.getElementById("street_number_i").value = street_number;document.getElementById("street_number_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if (zip) {document.getElementById("zip_i").value = zip;document.getElementById("zip_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if (street) {document.getElementById("route_i").value = street;document.getElementById("route_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if (town) {document.getElementById("locality_i").value = town;document.getElementById("locality_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if (state) {document.getElementById("state_i").value = state;document.getElementById("state_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if (country) {document.getElementById("country_i").value = country;document.getElementById("country_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
 
-house = document.getElementById("street_number");
-house.value = street_number;
-
-var road = document.getElementById("route");
-road.value = street;
-
-var zip = document.getElementById("postal_code");
-zip.value = postCode;
-
-var suburb = document.getElementById("locality");
-suburb.value = town;
-
-var region = document.getElementById("administrative_area_level_1");
-region.value = state;
-
-var nation = document.getElementById("country");
-nation.value = town;
-
-var elem = document.getElementById("fulladdress2");
-elem.innerHTML = response.result.formatted_address;
-
-var elem1 = document.getElementById("latitude_box");
-elem1.value = response.result.geometry.location.lat;
-
-var elem2 = document.getElementById("longitude_box");
-elem2.value = response.result.geometry.location.lng;
+document.getElementById("fulladdress2").innerHTML = 'Add location';
+$$( '#fulladdress2' ).css( 'color', 'black' );
+document.getElementById("address_provided").value = '1'
+document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';
+document.getElementById("latitude_box").value = response.result.geometry.location.lat;
+document.getElementById("longitude_box").value = response.result.geometry.location.lng;
 
 });    	
 	
@@ -480,6 +470,7 @@ $$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','post_id=xyz',
 	
 	
 }
+
 
 
 
@@ -631,13 +622,16 @@ function showDateTime(){
 
 
         if (document.getElementById('checkbox').checked) {
-            $$('#datetime').val("");
+            $$('#schedule_i').val("");
             $$('#datetimespan').hide();
             $$('#schedule').show();
+            document.getElementById("schedule_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-20px;" onclick="getInfo(\'schedule\')"><i  class="pe-7s-info pe-2x"></i></a>';
+            
         } else {
+            document.getElementById("schedule_c").innerHTML = '';
             $$('#schedule').hide();
             $$('#datetimespan').show();
-            $$('#datetime').focus();
+            $$('#schedule_i').focus();
         }
 
 	
@@ -648,18 +642,39 @@ function showAddress(){
 
         if (document.getElementById('addressbox').checked) {
             
-            
+            document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'address\')"><i  class="pe-7s-info pe-2x"></i></a>';
             //$$('#fulladdress').blur();
             $$('.addresshide').hide();
+            $$( '#fulladdress2' ).css( 'color', 'hsl(0, 0%, 70%)' );
+            document.getElementById("address_provided").value = '0';
             
         } else {
+             
              openSearch();
             $$('#fulladdress').focus();
+            document.getElementById("address_provided").value = '1';
         }
 
 	
 }
 
+function commentClick(){
+
+
+        if (document.getElementById('commentbox').checked) {
+            
+            document.getElementById("commenty_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;" onclick="getInfo(\'commenty\')"><i  class="pe-7s-info pe-2x"></i></a>';
+                 $$( '#commenty_i' ).css( 'color', 'hsl(0, 0%, 70%)' );
+            //$$('#fulladdress').blur();
+            
+            
+        } else {
+        document.getElementById("commenty_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';
+        $$( '#commenty_i' ).css( 'color', 'black' );
+        }
+
+	
+}
 
 function openMap() {
 
@@ -896,7 +911,7 @@ function dbDeal() {
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="center">Add Deal</div>' +
-       ' <div class="right"><a href="#" style="display:none" id="upload"><i class="pe-7s-upload pe-2x" style="color:#ff3b30;"></i></a></div>' +
+       ' <div class="right"><a href="#" id="upload" onclick="errorForm(7);"><i class="pe-7s-upload pe-2x" style="color:#ff3b30;"></i></a><a href="#" id="upload-ready" onclick="submitDeal();"><i class="pe-7s-upload pe-2x" style="color:#4cd964;"></i></a></div>' +
         '  </div>' +
         '</div>' +
         '<div class="pages business">' +
@@ -936,22 +951,30 @@ function dbDeal() {
  ' </div>'+
 
  ' <div class="tab" id="tab2">'+
-'<div class="content-block-title" style="margin-top:20px;text-align:center;">Create Deal</div><div class="list-block"><ul><li><div class="item-content"><div class="item-inner"><div class="item-title label" style="width:50px;color:hsl(0, 0%, 70%);">Title</div><div class="item-input"><input type="text" id="title_i" placeholder="20 characters or less" onchange="checkForm(\'title\',3,20)" style="float:left;width:180px;"><span id="title_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li><li><div class="item-content align-top"><div class="item-inner"><div class="item-title label"style="width:50px;color:hsl(0, 0%, 70%);">Deal</div><div class="item-input"><textarea id="description_i"  placeholder="140 characters or less" onchange="checkForm(\'description\',10,140)" style="float:left;width:180px;"></textarea><span id="description_c"></span></div></div></div></li><li><div class="item-content align-top"><div class="item-inner"><div class="item-title label" style="width:50px;color:hsl(0, 0%, 70%);">Terms</div><div class="item-input"><textarea id="terms_i" onchange="checkForm(\'terms\',10,140)" style="float:left;width:180px;"></textarea><span id="terms_c"></span></div></div></div></li><li><div class="item-content"><div class="item-inner"><div class="item-title label" style="width:50px;color:hsl(0, 0%, 70%);">Expiry</div><div class="item-input"><input type="datetime-local" id="expiry_i" onblur="checkForm(\'expiry\',0,100)" style="width:180px;float:left;"><span id="expiry_c"></span></div></div></div></li>                  <!-- Select --><li><div class="item-content"><div class="item-media" style="width:20px;"><i class="pe-7s-filter pe-lg"></i></div><div class="item-inner"><div class="item-input"><select id="category_i" style="color:hsl(0, 0%, 70%);width:180px;float:left;" onchange="checkForm(\'category\',0,0);"><option id="category_rec_value" value="category">Category</option><option value="Accountant">Accountant</option><option value="Airport">Airport</option><option value="Amusement Park">Amusement Park</option><option value="aquarium">Aquarium</option><option value="art_gallery">Art Gallery</option><option value="bakery">Bakery</option><option value="bank">Bank</option><option value="bar">Bar</option><option value="beauty_salon">Beauty Salon</option><option value="bicycle_store">Bicycle Store</option><option value="book_store">Book Store</option><option value="bowling_alley">Bowling Alley</option><option value="bus_station">Bus Station</option><option value="cafe">Cafe</option><option value="campground">Campground</option><option value="car_dealer">Car Dealer</option><option value="car_rental">Car Rental</option><option value="car_repair">Car Repair</option><option value="car_wash">Car Wash</option><option value="casino">Casino</option><option value="church">Church</option><option value="city_hall">City Hall</option><option value="clothing_store">Clothing Store</option><option value="convenience_store">Convenience Store</option><option value="courthouse">Courthouse</option><option value="dentist">Dentist</option><option value="department_store">Department Store</option><option value="doctor">Doctor</option><option value="electrician">Electrician</option><option value="electronics_store">Electronics Store</option><option value="embassy">Embassy</option><option value="establishment">Establishment</option><option value="finance">Finance</option><option value="florist">Florist</option><option value="food">Food</option><option value="funeral_home">Funeral Home</option><option value="furniture_store">Furniture Store</option><option value="gas_station">Petrol Station</option><option value="general_contractor">General Contractor</option><option value="grocery_or_supermarket">Supermarket / Groceries</option><option value="gym">Gym</option><option value="hair_care">Hair Care</option><option value="hardware_store">Hardware Store</option><option value="health">Health</option><option value="hindu_temple">Hindu Temple</option><option value="home_goods_store">Home Goods Store</option><option value="insurance_agency">Insurance Agency</option><option value="jewelry_store">Jewelry Store</option><option value="laundry">Laundry</option><option value="lawyer">Lawyer</option><option value="library">Library</option><option value="liquor_store">Liquor Store</option><option value="local_government_office">Local Government Office</option><option value="locksmith">Locksmith</option><option value="lodging">Lodging</option><option value="meal_delivery">Meal Delivery</option><option value="meal_takeaway">Meal Takeaway</option><option value="mosque">Mosque</option><option value="movie_rental">Movie Rental</option><option value="movie_theater">Movie Theater</option><option value="moving_company">Moving Company</option><option value="museum">Museum</option><option value="night_club">Night_club</option><option value="painter">Painter</option><option value="park">Park</option><option value="parking">Parking</option><option value="pet_store">Pet Store</option><option value="pharmacy">Pharmacy</option><option value="physiotherapist">Physiotherapist</option><option value="place_of_worship">Place of Worship</option><option value="plumber">Plumber</option><option value="post_office">Post Office</option><option value="real_estate_agency">    Real Estate Agency</option><option value="restaurant">    Restaurant</option><option value="roofing_contractor">    Roofing Contractor</option><option value="school">School</option><option value="shoe_store">Shoe Store</option><option value="shopping_mall">Shopping Mall</option><option value="spa">Spa</option><option value="stadium">Stadium</option><option value="storage">Storage</option><option value="store">Store</option><option value="synagogue">Synagogue</option><option value="taxi_stand">Taxi Stand</option><option value="travel_agency">Travel Agency</option><option value="university">University</option><option value="veterinary_care">Veterinary Care</option><option value="zoo">Zoo</option></select><span id="category_c"></span></div></div></div></li><li><div class="item-content"><div class="item-media" style="width:20px;"><i class="pe-7s-call pe-lg"></i></div><div class="item-inner"><div class="item-input"><input onchange="checkForm(\'phone\',6,25);" placeholder="Phone" id="phone_i" type="tel" style="width:180px;float:left;"><span id="phone_c"></span></div></div></div></li><li><div class="item-content"><div class="item-media" style="width:20px;"><i class="pe-7s-mail pe-lg"></i></div><div class="item-inner"><div class="item-input"><input placeholder="Email" onchange="checkForm(\'email\',7,100);" id="email_i" type="email" style="width:180px;float:left;"><span id="email_c"></span></div></div></div></li><li><div class="item-content"><div class="item-media" style="width:20px;"><i class="pe-7s-mouse pe-lg" style="margin-left:5px;"></i></div><div class="item-inner"><div class="item-input"><input onchange="checkForm(\'website\',7,100);" type="text" placeholder="Website" id="website_i" style="width:180px;float:left;"><span id="website_c"></span></div></div></div></li></ul></div> <a href="#" style="margin-top:-10px;" id="nextbutton" onclick="gotoThree();" class="button active disabled">Next</a>'+
+'<div class="content-block-title" style="margin-top:20px;text-align:center;">Create Deal</div><div class="list-block"><ul><li><div class="item-content"><div class="item-inner"><div class="item-title label" style="width:50px;color:hsl(0, 0%, 70%);"> Title</div><div class="item-input"><input type="text" id="title_i" onchange="checkForm(\'title\',3,20)" style="float:left;width:180px;"><span id="title_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'title\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li><li><div class="item-content align-top"><div class="item-inner"><div class="item-title label"style="width:50px;color:hsl(0, 0%, 70%);">Deal</div><div class="item-input"><textarea id="description_i"  onchange="checkForm(\'description\',5,140)" style="float:left;width:180px;"></textarea><span id="description_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'description\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li><li><div class="item-content align-top"><div class="item-inner"><div class="item-title label" style="width:50px;color:hsl(0, 0%, 70%);">Terms</div><div class="item-input"><textarea id="terms_i" onchange="checkForm(\'terms\',10,140)" style="float:left;width:180px;"></textarea><span id="terms_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'terms\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li><li><div class="item-content"><div class="item-inner"><div class="item-title label" style="width:50px;color:hsl(0, 0%, 70%);">Expiry</div><div class="item-input"><input type="datetime-local" id="expiry_i" onblur="checkForm(\'expiry\',0,100)" style="width:180px;float:left;"><span id="expiry_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'expiry\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li>                  <!-- Select --><li><div class="item-content"><div class="item-media" style="width:20px;"><i class="pe-7s-filter pe-lg"></i></div><div class="item-inner"><div class="item-input"><select id="category_i" style="color:hsl(0, 0%, 70%);width:180px;float:left;" onchange="checkForm(\'category\',0,0);"><option id="category_rec_value" value="category">Category</option><option value="Accountant">Accountant</option><option value="Airport">Airport</option><option value="Amusement Park">Amusement Park</option><option value="aquarium">Aquarium</option><option value="art_gallery">Art Gallery</option><option value="bakery">Bakery</option><option value="bank">Bank</option><option value="bar">Bar</option><option value="beauty_salon">Beauty Salon</option><option value="bicycle_store">Bicycle Store</option><option value="book_store">Book Store</option><option value="bowling_alley">Bowling Alley</option><option value="bus_station">Bus Station</option><option value="cafe">Cafe</option><option value="campground">Campground</option><option value="car_dealer">Car Dealer</option><option value="car_rental">Car Rental</option><option value="car_repair">Car Repair</option><option value="car_wash">Car Wash</option><option value="casino">Casino</option><option value="church">Church</option><option value="city_hall">City Hall</option><option value="clothing_store">Clothing Store</option><option value="convenience_store">Convenience Store</option><option value="courthouse">Courthouse</option><option value="dentist">Dentist</option><option value="department_store">Department Store</option><option value="doctor">Doctor</option><option value="electrician">Electrician</option><option value="electronics_store">Electronics Store</option><option value="embassy">Embassy</option><option value="establishment">Establishment</option><option value="finance">Finance</option><option value="florist">Florist</option><option value="food">Food</option><option value="funeral_home">Funeral Home</option><option value="furniture_store">Furniture Store</option><option value="gas_station">Petrol Station</option><option value="general_contractor">General Contractor</option><option value="grocery_or_supermarket">Supermarket / Groceries</option><option value="gym">Gym</option><option value="hair_care">Hair Care</option><option value="hardware_store">Hardware Store</option><option value="health">Health</option><option value="hindu_temple">Hindu Temple</option><option value="home_goods_store">Home Goods Store</option><option value="insurance_agency">Insurance Agency</option><option value="jewelry_store">Jewelry Store</option><option value="laundry">Laundry</option><option value="lawyer">Lawyer</option><option value="library">Library</option><option value="liquor_store">Liquor Store</option><option value="local_government_office">Local Government Office</option><option value="locksmith">Locksmith</option><option value="lodging">Lodging</option><option value="meal_delivery">Meal Delivery</option><option value="meal_takeaway">Meal Takeaway</option><option value="mosque">Mosque</option><option value="movie_rental">Movie Rental</option><option value="movie_theater">Movie Theater</option><option value="moving_company">Moving Company</option><option value="museum">Museum</option><option value="night_club">Night_club</option><option value="painter">Painter</option><option value="park">Park</option><option value="parking">Parking</option><option value="pet_store">Pet Store</option><option value="pharmacy">Pharmacy</option><option value="physiotherapist">Physiotherapist</option><option value="place_of_worship">Place of Worship</option><option value="plumber">Plumber</option><option value="post_office">Post Office</option><option value="real_estate_agency">    Real Estate Agency</option><option value="restaurant">    Restaurant</option><option value="roofing_contractor">    Roofing Contractor</option><option value="school">School</option><option value="shoe_store">Shoe Store</option><option value="shopping_mall">Shopping Mall</option><option value="spa">Spa</option><option value="stadium">Stadium</option><option value="storage">Storage</option><option value="store">Store</option><option value="synagogue">Synagogue</option><option value="taxi_stand">Taxi Stand</option><option value="travel_agency">Travel Agency</option><option value="university">University</option><option value="veterinary_care">Veterinary Care</option><option value="zoo">Zoo</option></select><span id="category_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'category\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li><li><div class="item-content"><div class="item-media" style="width:20px;"><i class="pe-7s-call pe-lg"></i></div><div class="item-inner"><div class="item-input"><input onchange="checkForm(\'phone\',6,25);" placeholder="Phone" id="phone_i" type="tel" style="width:180px;float:left;"><span id="phone_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'phone\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li><li><div class="item-content"><div class="item-media" style="width:20px;"><i class="pe-7s-mail pe-lg"></i></div><div class="item-inner"><div class="item-input"><input placeholder="Email" onchange="checkForm(\'email\',7,100);" id="email_i" type="email" style="width:180px;float:left;"><span id="email_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'email\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li><li><div class="item-content"><div class="item-media" style="width:20px;"><i class="pe-7s-mouse pe-lg" style="margin-left:5px;"></i></div><div class="item-inner"><div class="item-input"><input onchange="checkForm(\'website\',7,100);" type="text" placeholder="Website" id="website_i" style="width:180px;float:left;"><span id="website_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'website\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li><li><div class="item-content"><div class="item-media" style="width:20px;"><i class="pe-7s-link pe-lg" style="margin-left:5px;"></i></div><div class="item-inner"><div class="item-input"><input placeholder="Link" onchange="checkForm(\'link\',7,100);" type="text" id="link_i" style="width:180px;float:left;"><span id="link_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'link\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li></ul></div> '+
 
 
 
 
-
- '<input id="latitude_box" type="hidden"><input id="longitude_box" type="hidden">' +
+//'<input id="cover" type="hidden"><input id="name" type="hidden"><input id="page_id" type="hidden"><input id="latitude_box" type="hidden"><input id="longitude_box" type="hidden">' +
+ '<input id="page_token" type="hidden"><input id="cover" type="hidden"><input id="address_provided" type="hidden"><input id="name" type="hidden"><input id="page_id" type="hidden"><input id="latitude_box" type="hidden"><input id="longitude_box" type="hidden">' +
   '</div>'+
 
   '<div class="tab" id="tab3">'+
  '<div class="content-block-title" style="text-align:center;margin-top:20px;">Customise deal</div>'+
- '<div class="list-block"><ul><li><div class="item-content"><div class="item-media" onclick="showDateTime();" style="width:50px;"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><span id="schedule" style="color:hsl(0, 0%, 70%);font-size:16px;">Schedule Post  <a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;"><i  class="pe-7s-info pe-2x"></i></a></span><span id="datetimespan" style="display:none;"><input type="datetime-local" id="datetime" style="width:150px;overflow:hidden;float:left;"> <a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a></span></div></div></div></li>'+
- '<li><div class="item-content"><div class="item-media" style="width:50px;"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><span style="color:hsl(0, 0%, 70%);font-size:16px;">Require Comment  <a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li>'+
+ '<div class="list-block"><ul><li><div class="item-content"><div class="item-media" onclick="showDateTime();" style="width:50px;"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><span id="schedule" style="color:hsl(0, 0%, 70%);font-size:17px;width:150px;padding-top:5px;">Schedule post</span><span id="datetimespan" style="display:none;"><input type="datetime-local" id="schedule_i" onblur="checkForm(\'schedule\',3,20)" style="width:150px;overflow:hidden;float:left;"></span><span id="schedule_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;" onclick="getInfo(\'schedule\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li>'+
+ '<li><div class="item-content"><div class="item-media" style="width:50px;"><label class="label-switch" onclick="commentClick()"><input type="checkbox" id="commentbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><span style="color:hsl(0, 0%, 70%);font-size:17px;width:150px;margin-top:5px;" id="commenty_i">Require comment </span><span id="commenty_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;" onclick="getInfo(\'commenty\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li>'+
+ '<li><div class="item-content" style="border:none;"><div class="item-inner"><label class="label-switch" onclick="showAddress();"><input type="checkbox" id="addressbox"><div class="checkbox"></div></label><div class="item-input" onclick="openSearch();$$(\'#fulladdress\').focus();" style="width:150px;color:hsl(0, 0%, 70%);" id="fulladdress2">Add location</div><span id="address_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;" onclick="getInfo(\'address\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></li>'+
+ '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Unit</div><div class="item-input"><input id="subpremise_i" type="tel" placeholder="-" style="width:140px;float:left;" onchange="checkForm(\'subpremise\',0,10)"><span id="subpremise_c"></span></div></div></div></li>'+
+ '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Number</div><div class="item-input"><input placeholder="-" id="street_number_i" type="tel" style="width:140px;float:left;" onchange="checkForm(\'street_number\',0,10)"><span id="street_number_c"></span></div></div></div></li>'+
+ '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Street</div><div class="item-input"><input placeholder="-" id="route_i" type="text" style="width:140px;float:left;" onchange="checkForm(\'route\',0,100)"><span id="route_c"></span></div></div></div></li>'+
+ '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Suburb</div><div class="item-input"><input placeholder="-" id="locality_i" type="text" style="width:140px;float:left;" onchange="checkForm(\'locality\',0,10)"><span id="locality_c"></span></div></div></div></li>'+
+' <li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Zip</div><div class="item-input"><input placeholder="-" id="zip_i" type="tel" style="width:140px;float:left;" onchange="checkForm(\'zip\',0,10)"><span id="zip_c"></span></div></div></div></li>'+
+ '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">State</div><div class="item-input"><input placeholder="-" id="state_i" type="text" style="width:140px;float:left;" onchange="checkForm(\'state\',0,100)"><span id="state_c"></span></div></div></div></li>'+
+ '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Country</div><div class="item-input"><input placeholder="-" id="country_i" type="text" style="width:140px;float:left;" onchange="checkForm(\'country\',0,100)"><span id="country_c"></span></div></div></div></li>'+
  '</ul></div>' +
- //'<div class="list-block media-list"><ul><li><div class="item-content"><div class="item-media" onclick="showDateTime();"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-title-row"><div class="item-title" style="font-weight:normal"><input style="display:none;" type="datetime-local" id="datetime"><p id="schedule">Schedule Post</p></div><div class="item-after"><i class="pe-7s-info pe-2x"></i></div></div></div></div></li></ul></div>'+
- //<div class="item-content" style="border:none;"><div class="item-inner"><label class="label-switch" onclick="showAddress();"><input type="checkbox" id="addressbox"><div class="checkbox"></div></label><div class="item-input" placeholder="Set Location" onclick="openSearch();$$(\'#fulladdress\').focus();" style="margin-left:20px;" id="fulladdress2"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Unit</div><div class="item-input"><input id="subpremise" type="text" placeholder="-"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Number</div><div class="item-input"><input placeholder="-" id="street_number" type="text"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Street</div><div class="item-input"><input placeholder="-" id="route" type="text"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Suburb</div><div class="item-input"><input placeholder="-" id="locality" type="text" value="ffff"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Postal Code</div><div class="item-input"><input placeholder="-" id="postal_code" type="text"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">State</div><div class="item-input"><input placeholder="-" id="administrative_area_level_1" type="text"></div></div></div></li><li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Country</div><div class="item-input"><input placeholder="-" id="country" type="text"></div></div></div></li></ul></div>'+
+ 
+
         
 
                      
@@ -1060,14 +1083,15 @@ myApp.confirm('Are you sure you want to permanently delete this deal?', 'Delete?
 }
 
 
-function getCover(page_id){
+function getCover(page_id,access_token){
 
 
 
     myApp.showTab('#tab2');
 addPhoto(page_id);
+document.getElementById("page_id").value = page_id;
+document.getElementById("page_token").value = access_token;
 	
-$$('#upload').show();
 
 //var page_id = $$('#pages_list').val();
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
@@ -1077,29 +1101,49 @@ var phone = document.getElementById("phone_i");
 var email = document.getElementById("email_i");
 var phone = document.getElementById("phone_i");
 var website = document.getElementById("website_i");
+var link = document.getElementById("link_i");
 var opt= document.getElementById('category_i').options[0];
+var subpremise = document.getElementById("subpremise_i");
+var street_number = document.getElementById("street_number_i");
+var zip = document.getElementById("zip_i");
+var street = document.getElementById("route_i");
+var town = document.getElementById("locality_i");
+var state = document.getElementById("state_i");
+var country = document.getElementById("country_i");
 
-phone.value = "";
-//address.value = "";
-website.value = "";
-email.value = "";
-opt.value =  "category";
+phone.value = "";document.getElementById("phone_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'phone\')"><i  class="pe-7s-info pe-2x"></i></a>';
+website.value = "";document.getElementById("website_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'website\')"><i  class="pe-7s-info pe-2x"></i></a>';
+email.value = "";document.getElementById("email_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'email\')"><i  class="pe-7s-info pe-2x"></i></a>';
+opt.value =  "category";$$( '#category_i' ).css( 'color', 'hsl(0, 0%, 70%)' );document.getElementById("category_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'category\')"><i  class="pe-7s-info pe-2x"></i></a>';
 opt.text = "Category";
-
+link.value = "";document.getElementById("link_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'link\')"><i  class="pe-7s-info pe-2x"></i></a>';
 //res[0][5] + ',' + res[0][6]  + ',' + res[0][7]  + ',' + res[0][9]  + ',' + res[0][10] ',' + res[0][11];
+
+if(res[0][8]) {document.getElementById("address_provided").value = '1';document.getElementById("addressbox").checked = true; $$('.addresshide').show();document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if(res[0][5]) {subpremise.value = res[0][5];document.getElementById("subpremise_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if(res[0][6]) {street_number.value = res[0][6];document.getElementById("street_number_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if(res[0][7]) {street.value = res[0][7];document.getElementById("route_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if(res[0][9]) {town.value = res[0][9];document.getElementById("locality_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if(res[0][10]) {zip.value = res[0][10];document.getElementById("zip_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if(res[0][11]) {state.value = res[0][11];document.getElementById("state_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if(res[0][12]) {country.value = res[0][12];document.getElementById("country_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
 
 if (res[0][16]) {email.value = res[0][16];checkForm('email');}
 if (res[0][4]) {phone.value = res[0][4];checkForm('phone',6,25);}
 if (res[0][15]) {website.value = res[0][15];checkForm('website');}
-if (res[0][15]) {opt.value =  res[0][17];opt.text = res[0][17];checkForm('category');}
+if (res[0][17]) {opt.value =  res[0][17];opt.text = res[0][17];checkForm('category');}
+if (res[0][18]) {link.value = res[0][18];checkForm('link');}
 
-
+if (res[0][13]) {document.getElementById("latitude_box").value = res[0][13];}
+if (res[0][14]) {document.getElementById("longitude_box").value = res[0][14];}
 
 
 
 });
 
-$$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,location,category,category_list', function(response){
+
+
+$$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,name', function(response){
 	
 //if (response["location"]["latitude"]) {response["location"]["latitude"]};
 
@@ -1110,8 +1154,6 @@ var phone = document.getElementById("phone_i");
 var website = document.getElementById("website_i");
 var opt= document.getElementById('category_i').options[0];
 
-if (opt == "category"){alert(response["category"]);}
-//alert(response["category"]);
 	
 $$('#add_button').remove();
 
@@ -1119,6 +1161,8 @@ $$('#add_button').remove();
 
 	document.getElementById("coverbutton").innerHTML = '<a href="#" class="button" onclick="addPhoto('+page_id+')" style="height:80px;margin:0 auto;border:none;margin-top:-100px;"><i class="pe-7s-camera pe-5x" ></i></a>';
 	var coverpic = response["cover"]["source"];
+	document.getElementById("cover").value = coverpic;
+	document.getElementById("name").value = response["name"];
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
 	$$( '.cover-add' ).css( 'background-repeat', 'no-repeat' );
@@ -1216,7 +1260,7 @@ function openSearch() {
 
 
 	 var popupHTML = '<div class="popup">'+
-'<form class="searchbar"><a href="#" class="close-popup"><i class="icon icon-back" style="margin-right:10px;"></i></a><div class="searchbar-input"><input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress"></div></form>'+
+'<form class="searchbar"><a href="#" class="close-popup" onclick="document.getElementById(\'addressbox\').checked = false;"><i class="icon icon-back" style="margin-right:10px;"></i></a><div class="searchbar-input"><input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress"></div></form>'+
 '<div class="content-block">'+
 '<a href="#" class="button disabled" id="search_button" style="height:80px;position:absolute;border:none;left:40%;margin-top:50px;"><i class="pe-7s-search pe-5x"></i></a>'+
 '<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resulta" style="background-color:transparent;border:none;padding:0px;margin:0px;"></ul></div>'+
@@ -1251,8 +1295,11 @@ $$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-righ
 function checkForm(id,min,max) {
 var input = document.getElementById(id + "_i").value;
 
+
+
 if (id=='email'){checkEmail(input,id);return;}
 if (id=='website'){checkWebsite(input,id);return;}
+if (id=='link'){checkWebsite(input,id);return;}
 
 
 if ((id=='category') && (input == 'category')) {$$( '#category_i' ).css( 'color', 'hsl(0, 0%, 70%)' );document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
@@ -1262,35 +1309,28 @@ var tomorrow = new Date();
 tomorrow.setDate(tomorrow.getDate() + 1);
 corrected_date = tomorrow.toISOString();
 
-if ((id=='expiry') && (input < corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
-if ((id=='expiry') && (input > corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';return;}
-if ((id=='expiry') && (input == corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
+if ((id=='expiry' || id=='schedule') && (input < corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
+if ((id=='expiry' || id=='schedule') && (input > corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';return;}
+if ((id=='expiry' || id=='schedule') && (input == corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
 
 
 var length_string = input.length;
 
-if (length_string < min) { errorForm(1);document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(1);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';}
-if (length_string > max) { errorForm(2);document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(2);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';}
-if ((id=='title' || id=='description' || id=='terms' || id=='phone') && (length_string > min) && (length_string < max)) {document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>'; }
+if (length_string < min) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(1);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';}
+if (length_string > max) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(2);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';}
+if ((id=='subpremise' || id=='street_number' || id=='route' || id=='country' || id=='zip' || id=='state' || id=='locality' || id=='title' || id=='description' || id=='terms' || id=='phone') && (length_string > min) && (length_string < max)) {document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>'; }
 
+var title_i = document.getElementById("title_i").value;
+var description_i = document.getElementById("description_i").value;
+var terms_i = document.getElementById("terms_i").value;
+var expiry_i = document.getElementById("expiry_i").value;
 
-
-	
-var title_i = document.getElementById("title_i");
-var description_i = document.getElementById("description_i");
-var terms_i = document.getElementById("terms_i");
-var expiry_i = document.getElementById("expiry_i");
-
-if((title_i.value != "") && (description_i.value != "") && (terms_i.value != "") && (expiry_i.value != "")){alert('completed required inputs');$$( "#nextbutton" ).removeClass( "disabled" );}
-else {alert('have not made required inputs' );}
+//if((title_i.length > 3) && (title_i.length < 20) && (description_i.length < 140) && (description_i.length > 5) && (terms_i.length > 5) && (terms_i.length < 140) && (expiry_i > corrected_date)){alert('everything ok');$$( '#upload' ).hide();$$( '#upload-ready' ).show();}
+//else {alert('everything not ok');$$( '#upload' ).show();$$( '#upload-ready' ).hide();}
 
 }
 
-function gotoThree(){
-	
-	
-	myApp.showTab('#tab3');
-}
+
 
 function errorForm(error){
 
@@ -1303,7 +1343,7 @@ myApp.alert('Sorry that is too long!','Error');
 }
 
 if (error == '3') {
-myApp.alert('You must set an expiry date in the future!','Error');
+myApp.alert('You must set a date at least 24 hours in the future!','Error');
 }
 
 if (error == '4') {
@@ -1318,12 +1358,11 @@ if (error == '6') {
 myApp.alert('Please enter a valid website address','Error');
 }
 
-
+if (error == '7') {
+myApp.alert('In order to submit a deal, you must select a page and complete the minimum information required: Title, Deal Information, Terms and Expiry Date.','Error');
 }
 
-function successForm(id){
-	
-	
+
 }
 
 function moveCover(){
@@ -1353,3 +1392,92 @@ var lowercase=text.toLowerCase();
       if (rex.test(lowercase)){document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';return;}
       else {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(6);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
     }
+
+function getInfo (id){
+
+if(id=='title'){myApp.alert('Choose something creative between 3-20 characters.','<i  class="pe-7s-pen pe-2x"></i> Title');}	
+if(id=='description'){myApp.alert('Create a deal for your Likers up to 140 characters.','<i  class="pe-7s-pen pe-2x"></i> Deal');}	
+if(id=='terms'){myApp.alert('Create the terms for your Likers up to 140 characters. Remember, the deal should be kosher for Facebook. You can provide a link to full Terms and Conditions below.','<i  class="pe-7s-pen pe-2x"></i> Terms');}	
+if(id=='expiry'){myApp.alert('Choose when the deal will expire.','<i  class="pe-7s-clock pe-2x"></i> Expiry');}	
+if(id=='category'){myApp.alert('Choose the category that best fits your deal, so Likers can find it.','<i  class="pe-7s-filter pe-2x"></i> Category');}
+if(id=='phone'){myApp.alert('You may provide a phone number for Likers to call you.','<i  class="pe-7s-call pe-2x"></i> Phone');}	
+if(id=='email'){myApp.alert('You may provide an email for Likers to contact you.','<i  class="pe-7s-mail pe-2x"></i> Email');}	
+if(id=='website'){myApp.alert('You may provide your website address for Likers to find you.','<i  class="pe-7s-mouse pe-2x"></i> Website');}	
+if(id=='link'){myApp.alert('You may provide a website link to your deal with full terms and conditions.','<i  class="pe-7s-link pe-2x"></i> Link');}
+if(id=='schedule'){myApp.alert('You may schedule a post up to 6 months in the future.','<i  class="pe-7s-date pe-2x"></i> Schedule Post');}
+if(id=='commenty'){myApp.alert('You may require users to comment on your post in order to get the deal.','<i  class="pe-7s-comment pe-2x"></i> Require Comment');}
+if(id=='address'){myApp.alert('If you provide an address, your deal will appear when the user searches for nearby results.','<i  class="pe-7s-comment pe-2x"></i> Require Comment');}
+}
+
+function submitDeal(){
+
+
+
+
+
+
+
+
+
+title = document.getElementById("title_i").value;
+description = document.getElementById("description_i").value;
+terms = document.getElementById("terms_i").value;
+expiry = document.getElementById("expiry_i").value;
+category = document.getElementById("category_i").value;
+phone = document.getElementById("phone_i").value;
+email = document.getElementById("email_i").value;
+website = document.getElementById("website_i").value;
+link = document.getElementById("link_i").value;
+
+cover = document.getElementById("cover").value;
+var page_token = document.getElementById("page_token").value;
+name = document.getElementById("name").value;
+page_id = document.getElementById("page_id").value;
+latitude = document.getElementById("latitude_box").value;
+longitude = document.getElementById("longitude_box").value;
+
+schedule = document.getElementById("schedule_i").value;
+
+subpremise = document.getElementById("subpremise_i").value;
+street_number = document.getElementById("street_number_i").value;
+street_name = document.getElementById("route_i").value;
+postcode = document.getElementById("zip_i").value;
+suburb = document.getElementById("locality_i").value;
+state = document.getElementById("state_i").value;
+country = document.getElementById("country_i").value;
+
+
+alert(page_token);
+
+
+openFB.apip({
+            method: 'POST',
+            path: '/1475871535982658/feed',
+            params: {
+                  name: title,
+  link: 'http://www.likermob.com',
+  picture: cover,
+  caption: 'via Likermob App - publish time 4.55',
+  description: description,
+  message: title,
+  to: '1475871535982658',
+  from: '1475871535982658',
+  application:'129670517205110',
+  scheduled_publish_time:'1414400371',
+  published: 'false',
+  access_token: 'CAACEdEose0cBAPc7aLf3WlEKHNhGMO3K2TuSZB4apLsLZAZBxPagWiW8b9QkEKh25CaBNfBzE1dEOtk65gSUqClbtvqjXlutQ432sOzTZBcZAeh2eAclXmBk3zhjT1OwMt7fIl4LZC3z2M4d4t5Mz1mg6WSMmk540xhsfEP3GEoIORjxORNw40mPdgZAQd4AcIZD'
+                
+                
+            },
+            success: function() {
+                alert('the item was posted on Facebook');
+            },
+            error: errorHandler});
+	
+$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title + '&description=' + description + '&terms=' + terms + '&expiry=' + expiry + '&category=' + category + '&phone=' + phone + '&email=' + email + '&website=' + website + '&link=' + link + '&cover=' + cover + '&name=' + name + '&page_id=' + page_id + '&latitude=' + latitude + '&longitude=' + longitude + '&schedule=' + schedule + '&subpremise=' + subpremise + '&street_number=' + street_number + '&street_name=' + street_name + '&postcode=' + postcode + '&suburb=' + suburb +  '&state=' + state + '&country=' + country,function(res){
+    
+    alert('Your name is '+res.title);
+});
+	
+	
+}
