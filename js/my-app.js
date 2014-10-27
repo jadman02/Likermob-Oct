@@ -911,7 +911,7 @@ function dbDeal() {
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="center">Add Deal</div>' +
-       ' <div class="right"><a href="#" id="upload" onclick="errorForm(7);"><i class="pe-7s-upload pe-2x" style="color:#ff3b30;"></i></a><a href="#" id="uploader" onclick="submitDeal();"><i class="pe-7s-upload pe-2x" style="color:#4cd964;"></i></a></div>' +
+       ' <div class="right"><a href="#" id="upload" onclick="errorForm(7);"><i class="pe-7s-upload pe-2x" style="color:#ff3b30;"></i></a><a href="#" id="upload-ready" onclick="submitDeal();"><i class="pe-7s-upload pe-2x" style="color:#4cd964;"></i></a></div>' +
         '  </div>' +
         '</div>' +
         '<div class="pages business">' +
@@ -1326,8 +1326,8 @@ var description_i = document.getElementById("description_i").value;
 var terms_i = document.getElementById("terms_i").value;
 var expiry_i = document.getElementById("expiry_i").value;
 
-if((title_i.length > 3) && (title_i.length < 20) && (description_i.length < 140) && (description_i.length > 5) && (terms_i.length > 5) && (terms_i.length < 140) && (expiry_i > corrected_date)){alert('everything ok');$$( '#upload' ).hide();$$( '#upload-ready' ).show();}
-else {alert('everything not ok');$$( '#upload' ).show();$$( '#upload-ready' ).hide();}
+//if((title_i.length > 3) && (title_i.length < 20) && (description_i.length < 140) && (description_i.length > 5) && (terms_i.length > 5) && (terms_i.length < 140) && (expiry_i > corrected_date)){alert('everything ok');$$( '#upload' ).hide();$$( '#upload-ready' ).show();}
+//else {alert('everything not ok');$$( '#upload' ).show();$$( '#upload-ready' ).hide();}
 
 }
 
