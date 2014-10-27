@@ -1409,7 +1409,8 @@ if(id=='address'){myApp.alert('If you provide an address, your deal will appear 
 
 function submitDeal(){
 
-title = document.getElementById("title_i").value;	
+title = document.getElementById("title_i").value;
+description = document.getElementById("description_i").value;
 subpremise = document.getElementById("subpremise_i").value;
 document.getElementById("street_number_i").value;
 document.getElementById("route_i").value;
@@ -1418,7 +1419,7 @@ document.getElementById("locality_i").value;
 document.getElementById("state_i").value;
 document.getElementById("country_i").value;
 alert(title);	
-$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title,function(res){
+$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title + '&description=' + description,function(res){
     
     alert('Your name is '+res.title);
 });
