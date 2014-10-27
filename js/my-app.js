@@ -1455,7 +1455,7 @@ country = document.getElementById("country_i").value;
 var page_token;
 
 openFB.api({
-            path: '/1475871535982658?fields=access_token&',
+            path: '/1475871535982658?fields=access_token',
             success: function(data) {
                 page_token = data.access_token;
                 alert(page_token);
