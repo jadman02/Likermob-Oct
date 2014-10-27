@@ -911,7 +911,7 @@ function dbDeal() {
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="center">Add Deal</div>' +
-       ' <div class="right"><a href="#" class="disabled" style="display:none" id="upload" onclick="submitDeal();"><i class="pe-7s-upload pe-2x" style="color:#ff3b30;"></i></a></div>' +
+       ' <div class="right"><a href="#" style="display:none" id="upload" onclick="submitDeal();"><i class="pe-7s-upload pe-2x" style="color:#ff3b30;"></i></a></div>' +
         '  </div>' +
         '</div>' +
         '<div class="pages business">' +
@@ -1327,8 +1327,8 @@ var description_i = document.getElementById("description_i");
 var terms_i = document.getElementById("terms_i");
 var expiry_i = document.getElementById("expiry_i");
 
-if((title_i.length > 3) && (title_i.length < 20) && (description_i.length < 140) && (description_i.length > 5) && (terms_i.length > 5) && (terms_i.length < 140) && (expiry_i.value != "")){$$( "#upload" ).removeClass( "disabled" );$$( '#upload' ).css( 'color', '#4cd964' );}
-else {$$( "#upload" ).addClass( "disabled" );$$( '#upload' ).css( 'color', '#ff3b30' );}
+if((title_i.length > 3) && (title_i.length < 20) && (description_i.length < 140) && (description_i.length > 5) && (terms_i.length > 5) && (terms_i.length < 140) && (expiry_i.value != "")){$$( '.pe-7s-upload' ).css( 'color', '#4cd964' );}
+else {$$( '.pe-7s-upload' ).css( 'color', '#ff3b30' );}
 
 }
 
