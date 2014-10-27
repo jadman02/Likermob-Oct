@@ -174,20 +174,6 @@ alert('on about page');
     });
 });
 
-
-
-function setEmpty(homelist){
-
-alert(homelist);	
-if (homelist=="find"){localStorage.setItem("homelist", "find");}
-if (homelist=="mydeals"){localStorage.setItem("homelist", "mydeals");}
-if (homelist=="fav"){localStorage.setItem("homelist", "fav");}
-if (homelist=="add"){localStorage.setItem("homelist", "add");}
-
-	
-	
-}
-
 var data_send;
 var domain;
 
@@ -399,13 +385,7 @@ $$.getJSON('https://maps.googleapis.com/maps/api/place/details/json?placeid='+ p
 $$("#resulta li").remove();
 $$('.addresshide').show();
 
-document.getElementById("subpremise_i").value ="";
-document.getElementById("street_number_i").value ="";
-document.getElementById("route_i").value ="";
-document.getElementById("zip_i").value ="";
-document.getElementById("locality_i").value ="";
-document.getElementById("state_i").value ="";
-document.getElementById("country_i").value ="";
+document.querySelectorAll("#subpremise_i,#street_number_i,#route_i,#zip_i","#locality_i","state_i","country_i").value="";
 
 //alert(response.result.address_components[0].short_name);
 //alert(response.result.address_components[1].short_name);
