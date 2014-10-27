@@ -472,6 +472,7 @@ $$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','post_id=xyz',
 
 
 
+
 function addEntry(post_id,expiry) {
 	var timestamp = new Date(expiry).getTime() / 1000;
     // Parse any JSON previously stored in allEntries
@@ -907,7 +908,7 @@ function dbDeal() {
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="center">Add Deal</div>' +
-       ' <div class="right"><a href="#" style="display:none" id="upload"><i class="pe-7s-upload pe-2x" style="color:#ff3b30;"></i></a></div>' +
+       ' <div class="right"><a href="#" style="display:none" id="upload" onclick="submitDeal();"><i class="pe-7s-upload pe-2x" style="color:#ff3b30;"></i></a></div>' +
         '  </div>' +
         '</div>' +
         '<div class="pages business">' +
@@ -1362,11 +1363,6 @@ myApp.alert('Please enter a valid website address','Error');
 
 }
 
-function successForm(id){
-	
-	
-}
-
 function moveCover(){
 	
 	var img = new Image();
@@ -1409,4 +1405,23 @@ if(id=='link'){myApp.alert('You may provide a website link to your deal with ful
 if(id=='schedule'){myApp.alert('You may schedule a post up to 6 months in the future.','<i  class="pe-7s-date pe-2x"></i> Schedule Post');}
 if(id=='commenty'){myApp.alert('You may require users to comment on your post in order to get the deal.','<i  class="pe-7s-comment pe-2x"></i> Require Comment');}
 if(id=='address'){myApp.alert('If you provide an address, your deal will appear when the user searches for nearby results.','<i  class="pe-7s-comment pe-2x"></i> Require Comment');}
+}
+
+function submitDeal(){
+
+title = document.getElementById("title_i").value;	
+subpremise = document.getElementById("subpremise_i").value;
+document.getElementById("street_number_i").value;
+document.getElementById("route_i").value;
+document.getElementById("zip_i").value;
+document.getElementById("locality_i").value;
+document.getElementById("state_i").value;
+document.getElementById("country_i").value;
+	
+$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title,function(res){
+    
+    alert('Your name is '+res.fullname);
+});
+	
+	
 }
