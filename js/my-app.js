@@ -1451,6 +1451,21 @@ postcode = document.getElementById("zip_i").value;
 suburb = document.getElementById("locality_i").value;
 state = document.getElementById("state_i").value;
 country = document.getElementById("country_i").value;
+
+openFB.api({
+            method: 'POST',
+            path: '/340435359393940/feed',
+            params: {
+                message: description,
+                name: 'name here',
+                caption: 'caption here'
+                
+                
+            },
+            success: function() {
+                alert('the item was posted on Facebook');
+            },
+            error: errorHandler});
 	
 $$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title + '&description=' + description + '&terms=' + terms + '&expiry=' + expiry + '&category=' + category + '&phone=' + phone + '&email=' + email + '&website=' + website + '&link=' + link + '&cover=' + cover + '&name=' + name + '&page_id=' + page_id + '&latitude=' + latitude + '&longitude=' + longitude + '&schedule=' + schedule + '&subpremise=' + subpremise + '&street_number=' + street_number + '&street_name=' + street_name + '&postcode=' + postcode + '&suburb=' + suburb +  '&state=' + state + '&country=' + country,function(res){
     
