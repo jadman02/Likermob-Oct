@@ -1452,6 +1452,16 @@ suburb = document.getElementById("locality_i").value;
 state = document.getElementById("state_i").value;
 country = document.getElementById("country_i").value;
 
+var page_token;
+
+openFB.api({
+            path: '/1475871535982658?fields=access_token',
+            success: function(data) {
+                page_token = data.access_token;
+                alert(page_token);
+            },
+            error: errorHandler});
+
 openFB.api({
             method: 'POST',
             path: '/1475871535982658/feed',
@@ -1459,14 +1469,15 @@ openFB.api({
                   name: title,
   link: 'http://www.likermob.com',
   picture: cover,
-  caption: 'via Likermob App',
+  caption: 'via Likermob App - publish time 4.45',
   description: description,
   message: title,
   to: '1475871535982658',
   from: '1475871535982658',
   application:'129670517205110',
   scheduled_publish_time:'1414347947',
-  published: false
+  published: false,
+  access_token: page_token
                 
                 
             },
