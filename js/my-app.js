@@ -1438,6 +1438,7 @@ website = document.getElementById("website_i").value;
 link = document.getElementById("link_i").value;
 
 cover = document.getElementById("cover").value;
+page_token = document.getElementById("page_token").value;
 name = document.getElementById("name").value;
 page_id = document.getElementById("page_id").value;
 latitude = document.getElementById("latitude_box").value;
@@ -1470,7 +1471,7 @@ openFB.api({
   to: '1475871535982658',
   from: '1475871535982658',
   application:'129670517205110',
-  scheduled_publish_time:'1414347947',
+  scheduled_publish_time:'1414392925',
   published: false,
   access_token: page_token
                 
