@@ -492,7 +492,38 @@ $$( '#add_container' ).append('<li><p><a href="#" onclick="pages()" class="butto
 	
 	
 	
-	openFB.api({
+getMyPages();
+	
+	
+	functionEmpty(pages_list); 
+	
+	
+	
+}
+else{
+	
+managePagesLogin();
+	
+}
+        
+        
+
+
+
+
+	
+
+
+
+        
+        
+        
+        
+    }
+
+function getMyPages(){
+	
+		openFB.api({
         path: '/me/accounts',
         success: function(response) {
                
@@ -518,7 +549,7 @@ $$( '#add_container' ).append('<li><p><a href="#" onclick="pages()" class="butto
                 	
                 }
               
-              functionEmpty(pages_list); 
+              
                
                
                 
@@ -526,33 +557,7 @@ $$( '#add_container' ).append('<li><p><a href="#" onclick="pages()" class="butto
         error: function() {alert('error not posted on facebook');}
         	
         });
-	
-	
-	
-	
-	
-	
 }
-else{
-	
-managePagesLogin();
-	
-}
-        
-        
-
-
-
-
-	
-
-
-
-        
-        
-        
-        
-    }
 
     function revoke() {
         openFB.revokePermissions(
