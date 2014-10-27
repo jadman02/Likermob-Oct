@@ -1457,7 +1457,7 @@ openFB.api({
             path: '/1475871535982658/feed',
             params: {
                   name: title,
-  link: 'likermob://',
+  link: 'http://www.likermob.com',
   picture: cover,
   caption: 'via Likermob App',
   description: description,
