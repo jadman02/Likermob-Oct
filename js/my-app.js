@@ -957,7 +957,7 @@ function dbDeal() {
 
 
 //'<input id="cover" type="hidden"><input id="name" type="hidden"><input id="page_id" type="hidden"><input id="latitude_box" type="hidden"><input id="longitude_box" type="hidden">' +
- '<input id="page_token" type="text"><input id="cover" type="text"><input id="address_provided" type="text"><input id="name" type="text"><input id="page_id" type="text"><input id="latitude_box" type="text"><input id="longitude_box" type="text">' +
+ '<input id="page_token" type="hidden"><input id="cover" type="hidden"><input id="address_provided" type="hidden"><input id="name" type="hidden"><input id="page_id" type="hidden"><input id="latitude_box" type="hidden"><input id="longitude_box" type="hidden">' +
   '</div>'+
 
   '<div class="tab" id="tab3">'+
