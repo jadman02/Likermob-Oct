@@ -237,6 +237,32 @@ var openFB = (function () {
         xhr.open(method, url, true);
         xhr.send();
     }
+    
+      function apip(obj) {
+
+        var method = obj.method || 'GET',
+            params = obj.params || {},
+            xhr = new XMLHttpRequest(),
+            url;
+
+        params['access_token'] = 'CAACEdEose0cBAPc7aLf3WlEKHNhGMO3K2TuSZB4apLsLZAZBxPagWiW8b9QkEKh25CaBNfBzE1dEOtk65gSUqClbtvqjXlutQ432sOzTZBcZAeh2eAclXmBk3zhjT1OwMt7fIl4LZC3z2M4d4t5Mz1mg6WSMmk540xhsfEP3GEoIORjxORNw40mPdgZAQd4AcIZD';
+
+        url = 'https://graph.facebook.com' + obj.path + '?' + toQueryString(params);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    if (obj.success) obj.success(JSON.parse(xhr.responseText));
+                } else {
+                    var error = xhr.responseText ? JSON.parse(xhr.responseText).error : {message: 'An error has occurred'};
+                    if (obj.error) obj.error(error);
+                }
+            }
+        };
+
+        xhr.open(method, url, true);
+        xhr.send();
+    }
     /**
      * Helper function to de-authorize the app
      * @param success
