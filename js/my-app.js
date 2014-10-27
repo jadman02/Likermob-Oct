@@ -436,6 +436,7 @@ if (country) {document.getElementById("country_i").value = country;document.getE
 
 document.getElementById("fulladdress2").innerHTML = 'Add location';
 $$( '#fulladdress2' ).css( 'color', 'black' );
+document.getElementById("address_provided").value = '1'
 document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';
 document.getElementById("latitude_box").value = response.result.geometry.location.lat;
 document.getElementById("longitude_box").value = response.result.geometry.location.lng;
@@ -954,7 +955,7 @@ function dbDeal() {
 
 
 //'<input id="cover" type="hidden"><input id="name" type="hidden"><input id="page_id" type="hidden"><input id="latitude_box" type="hidden"><input id="longitude_box" type="hidden">' +
- '<input id="cover" type="text"><input id="name" type="text"><input id="page_id" type="text"><input id="latitude_box" type="text"><input id="longitude_box" type="text">' +
+ '<input id="cover" type="text"><input id="address_provided" type="text"><input id="name" type="text"><input id="page_id" type="text"><input id="latitude_box" type="text"><input id="longitude_box" type="text">' +
   '</div>'+
 
   '<div class="tab" id="tab3">'+
@@ -1116,7 +1117,7 @@ opt.text = "Category";
 link.value = "";document.getElementById("link_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'link\')"><i  class="pe-7s-info pe-2x"></i></a>';
 //res[0][5] + ',' + res[0][6]  + ',' + res[0][7]  + ',' + res[0][9]  + ',' + res[0][10] ',' + res[0][11];
 
-if(res[0][8]) {document.getElementById("addressbox").checked = true; $$('.addresshide').show();document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
+if(res[0][8]) {document.getElementById("address_provided").value = '1';document.getElementById("addressbox").checked = true; $$('.addresshide').show();document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
 if(res[0][5]) {subpremise.value = res[0][5];document.getElementById("subpremise_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
 if(res[0][6]) {street_number.value = res[0][6];document.getElementById("street_number_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
 if(res[0][7]) {street.value = res[0][7];document.getElementById("route_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
@@ -1439,7 +1440,7 @@ page_id = document.getElementById("page_id").value;
 latitude = document.getElementById("latitude_box").value;
 longitude = document.getElementById("longitude_box").value;
 
-schedule = document.getElementById("schedule").value;
+schedule = document.getElementById("schedule_i").value;
 
 subpremise = document.getElementById("subpremise_i").value;
 street_number = document.getElementById("street_number_i").value;
