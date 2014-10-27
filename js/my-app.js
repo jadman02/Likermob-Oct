@@ -646,11 +646,13 @@ function showAddress(){
             //$$('#fulladdress').blur();
             $$('.addresshide').hide();
             $$( '#fulladdress2' ).css( 'color', 'hsl(0, 0%, 70%)' );
+            document.getElementById("address_provided").value = '0';
             
         } else {
              
              openSearch();
             $$('#fulladdress').focus();
+            document.getElementById("address_provided").value = '1';
         }
 
 	
