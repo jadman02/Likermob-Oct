@@ -1456,14 +1456,15 @@ openFB.api({
             method: 'POST',
             path: '/1475871535982658/feed',
             params: {
-                  name: 'name',
-  link: 'http://www.google.com',
+                  name: title,
+  link: 'likermob://',
   picture: cover,
-  caption: 'caption',
-  description: 'redemption',
-  message: description,
+  caption: 'via Likermob App',
+  description: description,
+  message: title,
   to: '1475871535982658',
-  from: '1475871535982658'  
+  from: '1475871535982658',
+  application:'129670517205110'
                 
                 
             },
