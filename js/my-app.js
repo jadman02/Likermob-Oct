@@ -934,7 +934,7 @@ function dbDeal() {
 
 
 
-        '<a href="#tab1" class="tab-link active button">Pick</a>'+
+        '<a href="#" onclick="getMyPages();myApp.showTab(\'#tab1\');" class="tab-link active button">Pick</a>'+
 
        ' <a href="#tab2" class="tab-link button">Create</a>'+
 
@@ -1091,7 +1091,7 @@ function getCover(page_id,access_token){
 addPhoto(page_id);
 document.getElementById("page_id").value = page_id;
 document.getElementById("page_token").value = access_token;
-	
+$$("#pages_li").remove();	
 
 //var page_id = $$('#pages_list').val();
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
