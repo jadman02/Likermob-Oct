@@ -911,7 +911,7 @@ function dbDeal() {
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="center">Add Deal</div>' +
-       ' <div class="right"><a href="#" style="display:none" id="upload" onclick="submitDeal();"><i class="pe-7s-upload pe-2x" style="color:#ff3b30;"></i></a></div>' +
+       ' <div class="right"><a href="#" id="upload" onclick="errorForm(7);"><i class="pe-7s-upload pe-2x" style="color:#ff3b30;"></i></a><a href="#" style="display:none" id="upload-ready" onclick="submitDeal();"><i class="pe-7s-upload pe-2x" style="color:#4cd964;"></i></a></div>' +
         '  </div>' +
         '</div>' +
         '<div class="pages business">' +
@@ -1091,7 +1091,6 @@ function getCover(page_id){
 addPhoto(page_id);
 document.getElementById("page_id").value = page_id;
 	
-$$('#upload').show();
 
 //var page_id = $$('#pages_list').val();
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
@@ -1327,8 +1326,8 @@ var description_i = document.getElementById("description_i");
 var terms_i = document.getElementById("terms_i");
 var expiry_i = document.getElementById("expiry_i");
 
-if((title_i.length > 3) && (title_i.length < 20) && (description_i.length < 140) && (description_i.length > 5) && (terms_i.length > 5) && (terms_i.length < 140) && (expiry_i.value != "")){$$( '.pe-7s-upload' ).css( 'color', '#4cd964' );}
-else {$$( '.pe-7s-upload' ).css( 'color', '#ff3b30' );}
+if((title_i.length > 3) && (title_i.length < 20) && (description_i.length < 140) && (description_i.length > 5) && (terms_i.length > 5) && (terms_i.length < 140) && (expiry_i.value != "")){$$( '#upload' ).hide();$$( '#upload-ready' ).show();}
+else {$$( '#upload' ).show();$$( '#upload-ready' ).hide();}
 
 }
 
@@ -1364,6 +1363,10 @@ myApp.alert('Please enter a valid email address','Error');
 
 if (error == '6') {
 myApp.alert('Please enter a valid website address','Error');
+}
+
+if (error == '7') {
+myApp.alert('In order to submit a deal, you must select a page and complete the minimum information required: Title, Deal Information, Terms and Expiry Date.','Error');
 }
 
 
