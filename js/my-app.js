@@ -1091,7 +1091,7 @@ function getCover(page_id,access_token){
 addPhoto(page_id);
 document.getElementById("page_id").value = page_id;
 document.getElementById("page_token").value = access_token;
-$$("#pages_li").remove();	
+$$("#pages_list li").remove();	
 
 //var page_id = $$('#pages_list').val();
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
