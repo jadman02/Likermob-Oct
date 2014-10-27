@@ -953,8 +953,8 @@ function dbDeal() {
 
 
 
-
- '<input id="latitude_box" type="hidden"><input id="longitude_box" type="hidden">' +
+//'<input id="cover" type="hidden"><input id="name" type="hidden"><input id="page_id" type="hidden"><input id="latitude_box" type="hidden"><input id="longitude_box" type="hidden">' +
+ '<input id="cover" type="text"><input id="name" type="text"><input id="page_id" type="text"><input id="latitude_box" type="text"><input id="longitude_box" type="text">' +
   '</div>'+
 
   '<div class="tab" id="tab3">'+
@@ -1086,6 +1086,7 @@ function getCover(page_id){
 
     myApp.showTab('#tab2');
 addPhoto(page_id);
+document.getElementById("page_id").value = page_id;
 	
 $$('#upload').show();
 
@@ -1130,13 +1131,16 @@ if (res[0][15]) {website.value = res[0][15];checkForm('website');}
 if (res[0][17]) {opt.value =  res[0][17];opt.text = res[0][17];checkForm('category');}
 if (res[0][18]) {link.value = res[0][18];checkForm('link');}
 
-
+if (res[0][13]) {document.getElementById("latitude_box").value = res[0][13];}
+if (res[0][14]) {document.getElementById("longitude_box").value = res[0][14];}
 
 
 
 });
 
-$$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(response){
+
+
+$$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,name', function(response){
 	
 //if (response["location"]["latitude"]) {response["location"]["latitude"]};
 
@@ -1155,6 +1159,8 @@ $$('#add_button').remove();
 
 
 	document.getElementById("coverbutton").innerHTML = '<a href="#" class="button" onclick="addPhoto('+page_id+')" style="height:80px;margin:0 auto;border:none;margin-top:-100px;"><i class="pe-7s-camera pe-5x" ></i></a>';
+	document.getElementById("cover").value = coverpic;
+	document.getElementById("name").value = response["namer"];
 	var coverpic = response["cover"]["source"];
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
@@ -1409,17 +1415,41 @@ if(id=='address'){myApp.alert('If you provide an address, your deal will appear 
 
 function submitDeal(){
 
+
+
+
+
+
+
+
+
 title = document.getElementById("title_i").value;
 description = document.getElementById("description_i").value;
+terms = document.getElementById("terms_i").value;
+expiry = document.getElementById("expiry_i").value;
+category = document.getElementById("category_i").value;
+phone = document.getElementById("phone_i").value;
+email = document.getElementById("email_i").value;
+website = document.getElementById("website_i").value;
+link = document.getElementById("link_i").value;
+
+cover = document.getElementById("cover").value;
+name = document.getElementById("name").value;
+page_id = document.getElementById("page_id").value;
+latitude = document.getElementById("latitude_box").value;
+longitude = document.getElementById("longitude_box").value;
+
+schedule = document.getElementById("schedule").value;
+
 subpremise = document.getElementById("subpremise_i").value;
-document.getElementById("street_number_i").value;
-document.getElementById("route_i").value;
-document.getElementById("zip_i").value;
-document.getElementById("locality_i").value;
-document.getElementById("state_i").value;
-document.getElementById("country_i").value;
-alert(title);	
-$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title + '&description=' + description,function(res){
+street_number = document.getElementById("street_number_i").value;
+street_name = document.getElementById("route_i").value;
+postcode = document.getElementById("zip_i").value;
+suburb = document.getElementById("locality_i").value;
+state = document.getElementById("state_i").value;
+country = document.getElementById("country_i").value;
+	
+$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title + '&description=' + description + '&terms=' + terms + '&expiry=' + expiry + '&category=' + category + '&phone=' + phone + '&email=' + email + '&website=' + website + '&link=' + link + '&cover=' + cover + '&name=' + name + '&page_id=' + page_id + '&latitude=' + latitude + '&longitude=' + longitude + '&schedule=' + schedule + '&subpremise=' + subpremise + '&street_number=' + street_number + '&street_name=' + street_name + '&postcode=' + postcode + '&suburb=' + suburb +  '&state=' + state + '&country=' + country,function(res){
     
     alert('Your name is '+res.title);
 });
