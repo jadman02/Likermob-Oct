@@ -1454,7 +1454,7 @@ country = document.getElementById("country_i").value;
 
 openFB.api({
             method: 'POST',
-            path: '/340435359393940/feed',
+            path: '/1475871535982658/feed',
             params: {
                 message: description,
                 name: 'name here',
