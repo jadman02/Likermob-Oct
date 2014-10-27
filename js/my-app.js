@@ -1417,10 +1417,10 @@ document.getElementById("zip_i").value;
 document.getElementById("locality_i").value;
 document.getElementById("state_i").value;
 document.getElementById("country_i").value;
-	
+alert(title);	
 $$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title,function(res){
     
-    alert('Your name is '+res.fullname);
+    alert('Your name is '+res.title);
 });
 	
 	
