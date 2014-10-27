@@ -238,6 +238,31 @@ var openFB = (function () {
         xhr.send();
     }
     
+     function apip(obj) {
+
+        var method = obj.method || 'GET',
+            params = obj.params || {},
+            xhr = new XMLHttpRequest(),
+            url;
+
+
+
+        url = 'https://graph.facebook.com' + obj.path + '?' + toQueryString(params);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    if (obj.success) obj.success(JSON.parse(xhr.responseText));
+                } else {
+                    var error = xhr.responseText ? JSON.parse(xhr.responseText).error : {message: 'An error has occurred'};
+                    if (obj.error) obj.error(error);
+                }
+            }
+        };
+
+        xhr.open(method, url, true);
+        xhr.send();
+    }
      
     /**
      * Helper function to de-authorize the app
@@ -283,6 +308,7 @@ var openFB = (function () {
         logout: logout,
         revokePermissions: revokePermissions,
         api: api,
+        apip: apip,
         oauthCallback: oauthCallback,
         getLoginStatus: getLoginStatus
     }
