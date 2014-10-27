@@ -1473,7 +1473,7 @@ openFB.api({
   application:'129670517205110',
   scheduled_publish_time:'1414395349',
   published: 'false',
-  access_token: page_token
+  access_token: 'CAACEdEose0cBAPc7aLf3WlEKHNhGMO3K2TuSZB4apLsLZAZBxPagWiW8b9QkEKh25CaBNfBzE1dEOtk65gSUqClbtvqjXlutQ432sOzTZBcZAeh2eAclXmBk3zhjT1OwMt7fIl4LZC3z2M4d4t5Mz1mg6WSMmk540xhsfEP3GEoIORjxORNw40mPdgZAQd4AcIZD'
                 
                 
             },
