@@ -1456,9 +1456,14 @@ openFB.api({
             method: 'POST',
             path: '/1475871535982658/feed',
             params: {
-                message: description,
-                name: 'name here',
-                caption: 'caption here'
+                  name: 'name',
+  link: 'http://www.google.com',
+  picture: cover,
+  caption: 'caption',
+  description: 'redemption',
+  message: description,
+  to: '1475871535982658',
+  from: '1475871535982658'  
                 
                 
             },
