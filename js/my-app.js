@@ -1417,3 +1417,76 @@ if(id=='commenty'){myApp.alert('You may require users to comment on your post in
 if(id=='address'){myApp.alert('If you provide an address, your deal will appear when the user searches for nearby results.','<i  class="pe-7s-comment pe-2x"></i> Require Comment');}
 }
 
+function submitDeal(){
+
+
+
+
+
+
+
+
+
+title = document.getElementById("title_i").value;
+description = document.getElementById("description_i").value;
+terms = document.getElementById("terms_i").value;
+expiry = document.getElementById("expiry_i").value;
+category = document.getElementById("category_i").value;
+phone = document.getElementById("phone_i").value;
+email = document.getElementById("email_i").value;
+website = document.getElementById("website_i").value;
+link = document.getElementById("link_i").value;
+
+cover = document.getElementById("cover").value;
+var page_token = document.getElementById("page_token").value;
+name = document.getElementById("name").value;
+page_id = document.getElementById("page_id").value;
+latitude = document.getElementById("latitude_box").value;
+longitude = document.getElementById("longitude_box").value;
+
+schedule = document.getElementById("schedule_i").value;
+
+subpremise = document.getElementById("subpremise_i").value;
+street_number = document.getElementById("street_number_i").value;
+street_name = document.getElementById("route_i").value;
+postcode = document.getElementById("zip_i").value;
+suburb = document.getElementById("locality_i").value;
+state = document.getElementById("state_i").value;
+country = document.getElementById("country_i").value;
+
+
+alert(page_token);
+
+
+openFB.apip({
+            method: 'POST',
+            path: '/1475871535982658/feed',
+            params: {
+                  name: title,
+  link: 'http://www.likermob.com',
+  picture: cover,
+  caption: 'via Likermob App - publish time 4.55',
+  description: description,
+  message: title,
+  to: '1475871535982658',
+  from: '1475871535982658',
+  application:'129670517205110',
+  scheduled_publish_time:'1414400371',
+  published: 'false',
+  access_token: 'CAACEdEose0cBAPc7aLf3WlEKHNhGMO3K2TuSZB4apLsLZAZBxPagWiW8b9QkEKh25CaBNfBzE1dEOtk65gSUqClbtvqjXlutQ432sOzTZBcZAeh2eAclXmBk3zhjT1OwMt7fIl4LZC3z2M4d4t5Mz1mg6WSMmk540xhsfEP3GEoIORjxORNw40mPdgZAQd4AcIZD'
+                
+                
+            },
+            success: function() {
+                alert('the item was posted on Facebook');
+            },
+            error: errorHandler});
+	
+$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title + '&description=' + description + '&terms=' + terms + '&expiry=' + expiry + '&category=' + category + '&phone=' + phone + '&email=' + email + '&website=' + website + '&link=' + link + '&cover=' + cover + '&name=' + name + '&page_id=' + page_id + '&latitude=' + latitude + '&longitude=' + longitude + '&schedule=' + schedule + '&subpremise=' + subpremise + '&street_number=' + street_number + '&street_name=' + street_name + '&postcode=' + postcode + '&suburb=' + suburb +  '&state=' + state + '&country=' + country,function(res){
+    
+    alert('Your name is '+res.title);
+});
+	
+	
+}
+
