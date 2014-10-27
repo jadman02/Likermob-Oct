@@ -1162,9 +1162,9 @@ $$('#add_button').remove();
 
 
 	document.getElementById("coverbutton").innerHTML = '<a href="#" class="button" onclick="addPhoto('+page_id+')" style="height:80px;margin:0 auto;border:none;margin-top:-100px;"><i class="pe-7s-camera pe-5x" ></i></a>';
-	document.getElementById("cover").value = coverpic;
-	document.getElementById("name").value = response["namer"];
 	var coverpic = response["cover"]["source"];
+	document.getElementById("cover").innerHTML = coverpic;
+	document.getElementById("name").value = response["name"];
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
 	$$( '.cover-add' ).css( 'background-repeat', 'no-repeat' );
