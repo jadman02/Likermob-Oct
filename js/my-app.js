@@ -1454,13 +1454,11 @@ country = document.getElementById("country_i").value;
 
 var page_token;
 
-openFB.api({
-            path: '/1475871535982658?fields=access_token',
-            success: function(data) {
-                page_token = data.access_token;
-                alert(page_token);
-            },
-            error: errorHandler});
+$$.getJSON('https://graph.facebook.com/1475871535982658?fields=access_token', function(response){
+	
+	alert (response["access_token"]);
+	
+});
 
 openFB.api({
             method: 'POST',
