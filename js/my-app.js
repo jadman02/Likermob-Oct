@@ -1509,7 +1509,7 @@ function submitImage(){
 	var cover = document.getElementById("cover").value;
 		var page_id = document.getElementById("page_id").value;
 	
-		$$.getJSON('http://www.smilesavers.net.au/submitimage.php?callback=?','cover=' + cover + '&post_id=' + post_id,function(res){
+		$$.getJSON('http://www.smilesavers.net.au/submitimage.php?callback=?','cover=' + cover + '&page_id=' + page_id,function(res){
     
     alert('Your name is '+res.title);
 });
