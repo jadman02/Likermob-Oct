@@ -1426,6 +1426,7 @@ var email = document.getElementById("email_i").value;
 var website = document.getElementById("website_i").value;
 var link = document.getElementById("link_i").value;
 
+
 var cover = document.getElementById("cover").value;
 var page_token = document.getElementById("page_token").value;
 var name = document.getElementById("name").value;
@@ -1434,7 +1435,7 @@ var latitude = document.getElementById("latitude_box").value;
 var longitude = document.getElementById("longitude_box").value;
 
 var schedule = document.getElementById("schedule_i").value;
-
+alert(schedule);
 var subpremise = document.getElementById("subpremise_i").value;
 var street_number = document.getElementById("street_number_i").value;
 var street_name = document.getElementById("route_i").value;
