@@ -1102,11 +1102,13 @@ $$( "#tab3link" ).removeClass( "disabled" );
 
 
 
-//$$('#spanicon').each(function() {
- //   alert( this.id );
-//});
+
 
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
+
+$$('#spanicon').each(function() {
+  alert( this.id );
+});
 
 $$.each({ name: "John", lang: "JS" }, function( k, v ) {
   alert( "Key: " + k + ", Value: " + v );
