@@ -1460,21 +1460,25 @@ openFB.apip({
   to: '1475871535982658',
   from: '1475871535982658',
   application:'129670517205110',
-  scheduled_publish_time:'1414400371',
+  scheduled_publish_time:'1414474410',
   published: 'false',
   access_token: 'CAACEdEose0cBAPc7aLf3WlEKHNhGMO3K2TuSZB4apLsLZAZBxPagWiW8b9QkEKh25CaBNfBzE1dEOtk65gSUqClbtvqjXlutQ432sOzTZBcZAeh2eAclXmBk3zhjT1OwMt7fIl4LZC3z2M4d4t5Mz1mg6WSMmk540xhsfEP3GEoIORjxORNw40mPdgZAQd4AcIZD'
                 
                 
             },
-            success: function() {
-                alert('the item was posted on Facebook');
-            },
-            error: errorHandler});
-	
-$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title + '&description=' + description + '&terms=' + terms + '&expiry=' + expiry + '&category=' + category + '&phone=' + phone + '&email=' + email + '&website=' + website + '&link=' + link + '&cover=' + cover + '&name=' + name + '&page_id=' + page_id + '&latitude=' + latitude + '&longitude=' + longitude + '&schedule=' + schedule + '&subpremise=' + subpremise + '&street_number=' + street_number + '&street_name=' + street_name + '&postcode=' + postcode + '&suburb=' + suburb +  '&state=' + state + '&country=' + country,function(res){
+            success: function(data) {
+                
+                alert('the item was posted on Facebook' + data.id);
+            
+            	$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title + '&description=' + description + '&terms=' + terms + '&expiry=' + expiry + '&category=' + category + '&phone=' + phone + '&email=' + email + '&website=' + website + '&link=' + link + '&cover=' + cover + '&name=' + name + '&page_id=' + page_id + '&latitude=' + latitude + '&longitude=' + longitude + '&schedule=' + schedule + '&subpremise=' + subpremise + '&street_number=' + street_number + '&street_name=' + street_name + '&postcode=' + postcode + '&suburb=' + suburb +  '&state=' + state + '&country=' + country,function(res){
     
     alert('Your name is '+res.title);
 });
+            	
+            },
+            error: errorHandler});
+	
+
 	
 	
 }
