@@ -1226,6 +1226,7 @@ function photoBrowser() {
       },
       {
         quality: 50,
+        allowEdit: true,
         destinationType: Camera.DestinationType.FILE_URI
       });
 	
