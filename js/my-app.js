@@ -1444,25 +1444,25 @@ var state = document.getElementById("state_i").value;
 var country = document.getElementById("country_i").value;
 
 
-alert(page_token);
+
 
 
 openFB.apip({
             method: 'POST',
-            path: '/1475871535982658/feed',
+            path: '/' + page_id + '/feed',
             params: {
                   name: title,
   link: 'http://www.likermob.com',
   picture: cover,
-  caption: 'via Likermob App - publish time 4.55',
+  caption: 'via Likermob App',
   description: description,
   message: title,
-  to: '1475871535982658',
-  from: '1475871535982658',
+  to: page_id,
+  from: page_id,
   application:'129670517205110',
-  scheduled_publish_time:'1414474410',
+  scheduled_publish_time:'1414475610',
   published: 'false',
-  access_token: 'CAACEdEose0cBAPc7aLf3WlEKHNhGMO3K2TuSZB4apLsLZAZBxPagWiW8b9QkEKh25CaBNfBzE1dEOtk65gSUqClbtvqjXlutQ432sOzTZBcZAeh2eAclXmBk3zhjT1OwMt7fIl4LZC3z2M4d4t5Mz1mg6WSMmk540xhsfEP3GEoIORjxORNw40mPdgZAQd4AcIZD'
+  access_token: page_token
                 
                 
             },
