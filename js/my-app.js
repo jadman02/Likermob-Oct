@@ -1108,7 +1108,7 @@ $$( "#tab3link" ).removeClass( "disabled" );
 
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
-$.each({ phone: "4", email: "16", website: "15" }, function( k, v ) {
+$$.each({ phone: "4", email: "16", website: "15" }, function( k, v ) {
   
   var k_i = document.getElementById(k + '_i');
   var k_c = document.getElementById(k + '_c');
