@@ -1481,7 +1481,7 @@ openFB.apip({
             params: {
                   name: title,
   link: 'http://www.likermob.com',
-  picture: cover,
+  picture: 'http://smilesavers.net.au/images/namethisimage.jpg',
   caption: 'via Likermob App',
   description: description,
   message: title,
