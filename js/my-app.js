@@ -1237,8 +1237,7 @@ moveCover();
 
 function getPhoto() {
      
-     navigator.camera.getPicture(uploadPhoto,
-      function( message ) {
+     navigator.camera.getPicture(uploadPhoto, function( message ) {
         alert( message );
       },
       {
@@ -1249,36 +1248,35 @@ function getPhoto() {
     }
 
 function uploadPhoto(imageURI) {
-                $$( '.cover-add' ).css( 'background-image', 'url(\''+ imageURI  +'\')');
+             $$( '.cover-add' ).css( 'background-image', 'url(\''+ imageURI  +'\')');
         document.getElementById("cover").value = imageURI;
 moveCover();
-        var options = new FileUploadOptions();
-        options.fileKey="file";
-        options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1)+'.jpg';
-        options.mimeType="text/plain";
-
-        var params = new Object();
-
-        options.params = params;
-        options.chunkedMode = false;
-alert(imageURI);
-        var ft = new FileTransfer();
-        ft.upload(imageURI, encodeURI("http://www.smilesavers.net.au/submitimage.php"), win, fail, options);
-    }
-
-    function win(r) {
-        alert('success');
-        console.log("Code = " + r.responseCode);
-        console.log("Response = " + r.response);
-        console.log("Sent = " + r.bytesSent);
-    }
-
-    function fail(error) {
-        alert("An error has occurred: Code = " + error.code);
-        console.log("upload error source " + error.source);
-        console.log("upload error target " + error.target);
-    }
-
+            var options = new FileUploadOptions();
+            options.fileKey="file";
+            options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
+            options.mimeType="image/jpeg";
+ 
+           var params = new Object();
+            params.value1 = "test";
+            params.value2 = "param";
+ 
+            options.params = params;
+            options.chunkedMode = false;
+ 
+            var ft = new FileTransfer();
+            ft.upload(imageURI, "http://smilesavers.net.au/submitimage.php", win, fail, options);
+        }
+ 
+        function win(r) {
+            console.log("Code = " + r.responseCode);
+            console.log("Response = " + r.response);
+            console.log("Sent = " + r.bytesSent);
+            alert(r.response);
+        }
+ 
+        function fail(error) {
+            alert("An error has occurred: Code = " = error.code);
+        }
 
 
 
