@@ -955,13 +955,14 @@ function dbDeal() {
 '<a href="#" class="button" onclick="submitImage();">Submit Image</a>' +
 
 '<form id="ff" action="http://smilesavers.net.au/submitimage.php" method="post">'+
-'<input type="file" id="coverphotoform" placeholder="" name="photo">'+
-'<input type="submit" onclick="submitForm()" value="Submit">'+
+'<input type="file" id="photo" name="photo">'+
+'<input type="hidden" name="name1" value="666"><br>' +
+'<input type="submit" class="button" onclick="submitForm()" value="Submit">'+
 '</form>'+
 
 
 //'<input id="cover" type="hidden"><input id="name" type="hidden"><input id="page_id" type="hidden"><input id="latitude_box" type="hidden"><input id="longitude_box" type="hidden">' +
- '<input id="page_token" type="text"><input id="cover" name="photo" type="file"><input id="address_provided" type="text"><input id="name" type="text"><input id="page_id" type="text"><input id="latitude_box" type="text"><input id="longitude_box" type="text">' +
+ '<input id="page_token" type="text"><input id="cover" type="file"><input id="address_provided" type="text"><input id="name" type="text"><input id="page_id" type="text"><input id="latitude_box" type="text"><input id="longitude_box" type="text">' +
   '</div>'+
 
   '<div class="tab" id="tab3">'+
