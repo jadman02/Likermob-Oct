@@ -1494,7 +1494,7 @@ function clearPageslist(){
 	$$( '#tab2link' ).addClass( 'disabled' );
 	$$( '#tab3link' ).addClass( 'disabled' );
 	$$('#add_button').show();
-	$$('#coverbutton').remove();
-	$$('#add_button').append('<div id="coverbutton"></div>');
+	$$('#coverbutton').hide();
 	$$( '.content-block' ).css( 'padding-top', '40px' );
+	$$( '.cover-add' ).css( 'background-image', 'none' );
 }
