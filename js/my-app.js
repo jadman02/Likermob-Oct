@@ -892,9 +892,7 @@ localStorage.setItem("order", order);
 
 }
 
-$$('#add_button').on('click', function (e) {
-   alert('Show facebook photos');
-});
+
 
 function dbDeal() {
 
@@ -1168,18 +1166,9 @@ $$('#add_button').hide();
 
 
 	document.getElementById("coverbutton").innerHTML = '<a href="#" class="button" onclick="addPhoto('+page_id+')" style="height:80px;margin:0 auto;border:none;margin-top:-100px;"><i class="pe-7s-camera pe-5x" ></i></a>';
-	var coverpic = response["cover"]["source"];
-	document.getElementById("cover").value = coverpic;
+	setCover(response["cover"]["source"]);
 	document.getElementById("name").value = response["name"];
-	$$( '.cover-add' ).css( 'background-image', 'url(\''+ coverpic  +'\')' );
-	$$( '.cover-add' ).css( 'background-size', '100%' );
-	$$( '.cover-add' ).css( 'background-repeat', 'no-repeat' );
-
-//	$$('.a_' + page_id ).removeClass('total_list');
-//	$$('.total_list').remove();
-//	$$( '.a_' + page_id ).css( 'background-color', '#5ac8fa' );
-
-moveCover();
+	moveCover();
 
 
     
@@ -1499,4 +1488,13 @@ function clearPageslist(){
 	$$('#coverbutton').hide();
 	$$( '.content-block' ).css( 'padding-top', '40px' );
 	$$( '.cover-add' ).css( 'background-image', 'none' );
+}
+
+function setCover(url){
+	alert(url);
+	document.getElementById("name").value = url;
+	$$( '.cover-add' ).css( 'background-image', 'url(\''+ url  +'\')' );
+	$$( '.cover-add' ).css( 'background-size', '100%' );
+	$$( '.cover-add' ).css( 'background-repeat', 'no-repeat' );
+	
 }
