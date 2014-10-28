@@ -1266,9 +1266,8 @@ moveCover();
  
             options.params = params;
             options.chunkedMode = false;
- alert('proceeding to upload');
             var ft = new FileTransfer();
-            ft.upload(imageURI, "http://smilesavers.net.au/submitimage.php", win, fail, options);
+            ft.upload(imageURI, "http://www.smilesavers.net.au/submitimage.php", win, fail, options);
             
         }
  
