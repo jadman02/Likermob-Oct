@@ -1108,6 +1108,10 @@ $$( "#tab3link" ).removeClass( "disabled" );
 
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
+$$.each({ name: "John", lang: "JS" }, function( k, v ) {
+  alert( "Key: " + k + ", Value: " + v );
+});
+
 $$.each({ phone: "4", email: "16", website: "15" }, function( k, v ) {
   alert(res[0][v]);alert(k+ '_i');
   if(res[0][v]){document.getElementById(k + '_i').value = res[0][v];document.getElementById(k + '_c').value = 'yahoo';}
