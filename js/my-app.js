@@ -1225,6 +1225,7 @@ function photoBrowser() {
 	
 	navigator.camera.getPicture( function( imageURI ) {
         $$( '.cover-add' ).css( 'background-image', 'url(\''+ imageURI  +'\')');
+        document.getElementById("cover").value = imageURI;
 moveCover();
       },
       function( message ) {
@@ -1241,6 +1242,7 @@ function getPhoto() {
      
      navigator.camera.getPicture( function( imageURI ) {
         $$( '.cover-add' ).css( 'background-image', 'url(\''+ imageURI  +'\')');
+        document.getElementById("cover").value = imageURI;
 moveCover();
       },
       function( message ) {
