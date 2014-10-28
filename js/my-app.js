@@ -1248,41 +1248,33 @@ function getPhoto() {
       });
     }
 
-
 function uploadPhoto(imageURI) {
+        var options = new FileUploadOptions();
+        options.fileKey="file";
+        options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1)+'.png';
+        options.mimeType="text/plain";
 
-        $$( '.cover-add' ).css( 'background-image', 'url(\''+ imageURI  +'\')');
-        document.getElementById("cover").value = imageURI;
-moveCover();
-            
-            var options = new FileUploadOptions();
-            options.fileKey="file";
-            options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
-            options.mimeType="image/jpeg";
- 
-            var params = new Object();
-            params.value1 = "test";
-            params.value2 = "param";
- 
-            options.params = params;
-            options.chunkedMode = false;
-            var ft = new FileTransfer();
-            ft.upload(imageURI, "http://www.smilesavers.net.au/submitimage.php", win, fail, options);
-            
-        }
- 
-        function win(r) {
-           alert('win');
-            alert("Code = " + r.responseCode);
-            alert("Response = " + r.response);
-            alert("Sent = " + r.bytesSent);
-            alert(r.response);
-        }
- 
-        function fail(error) {
-           alert('fail');
-            alert("An error has occurred: Code = " = error.code);
-        }
+        var params = new Object();
+
+        options.params = params;
+
+        var ft = new FileTransfer();
+        ft.upload(imageURI, encodeURI("http://www.smilesavers.net.au/submitimage.php"), win, fail, options);
+    }
+
+    function win(r) {
+        console.log("Code = " + r.responseCode);
+        console.log("Response = " + r.response);
+        console.log("Sent = " + r.bytesSent);
+    }
+
+    function fail(error) {
+        alert("An error has occurred: Code = " + error.code);
+        console.log("upload error source " + error.source);
+        console.log("upload error target " + error.target);
+    }
+
+
 
 
 function openSearch() {
