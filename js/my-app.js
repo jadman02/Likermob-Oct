@@ -1254,7 +1254,7 @@ function uploadPhoto(imageURI) {
         $$( '.cover-add' ).css( 'background-image', 'url(\''+ imageURI  +'\')');
         document.getElementById("cover").value = imageURI;
 moveCover();
-            alert('proceeding to upload');
+            
             var options = new FileUploadOptions();
             options.fileKey="file";
             options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
@@ -1266,7 +1266,7 @@ moveCover();
  
             options.params = params;
             options.chunkedMode = false;
- 
+ alert('proceeding to upload');
             var ft = new FileTransfer();
             ft.upload(imageURI, "http://smilesavers.net.au/submitimage.php", win, fail, options);
             
