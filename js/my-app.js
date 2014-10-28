@@ -1105,9 +1105,7 @@ $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=
   //  alert( this.id );
 //});
 
-$$.each({ name: 'John', lang: 'JS' }, function( k, v ) {
-  alert( 'Key: ' + k + ', Value: ' + v );
-});
+
 
 var phone = document.getElementById("phone_i");
 //var address = document.getElementById("fulladdress2");
