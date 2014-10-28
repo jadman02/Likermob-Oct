@@ -934,7 +934,7 @@ function dbDeal() {
 
 
 
-        '<a href="#tab1" onclick="$$(\'#add-loader-container\').show();getMyPages();$$( \'#tab2link\' ).addClass( \'disabled\' );$$( \'#tab3link\' ).addClass( \'disabled\' );" class="tab-link active button">Pick</a>'+
+        '<a href="#tab1" onclick="clearPageslist();" class="tab-link active button">Pick</a>'+
 
        ' <a href="#tab2" id="tab2link" class="tab-link button disabled">Create</a>'+
 
@@ -1161,7 +1161,7 @@ var website = document.getElementById("website_i");
 var opt= document.getElementById('category_i').options[0];
 
 	
-$$('#add_button').remove();
+$$('#add_button').hide();
 
 
 
@@ -1486,4 +1486,15 @@ $$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + 
 });
 	
 	
+}
+
+function clearPageslist(){
+	$$('#add-loader-container').show();
+	getMyPages();
+	$$( '#tab2link' ).addClass( 'disabled' );
+	$$( '#tab3link' ).addClass( 'disabled' );
+	$$('#add_button').show();
+	$$('#coverbutton').remove();
+	$$('#add_button').append('<div id="coverbutton"></div>');
+	$$( '.content-block' ).css( 'padding-top', '40px' );
 }
