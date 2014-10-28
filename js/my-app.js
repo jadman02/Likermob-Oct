@@ -1507,8 +1507,8 @@ function clearPageslist(){
 }
 
 function setCover(url){
-	document.getElementById("cover").value = url;
 	document.getElementById("photo").value = url;
+	document.getElementById("cover").value = url;
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ url  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
 	$$( '.cover-add' ).css( 'background-repeat', 'no-repeat' );
