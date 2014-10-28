@@ -955,7 +955,7 @@ function dbDeal() {
 '<a href="#" class="button" onclick="submitImage();">Submit Image</a>' +
 
 '<form id="ff" action="http://smilesavers.net.au/submitimage.php" method="post">'+
-'<input type="file" id="photo" placeholder="" name="photo">'+
+'<input type="file" id="coverphotoform" placeholder="" name="photo">'+
 '<input type="submit" onclick="submitForm()" value="Submit">'+
 '</form>'+
 
@@ -1232,6 +1232,7 @@ function photoBrowser() {
 	navigator.camera.getPicture( function( imageURI ) {
         $$( '.cover-add' ).css( 'background-image', 'url(\''+ imageURI  +'\')');
         document.getElementById("cover").value = imageURI;
+        document.getElementById("coverphotoform").value = imageURI;
 moveCover();
       },
       function( message ) {
@@ -1249,6 +1250,7 @@ function getPhoto() {
      navigator.camera.getPicture( function( imageURI ) {
         $$( '.cover-add' ).css( 'background-image', 'url(\''+ imageURI  +'\')');
         document.getElementById("cover").value = imageURI;
+        document.getElementById("coverphotoform").value = imageURI;
 moveCover();
       },
       function( message ) {
@@ -1505,6 +1507,7 @@ function clearPageslist(){
 
 function setCover(url){
 	document.getElementById("cover").value = url;
+	document.getElementById("coverphotoform").value = url;
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ url  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
 	$$( '.cover-add' ).css( 'background-repeat', 'no-repeat' );
