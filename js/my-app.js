@@ -1109,7 +1109,7 @@ $$( "#tab3link" ).removeClass( "disabled" );
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
 $$.each({ phone: "4", email: "16", website: "15" }, function( k, v ) {
-  
+  alert(res[0][v]);alert(k+ '_i');
   if(res[0][v]){document.getElementById(k + '_i').value = res[0][v];document.getElementById(k + '_c').value = 'yahoo';}
   //'<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>'
   //else {document.getElementById(k + '_i').value = '';document.getElementById(k + '_c').value = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'phone\')"><i  class="pe-7s-info pe-2x"></i></a>';}
