@@ -1227,8 +1227,6 @@ function photoBrowser() {
       {
         quality: 50,
         allowEdit: true,
-        targetWidth: 300,
-  targetHeight: 100,
         destinationType: Camera.DestinationType.FILE_URI
       });
 	
