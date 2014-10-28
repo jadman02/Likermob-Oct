@@ -954,8 +954,14 @@ function dbDeal() {
 
 '<a href="#" class="button" onclick="submitImage();">Submit Image</a>' +
 
+'<form id="ff" action="http://smilesavers.net.au/submitimage.php" method="post">'+
+'<input type="file" id="photo" placeholder="" name="photo">'+
+'<input type="submit" onclick="submitForm()" value="Submit">'+
+'</form>'+
+
+
 //'<input id="cover" type="hidden"><input id="name" type="hidden"><input id="page_id" type="hidden"><input id="latitude_box" type="hidden"><input id="longitude_box" type="hidden">' +
- '<input id="page_token" type="text"><input id="cover" type="text"><input id="address_provided" type="text"><input id="name" type="text"><input id="page_id" type="text"><input id="latitude_box" type="text"><input id="longitude_box" type="text">' +
+ '<input id="page_token" type="text"><input id="cover" name="photo" type="file"><input id="address_provided" type="text"><input id="name" type="text"><input id="page_id" type="text"><input id="latitude_box" type="text"><input id="longitude_box" type="text">' +
   '</div>'+
 
   '<div class="tab" id="tab3">'+
@@ -1513,5 +1519,16 @@ function submitImage(){
     
     alert('Your name is '+res.title);
 });
+	
+}
+
+function submitForm(){
+	
+	$('#ff').form({  
+    success:function(data){  
+        alert('posted' + data);  
+    }  
+});
+	
 	
 }
