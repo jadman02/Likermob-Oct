@@ -1492,7 +1492,7 @@ function clearPageslist(){
 
 function setCover(url){
 	alert(url);
-	document.getElementById("name").value = url;
+	document.getElementById("cover").value = url;
 	$$( '.cover-add' ).css( 'background-image', 'url(\''+ url  +'\')' );
 	$$( '.cover-add' ).css( 'background-size', '100%' );
 	$$( '.cover-add' ).css( 'background-repeat', 'no-repeat' );
