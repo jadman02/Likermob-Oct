@@ -934,7 +934,7 @@ function dbDeal() {
 
 
 
-        '<a href="#tab1" onclick="$$(\'#add-loader-container\').show();getMyPages();" class="tab-link active button">Pick</a>'+
+        '<a href="#tab1" onclick="$$(\'#add-loader-container\').show();getMyPages();$$( \'#tab2link\' ).addClass( \'disabled\' );$$( \'#tab3link\' ).addClass( \'disabled\' );" class="tab-link active button">Pick</a>'+
 
        ' <a href="#tab2" id="tab2link" class="tab-link button disabled">Create</a>'+
 
