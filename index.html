@@ -328,6 +328,10 @@ localStorage.setItem("manage_pages", "manage_pages");
                 
                 	//$$( '#pages_list' ).append('<li><img style="wi'dth:50%;float:left;padding:20px;" src="'+ response.albums.data[i].photos.data[j].picture +'"/></li>');
                	photos_list.push('<div class="slider-slide"><img src="'+ response.albums.data[i].photos.data[j].picture +'" height="130" /></div>');
+                
+                setCover(response.albums.data[i].photos.data[j].picture);
+                
+
                 	
                 }
                 }
