@@ -1257,6 +1257,7 @@ function uploadPhoto(imageURI) {
         var params = new Object();
 
         options.params = params;
+        options.chunkedMode = false;
 
         var ft = new FileTransfer();
         ft.upload(imageURI, encodeURI("http://www.smilesavers.net.au/submitimage.php"), win, fail, options);
