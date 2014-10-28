@@ -934,7 +934,7 @@ function dbDeal() {
 
 
 
-        '<a href="#" onclick="getMyPages();myApp.showTab(\'#tab1\');" class="tab-link active button">Pick</a>'+
+        '<a href="#tab1" onclick="$$(\'#add-loader-container\').show();getMyPages();" class="tab-link active button">Pick</a>'+
 
        ' <a href="#tab2" class="tab-link button">Create</a>'+
 
