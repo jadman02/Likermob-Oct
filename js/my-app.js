@@ -1435,9 +1435,7 @@ var latitude = document.getElementById("latitude_box").value;
 var longitude = document.getElementById("longitude_box").value;
 
 var schedule = document.getElementById("schedule_i").value;
-alert(schedule);
 var unix = Math.round(new Date(schedule).getTime()/1000);
-alert(unix);
 var subpremise = document.getElementById("subpremise_i").value;
 var street_number = document.getElementById("street_number_i").value;
 var street_name = document.getElementById("route_i").value;
@@ -1471,9 +1469,9 @@ openFB.apip({
             },
             success: function(data) {
                 var post_id = data.id;
-                alert('the item was posted on Facebook' + post_id);
+                
             
-            	$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title + '&description=' + description + '&terms=' + terms + '&expiry=' + expiry + '&category=' + category + '&phone=' + phone + '&email=' + email + '&website=' + website + '&link=' + link + '&cover=' + cover + '&name=' + name + '&page_id=' + page_id + '&latitude=' + latitude + '&longitude=' + longitude + '&schedule=' + schedule + '&subpremise=' + subpremise + '&street_number=' + street_number + '&street_name=' + street_name + '&postcode=' + postcode + '&suburb=' + suburb +  '&state=' + state + '&country=' + country,function(res){
+            	$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title + 'post_id=' + post_id + '&description=' + description + '&terms=' + terms + '&expiry=' + expiry + '&category=' + category + '&phone=' + phone + '&email=' + email + '&website=' + website + '&link=' + link + '&cover=' + cover + '&name=' + name + '&page_id=' + page_id + '&latitude=' + latitude + '&longitude=' + longitude + '&schedule=' + schedule + '&subpremise=' + subpremise + '&street_number=' + street_number + '&street_name=' + street_name + '&postcode=' + postcode + '&suburb=' + suburb +  '&state=' + state + '&country=' + country,function(res){
     
     alert('Your name is '+res.title);
 });
