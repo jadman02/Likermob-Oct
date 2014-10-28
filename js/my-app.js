@@ -1249,6 +1249,9 @@ function getPhoto() {
     }
 
 function uploadPhoto(imageURI) {
+                $$( '.cover-add' ).css( 'background-image', 'url(\''+ imageURI  +'\')');
+        document.getElementById("cover").value = imageURI;
+moveCover();
         var options = new FileUploadOptions();
         options.fileKey="file";
         options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1)+'.png';
@@ -1264,6 +1267,7 @@ function uploadPhoto(imageURI) {
     }
 
     function win(r) {
+        alert('success');
         console.log("Code = " + r.responseCode);
         console.log("Response = " + r.response);
         console.log("Sent = " + r.bytesSent);
