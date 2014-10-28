@@ -1246,7 +1246,6 @@ function getPhoto() {
 function backgroundPhoto(imageURI) {
             document.getElementById("imageURI").value = imageURI;
              $$( '.cover-add' ).css( 'background-image', 'url(\''+ imageURI  +'\')');
-        document.getElementById("cover").value = imageURI;
 moveCover();
         }
 
