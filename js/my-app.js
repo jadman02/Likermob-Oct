@@ -1524,7 +1524,7 @@ function submitImage(){
 
 function submitForm(){
 	
-	$('#ff').form({  
+	$$('#ff').form({  
     success:function(data){  
         alert('posted' + data);  
     }  
