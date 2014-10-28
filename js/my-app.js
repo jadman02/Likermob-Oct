@@ -1095,33 +1095,21 @@ $$("#pages_list li").remove();
 $$( "#tab2link" ).removeClass( "disabled" );
 $$( "#tab3link" ).removeClass( "disabled" );
 
+//var page_id = $$('#pages_list').val();
+$$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
+
 //$$('input').val('');
 //$$('.spanicon').val('<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'phone\')"><i  class="pe-7s-info pe-2x"></i></a>');
 
-
-
-
-
-
-$$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
-
-//$$('#spanicon).each(function() {
-//  alert( this.id );
-//});
-//$$.each({ phone: '4', email: '16', website: '15' }, function( k, v ) {
- // alert(res[0][v]);alert(k+ '_i');
-  //if(res[0][v]){document.getElementById(k + '_i').value = res[0][v];document.getElementById(k + '_c').value = 'yahoo';}
-  //'<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>'
-  //else {document.getElementById(k + '_i').value = '';document.getElementById(k + '_c').value = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'phone\')"><i  class="pe-7s-info pe-2x"></i></a>';}
-  
-  //alert( "Key: " + k + ", Value: " + v );
-//});
-
-
+$$('.spanicon').each(function() {
+    alert( this.id );
+});
 
 var phone = document.getElementById("phone_i");
+//var address = document.getElementById("fulladdress2");
 var email = document.getElementById("email_i");
 var website = document.getElementById("website_i");
+var link = document.getElementById("link_i");
 var opt= document.getElementById('category_i').options[0];
 var subpremise = document.getElementById("subpremise_i");
 var street_number = document.getElementById("street_number_i");
@@ -1130,6 +1118,13 @@ var street = document.getElementById("route_i");
 var town = document.getElementById("locality_i");
 var state = document.getElementById("state_i");
 var country = document.getElementById("country_i");
+
+phone.value = "";document.getElementById("phone_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'phone\')"><i  class="pe-7s-info pe-2x"></i></a>';
+website.value = "";document.getElementById("website_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'website\')"><i  class="pe-7s-info pe-2x"></i></a>';
+email.value = "";document.getElementById("email_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'email\')"><i  class="pe-7s-info pe-2x"></i></a>';
+opt.value =  "Category";$$( '#category_i' ).css( 'color', 'hsl(0, 0%, 70%)' );document.getElementById("category_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'category\')"><i  class="pe-7s-info pe-2x"></i></a>';
+link.value = "";document.getElementById("link_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'link\')"><i  class="pe-7s-info pe-2x"></i></a>';
+//res[0][5] + ',' + res[0][6]  + ',' + res[0][7]  + ',' + res[0][9]  + ',' + res[0][10] ',' + res[0][11];
 
 if(res[0][8]) {document.getElementById("address_provided").value = '1';document.getElementById("addressbox").checked = true; $$('.addresshide').show();document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';} else {}
 if(res[0][5]) {subpremise.value = res[0][5];document.getElementById("subpremise_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
@@ -1144,16 +1139,10 @@ if (res[0][16]) {email.value = res[0][16];checkForm('email');}
 if (res[0][4]) {phone.value = res[0][4];checkForm('phone',6,25);}
 if (res[0][15]) {website.value = res[0][15];checkForm('website');}
 if (res[0][17]) {opt.value =  res[0][17];opt.text = res[0][17];checkForm('category');}
+if (res[0][18]) {link.value = res[0][18];checkForm('link');}
 
 if (res[0][13]) {document.getElementById("latitude_box").value = res[0][13];}
 if (res[0][14]) {document.getElementById("longitude_box").value = res[0][14];}
-
-phone.value = "";document.getElementById("phone_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'phone\')"><i  class="pe-7s-info pe-2x"></i></a>';
-website.value = "";document.getElementById("website_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'website\')"><i  class="pe-7s-info pe-2x"></i></a>';
-email.value = "";document.getElementById("email_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'email\')"><i  class="pe-7s-info pe-2x"></i></a>';
-opt.value =  "Category";$$( '#category_i' ).css( 'color', 'hsl(0, 0%, 70%)' );document.getElementById("category_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'category\')"><i  class="pe-7s-info pe-2x"></i></a>';
-//link.value = "";document.getElementById("link_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'link\')"><i  class="pe-7s-info pe-2x"></i></a>';
-//res[0][5] + ',' + res[0][6]  + ',' + res[0][7]  + ',' + res[0][9]  + ',' + res[0][10] ',' + res[0][11];
 
 
 
@@ -1163,7 +1152,18 @@ opt.value =  "Category";$$( '#category_i' ).css( 'color', 'hsl(0, 0%, 70%)' );do
 
 $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,name', function(response){
 	
+//if (response["location"]["latitude"]) {response["location"]["latitude"]};
+
+var phone = document.getElementById("phone_i");
+//var address = document.getElementById("fulladdress2");
+var email = document.getElementById("email_i");
+var website = document.getElementById("website_i");
+var opt= document.getElementById('category_i').options[0];
+
+	
 $$('#add_button').hide();
+
+
 
 	document.getElementById("coverbutton").innerHTML = '<a href="#" class="button" onclick="addPhoto('+page_id+')" style="height:80px;margin:0 auto;border:none;margin-top:-100px;"><i class="pe-7s-camera pe-5x" ></i></a>';
 	var coverpic = response["cover"]["source"];
@@ -1173,8 +1173,21 @@ $$('#add_button').hide();
 	$$( '.cover-add' ).css( 'background-size', '100%' );
 	$$( '.cover-add' ).css( 'background-repeat', 'no-repeat' );
 
+//	$$('.a_' + page_id ).removeClass('total_list');
+//	$$('.total_list').remove();
+//	$$( '.a_' + page_id ).css( 'background-color', '#5ac8fa' );
+
 moveCover();
 
+
+    
+
+
+
+
+
+	
+	
 });
 }
 
