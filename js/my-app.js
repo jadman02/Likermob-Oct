@@ -1436,11 +1436,8 @@ var longitude = document.getElementById("longitude_box").value;
 
 var schedule = document.getElementById("schedule_i").value;
 alert(schedule);
-alert(+new Date());
-//schedule_time = Math.round(schedule.getTime() / 1000);
-
-//var unix = Math.round(+new Date()/1000);
-//alert(schedule_time);
+var unix = Math.round(new Date(schedule).getTime()/1000);
+alert(unix);
 var subpremise = document.getElementById("subpremise_i").value;
 var street_number = document.getElementById("street_number_i").value;
 var street_name = document.getElementById("route_i").value;
@@ -1466,7 +1463,7 @@ openFB.apip({
   to: page_id,
   from: page_id,
   application:'129670517205110',
-  scheduled_publish_time: schedule_time,
+  scheduled_publish_time: unix,
   published: 'false',
   access_token: page_token
                 
