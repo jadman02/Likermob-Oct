@@ -1469,7 +1469,7 @@ openFB.apip({
             },
             success: function(data) {
                 var post_id = data.id;
-                alert('the item was posted on Facebook' + data.id);
+                alert('the item was posted on Facebook' + post_id);
             
             	$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title + '&description=' + description + '&terms=' + terms + '&expiry=' + expiry + '&category=' + category + '&phone=' + phone + '&email=' + email + '&website=' + website + '&link=' + link + '&cover=' + cover + '&name=' + name + '&page_id=' + page_id + '&latitude=' + latitude + '&longitude=' + longitude + '&schedule=' + schedule + '&subpremise=' + subpremise + '&street_number=' + street_number + '&street_name=' + street_name + '&postcode=' + postcode + '&suburb=' + suburb +  '&state=' + state + '&country=' + country,function(res){
     
