@@ -931,9 +931,7 @@ function dbDeal() {
         '<div id="coverbutton"></div>'+
         '<div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
                       
-               <i class="icon demo-icon-2">
-                <span class="badge bg-red">5</span>
-            </i>       
+                     
                      
                       
  
@@ -1634,4 +1632,3 @@ openFB.apip({
         function fail(error) {
             alert("An error has occurred: Code = " = error.code);
         }
-
