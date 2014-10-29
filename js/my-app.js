@@ -931,23 +931,25 @@ function dbDeal() {
         '<div id="coverbutton"></div>'+
         '<div class="content-block-inner" style="background-color:rgba(255,255,255,.4);">' +
                       
-                     
+               <i class="icon demo-icon-2">
+                <span class="badge bg-red">5</span>
+            </i>       
                      
                       
  
 '<div class="toolbar tabbar">'+
     '<div class="toolbar-inner">'+
         '<a href="#tab1" onclick="clearPageslist();" class="tab-link active">'+
-            '<i class="pe-7s-plus pe-lg"></i>'+
+            '<i class="pe-7s-plus pe-lg icon"><span class="badge bg-red">1</span></i>'+
         '</a>'+
         '<a href="#tab2" id="tab2link" class="tab-link disabled">'+
-           ' <i class="pe-7s-pen pe-lg"></i>'+
+           ' <i class="pe-7s-pen pe-lg icon"><span class="badge bg-red">2</span></i></i>'+
        ' </a>'+
         '<a href="#tab3" id="tab3link" class="tab-link disabled">'+
-           ' <i class="pe-7s-switch pe-lg"></i>'+
+           ' <i class="pe-7s-switch pe-lg icon"><span class="badge bg-red">3</span></i></i>'+
        ' </a>'+
        ' <a href="#tab4" class="tab-link">'+
-            '<i class="pe-7s-upload pe-lg"></i>'+
+            '<i class="pe-7s-upload pe-lg icon"><span class="badge bg-red">4</span></i></i>'+
         '</a>'+
     '</div>'+
 '</div>'+
