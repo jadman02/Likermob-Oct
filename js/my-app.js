@@ -1437,7 +1437,7 @@ var date = new Date();
 var offset = date.getTimezoneOffset();
 var seconds = offset / 3600;
 var schedule = document.getElementById("schedule_i").value;
-var unix = Math.round((new Date(schedule).getTime()/1000)-(seconds));
+var unix = Math.round((new Date(schedule).getTime() + offset)/1000);
 alert(unix);
 var subpremise = document.getElementById("subpremise_i").value;
 var street_number = document.getElementById("street_number_i").value;
