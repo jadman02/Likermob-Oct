@@ -1439,6 +1439,7 @@ var hours = offset / 60;
 alert(hours);
 var schedule = document.getElementById("schedule_i").value;
 schedule.setHours( schedule.getHours() + hours );
+alert(schedule);
 var unix = Math.round(new Date(schedule).getTime()/1000);
 var subpremise = document.getElementById("subpremise_i").value;
 var street_number = document.getElementById("street_number_i").value;
