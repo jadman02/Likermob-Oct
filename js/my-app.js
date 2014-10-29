@@ -1084,7 +1084,10 @@ myApp.confirm('Are you sure you want to permanently delete this deal?', 'Delete?
 
 function getCover(page_id,access_token){
 
-
+var date = new Date();
+alert(date);
+var offset = date.getTimezoneOffset();
+alert(offset);
 
     myApp.showTab('#tab2');
 addPhoto(page_id);
