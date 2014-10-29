@@ -935,7 +935,7 @@ function dbDeal() {
                      
                      
                       
- '<div class="toolbar tabbar" style="clear:both;">'+
+ '<div class="toolbar tabbar">'+
     '<div class="toolbar-inner">'+
         '<a href="#tab1" onclick="clearPageslist();" class="tab-link active">'+
             '<i class="pe-7s-plus pe-lg"></i>'+
