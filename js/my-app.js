@@ -916,6 +916,16 @@ function dbDeal() {
        ' <div class="right"><a href="#" id="upload" onclick="errorForm(7);" class="disabled"><i class="pe-7s-upload pe-2x" style="color:#ff3b30;"></i></a><a href="#" style="display:none;" id="upload-ready" onclick="submitDeal();"><i class="pe-7s-upload pe-2x" style="color:#4cd964;"></i></a></div>' +
         '  </div>' +
         '</div>' +
+        
+          '<div class="toolbar">'+
+    '<div class="toolbar-inner">'+
+        '<a href="#" class="link">Link 1</a>'+
+        '<a href="#" class="link">Link 2</a>'+
+        '<a href="#" class="link">Link 3</a>'+
+    '</div>'+
+'</div>'+
+        
+        
         '<div class="pages business">' +
         '  <!-- Page, data-page contains page name-->' +
         '  <div data-page="add_deal" class="page business">' +
@@ -981,13 +991,7 @@ function dbDeal() {
                      
   '</div>'+
   
-  '<div class="toolbar">'+
-    '<div class="toolbar-inner">'+
-        '<a href="#" class="link">Link 1</a>'+
-        '<a href="#" class="link">Link 2</a>'+
-        '<a href="#" class="link">Link 3</a>'+
-    '</div>'+
-'</div>'+
+
   
 '</div>  '+
 '</div>  '+
