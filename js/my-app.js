@@ -1084,10 +1084,6 @@ myApp.confirm('Are you sure you want to permanently delete this deal?', 'Delete?
 
 function getCover(page_id,access_token){
 
-var date = new Date();
-alert(date);
-var offset = date.getTimezoneOffset();
-alert(offset);
 
     myApp.showTab('#tab2');
 addPhoto(page_id);
@@ -1437,7 +1433,11 @@ var page_id = document.getElementById("page_id").value;
 var latitude = document.getElementById("latitude_box").value;
 var longitude = document.getElementById("longitude_box").value;
 
+var date = new Date();
+var offset = date.getTimezoneOffset();
+var hours = offset / 60;
 var schedule = document.getElementById("schedule_i").value;
+schedule.setHours( schedule.getHours() - hours );
 var unix = Math.round(new Date(schedule).getTime()/1000);
 var subpremise = document.getElementById("subpremise_i").value;
 var street_number = document.getElementById("street_number_i").value;
