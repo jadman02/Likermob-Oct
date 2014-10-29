@@ -938,16 +938,16 @@ function dbDeal() {
 '<div class="toolbar tabbar">'+
     '<div class="toolbar-inner">'+
         '<a href="#tab1" onclick="clearPageslist();" class="tab-link active">'+
-            '<i class="pe-7s-plus pe-lg icon"><span class="badge bg-red">1</span></i>'+
+            '<i class="pe-7s-plus pe-2x icon"><span class="badge bg-red">1</span></i>'+
         '</a>'+
         '<a href="#tab2" id="tab2link" class="tab-link disabled">'+
-           ' <i class="pe-7s-pen pe-lg"></i>'+
+           ' <i class="pe-7s-pen pe-2x"></i>'+
        ' </a>'+
         '<a href="#tab3" id="tab3link" class="tab-link disabled">'+
-           ' <i class="pe-7s-switch pe-lg"></i>'+
+           ' <i class="pe-7s-switch pe-2x"></i>'+
        ' </a>'+
        ' <a href="#tab4" class="tab-link">'+
-            '<i class="pe-7s-upload pe-lg"></i>'+
+            '<i class="pe-7s-upload pe-2x"></i>'+
         '</a>'+
     '</div>'+
 '</div>'+
