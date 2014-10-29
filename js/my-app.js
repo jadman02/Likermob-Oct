@@ -1436,10 +1436,7 @@ var longitude = document.getElementById("longitude_box").value;
 var date = new Date();
 var offset = date.getTimezoneOffset() * 60;
 var schedule = document.getElementById("schedule_i").value;
-var unixwithoutoffset = Math.round(new Date(schedule).getTime()/1000);
 var unix = Math.round(new Date(schedule).getTime()/1000) + offset;
-alert('unix without offset:'+ unixwithoutoffset);
-alert('unix with offset:' + unix);
 var subpremise = document.getElementById("subpremise_i").value;
 var street_number = document.getElementById("street_number_i").value;
 var street_name = document.getElementById("route_i").value;
@@ -1448,8 +1445,7 @@ var suburb = document.getElementById("locality_i").value;
 var state = document.getElementById("state_i").value;
 var country = document.getElementById("country_i").value;
 
-alert(schedule);
-alert(unix);
+
 
 if (schedule){	
 	
@@ -1556,8 +1552,10 @@ var page_id = document.getElementById("page_id").value;
 var latitude = document.getElementById("latitude_box").value;
 var longitude = document.getElementById("longitude_box").value;
 
+var date = new Date();
+var offset = date.getTimezoneOffset() * 60;
 var schedule = document.getElementById("schedule_i").value;
-var unix = Math.round(new Date(schedule).getTime()/1000);
+var unix = Math.round(new Date(schedule).getTime()/1000) + offset;
 var subpremise = document.getElementById("subpremise_i").value;
 var street_number = document.getElementById("street_number_i").value;
 var street_name = document.getElementById("route_i").value;
