@@ -1007,7 +1007,7 @@ function dbDeal() {
         
         
 '<div class="toolbar">'+
-'<div class="toolbar-inner">'+
+
 
 '<div class="buttons-row">'+
 '<a href="#tab1" onclick="clearPageslist();" class="tab-link active button">Pick</a>'+
@@ -1015,7 +1015,7 @@ function dbDeal() {
 '<a href="#tab3" id="tab3link" class="tab-link button disabled">Customise</a>'+
 '</div>'+
       
-'</div>'+
+
 '</div>'+
         
         '  </div>' +
