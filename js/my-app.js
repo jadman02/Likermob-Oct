@@ -917,13 +917,7 @@ function dbDeal() {
         '  </div>' +
         '</div>' +
         
-          '<div class="toolbar">'+
-    '<div class="toolbar-inner">'+
-        '<a href="#" class="link">Link 1</a>'+
-        '<a href="#" class="link">Link 2</a>'+
-        '<a href="#" class="link">Link 3</a>'+
-    '</div>'+
-'</div>'+
+
         
         
         '<div class="pages business">' +
@@ -1019,6 +1013,16 @@ function dbDeal() {
         '        </div>' +
         '      </div>' +
         '    </div>' +
+        
+        
+                  '<div class="toolbar">'+
+    '<div class="toolbar-inner">'+
+        '<a href="#" class="link">Link 1</a>'+
+        '<a href="#" class="link">Link 2</a>'+
+        '<a href="#" class="link">Link 3</a>'+
+    '</div>'+
+'</div>'+
+        
         '  </div>' +
         '</div>'
     );
