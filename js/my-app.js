@@ -667,14 +667,14 @@ function commentClick(){
             
             document.getElementById("commenty_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;" onclick="getInfo(\'commenty\')"><i  class="pe-7s-info pe-2x"></i></a>';
                  $$( '#commenty_i' ).css( 'color', 'hsl(0, 0%, 70%)' );
-                 document.getElementById("cover").value = 'like';
+                 document.getElementById("type").value = 'like';
             //$$('#fulladdress').blur();
             
             
         } else {
         document.getElementById("commenty_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';
         $$( '#commenty_i' ).css( 'color', 'black' );
-        document.getElementById("cover").value = 'comment';
+        document.getElementById("type").value = 'comment';
         }
 
 	
@@ -1412,12 +1412,57 @@ if(id=='address'){myApp.alert('If you provide an address, your deal will appear 
 
 function submitDeal(){
 
-
-
-
 var imageURI = document.getElementById("imageURI").value;
+var title = document.getElementById("title_i").value;
+var description = document.getElementById("description_i").value;
+var terms = document.getElementById("terms_i").value;
+var expiry = document.getElementById("expiry_i").value;
+var category = document.getElementById("category_i").value;
+var phone = document.getElementById("phone_i").value;
+var email = document.getElementById("email_i").value;
+var website = document.getElementById("website_i").value;
+var link = document.getElementById("link_i").value;
+var photo_created = document.getElementById("photo_created").value;
 
-if (imageURI) {uploadPhoto();}
+var cover = document.getElementById("cover").value;
+var type = document.getElementById("type").value;
+var page_token = document.getElementById("page_token").value;
+var name = document.getElementById("name").value;
+var page_id = document.getElementById("page_id").value;
+var latitude = document.getElementById("latitude_box").value;
+var longitude = document.getElementById("longitude_box").value;
+
+var schedule = document.getElementById("schedule_i").value;
+var unix = Math.round(new Date(schedule).getTime()/1000);
+var subpremise = document.getElementById("subpremise_i").value;
+var street_number = document.getElementById("street_number_i").value;
+var street_name = document.getElementById("route_i").value;
+var postcode = document.getElementById("zip_i").value;
+var suburb = document.getElementById("locality_i").value;
+var state = document.getElementById("state_i").value;
+var country = document.getElementById("country_i").value;
+
+if (imageURI) {uploadPhoto();return}
+var paramvalue;
+if (schedule){paramvalue = name: title, link: 'http://www.likermob.com', picture: 'http://smilesavers.net.au/images/likermob/'+ page_id +'_'+ photo_created +'.jpg',  caption: 'via Likermob App',  description: terms,  message: description,  to: page_id,  from: page_id,  application:'129670517205110',  scheduled_publish_time: unix,  published: 'false',  access_token: page_token}	
+	
+	openFB.apip({
+            method: 'POST',
+            path: '/' + page_id + '/feed',
+            params: {paramvalue},
+            success: function(data) {
+                var post_id = data.id;
+                
+            
+            	$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title + '&post_id=' + post_id + '&type=' + type + '&photo_created=' + photo_created + '&description=' + description + '&terms=' + terms + '&expiry=' + expiry + '&category=' + category + '&phone=' + phone + '&email=' + email + '&website=' + website + '&link=' + link + '&cover=' + cover + '&name=' + name + '&page_id=' + page_id + '&latitude=' + latitude + '&longitude=' + longitude + '&schedule=' + schedule + '&subpremise=' + subpremise + '&street_number=' + street_number + '&street_name=' + street_name + '&postcode=' + postcode + '&suburb=' + suburb +  '&state=' + state + '&country=' + country,function(res){
+    
+    alert('Your name is '+res.title);
+});
+            	
+            },
+            error: errorHandler});
+	
+
 
 
 }
@@ -1473,66 +1518,4 @@ function uploadPhoto() {
         function fail(error) {
             alert("An error has occurred: Code = " = error.code);
         }
-function schedulePost(){
-	
-var title = document.getElementById("title_i").value;
-var description = document.getElementById("description_i").value;
-var terms = document.getElementById("terms_i").value;
-var expiry = document.getElementById("expiry_i").value;
-var category = document.getElementById("category_i").value;
-var phone = document.getElementById("phone_i").value;
-var email = document.getElementById("email_i").value;
-var website = document.getElementById("website_i").value;
-var link = document.getElementById("link_i").value;
-var photo_created = document.getElementById("photo_created").value;
 
-var cover = document.getElementById("cover").value;
-var page_token = document.getElementById("page_token").value;
-var name = document.getElementById("name").value;
-var page_id = document.getElementById("page_id").value;
-var latitude = document.getElementById("latitude_box").value;
-var longitude = document.getElementById("longitude_box").value;
-
-var schedule = document.getElementById("schedule_i").value;
-var unix = Math.round(new Date(schedule).getTime()/1000);
-var subpremise = document.getElementById("subpremise_i").value;
-var street_number = document.getElementById("street_number_i").value;
-var street_name = document.getElementById("route_i").value;
-var postcode = document.getElementById("zip_i").value;
-var suburb = document.getElementById("locality_i").value;
-var state = document.getElementById("state_i").value;
-var country = document.getElementById("country_i").value;
-	
-	openFB.apip({
-            method: 'POST',
-            path: '/' + page_id + '/feed',
-            params: {
-                  name: title,
-  link: 'http://www.likermob.com',
-  picture: 'http://smilesavers.net.au/images/likermob/'+ page_id +'_'+ photo_created +'.jpg',
-  caption: 'via Likermob App',
-  description: terms,
-  message: description,
-  to: page_id,
-  from: page_id,
-  application:'129670517205110',
-  scheduled_publish_time: unix,
-  published: 'false',
-  access_token: page_token
-                
-                
-            },
-            success: function(data) {
-                var post_id = data.id;
-                
-            
-            	$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title + '&post_id=' + post_id + '&photo_created=' + photo_created + '&description=' + description + '&terms=' + terms + '&expiry=' + expiry + '&category=' + category + '&phone=' + phone + '&email=' + email + '&website=' + website + '&link=' + link + '&cover=' + cover + '&name=' + name + '&page_id=' + page_id + '&latitude=' + latitude + '&longitude=' + longitude + '&schedule=' + schedule + '&subpremise=' + subpremise + '&street_number=' + street_number + '&street_name=' + street_name + '&postcode=' + postcode + '&suburb=' + suburb +  '&state=' + state + '&country=' + country,function(res){
-    
-    alert('Your name is '+res.title);
-});
-            	
-            },
-            error: errorHandler});
-	
-	
-}
