@@ -1434,10 +1434,9 @@ var latitude = document.getElementById("latitude_box").value;
 var longitude = document.getElementById("longitude_box").value;
 
 var date = new Date();
-var offset = date.getTimezoneOffset();
-var seconds = offset / 3600;
+var offset = date.getTimezoneOffset() * 60;
 var schedule = document.getElementById("schedule_i").value;
-var unix = Math.round((new Date(schedule).getTime() + offset)/1000);
+var unix = Math.round(new Date(schedule).getTime()/1000) + offset;
 alert(unix);
 var subpremise = document.getElementById("subpremise_i").value;
 var street_number = document.getElementById("street_number_i").value;
