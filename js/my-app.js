@@ -943,13 +943,13 @@ function dbDeal() {
             '<i class="pe-7s-plus pe-lg icon"><span class="badge bg-red">1</span></i>'+
         '</a>'+
         '<a href="#tab2" id="tab2link" class="tab-link disabled">'+
-           ' <i class="pe-7s-pen pe-lg icon"><span class="badge bg-red">2</span></i></i>'+
+           ' <i class="pe-7s-pen pe-lg icon"><span class="badge bg-red">2</span></i>'+
        ' </a>'+
         '<a href="#tab3" id="tab3link" class="tab-link disabled">'+
-           ' <i class="pe-7s-switch pe-lg icon"><span class="badge bg-red">3</span></i></i>'+
+           ' <i class="pe-7s-switch pe-lg icon"><span class="badge bg-red">3</span></i>'+
        ' </a>'+
        ' <a href="#tab4" class="tab-link">'+
-            '<i class="pe-7s-upload pe-lg icon"><span class="badge bg-red">4</span></i></i>'+
+            '<i class="pe-7s-upload pe-lg icon"><span class="badge bg-red">4</span></i>'+
         '</a>'+
     '</div>'+
 '</div>'+
