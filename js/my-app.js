@@ -913,7 +913,7 @@ function dbDeal() {
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="center">Add Deal</div>' +
-       ' <div class="right"><a href="#" id="upload" onclick="errorForm(7);" class="disabled"><i class="pe-7s-upload pe-2x" style="color:#ff3b30;"></i></a><a href="#" style="display:none;" id="upload-ready" onclick="submitDeal();"><i class="pe-7s-upload pe-2x" style="color:#4cd964;"></i></a></div>' +
+       ' <div class="right"></div>' +
         '  </div>' +
         '</div>' +
         
@@ -936,18 +936,21 @@ function dbDeal() {
                       
  
 '<div class="toolbar tabbar">'+
-    '<div class="toolbar-inner">'+
+    '<div class="toolbar-inner" style="background-color:transparent;">'+
         '<a href="#tab1" onclick="clearPageslist();" class="tab-link active">'+
             '<i class="pe-7s-plus pe-lg"></i>'+
         '</a>'+
         '<a href="#tab2" id="tab2link" class="tab-link disabled">'+
-           ' <i class="pe-7s-pen pe-lg" style="color:#ff3b30"></i>'+
+           ' <i class="pe-7s-pen pe-lg"></i>'+
        ' </a>'+
         '<a href="#tab3" id="tab3link" class="tab-link disabled">'+
-           ' <i class="pe-7s-switch pe-lg" style="color:#ff3b30"></i>'+
+           ' <i class="pe-7s-switch pe-lg"></i>'+
        ' </a>'+
-       ' <a href="#tab4" class="tab-link disabled">'+
-            '<i class="pe-7s-upload pe-lg" style="color:#ff3b30"></i>'+
+       ' <a href="#tab4" class="tab-link" style="display:none;" id="upload-ready" onclick="submitDeal();">'+
+            '<i class="pe-7s-upload pe-lg" style="color:#4cd964"></i>'+
+        '</a>'+
+         ' <a href="#tab4" id="upload" onclick="errorForm(7);" class="tab-link">'+
+            '<i class="pe-7s-upload pe-lg" style="color:#ff3b30" ></i>'+
         '</a>'+
     '</div>'+
 '</div>'+
