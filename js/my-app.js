@@ -936,16 +936,7 @@ function dbDeal() {
                       
  
 
-'<div class="buttons-row">'+
 
-
-
-        '<a href="#tab1" onclick="clearPageslist();" class="tab-link active button">Pick</a>'+
-
-       ' <a href="#tab2" id="tab2link" class="tab-link button disabled">Create</a>'+
-
-        '<a href="#tab3" id="tab3link" class="tab-link button disabled">Customise</a>'+
-      '</div>'+
 
 
 
@@ -1015,12 +1006,16 @@ function dbDeal() {
         '    </div>' +
         
         
-                  '<div class="toolbar">'+
-    '<div class="toolbar-inner">'+
-        '<a href="#" class="link">Link 1</a>'+
-        '<a href="#" class="link">Link 2</a>'+
-        '<a href="#" class="link">Link 3</a>'+
-    '</div>'+
+'<div class="toolbar">'+
+'<div class="toolbar-inner">'+
+
+'<div class="buttons-row">'+
+'<a href="#tab1" onclick="clearPageslist();" class="tab-link active button">Pick</a>'+
+' <a href="#tab2" id="tab2link" class="tab-link button disabled">Create</a>'+
+'<a href="#tab3" id="tab3link" class="tab-link button disabled">Customise</a>'+
+'</div>'+
+      
+'</div>'+
 '</div>'+
         
         '  </div>' +
