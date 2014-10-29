@@ -1506,7 +1506,7 @@ var country = document.getElementById("country_i").value;
                   name: title,
   link: 'http://www.likermob.com',
   picture: 'http://smilesavers.net.au/images/likermob/'+ page_id +'_'+ photo_created +'.jpg',
-  caption: 'via Likermob App',
+  caption: 'via Likermob App (Free download from the App Store)',
   description: description,
   message: title,
   to: page_id,
