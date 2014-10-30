@@ -1128,6 +1128,8 @@ document.getElementById("commentbox").checked = false;
 document.getElementById("checkbox").checked = false;
 document.getElementById("type").value = "like";
 
+alert('got here');
+
 document.getElementById("title_c").value = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'title\')"><i  class="pe-7s-info pe-2x"></i></a>';
 document.getElementById("description_c").value = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'description\')"><i  class="pe-7s-info pe-2x"></i></a>';
 document.getElementById("terms_c").value = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'terms\')"><i  class="pe-7s-info pe-2x"></i></a>';
