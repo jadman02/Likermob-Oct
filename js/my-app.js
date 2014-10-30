@@ -1128,15 +1128,13 @@ document.getElementById("commentbox").checked = false;
 document.getElementById("checkbox").checked = false;
 document.getElementById("type").value = "like";
 
-alert('got here');
-
-document.getElementById("title_c").value = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'title\')"><i  class="pe-7s-info pe-2x"></i></a>';
-document.getElementById("description_c").value = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'description\')"><i  class="pe-7s-info pe-2x"></i></a>';
-document.getElementById("terms_c").value = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'terms\')"><i  class="pe-7s-info pe-2x"></i></a>';
-document.getElementById("expiry_c").value = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'expiry\')"><i  class="pe-7s-info pe-2x"></i></a>';
-document.getElementById("category_c").value = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'category\')"><i  class="pe-7s-info pe-2x"></i></a>';
-document.getElementById("link_c").value = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'link\')"><i  class="pe-7s-info pe-2x"></i></a>';
-document.getElementById("schedule_c").value = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'schedule\')"><i  class="pe-7s-info pe-2x"></i></a>';
+document.getElementById("title_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'title\')"><i  class="pe-7s-info pe-2x"></i></a>';
+document.getElementById("description_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'description\')"><i  class="pe-7s-info pe-2x"></i></a>';
+document.getElementById("terms_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'terms\')"><i  class="pe-7s-info pe-2x"></i></a>';
+document.getElementById("expiry_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'expiry\')"><i  class="pe-7s-info pe-2x"></i></a>';
+document.getElementById("category_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'category\')"><i  class="pe-7s-info pe-2x"></i></a>';
+document.getElementById("link_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'link\')"><i  class="pe-7s-info pe-2x"></i></a>';
+document.getElementById("schedule_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'schedule\')"><i  class="pe-7s-info pe-2x"></i></a>';
 
 
 var latitude = document.getElementById("latitude_box").value;
