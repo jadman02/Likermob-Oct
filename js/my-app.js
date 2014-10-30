@@ -1119,12 +1119,10 @@ $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=
 
 
 $$('.essentials').each(function() {
-alert( this.id );
+ $$( this ).val('');
 });
 
-//$$( 'input[type=text].essentials').each(function() {
-//  $$( this ).val('');
-//});
+
 
 document.getElementById("commentbox").checked = false;
 document.getElementById("checkbox").checked = false;
