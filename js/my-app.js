@@ -1109,7 +1109,7 @@ document.getElementById("page_token").value = access_token;
 $$("#pages_list li").remove();	
 $$( "#tab2link" ).removeClass( "disabled" );
 $$( "#tab3link" ).removeClass( "disabled" );
-document.getElementById("cameradiv").innerHTML = '<a href="#" onclick="addPhoto('+page_id+')"><i class="pe-7s-camera pe-lg"></i></a>';
+document.getElementById("cameradiv").innerHTML = '<a href="#" onclick="addPhoto(\''+page_id+'\')"><i class="pe-7s-camera pe-lg"></i></a>';
 
 //var page_id = $$('#pages_list').val();
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
