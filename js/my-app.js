@@ -1184,7 +1184,7 @@ var opt= document.getElementById('category_i').options[0];
 
 	
 $$('#add_button').hide();
-
+$$('#coverbutton').show();
 
 
 	document.getElementById("coverbutton").innerHTML = '<a href="#" class="button" onclick="addPhoto('+page_id+')" style="height:80px;margin:0 auto;border:none;margin-top:-100px;"><i class="pe-7s-camera pe-5x" ></i></a>';
