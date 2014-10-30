@@ -1186,7 +1186,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,name', functio
 $$('#add_button').hide();
 $$('#coverbutton').show();
 
-document.getElementById("coverbutton").innerHTML = '<a href="#" class="button" id="upload-ready" onclick="submitDeal();" style="height:80px;margin:0 auto;border:none;margin-top:-100px;"><i class="pe-7s-upload pe-5x" style="color:#ff3b30"></i></a>';
+document.getElementById("coverbutton").innerHTML = '<a href="#" class="button" id="upload-ready" onclick="submitDeal();" style="height:80px;margin:0 auto;border:none;margin-top:-100px;color:#ff3b30"><i class="pe-7s-upload pe-5x"></i></a>';
 setCover(response["cover"]["source"]);
 document.getElementById("name").value = response["name"];
 moveCover();
