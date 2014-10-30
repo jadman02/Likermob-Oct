@@ -946,11 +946,11 @@ function dbDeal() {
         '<a href="#tab3" id="tab3link" class="tab-link disabled">'+
            ' <i class="pe-7s-switch pe-lg"></i>'+
        ' </a>'+
-       ' <a href="#tab4" class="tab-link" style="display:none;" id="upload-ready" onclick="submitDeal();">'+
-            '<i class="pe-7s-upload pe-lg" style="color:#4cd964"></i>'+
-        '</a>'+
          ' <a href="#tab4" id="upload" onclick="errorForm(7);" class="tab-link">'+
             '<i class="pe-7s-upload pe-lg" style="color:#ff3b30" ></i>'+
+        '</a>'+
+         ' <a href="#tab4" class="tab-link" style="display:none;" id="upload-ready" onclick="submitDeal();">'+
+            '<i class="pe-7s-upload pe-lg" style="color:#4cd964"></i>'+
         '</a>'+
     '</div>'+
 '</div>'+
