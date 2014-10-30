@@ -1115,6 +1115,10 @@ $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=
 //$$('input').val('');
 //$$('.spanicon').val('<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'phone\')"><i  class="pe-7s-info pe-2x"></i></a>');
 
+$$('input[type=text].essentials').each(function() {
+alert( this.id );
+});
+
 $$( 'input[type=text].essentials').each(function() {
   $$( this ).val('');
 });
