@@ -1092,22 +1092,9 @@ document.getElementById("page_token").value = access_token;
 $$("#pages_list li").remove();	
 $$( "#tab2link" ).removeClass( "disabled" );
 $$( "#tab3link" ).removeClass( "disabled" );
-document.getElementById("toolbardeal").innerHTML = '<a href="#" onclick="addPhoto(\''+page_id+'\')"><i class="pe-7s-camera pe-lg"></i></a>';
+document.getElementById("toolbardeal").innerHTML = '<div class="toolbar tabbar" style="background-color:transparent;border:none;"><div class="toolbar-inner" style="background-color:transparent;"><a href="#" onclick="addPhoto('+page_id+')"><i class="pe-7s-camera pe-lg"></i></a><a href="#tab2" id="tab2link" class="tab-link disabled"><i class="pe-7s-pen pe-lg"></i></a><a href="#tab2" id="tab2link" class="tab-link disabled"><i class="pe-7s-map-marker pe-lg"></i></a><a href="#tab2" id="tab2link" class="tab-link disabled"><i class="pe-7s-clock pe-lg"></i></a></div></div>';
 
-'<div class="toolbar tabbar" style="background-color:transparent;border:none;">'+
-    '<div class="toolbar-inner" style="background-color:transparent;">'+
-        '<div id="cameradiv"></div>'+
-        '<a href="#tab2" id="tab2link" class="tab-link disabled">'+
-           ' <i class="pe-7s-pen pe-lg"></i>'+
-       ' </a>'+
-               '<a href="#tab2" id="tab2link" class="tab-link disabled">'+
-           ' <i class="pe-7s-map-marker pe-lg"></i>'+
-       ' </a>'+
-               '<a href="#tab2" id="tab2link" class="tab-link disabled">'+
-           ' <i class="pe-7s-clock pe-lg"></i>'+
-       ' </a>'+
-    '</div>'+
-'</div>'+
+
 
 //var page_id = $$('#pages_list').val();
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
