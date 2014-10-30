@@ -913,7 +913,7 @@ function dbDeal() {
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="center">Add Deal</div>' +
-       ' <div class="right"><a href="#" class="tab-link" id="upload-ready" onclick="submitDeal();"><i class="pe-7s-upload pe-2x" style="color:#4cd964"></i></a></div>' +
+       ' <div class="right"><a href="#" class="tab-link" id="upload-ready" onclick="submitDeal();"><i class="pe-7s-upload pe-2x" style="color:#ff3b30"></i></a></div>' +
         '  </div>' +
         '</div>' +
 
@@ -1115,7 +1115,10 @@ $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=
 //$$('input').val('');
 //$$('.spanicon').val('<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'phone\')"><i  class="pe-7s-info pe-2x"></i></a>');
 
-$$('input[type=text].essentials').val('');
+$$( 'input[type=text].essentials').each(function() {
+  $$( this ).val('');
+});
+
 document.getElementById("commentbox").checked = false;
 document.getElementById("checkbox").checked = false;
 document.getElementById("type").value = "like";
