@@ -913,7 +913,7 @@ function dbDeal() {
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="center">Add Deal</div>' +
-       ' <div class="right"></div>' +
+       ' <div class="right"><a href="#tab1" onclick="clearPageslist();" class="tab-link active"><i class="pe-7s-plus pe-2x"></i></a></div>' +
         '  </div>' +
         '</div>' +
 
@@ -937,12 +937,15 @@ function dbDeal() {
  
 '<div class="toolbar tabbar" style="background-color:transparent;border:none;">'+
     '<div class="toolbar-inner" style="background-color:transparent;">'+
-        '<a href="#tab1" onclick="clearPageslist();" class="tab-link active">'+
-            '<i class="pe-7s-plus pe-lg"></i>'+
-        '</a>'+
         '<div id="cameradiv"></div>'+
         '<a href="#tab2" id="tab2link" class="tab-link disabled">'+
            ' <i class="pe-7s-pen pe-lg"></i>'+
+       ' </a>'+
+               '<a href="#tab2" id="tab2link" class="tab-link disabled">'+
+           ' <i class="pe-7s-map-marker pe-lg"></i>'+
+       ' </a>'+
+               '<a href="#tab2" id="tab2link" class="tab-link disabled">'+
+           ' <i class="pe-7s-comment pe-lg"></i>'+
        ' </a>'+
     '</div>'+
 '</div>'+
