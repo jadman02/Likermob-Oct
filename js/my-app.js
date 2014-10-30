@@ -1135,19 +1135,19 @@ document.getElementById("link_c").innerHTML = '<a href="#" class="button" style=
 document.getElementById("schedule_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'schedule\')"><i  class="pe-7s-info pe-2x"></i></a>';
 
 
-var latitude = document.getElementById("latitude_box").value;
-var longitude = document.getElementById("longitude_box").value;
+var latitude = document.getElementById("latitude_box");
+var longitude = document.getElementById("longitude_box");
 //var opt= document.getElementById('category_i').options[0];
-var phone = document.getElementById("phone_i").value;
-var email = document.getElementById("email_i").value;
-var website = document.getElementById("website_i").value;
-var subpremise = document.getElementById("subpremise_i").value;
-var street_number = document.getElementById("street_number_i").value;
-var street_name = document.getElementById("route_i").value;
-var postcode = document.getElementById("zip_i").value;
-var suburb = document.getElementById("locality_i").value;
-var state = document.getElementById("state_i").value;
-var country = document.getElementById("country_i").value;
+var phone = document.getElementById("phone_i");
+var email = document.getElementById("email_i");
+var website = document.getElementById("website_i");
+var subpremise = document.getElementById("subpremise_i");
+var street_number = document.getElementById("street_number_i");
+var street_name = document.getElementById("route_i");
+var postcode = document.getElementById("zip_i");
+var suburb = document.getElementById("locality_i");
+var state = document.getElementById("state_i");
+var country = document.getElementById("country_i");
 
 //phone.value = "";document.getElementById("phone_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'phone\')"><i  class="pe-7s-info pe-2x"></i></a>';
 //website.value = "";document.getElementById("website_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'website\')"><i  class="pe-7s-info pe-2x"></i></a>';
