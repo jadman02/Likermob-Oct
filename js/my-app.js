@@ -913,7 +913,7 @@ function dbDeal() {
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="center">Add Deal</div>' +
-       ' <div class="right"><a href="#" class="tab-link" id="upload-ready" onclick="submitDeal();"><i class="pe-7s-upload pe-2x" style="color:#ff3b30"></i></a></div>' +
+       ' <div class="right"></div>' +
         '  </div>' +
         '</div>' +
 
@@ -940,14 +940,13 @@ function dbDeal() {
         '<a href="#tab1" onclick="clearPageslist();" class="tab-link active">'+
             '<i class="pe-7s-plus pe-lg"></i>'+
         '</a>'+
+        '<div id="cameradiv"></div>'+
         '<a href="#tab2" id="tab2link" class="tab-link disabled">'+
            ' <i class="pe-7s-pen pe-lg"></i>'+
        ' </a>'+
-        '<a href="#tab3" id="tab3link" class="tab-link disabled">'+
-           ' <i class="pe-7s-switch pe-lg"></i>'+
-       ' </a>'+
     '</div>'+
 '</div>'+
+
 
 
 
@@ -1110,6 +1109,7 @@ document.getElementById("page_token").value = access_token;
 $$("#pages_list li").remove();	
 $$( "#tab2link" ).removeClass( "disabled" );
 $$( "#tab3link" ).removeClass( "disabled" );
+document.getElementById("cameradiv").innerHTML = '<a href="#" onclick="addPhoto('+page_id+')"><i class="pe-7s-camera pe-2x"></i></a>';
 
 //var page_id = $$('#pages_list').val();
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
@@ -1186,7 +1186,7 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover,name', functio
 $$('#add_button').hide();
 $$('#coverbutton').show();
 
-document.getElementById("coverbutton").innerHTML = '<a href="#" class="button" onclick="addPhoto('+page_id+')" style="height:80px;margin:0 auto;border:none;margin-top:-100px;"><i class="pe-7s-camera pe-5x" ></i></a>';
+document.getElementById("coverbutton").innerHTML = '<a href="#" class="button" id="upload-ready" onclick="submitDeal();" style="height:80px;margin:0 auto;border:none;margin-top:-100px;"><i class="pe-7s-upload pe-5x" ></i></a>';
 setCover(response["cover"]["source"]);
 document.getElementById("name").value = response["name"];
 moveCover();
