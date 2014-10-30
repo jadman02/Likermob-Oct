@@ -1137,19 +1137,19 @@ document.getElementById("link_c").innerHTML = '<a href="#" class="button" style=
 document.getElementById("schedule_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'schedule\')"><i  class="pe-7s-info pe-2x"></i></a>';
 
 
-var latitude = document.getElementById("latitude_box").value;
-var longitude = document.getElementById("longitude_box").value;
+var latitude = document.getElementById("latitude_box");
+var longitude = document.getElementById("longitude_box");
 //var opt= document.getElementById('category_i').options[0];
-var phone = document.getElementById("phone_i").value;
-var email = document.getElementById("email_i").value;
-var website = document.getElementById("website_i").value;
-var subpremise = document.getElementById("subpremise_i").value;
-var street_number = document.getElementById("street_number_i").value;
-var street_name = document.getElementById("route_i").value;
-var postcode = document.getElementById("zip_i").value;
-var suburb = document.getElementById("locality_i").value;
-var state = document.getElementById("state_i").value;
-var country = document.getElementById("country_i").value;
+var phone = document.getElementById("phone_i");
+var email = document.getElementById("email_i");
+var website = document.getElementById("website_i");
+var subpremise = document.getElementById("subpremise_i");
+var street_number = document.getElementById("street_number_i");
+var street_name = document.getElementById("route_i");
+var postcode = document.getElementById("zip_i");
+var suburb = document.getElementById("locality_i");
+var state = document.getElementById("state_i");
+var country = document.getElementById("country_i");
 
 //phone.value = "";document.getElementById("phone_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'phone\')"><i  class="pe-7s-info pe-2x"></i></a>';
 //website.value = "";document.getElementById("website_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'website\')"><i  class="pe-7s-info pe-2x"></i></a>';
@@ -1159,20 +1159,21 @@ var country = document.getElementById("country_i").value;
 //res[0][5] + ',' + res[0][6]  + ',' + res[0][7]  + ',' + res[0][9]  + ',' + res[0][10] ',' + res[0][11];
 
 //else {document.getElementById("addressbox").checked = false;$$('.addresshide').hide();document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'address\')"><i  class="pe-7s-info pe-2x"></i></a>';}
-if(res[0][8]) {document.getElementById("address_provided").value = '1';document.getElementById("addressbox").checked = true; $$('.addresshide').show();document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';} 
-if(res[0][5]) {subpremise.value = res[0][5];document.getElementById("subpremise_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
-if(res[0][6]) {street_number.value = res[0][6];document.getElementById("street_number_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';} 
-if(res[0][7]) {street.value = res[0][7];document.getElementById("route_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
-if(res[0][9]) {town.value = res[0][9];document.getElementById("locality_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
-if(res[0][10]) {zip.value = res[0][10];document.getElementById("zip_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';} 
-if(res[0][11]) {state.value = res[0][11];document.getElementById("state_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
-if(res[0][12]) {country.value = res[0][12];document.getElementById("country_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';}
-if (res[0][16]) {email.value = res[0][16];checkForm('email');} 
-if (res[0][4]) {phone.value = res[0][4];checkForm('phone',6,25);} 
-if (res[0][15]) {website.value = res[0][15];checkForm('website');} 
+if(res[0][8]) {document.getElementById("address_provided").value = '1';document.getElementById("addressbox").checked = true; $$('.addresshide').show();document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';} else {document.getElementById("addressbox").checked = false;$$('.addresshide').hide();document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'address\')"><i  class="pe-7s-info pe-2x"></i></a>';}
+if(res[0][5]) {subpremise.value = res[0][5];document.getElementById("subpremise_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';} else {subpremise.value = "";}
+if(res[0][6]) {street_number.value = res[0][6];document.getElementById("street_number_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';} else {street_number.value = "";}
+if(res[0][7]) {street.value = res[0][7];document.getElementById("route_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';} else {street.value = "";}
+if(res[0][9]) {town.value = res[0][9];document.getElementById("locality_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';} else {town.value = "";}
+if(res[0][10]) {zip.value = res[0][10];document.getElementById("zip_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';} else {zip.value = "";}
+if(res[0][11]) {state.value = res[0][11];document.getElementById("state_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';} else {state.value = "";}
+if(res[0][12]) {country.value = res[0][12];document.getElementById("country_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';} else {country.value = "";}
+if (res[0][16]) {email.value = res[0][16];checkForm('email');} else{email.value = "";document.getElementById("email_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'email\')"><i  class="pe-7s-info pe-2x"></i></a>';}
+if (res[0][4]) {phone.value = res[0][4];checkForm('phone',6,25);} else{phone.value = "";document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'phone\')"><i  class="pe-7s-info pe-2x"></i></a>';}
+if (res[0][15]) {website.value = res[0][15];checkForm('website');} else{website.value = "";document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'website\')"><i  class="pe-7s-info pe-2x"></i></a>';}
 //if (res[0][8]) {opt.value =  res[0][17];opt.text = res[0][17];checkForm('category');} else{email.value = "";}
-if (res[0][13]) {latitude.value = res[0][13];} 
-if (res[0][14]) {longitude.value = res[0][14];}
+if (res[0][13]) {latitude.value = res[0][13];} else {latitude.value = "";}
+if (res[0][14]) {longitude.value = res[0][14];} else {longitude.value = "";}
+
 
 
 });
