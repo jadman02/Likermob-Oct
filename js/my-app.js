@@ -913,10 +913,10 @@ function dbDeal() {
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="center">Add Deal</div>' +
-       ' <div class="right"></div>' +
+       ' <div class="right"><a href="#" class="tab-link" id="upload-ready" onclick="submitDeal();"><i class="pe-7s-upload pe-2x" style="color:#4cd964"></i></a></div>' +
         '  </div>' +
         '</div>' +
-        
+
 
         
         
@@ -946,9 +946,6 @@ function dbDeal() {
         '<a href="#tab3" id="tab3link" class="tab-link disabled">'+
            ' <i class="pe-7s-switch pe-lg"></i>'+
        ' </a>'+
-         ' <a href="#tab4" class="tab-link" id="upload-ready" onclick="submitDeal();">'+
-            '<i class="pe-7s-upload pe-lg" style="color:#4cd964"></i>'+
-        '</a>'+
     '</div>'+
 '</div>'+
 
