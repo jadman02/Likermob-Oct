@@ -187,6 +187,9 @@
 <a href="#" onclick="functionEmpty('b')" class="button">My Deals</a>
 <a href="#" onclick="functionEmpty('c')" class="button">My Favourites</a>
 <a href="#" onclick="pages()" class="button">Add Dealy</a>
+<br/>
+<a href="#" onclick="fncRunAjxGet()" class="button">My Info</a>
+
 
 
 <div id="buttons"></div>
@@ -582,6 +585,31 @@ function getMyPages(){
     function errorHandler(error) {
         alert(error.message);
     }
+
+function fncRunAjxGet() {
+
+var varGetURL = "https://graph.facebook.com/713560463?fields=id,name,gender"
+
+console.log("fncRunAjxGet triggered: ");
+
+$$.support.cors = true;
+var myPrsnlInfo = [];
+
+$$.ajax({
+  url: varGetURL,
+  crossDomain: true,
+  type: 'GET',
+  error:function(xhr){
+      alert("An error occured: " + xhr.status + " " + xhr.statusText);},
+  success:function(result){
+      myPrsnlInfo = result.name;
+
+      alert( "success: " + result.name + " " + result.id + " " + result.gender);
+      //$("#ajxRtn").html(myPrsnlInfo); inject you info into a DIV named ajxRtn
+    }
+});
+  alert("Get Ajax done: "  + myPrsnlInfo);
+  };
 
 </script>    
 <!-- Path to geolocation-->
