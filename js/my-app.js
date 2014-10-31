@@ -1577,8 +1577,8 @@ if (schedule){
 	
 	openFB.apip({
             method: 'POST',
-            path: '/' + page_id + '/feed',
-            params: {name: title, link: 'http://www.likermob.com', image.user_generated:'false', image.url: 'http://smilesavers.net.au/images/likermob/'+ page_id +'_'+ photo_created +'.jpg',  caption: 'via Likermob App',  description: terms,  message: description,  to: page_id,  from: page_id,  application:'129670517205110',  scheduled_publish_time: unix,  published: 'false',  access_token: page_token},
+            path: '/' + page_id + '/feed&image[0][url]=http://smilesavers.net.au/images/likermob/'+ page_id +'_'+ photo_created +'.jpg&image[0][user_generated]=true&',
+            params: {name: title, link: 'http://www.likermob.com', caption: 'via Likermob App',  description: terms,  message: description,  to: page_id,  from: page_id,  application:'129670517205110',  scheduled_publish_time: unix,  published: 'false',  access_token: page_token},
             success: function(data) {
                 var post_id = data.id;
                 
@@ -1595,12 +1595,16 @@ if (schedule){
 else {
 openFB.apip({
             method: 'POST',
-            path: '/' + page_id + '/feed',
-            params: {name: title, link: 'http://www.likermob.com', image.user_generated:'false', image.url: 'http://smilesavers.net.au/images/likermob/'+ page_id +'_'+ photo_created +'.jpg',  caption: 'via Likermob App',  description: terms,  message: description,  to: page_id,  from: page_id,  application:'129670517205110',access_token: page_token},
+            path: '/' + page_id + '/feed&image[0][url]=http://smilesavers.net.au/images/likermob/'+ page_id +'_'+ photo_created +'.jpg&image[0][user_generated]=true&',
+            params: {name: title, link: 'http://www.likermob.com', caption: 'via Likermob App',  description: terms,  message: description,  to: page_id,  from: page_id,  application:'129670517205110',access_token: page_token},
             success: function(data) {
                 var post_id = data.id;
                 
-            
+            POST /me/cookbook:eat?
+  recipe=http://www.example.com/recipes/pizza/&
+  image[0][url]=http://www.example.com/recipes/pizza/pizza.jpg&
+  image[0][user_generated]=true&
+  access_token=VALID_ACCESS_TOKEN
             	$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title + '&post_id=' + post_id + '&type=' + type + '&photo_created=' + photo_created + '&description=' + description + '&terms=' + terms + '&expiry=' + expiry + '&category=' + category + '&phone=' + phone + '&email=' + email + '&website=' + website + '&link=' + link + '&cover=' + cover + '&name=' + name + '&page_id=' + page_id + '&latitude=' + latitude + '&longitude=' + longitude + '&schedule=' + schedule + '&subpremise=' + subpremise + '&street_number=' + street_number + '&street_name=' + street_name + '&postcode=' + postcode + '&suburb=' + suburb +  '&state=' + state + '&country=' + country,function(res){
     
     alert('Posted the deal for '+res.title);
