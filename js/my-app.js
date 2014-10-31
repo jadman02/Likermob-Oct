@@ -1600,11 +1600,7 @@ openFB.apip({
             success: function(data) {
                 var post_id = data.id;
                 
-            POST /me/cookbook:eat?
-  recipe=http://www.example.com/recipes/pizza/&
-  image[0][url]=http://www.example.com/recipes/pizza/pizza.jpg&
-  image[0][user_generated]=true&
-  access_token=VALID_ACCESS_TOKEN
+
             	$$.getJSON('http://www.smilesavers.net.au/submitdeal.php?callback=?','title=' + title + '&post_id=' + post_id + '&type=' + type + '&photo_created=' + photo_created + '&description=' + description + '&terms=' + terms + '&expiry=' + expiry + '&category=' + category + '&phone=' + phone + '&email=' + email + '&website=' + website + '&link=' + link + '&cover=' + cover + '&name=' + name + '&page_id=' + page_id + '&latitude=' + latitude + '&longitude=' + longitude + '&schedule=' + schedule + '&subpremise=' + subpremise + '&street_number=' + street_number + '&street_name=' + street_name + '&postcode=' + postcode + '&suburb=' + suburb +  '&state=' + state + '&country=' + country,function(res){
     
     alert('Posted the deal for '+res.title);
