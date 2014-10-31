@@ -187,9 +187,6 @@
 <a href="#" onclick="functionEmpty('b')" class="button">My Deals</a>
 <a href="#" onclick="functionEmpty('c')" class="button">My Favourites</a>
 <a href="#" onclick="pages()" class="button">Add Dealy</a>
-<br/>
-<a href="#" onclick="testFacebook()" class="button">My Info</a>
-
 
 
 <div id="buttons"></div>
@@ -585,28 +582,6 @@ function getMyPages(){
     function errorHandler(error) {
         alert(error.message);
     }
-
-function testFacebook(){
-	
-	var http = new XMLHttpRequest();
-var url = "http://graph.facebook.com/713560463?fields=name";
-var params = "";
-http.open("POST", url, true);
-
-//Send the proper header information along with the request
-http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-http.setRequestHeader("Content-length", params.length);
-http.setRequestHeader("Connection", "close");
-
-http.onreadystatechange = function() {//Call a function when the state changes.
-    if(http.readyState == 4 && http.status == 200) {
-        alert(http.responseText);
-    }
-}
-http.send(params);
-	
-}
-
 
 </script>    
 <!-- Path to geolocation-->
