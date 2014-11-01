@@ -1577,8 +1577,15 @@ if (schedule){
 	
 	openFB.apip({
             method: 'POST',
-            path: '/' + page_id + '/feed',
-            params: {name: title, link: 'http://www.likermob.com', picture: 'http://smilesavers.net.au/images/likermob/'+ page_id +'_'+ photo_created +'.jpg',  caption: 'via Likermob App',  description: terms,  message: description,  to: page_id,  from: page_id,  application:'129670517205110',  scheduled_publish_time: unix,  published: 'false',  access_token: page_token},
+            path: '/' + page_id + '/photos',
+            params: {url: 'http://smilesavers.net.au/mkwatermark.php?filename='+ page_id +'_'+ photo_created +'.jpg',  
+            message: title + ' - ' + description + '. via Likermob App Test message @[1475871535982658] tag',  
+            to: page_id,  
+            from: page_id,  
+           application:'129670517205110',  
+           scheduled_publish_time: unix,  
+           published: 'false',  
+           access_token: page_token},
             success: function(data) {
                 var post_id = data.id;
                 
