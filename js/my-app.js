@@ -667,7 +667,7 @@ function showAddress(){
 function commentClick(){
 
 
-        if (document.getElementById('commentbox').checked) {
+        if (document.getElementById('commentibox').checked) {
             
             document.getElementById("commenty_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;" onclick="getInfo(\'commenty\')"><i  class="pe-7s-info pe-2x"></i></a>';
                  $$( '#commenty_i' ).css( 'color', 'hsl(0, 0%, 70%)' );
@@ -696,9 +696,6 @@ $$( ".page-content" ).toggleClass( "hide" );
 
 function toggleBox(id) {
 $$('#' + id + "box").click(); 
-if (id=="address") {showAddress();}
-if (id=="comment") {commentClick();}
-if (id=="check") {showDateTime();}
 $$( "#" + id + "icon" ).toggleClass( "green" );
 
 
@@ -969,7 +966,7 @@ function dbDeal() {
 
  '<div class="content-block-title" style="text-align:center;margin-top:10px;padding-bottom:10px;">Customise deal</div>'+
  '<div class="list-block"><ul><li><div class="item-content"><div class="item-media" onclick="showDateTime();" style="width:50px;"><label class="label-switch"><input type="checkbox" id="checkbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><span id="schedule" style="color:hsl(0, 0%, 70%);font-size:17px;width:150px;padding-top:5px;">Schedule post</span><span id="datetimespan" style="display:none;"><input type="datetime-local" class="essentials" id="schedule_i" onblur="checkForm(\'schedule\',3,20)" style="width:150px;overflow:hidden;float:left;"></span><span id="schedule_c"></span></div></div></div></li>'+
- '<li><div class="item-content"><div class="item-media" style="width:50px;"><label class="label-switch" onclick="commentClick()"><input type="checkbox" id="commentbox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><span style="color:hsl(0, 0%, 70%);font-size:17px;width:150px;margin-top:5px;" id="commenty_i">Require comment </span><span id="commenty_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;" onclick="getInfo(\'commenty\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li>'+
+ '<li><div class="item-content"><div class="item-media" style="width:50px;"><label class="label-switch" onclick="commentClick()"><input type="checkbox" id="commentibox"><div class="checkbox"></div></label></div><div class="item-inner"><div class="item-input"><span style="color:hsl(0, 0%, 70%);font-size:17px;width:150px;margin-top:5px;" id="commenty_i">Require comment </span><span id="commenty_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;" onclick="getInfo(\'commenty\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></div></li>'+
  '<li><div class="item-content" style="border:none;"><div class="item-inner"><label class="label-switch" onclick="showAddress();"><input type="checkbox" id="addressbox"><div class="checkbox"></div></label><div class="item-input" onclick="openSearch();$$(\'#fulladdress\').focus();" style="width:150px;color:hsl(0, 0%, 70%);" id="fulladdress2">Add location</div><span id="address_c"><a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;" onclick="getInfo(\'address\')"><i  class="pe-7s-info pe-2x"></i></a></span></div></div></li>'+
  '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Unit</div><div class="item-input"><input id="subpremise_i" type="tel" placeholder="-" style="width:140px;float:left;" onchange="checkForm(\'subpremise\',0,10)"><span id="subpremise_c"></span></div></div></div></li>'+
  '<li class="addresshide" style="display:none;"><div class="item-content"><div class="item-inner"><div class="item-title label">Number</div><div class="item-input"><input placeholder="-" id="street_number_i" type="tel" style="width:140px;float:left;" onchange="checkForm(\'street_number\',0,10)"><span id="street_number_c"></span></div></div></div></li>'+
@@ -1116,7 +1113,7 @@ document.getElementById("page_token").value = access_token;
 $$("#pages_list li").remove();	
 $$('#plusnavbar').show();
 $$('#toolbardeal').show();
-document.getElementById("toolbardeal").innerHTML = '<div class="toolbar tabbar" style="background-color:transparent;border:none;"><div class="toolbar-inner" style="background-color:transparent;"><a href="#" onclick="addPhoto('+page_id+')" class="tab-link" id="cameratab"><i class="pe-7s-camera pe-lg" id="cameraicon"></i></a><a href="#tab2" id="addresstab" class="tab-link" ontouchstart="toggleBox(\'address\');"><i class="pe-7s-map-marker pe-lg" id="addressicon"></i></a><a href="#tab2" id="checktab" class="tab-link" ontouchstart="toggleBox(\'check\');"><i class="pe-7s-clock pe-lg" id="checkicon"></i></a><a href="#" id="commenttab" class="tab-link" ontouchstart="togglebox(\'comment\');"><i class="pe-7s-comment pe-lg" id="commenticon"></i></a></div></div>';
+document.getElementById("toolbardeal").innerHTML = '<div class="toolbar tabbar" style="background-color:transparent;border:none;"><div class="toolbar-inner" style="background-color:transparent;"><a href="#" onclick="addPhoto('+page_id+')" class="tab-link" id="cameratab"><i class="pe-7s-camera pe-lg" id="cameraicon"></i></a><a href="#tab2" id="addresstab" class="tab-link" ontouchstart="toggleBox(\'address\');"><i class="pe-7s-map-marker pe-lg" id="addressicon"></i></a><a href="#tab2" id="checktab" class="tab-link" ontouchstart="toggleBox(\'check\');"><i class="pe-7s-clock pe-lg" id="checkicon"></i></a><a href="#" id="commenttab" class="tab-link" ontouchstart="togglebox(\'commenti\');"><i class="pe-7s-comment pe-lg" id="commentiicon"></i></a></div></div>';
 
 
 
@@ -1134,7 +1131,7 @@ $$('.essentials').each(function() {
 
 
 
-document.getElementById("commentbox").checked = false;
+document.getElementById("commentibox").checked = false;
 document.getElementById("checkbox").checked = false;
 document.getElementById("type").value = "like";
 document.getElementById("type").value = "Category";
