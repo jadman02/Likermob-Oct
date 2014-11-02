@@ -258,6 +258,7 @@
                     if(response.status === 'connected') {
                         alert('Facebook login succeeded, got access token: ' + response.authResponse.token);
 						document.getElementById('status').innerHTML = 'user is logged';
+						localStorage.setItem("auth_token", response.authResponse.token);
 						localStorage.setItem("register", "register");
 						mainView.loadPage('location.html');
 						getInfo();
@@ -298,8 +299,10 @@ localStorage.setItem("manage_pages", "manage_pages");
 
     function getInfo() {
        alert('getInfo function');
+       var auth_token = localStorage.getItem("auth_token");
         openFB.apip({
             path: '/me?fields=id,name',
+             params: {access_token: auth_token},
             success: function(data) {
                 //console.log(JSON.stringify(data));
                 //alert(data.name);
@@ -308,7 +311,7 @@ localStorage.setItem("manage_pages", "manage_pages");
                // alert(data.name);
                 //alert('http://graph.facebook.com/' + data.id + '/picture?type=small');
                // localStorage.setItem("uid", data.id);
-                //var uid = localStorage.getItem("uid");
+                
                // alert(uid);
             },
             error: errorHandler});
