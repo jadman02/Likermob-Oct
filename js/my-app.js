@@ -695,6 +695,8 @@ $$( ".page-content" ).toggleClass( "hide" );
 }
 
 function toggleBox(id) {
+var value = document.getElementById('#' + id + "box").value;
+alert(value);
 $$('#' + id + "box").click(); 
 $$( "#" + id + "icon" ).toggleClass( "green" );
 
