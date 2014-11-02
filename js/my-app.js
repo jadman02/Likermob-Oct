@@ -695,7 +695,7 @@ $$( ".page-content" ).toggleClass( "hide" );
 }
 
 function toggleBox(id) {
-$$('#' + id + "box").change(); 
+$$('#' + id + "box").click(); 
 $$( "#" + id + "icon" ).toggleClass( "green" );
 
 
