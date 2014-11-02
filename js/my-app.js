@@ -98,7 +98,34 @@ $$( '#resulty' ).append('<li class="item-content"><div class="item-media"></div>
  
 //And now we initialize app
 myApp.init();
+var mainView = myApp.addView('.view-main', {
+    // Because we use fixed-through navbar we can enable dynamic navbar
+    dynamicNavbar: true
+});
 
+	
+
+
+
+
+var register = localStorage.getItem('register');
+if (register) {
+alert('register localstorage');
+if(latitude) {mainView.loadPage('index.html');}
+else{mainView.loadPage('location.html');}
+	
+	
+
+
+
+	
+}
+else {
+
+// Load page from about.html file to main View:
+mainView.loadPage('register.html');
+alert('register not in localstorage');	
+}	
 
 
 
@@ -118,46 +145,6 @@ $$("#loader-container").show();
         myApp.pullToRefreshDone();
  //   }, 500);
 });
-
-
-
-
-
-
-
-var mainView = myApp.addView('.view-main', {
-    // Because we use fixed-through navbar we can enable dynamic navbar
-    dynamicNavbar: true
-});
-
-	
-
-
-
-
-var register = localStorage.getItem('register');
-if (register) {
-
-if(latitude) {mainView.loadPage('deal.html');mainView.loadPage('index.html');}
-else{mainView.loadPage('location.html');}
-	
-	
-
-
-
-	
-}
-else {
-
-// Load page from about.html file to main View:
-mainView.loadPage('register.html');
-	
-}	
-
-
-
-
-
 
 
 
