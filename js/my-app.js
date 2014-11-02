@@ -395,7 +395,7 @@ function saveAddress(place_id) {
 
 $$.getJSON('https://maps.googleapis.com/maps/api/place/details/json?placeid='+ place_id +'&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
 
-$$( '#addresstab' ).addClass( 'green' );
+$$( '#addressicon' ).addClass( 'green' );
 $$("#resulta li").remove();
 $$('.addresshide').show();
 
@@ -650,7 +650,7 @@ function showAddress(){
             $$('.addresshide').hide();
             $$( '#fulladdress2' ).css( 'color', 'hsl(0, 0%, 70%)' );
             document.getElementById("address_provided").value = '0';
-            $$( '#addresstab' ).removeClass( 'green' );
+            $$( '#addressicon' ).removeClass( 'green' );
             
         } else {
              
@@ -1113,7 +1113,7 @@ document.getElementById("page_token").value = access_token;
 $$("#pages_list li").remove();	
 $$('#plusnavbar').show();
 $$('#toolbardeal').show();
-document.getElementById("toolbardeal").innerHTML = '<div class="toolbar tabbar" style="background-color:transparent;border:none;"><div class="toolbar-inner" style="background-color:transparent;"><a href="#" onclick="addPhoto('+page_id+')" class="tab-link" id="cameratab"><i class="pe-7s-camera pe-lg"></i></a><a href="#tab2" id="addresstab" class="tab-link" onclick="toggleBox(\'address\');"><i class="pe-7s-map-marker pe-lg" #"addressicon"></i></a><a href="#tab2" id="checktab" class="tab-link" onclick="toggleBox(\'check\');"><i class="pe-7s-clock pe-lg"id="checkicon"></i></a><a href="#" id="commenttab" class="tab-link" onclick="togglebox(\'comment\');"><i class="pe-7s-comment pe-lg" id="commenticon"></i></a></div></div>';
+document.getElementById("toolbardeal").innerHTML = '<div class="toolbar tabbar" style="background-color:transparent;border:none;"><div class="toolbar-inner" style="background-color:transparent;"><a href="#" onclick="addPhoto('+page_id+')" class="tab-link" id="cameratab"><i class="pe-7s-camera pe-lg"></i></a><a href="#tab2" id="addresstab" class="tab-link" onclick="toggleBox(\'address\');"><i class="pe-7s-map-marker pe-lg" id="addressicon"></i></a><a href="#tab2" id="checktab" class="tab-link" onclick="toggleBox(\'check\');"><i class="pe-7s-clock pe-lg" id="checkicon"></i></a><a href="#" id="commenttab" class="tab-link" onclick="togglebox(\'comment\');"><i class="pe-7s-comment pe-lg" id="commenticon"></i></a></div></div>';
 
 
 
@@ -1167,7 +1167,7 @@ var country = document.getElementById("country_i");
 //res[0][5] + ',' + res[0][6]  + ',' + res[0][7]  + ',' + res[0][9]  + ',' + res[0][10] ',' + res[0][11];
 
 //else {document.getElementById("addressbox").checked = false;$$('.addresshide').hide();document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'address\')"><i  class="pe-7s-info pe-2x"></i></a>';}
-if(res[0][8]) {document.getElementById("address_provided").value = '1';document.getElementById("addressbox").checked = true; $$('.addresshide').show();$$( '#addresstab' ).addClass( 'green' );document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';} else {document.getElementById("addressbox").checked = false;$$('.addresshide').hide();document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'address\')"><i  class="pe-7s-info pe-2x"></i></a>';}
+if(res[0][8]) {document.getElementById("address_provided").value = '1';document.getElementById("addressbox").checked = true; $$('.addresshide').show();$$( '#addressicon' ).addClass( 'green' );document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';} else {document.getElementById("addressbox").checked = false;$$('.addresshide').hide();document.getElementById("address_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-10px;" onclick="getInfo(\'address\')"><i  class="pe-7s-info pe-2x"></i></a>';}
 if(res[0][5]) {subpremise.value = res[0][5];document.getElementById("subpremise_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';} else {subpremise.value = "";}
 if(res[0][6]) {street_number.value = res[0][6];document.getElementById("street_number_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';} else {street_number.value = "";}
 if(res[0][7]) {street.value = res[0][7];document.getElementById("route_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';} else {street.value = "";}
