@@ -695,8 +695,6 @@ $$( ".page-content" ).toggleClass( "hide" );
 }
 
 function toggleBox(id) {
-var addressy = document.getElementById('#' + id + "box").value;
-alert(addressy);
 $$('#' + id + "box").click(); 
 if (id=="address") {showAddress();}
 if (id=="comment") {commentClick();}
