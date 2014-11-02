@@ -695,8 +695,8 @@ $$( ".page-content" ).toggleClass( "hide" );
 }
 
 function toggleBox(id) {
-$$('#' + id + "box").click(); 
-$$( "#" + id + "icon" ).toggleClass( "green" );
+
+$$( "#" + id + "icon" ).addClass( "green" );
 
 
 }
@@ -1113,7 +1113,7 @@ document.getElementById("page_token").value = access_token;
 $$("#pages_list li").remove();	
 $$('#plusnavbar').show();
 $$('#toolbardeal').show();
-document.getElementById("toolbardeal").innerHTML = '<div class="toolbar tabbar" style="background-color:transparent;border:none;"><div class="toolbar-inner" style="background-color:transparent;"><a href="#" onclick="addPhoto('+page_id+')" class="tab-link" id="cameratab"><i class="pe-7s-camera pe-lg" id="cameraicon"></i></a><a href="#tab2" id="addresstab" class="tab-link" ontouchstart="toggleBox(\'address\');"><i class="pe-7s-map-marker pe-lg" id="addressicon"></i></a><a href="#tab2" id="checktab" class="tab-link" ontouchstart="toggleBox(\'check\');"><i class="pe-7s-clock pe-lg" id="checkicon"></i></a><a href="#" id="commenttab" class="tab-link" ontouchstart="togglebox(\'commenti\');"><i class="pe-7s-comment pe-lg" id="commentiicon"></i></a></div></div>';
+document.getElementById("toolbardeal").innerHTML = '<div class="toolbar tabbar" style="background-color:transparent;border:none;"><div class="toolbar-inner" style="background-color:transparent;"><a href="#" onclick="addPhoto('+page_id+')" class="tab-link" id="cameratab"><i class="pe-7s-camera pe-lg" id="cameraicon"></i></a><a href="#tab2" id="addresstab" class="tab-link" ontouchstart="toggleBox(\'address\');document.getElementById(\'addressbox\').checked = false;showAddress();"><i class="pe-7s-map-marker pe-lg" id="addressicon"></i></a><a href="#tab2" id="checktab" class="tab-link" ontouchstart="toggleBox(\'check\');document.getElementById(\'checkbox\').checked = false;showDateTime();"><i class="pe-7s-clock pe-lg" id="checkicon"></i></a><a href="#" id="commenttab" class="tab-link" ontouchstart="togglebox(\'commenti\');document.getElementById(\'commentibox\').checked = false;commentClick();"><i class="pe-7s-comment pe-lg" id="commentiicon"></i></a></div></div>';
 
 
 
