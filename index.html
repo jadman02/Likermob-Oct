@@ -303,9 +303,11 @@ localStorage.setItem("manage_pages", "manage_pages");
                 console.log(JSON.stringify(data));
                 //alert(data.name);
                 localStorage.setItem("user_name", data.name);
+                alert(data.name);
                 //alert('http://graph.facebook.com/' + data.id + '/picture?type=small');
                 localStorage.setItem("uid", data.id);
-                
+                var uid = localStorage.getItem("uid");
+                alert(uid);
             },
             error: errorHandler});
     }
