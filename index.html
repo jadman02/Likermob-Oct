@@ -191,7 +191,7 @@
 <a href="#" onclick="functionEmpty('c')" class="button">My Favourites</a>
 <a href="#" onclick="pages()" class="button">Add Dealy</a>
 
-
+<a href="#" onclick="getInfo()" class="button">Get Info</a>
 <div id="buttons"></div>
 
 <ul id="add_container"></ul>
@@ -260,8 +260,9 @@
 						document.getElementById('status').innerHTML = 'user is logged';
 						localStorage.setItem("register", "register");
 						mainView.loadPage('location.html');
-						mainView.showNavbar();
 						getInfo();
+						mainView.showNavbar();
+						
 						
                     } else {
                         alert('Facebook login failed: ' + response.error);
