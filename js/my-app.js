@@ -915,7 +915,7 @@ function dbDeal() {
         '  <div class="navbar-inner">' +
         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
         '    <div class="center">Add Deal</div>' +
-       ' <div class="right"><a href="#tab1" onclick="clearPageslist();" class="tab-link active"><i class="pe-7s-plus pe-2x"></i></a></div>' +
+       ' <div class="right"><a href="#tab1" onclick="clearPageslist();" style="display:none;" id="plusnavbar" class="tab-link active"><i class="pe-7s-plus pe-2x"></i></a></div>' +
         '  </div>' +
         '</div>' +
 
@@ -1100,8 +1100,8 @@ addPhoto(page_id);
 document.getElementById("page_id").value = page_id;
 document.getElementById("page_token").value = access_token;
 $$("#pages_list li").remove();	
-$$( "#tab2link" ).removeClass( "disabled" );
-$$( "#tab3link" ).removeClass( "disabled" );
+$$('#plusnavbar').show();
+$$('#toolbardeal').show();
 document.getElementById("toolbardeal").innerHTML = '<div class="toolbar tabbar" style="background-color:transparent;border:none;"><div class="toolbar-inner" style="background-color:transparent;"><a href="#" onclick="addPhoto('+page_id+')" class="tab-link" id="cameratab"><i class="pe-7s-camera pe-lg"></i></a><a href="#tab2" id="addresstab" class="tab-link" onclick="document.getElementById(\'addressbox\').checked = true;showAddress();"><i class="pe-7s-map-marker pe-lg"></i></a><a href="#tab2" id="clocktab" class="tab-link" onclick="$$(\'#schedule_i\').focus();"><i class="pe-7s-clock pe-lg"></i></a><a href="#" id="commenttab" class="tab-link" onclick="document.getElementById(\'commentbox\').checked = true;commentClick();"><i class="pe-7s-comment pe-lg"></i></a></div></div>';
 
 
@@ -1503,6 +1503,8 @@ openFB.apip({
 }
 
 function clearPageslist(){
+	$$('#plusnavbar').hide();
+	$$('#toolbardeal').hide();
 	$$('#add-loader-container').show();
 	getMyPages();
 	$$( '#tab2link' ).addClass( 'disabled' );
