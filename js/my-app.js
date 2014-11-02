@@ -695,9 +695,9 @@ $$( ".page-content" ).toggleClass( "hide" );
 }
 
 function toggleBox(id) {
-
-$$( "#" + id + "icon" ).toggleClass( "green" );
 $$('#' + id + "box").trigger("click"); 
+$$( "#" + id + "icon" ).toggleClass( "green" );
+
 
 }
 
@@ -1113,7 +1113,7 @@ document.getElementById("page_token").value = access_token;
 $$("#pages_list li").remove();	
 $$('#plusnavbar').show();
 $$('#toolbardeal').show();
-document.getElementById("toolbardeal").innerHTML = '<div class="toolbar tabbar" style="background-color:transparent;border:none;"><div class="toolbar-inner" style="background-color:transparent;"><a href="#" onclick="addPhoto('+page_id+')" class="tab-link" id="cameratab"><i class="pe-7s-camera pe-lg"></i></a><a href="#tab2" id="addresstab" class="tab-link" onclick="toggleBox(\'address\');"><i class="pe-7s-map-marker pe-lg" id="addressicon"></i></a><a href="#tab2" id="checktab" class="tab-link" onclick="toggleBox(\'check\');"><i class="pe-7s-clock pe-lg" id="checkicon"></i></a><a href="#" id="commenttab" class="tab-link" onclick="togglebox(\'comment\');"><i class="pe-7s-comment pe-lg" id="commenticon"></i></a></div></div>';
+document.getElementById("toolbardeal").innerHTML = '<div class="toolbar tabbar" style="background-color:transparent;border:none;"><div class="toolbar-inner" style="background-color:transparent;"><a href="#" onclick="addPhoto('+page_id+')" class="tab-link" id="cameratab"><i class="pe-7s-camera pe-lg" id="cameraicon"></i></a><a href="#tab2" id="addresstab" class="tab-link" onclick="toggleBox(\'address\');"><i class="pe-7s-map-marker pe-lg" id="addressicon"></i></a><a href="#tab2" id="checktab" class="tab-link" onclick="toggleBox(\'check\');"><i class="pe-7s-clock pe-lg" id="checkicon"></i></a><a href="#" id="commenttab" class="tab-link" onclick="togglebox(\'comment\');"><i class="pe-7s-comment pe-lg" id="commenticon"></i></a></div></div>';
 
 
 
@@ -1268,7 +1268,7 @@ function getPhoto() {
 function backgroundPhoto(imageURI) {
             document.getElementById("imageURI").value = imageURI;
              $$( '.cover-add' ).css( 'background-image', 'url(\''+ imageURI  +'\')');
-             $$( '#cameratab' ).addClass( 'green' );
+             $$( '#cameraicon' ).addClass( 'green' );
              
 moveCover();
         }
