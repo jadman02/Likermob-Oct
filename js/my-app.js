@@ -672,7 +672,7 @@ function commentClick(){
             document.getElementById("commenty_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;" onclick="getInfo(\'commenty\')"><i  class="pe-7s-info pe-2x"></i></a>';
                  $$( '#commenty_i' ).css( 'color', 'hsl(0, 0%, 70%)' );
                  document.getElementById("type").value = 'like';
-                 $$( '#commenttab' ).removeClass( 'green' );
+                 $$( '#commenticon' ).removeClass( 'green' );
             //$$('#fulladdress').blur();
             
             
@@ -680,7 +680,7 @@ function commentClick(){
         document.getElementById("commenty_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';
         $$( '#commenty_i' ).css( 'color', 'black' );
         document.getElementById("type").value = 'comment';
-        	$$( '#commenttab' ).addClass( 'green' );
+        	$$( '#commenticon' ).addClass( 'green' );
         }
 
 	
