@@ -298,11 +298,13 @@ localStorage.setItem("manage_pages", "manage_pages");
 
 
     function getInfo() {
+       alert('getInfo function');
         openFB.api({
             path: '/me',
             success: function(data) {
                 console.log(JSON.stringify(data));
                 //alert(data.name);
+                alert(data.name);
                 localStorage.setItem("user_name", data.name);
                 alert(data.name);
                 //alert('http://graph.facebook.com/' + data.id + '/picture?type=small');
