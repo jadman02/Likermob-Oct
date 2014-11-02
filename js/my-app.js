@@ -626,13 +626,13 @@ function showDateTime(){
             $$('#datetimespan').hide();
             $$('#schedule').show();
             document.getElementById("schedule_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-20px;" onclick="getInfo(\'schedule\')"><i  class="pe-7s-info pe-2x"></i></a>';
-            
+            $$( '#clocktab' ).removeClass( 'green' );
         } else {
             document.getElementById("schedule_c").innerHTML = '';
             $$('#schedule').hide();
             $$('#datetimespan').show();
             $$('#schedule_i').focus();
-            $$( '#clocktab' ).css( 'color', '#4cd964');
+            $$( '#clocktab' ).addClass( 'green' );
         }
 
 	
@@ -650,6 +650,7 @@ function showAddress(){
             $$('.addresshide').hide();
             $$( '#fulladdress2' ).css( 'color', 'hsl(0, 0%, 70%)' );
             document.getElementById("address_provided").value = '0';
+            $$( '#addresstab' ).removeClass( 'green' );
             
         } else {
              
@@ -669,6 +670,7 @@ function commentClick(){
             document.getElementById("commenty_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;" onclick="getInfo(\'commenty\')"><i  class="pe-7s-info pe-2x"></i></a>';
                  $$( '#commenty_i' ).css( 'color', 'hsl(0, 0%, 70%)' );
                  document.getElementById("type").value = 'like';
+                 $$( '#commenttab' ).removeClass( 'green' );
             //$$('#fulladdress').blur();
             
             
@@ -676,7 +678,7 @@ function commentClick(){
         document.getElementById("commenty_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:5px;"><i  class="pe-7s-check pe-2x"></i></a>';
         $$( '#commenty_i' ).css( 'color', 'black' );
         document.getElementById("type").value = 'comment';
-        $$( '#commenttab' ).css( 'color', '#4cd964');
+        	$$( '#commenttab' ).addClass( 'green' );
         }
 
 	
@@ -1102,7 +1104,7 @@ document.getElementById("page_token").value = access_token;
 $$("#pages_list li").remove();	
 $$('#plusnavbar').show();
 $$('#toolbardeal').show();
-document.getElementById("toolbardeal").innerHTML = '<div class="toolbar tabbar" style="background-color:transparent;border:none;"><div class="toolbar-inner" style="background-color:transparent;"><a href="#" onclick="addPhoto('+page_id+')" class="tab-link" id="cameratab"><i class="pe-7s-camera pe-lg"></i></a><a href="#tab2" id="addresstab" class="tab-link" onclick="document.getElementById(\'addressbox\').checked = false;showAddress();"><i class="pe-7s-map-marker pe-lg"></i></a><a href="#tab2" id="clocktab" class="tab-link" onclick="$$(\'#schedule_i\').focus();"><i class="pe-7s-clock pe-lg"></i></a><a href="#" id="commenttab" class="tab-link" onclick="document.getElementById(\'commentbox\').checked = true;commentClick();"><i class="pe-7s-comment pe-lg"></i></a></div></div>';
+document.getElementById("toolbardeal").innerHTML = '<div class="toolbar tabbar" style="background-color:transparent;border:none;"><div class="toolbar-inner" style="background-color:transparent;"><a href="#" onclick="addPhoto('+page_id+')" class="tab-link" id="cameratab"><i class="pe-7s-camera pe-lg"></i></a><a href="#tab2" id="addresstab" class="tab-link" onclick="$$( \'#addressbox\' ).click();showAddress();"><i class="pe-7s-map-marker pe-lg"></i></a><a href="#tab2" id="clocktab" class="tab-link" onclick="$$(\'#schedule_i\').focus();"><i class="pe-7s-clock pe-lg"></i></a><a href="#" id="commenttab" class="tab-link" onclick="$$( \'#commentbox\' ).click();commentClick();"><i class="pe-7s-comment pe-lg"></i></a></div></div>';
 
 
 
