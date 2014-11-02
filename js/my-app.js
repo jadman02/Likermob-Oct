@@ -462,8 +462,9 @@ like(post_id);
 
 function closeButton(){
 	
-	
-$$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','post_id=xyz',function(res){
+var uid = localStorage.getItem("uid");
+alert(uid);	
+$$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','post_id=' + uid,function(res){
     
     alert('Your name is '+res.fullname);
 });
