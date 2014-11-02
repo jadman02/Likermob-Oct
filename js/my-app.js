@@ -1102,7 +1102,7 @@ document.getElementById("page_token").value = access_token;
 $$("#pages_list li").remove();	
 $$( "#tab2link" ).removeClass( "disabled" );
 $$( "#tab3link" ).removeClass( "disabled" );
-document.getElementById("toolbardeal").innerHTML = '<div class="toolbar tabbar" style="background-color:transparent;border:none;"><div class="toolbar-inner" style="background-color:transparent;"><a href="#" onclick="addPhoto('+page_id+')" class="tab-link" id="cameratab"><i class="pe-7s-camera pe-lg"></i></a><a href="#tab2" id="addresstab" class="tab-link" onclick="document.getElementById(\'addressbox\').checked = true;"><i class="pe-7s-map-marker pe-lg"></i></a><a href="#tab2" id="clocktab" class="tab-link" onclick="$$(\'#schedule_i\').focus();"><i class="pe-7s-clock pe-lg"></i></a><a href="#" id="commenttab" class="tab-link" onclick="document.getElementById(\'commentbox\').checked = true;"><i class="pe-7s-comment pe-lg"></i></a></div></div>';
+document.getElementById("toolbardeal").innerHTML = '<div class="toolbar tabbar" style="background-color:transparent;border:none;"><div class="toolbar-inner" style="background-color:transparent;"><a href="#" onclick="addPhoto('+page_id+')" class="tab-link" id="cameratab"><i class="pe-7s-camera pe-lg"></i></a><a href="#tab2" id="addresstab" class="tab-link" onclick="document.getElementById(\'addressbox\').checked = true;"><i class="pe-7s-map-marker pe-lg"></i></a><a href="#tab2" id="clocktab" class="tab-link" onclick="$$(\'#schedule_i\').focus();"><i class="pe-7s-clock pe-lg"></i></a><a href="#" id="commenttab" class="tab-link" onclick="document.getElementById(\'commentbox\').checked = true;commentClick();"><i class="pe-7s-comment pe-lg"></i></a></div></div>';
 
 
 
