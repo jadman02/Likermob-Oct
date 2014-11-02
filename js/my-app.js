@@ -1329,7 +1329,7 @@ tomorrow.setDate(tomorrow.getDate() + 1);
 corrected_date = tomorrow.toISOString();
 
 if ((id=='expiry' || id=='schedule') && (input < corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
-if ((id=='expiry' || id=='schedule') && (input > corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';return;}
+if ((id=='expiry' || id=='schedule') && (input > corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;"><i  class="pe-7s-check pe-2x"></i></a>';}
 if ((id=='expiry' || id=='schedule') && (input == corrected_date)) {document.getElementById(id + "_c").innerHTML = '<a href="#" onclick="errorForm(3);" class="button" style="float:right;border:none;padding:0px;margin-top:10px;"><i class="pe-7s-attention pe-2x" style="color:#ff3b30;"></i></a>';return;}
 
 
