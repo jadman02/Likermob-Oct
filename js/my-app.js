@@ -626,7 +626,7 @@ function showDateTime(){
             $$('#datetimespan').hide();
             $$('#schedule').show();
             document.getElementById("schedule_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:-20px;" onclick="getInfo(\'schedule\')"><i  class="pe-7s-info pe-2x"></i></a>';
-            $$( '#clockicon' ).removeClass( 'green' );
+            $$( '#checkicon' ).removeClass( 'green' );
         } else {
             document.getElementById("schedule_c").innerHTML = '';
             $$('#schedule').hide();
