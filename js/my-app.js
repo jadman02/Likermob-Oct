@@ -451,6 +451,11 @@ document.getElementById("longitude_box").value = response.result.geometry.locati
 function likeButton(post_id,expiry) {
 like(post_id);
 //addEntry(post_id,expiry);
+var uid = localStorage.getItem("uid");
+$$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','user_id=' + uid + '&post_id=' + post_id,function(res){
+    
+    alert('Your name is '+res.fullname);
+});
 }
 
 
@@ -458,7 +463,6 @@ like(post_id);
 function closeButton(post_id){
 	
 var uid = localStorage.getItem("uid");
-alert(uid);	
 $$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','user_id=' + uid + '&post_id=' + post_id,function(res){
     
     alert('Your name is '+res.fullname);
