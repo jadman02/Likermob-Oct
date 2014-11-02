@@ -395,7 +395,7 @@ function saveAddress(place_id) {
 
 $$.getJSON('https://maps.googleapis.com/maps/api/place/details/json?placeid='+ place_id +'&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
 
-$$( '#addresstab' ).css( 'color', '#4cd964');
+$$( '#addresstab' ).addClass( 'green' );
 $$("#resulta li").remove();
 $$('.addresshide').show();
 
@@ -1267,7 +1267,8 @@ function getPhoto() {
 function backgroundPhoto(imageURI) {
             document.getElementById("imageURI").value = imageURI;
              $$( '.cover-add' ).css( 'background-image', 'url(\''+ imageURI  +'\')');
-             $$( '#cameratab' ).css( 'color', '#4cd964');
+             $$( '#cameratab' ).addClass( 'green' );
+             
 moveCover();
         }
 
