@@ -213,6 +213,8 @@ var singlequote = str.replace(/'/g, "qqqq");
 //var description = "'" + singlequote.replace(/(\r\n|\n|\r)/gm,"") + "'";
 var type = response[i][9];
 
+alert(response[i][21]);
+
 if (response[i][21] !== '0'){photo_created = response[i][21];alert(photo_created);}
 //if (response[i][21]) {cover = 'http://smilesavers.net.au/images/likermob/' + response[i][1] + '_' + response[i][21] + '.jpg';}
 
