@@ -492,7 +492,7 @@ function likeButton(post_id,expiry) {
 like(post_id);
 //addEntry(post_id,expiry);
 var uid = localStorage.getItem("uid");
-$$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','user_id=' + uid + '&post_id=' + post_id + '&type=like',function(res){
+$$.getJSON('http://www.smilesavers.net.au/like.php?callback=?','user_id=' + uid + '&post_id=' + post_id + '&type=like',function(res){
     
     alert('Your name is '+res.fullname);
 });
