@@ -1590,7 +1590,8 @@ function uploadPhoto() {
  
            var params = new Object();
             params.value1 = page_id + '_' + photo_created;
-            params.value2 = page_id + '_' + cover;
+            params.value2 = page_id;
+            params.value3 = cover;
  
             options.params = params;
             options.chunkedMode = false;
