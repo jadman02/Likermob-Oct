@@ -1489,6 +1489,10 @@ $$.getJSON('http://www.smilesavers.net.au/submitcover.php?callback=?','url=' + c
     
     alert('Your name is '+res.fullname);
 
+var cover = document.getElementById("cover").value;
+var page_id = document.getElementById("page_id").value;
+var photo_created = document.getElementById("photo_created").value;
+
 var title = document.getElementById("title_i").value;
 var description = document.getElementById("description_i").value;
 var terms = document.getElementById("terms_i").value;
