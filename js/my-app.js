@@ -1581,7 +1581,7 @@ function setCover(url){
 function uploadPhoto() {
             var imageURI = document.getElementById("imageURI").value;
             var page_id = document.getElementById("page_id").value;
-            var photo_created = new Date() / 1000;
+            var photo_created = Math.round(new Date() / 1000);
             document.getElementById("photo_created").value = photo_created;
             var options = new FileUploadOptions();
             options.fileKey="file";
