@@ -205,14 +205,14 @@ $$.getJSON('http://www.smilesavers.net.au/'+ domain +'.php?callback=?', ''+ data
 localStorage.setItem("total_pages", response.length);
 $$("#loader-container").hide();
 
-
+var photo_created;
 for (i = 0; i < 10; i++) {        
 
 var str = response[i][4];
 var singlequote = str.replace(/'/g, "qqqq");
 //var description = "'" + singlequote.replace(/(\r\n|\n|\r)/gm,"") + "'";
 var type = response[i][9];
-var photo_created = response[i][14];
+if (response[i][21]) = {photo_created = response[i][21];}
 //if (response[i][21]) {cover = 'http://smilesavers.net.au/images/likermob/' + response[i][1] + '_' + response[i][21] + '.jpg';}
 
 
