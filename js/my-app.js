@@ -463,7 +463,7 @@ $$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','user_id=' + u
 function closeButton(post_id){
 	
 var uid = localStorage.getItem("uid");
-$$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','user_id=' + uid + '&post_id=' + post_id '&type=dislike',function(res){
+$$.getJSON('http://www.smilesavers.net.au/dislike.php?callback=?','user_id=' + uid + '&post_id=' + post_id + '&type=dislike',function(res){
     
     alert('Your name is '+res.fullname);
 });
