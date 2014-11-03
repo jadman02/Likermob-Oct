@@ -499,7 +499,6 @@ $$.getJSON('http://www.smilesavers.net.au/like.php?callback=?','user_id=' + uid 
 }
 
 
-
 function closeButton(post_id){
 	
 var uid = localStorage.getItem("uid");
