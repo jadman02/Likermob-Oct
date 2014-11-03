@@ -1152,6 +1152,8 @@ function getCover(page_id,access_token){
 addPhoto(page_id);
 document.getElementById("page_id").value = page_id;
 document.getElementById("page_token").value = access_token;
+var photo_created = Math.round(new Date() / 1000);
+document.getElementById("photo_created").value = photo_created;
 $$("#pages_list li").remove();	
 $$('#plusnavbar').show();
 $$('#toolbardeal').show();
@@ -1478,6 +1480,14 @@ alert('submitting deal');
 var imageURI = document.getElementById("imageURI").value;
 if (imageURI) {uploadPhoto();return;}
 
+var cover = document.getElementById("cover").value;
+var page_id = document.getElementById("page_id").value;
+var photo_created = document.getElementById("photo_created").value;
+
+$$.getJSON('http://www.smilesavers.net.au/submitcover.php?callback=?','url=' + cover + '&page_id_photo_created=' + post_id + '_' + photo_created,function(res){
+    
+    alert('Your name is '+res.fullname);
+
 var title = document.getElementById("title_i").value;
 var description = document.getElementById("description_i").value;
 var terms = document.getElementById("terms_i").value;
@@ -1487,13 +1497,13 @@ var phone = document.getElementById("phone_i").value;
 var email = document.getElementById("email_i").value;
 var website = document.getElementById("website_i").value;
 var link = document.getElementById("link_i").value;
-var photo_created = document.getElementById("photo_created").value;
 
-var cover = document.getElementById("cover").value;
+
+
 var type = document.getElementById("type").value;
 var page_token = document.getElementById("page_token").value;
 var name = document.getElementById("name").value;
-var page_id = document.getElementById("page_id").value;
+
 var latitude = document.getElementById("latitude_box").value;
 var longitude = document.getElementById("longitude_box").value;
 
@@ -1508,8 +1518,6 @@ var postcode = document.getElementById("zip_i").value;
 var suburb = document.getElementById("locality_i").value;
 var state = document.getElementById("state_i").value;
 var country = document.getElementById("country_i").value;
-
-
 
 if (schedule){	
 	
@@ -1550,6 +1558,11 @@ openFB.apip({
 	
 }
 	
+	
+});
+
+
+	
 
 
 
@@ -1580,7 +1593,6 @@ function setCover(url){
 function uploadPhoto() {
             var imageURI = document.getElementById("imageURI").value;
             var page_id = document.getElementById("page_id").value;
-            var cover = document.getElementById("cover").value;
             var photo_created = Math.round(new Date() / 1000);
             document.getElementById("photo_created").value = photo_created;
             var options = new FileUploadOptions();
@@ -1590,8 +1602,6 @@ function uploadPhoto() {
  
            var params = new Object();
             params.value1 = page_id + '_' + photo_created;
-            params.value2 = page_id;
-            params.value3 = cover;
  
             options.params = params;
             options.chunkedMode = false;
