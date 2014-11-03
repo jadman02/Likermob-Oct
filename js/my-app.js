@@ -214,7 +214,7 @@ var singlequote = str.replace(/'/g, "qqqq");
 var type = response[i][9];
 var cover;
 if (response[i][14]) {cover = response[i][14];}
-if (response[i][21]) {cover = 'http://smilesavers.net.au/images/likermob/' + response[i][1] + '_' + response[i][21] + '.jpg';}
+//if (response[i][21]) {cover = 'http://smilesavers.net.au/images/likermob/' + response[i][1] + '_' + response[i][21] + '.jpg';}
 
 
 someText = str.replace(/(\r\n|\n|\r)/gm,"<br />");
