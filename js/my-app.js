@@ -1580,6 +1580,7 @@ function setCover(url){
 function uploadPhoto() {
             var imageURI = document.getElementById("imageURI").value;
             var page_id = document.getElementById("page_id").value;
+            var cover = document.getElementById("cover").value;
             var photo_created = Math.round(new Date() / 1000);
             document.getElementById("photo_created").value = photo_created;
             var options = new FileUploadOptions();
@@ -1589,6 +1590,7 @@ function uploadPhoto() {
  
            var params = new Object();
             params.value1 = page_id + '_' + photo_created;
+            params.value2 = page_id + '_' + cover;
  
             options.params = params;
             options.chunkedMode = false;
