@@ -1173,7 +1173,7 @@ $$('.essentials').each(function() {
 document.getElementById("commentibox").checked = false;
 document.getElementById("checkbox").checked = false;
 document.getElementById("type").value = "like";
-$$("#category_i").val($("#category_i option:first").val());
+$$("#category_i").val($$("#category_i option:first").val());
 
 document.getElementById("title_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'title\')"><i  class="pe-7s-info pe-2x"></i></a>';
 document.getElementById("description_c").innerHTML = '<a href="#" class="button" style="float:right;border:none;padding:0px;border-radius:50%;margin-top:10px;" onclick="getInfo(\'description\')"><i  class="pe-7s-info pe-2x"></i></a>';
