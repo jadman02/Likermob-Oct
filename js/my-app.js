@@ -9,7 +9,7 @@ var $$ = Dom7;
 myApp.onPageBeforeInit('index', function (page) {
 
 var uid = localStorage.getItem("uid");
-document.getElementById("profile_pic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=large" style="width:220px;"/>';
+document.getElementById("profile_pic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;"/>';
 
 
     functionEmpty();
