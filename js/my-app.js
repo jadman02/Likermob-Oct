@@ -60,7 +60,7 @@ functionEmpty();
 	
 myApp.onPageInit('location', function (page) {
 
-alert('on location page');
+
 
 document.getElementsByName('numPeople')[0].placeholder=localStorage.getItem("position");
 
