@@ -1355,7 +1355,7 @@ function openSearchHome() {
     '</div>'+
  ' </div>'+
 '</div>'+
-'<div class="right"></div>'+
+'<div class="right">  </div>'+
 '<form class="searchbar"><div class="searchbar-input"><input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress"></div></form>'+
 '<div class="content-block">'+
 '<a href="#" class="button disabled" id="search_button" style="height:80px;position:absolute;border:none;left:40%;margin-top:50px;"><i class="pe-7s-search pe-5x"></i></a>'+
