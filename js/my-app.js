@@ -11,7 +11,6 @@ myApp.onPageBeforeInit('index', function (page) {
 var uid = localStorage.getItem("uid");
 profilepic = 'http://graph.facebook.com/' + uid + '/picture?type=normal&height=50&width=50';
 	$$( '.panel' ).css( 'background-image', 'url(\''+ profilepic  +'\')' );
-	$$( '.panel' ).css( 'background-size', '100%' );
 	$$( '.panel' ).css( 'background-repeat', 'no-repeat' );
 	$$( '.panel' ).css( 'background-position', 'center' );
 
