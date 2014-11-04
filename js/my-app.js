@@ -1352,7 +1352,9 @@ function openSearchHome() {
         '<a href="#tab3" class="tab-link button"><i class="pe-7s-filter pe-lg" style="padding-left:15px;padding-right:15px;"></i></a>'+
       '</div>'+
     '</div>'+
- '<div class="right"></div>'+
+    
+    
+ '<div class="right"><i class="pe-7s-compass pe-lg"></i></div>'+
  ' </div>'+
 '</div>'+
 
