@@ -10,16 +10,17 @@
       <!-- Buttons row as tabs controller in navbar-->
       <div class="buttons-row">
         <!-- Link to 1st tab, active -->
-        <a href="#tab1" class="tab-link active button"><i class="pe-7s-map-marker pe-lg"></i></a>
+        <a href="#tab1" class="tab-link active button"><i class="pe-7s-map-marker pe-lg"></i> Location</a>
         <!-- Link to 2nd tab -->
-        <a href="#tab2" class="tab-link button"><i class="pe-7s-map-marker pe-lg"></i></a>
+        <a href="#tab2" class="tab-link button"><i class="pe-7s-search pe-lg"></i> Page</a>
+        <a href="#tab3" class="tab-link button"><i class="pe-7s-filter pe-lg"></i> Category</a>
       </div>
     </div>
   </div>
 </div>
 <div data-page="location" class="page" style="margin-top:25px;">
 
-<form class="searchbar"><a href="#" class="close-popup" onclick="document.getElementById(\'addressbox\').checked = true;showAddress();document.getElementById(\'addressbox\').checked = false;"><i class="icon icon-back" style="margin-right:10px;"></i></a><div class="searchbar-input" style="width:200px;"><input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress" ></div><div class="buttons-row"><a href="#tab1" class="tab-link active button"><i class="pe-7s-map-marker pe-lg"></i></a><a href="#tab2" class="tab-link button"><i class="pe-7s-photo-gallery pe-lg"></i></a></div></form>
+<form class="searchbar"><div class="searchbar-input"><input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress"></div></form>
 <div class="content-block">
 <a href="#" class="button disabled" id="search_button" style="height:80px;position:absolute;border:none;left:40%;margin-top:50px;"><i class="pe-7s-search pe-5x"></i></a>
 <div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resulta" style="background-color:transparent;border:none;padding:0px;margin:0px;"></ul></div>
