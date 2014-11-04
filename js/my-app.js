@@ -8,8 +8,8 @@ var $$ = Dom7;
 
 myApp.onPageBeforeInit('index', function (page) {
 
-
-
+var uid = localStorage.getItem("uid");
+document.getElementById("profile_pic").innerHTML = 'http://graph.facebook.com/' + uid + '/picture?type=small';
 
 
     functionEmpty();
