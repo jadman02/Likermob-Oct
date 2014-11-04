@@ -1346,16 +1346,16 @@ function openSearchHome() {
     '<div class="left"><a href="#" class="close-popup"><i class="icon icon-back" style="margin-right:10px;"></i></a></div>'+
     
     '<div class="center">'+
-'Search' +
  '<div class="buttons-row" style="padding:5px;">'+
        ' <a href="#tab1" class="tab-link active button"><i class="pe-7s-map-marker pe-lg" style="padding-left:5px;padding-right:5px;"></i></a>'+
         '<a href="#tab2" class="tab-link button"><i class="pe-7s-photo-gallery pe-lg" style="padding-left:5px;padding-right:5px;"></i></a>'+
         '<a href="#tab3" class="tab-link button"><i class="pe-7s-filter pe-lg" style="padding-left:5px;padding-right:5px;"></i></a>'+
       '</div>'+
     '</div>'+
+ '<div class="right"></div>'+
  ' </div>'+
 '</div>'+
-'<div class="right">  </div>'+
+
 '<form class="searchbar"><div class="searchbar-input"><input type="search" placeholder="Search for address" style="width:100px;" onkeyup="searchPlaces();" id="fulladdress"></div></form>'+
 '<div class="content-block">'+
 '<a href="#" class="button disabled" id="search_button" style="height:80px;position:absolute;border:none;left:40%;margin-top:50px;"><i class="pe-7s-search pe-5x"></i></a>'+
