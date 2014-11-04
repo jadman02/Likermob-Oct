@@ -9,10 +9,11 @@ var $$ = Dom7;
 myApp.onPageBeforeInit('index', function (page) {
 
 var uid = localStorage.getItem("uid");
-profilepic = 'http://graph.facebook.com/' + uid + '/picture?type=normal';
+profilepic = 'http://graph.facebook.com/' + uid + '/picture?type=normal&height=50px&width=50px';
 	$$( '.panel' ).css( 'background-image', 'url(\''+ profilepic  +'\')' );
 	$$( '.panel' ).css( 'background-size', '100%' );
 	$$( '.panel' ).css( 'background-repeat', 'no-repeat' );
+	$$( '.panel' ).css( 'background-position', 'center' );
 
 
     functionEmpty();
