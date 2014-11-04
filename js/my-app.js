@@ -1344,6 +1344,7 @@ function openSearchHome() {
 '<div class="navbar"><div class="navbar-inner">'+
     '<div class="left"><a href="index.html" class="back" icon-only><i class="icon icon-back"></i></a></div>'+
     '<div class="center">Search</div>'+
+    '<div class="right"></div>'+
   '</div>'+
 '</div>'+
  '<div class="buttons-row" style="padding:5px;">'+
