@@ -15,7 +15,6 @@ profilepic = 'http://graph.facebook.com/' + uid + '/picture?type=normal&height=5
 	$$( '.panel' ).css( 'background-repeat', 'no-repeat' );
 	$$( '.panel' ).css( 'background-position', 'center' );
 
-
     functionEmpty();
 	
 	
