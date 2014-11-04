@@ -1346,6 +1346,11 @@ function openSearchHome() {
     '<div class="center">Search</div>'+
   '</div>'+
 '</div>'+
+ '<div class="buttons-row" style="padding:5px;">'+
+       ' <a href="#tab1" class="tab-link active button"><i class="pe-7s-map-marker pe-lg"></i></a>'+
+        '<a href="#tab2" class="tab-link button"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
+        '<a href="#tab3" class="tab-link button"><i class="pe-7s-filter pe-lg"></i></a>'+
+      '</div>'+
 '<form class="searchbar"><a href="#" class="close-popup" onclick="document.getElementById(\'addressbox\').checked = true;showAddress();document.getElementById(\'addressbox\').checked = false;"><i class="icon icon-back" style="margin-right:10px;"></i></a><div class="searchbar-input"><input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress"></div></form>'+
 '<div class="content-block">'+
 '<a href="#" class="button disabled" id="search_button" style="height:80px;position:absolute;border:none;left:40%;margin-top:50px;"><i class="pe-7s-search pe-5x"></i></a>'+
