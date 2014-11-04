@@ -1343,7 +1343,7 @@ function openSearchHome() {
 '<div class="popup">'+
  '<div class="navbar">'+
  ' <div class="navbar-inner">'+
-    '<div class="left"><a href="#" class="close-popup"><i class="icon icon-back" style="margin-right:10px;"></i></a></div>'+
+    '<div class="left"><a href="#" class="close-popup"><i class="icon icon-back" style="margin-right:10px;"></i></a>Search</div>'+
     
     '<div class="center">'+
 
