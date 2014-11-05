@@ -1351,11 +1351,9 @@ function openSearchHome() {
     
     
  '<div class="right">'+
- '<div class="buttons-row">'+
        ' <a href="#tab1" class="active button"><i class="pe-7s-map-marker pe-lg"></i></a>'+
         '<a href="#tab2" class="button"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
         '<a href="#tab3" class="button"><i class="pe-7s-filter pe-lg"></i></a>'+
-      '</div>'+
  '</div>'+
  ' </div>'+
 '</div>'+
