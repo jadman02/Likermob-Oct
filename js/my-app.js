@@ -1337,7 +1337,7 @@ function openSearch() {
 }
 
 
-showCancel() {
+function showCancel() {
 		$$('.searchbar-cancel').show();
 	
 }
