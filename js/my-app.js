@@ -1336,6 +1336,13 @@ function openSearch() {
 	
 }
 
+
+showCancel() {
+		$$('.searchbar-cancel').show();
+	
+}
+
+
 function openSearchHome() {
 
 
@@ -1358,9 +1365,9 @@ function openSearchHome() {
  ' </div>'+
 '</div>'+
 
- ' <form class="searchbar" data-search-list="" data-search-in="" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">'+
+ ' <form class="searchbar">'+
        ' <div class="searchbar-input">'+
-          '  <input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress">'+
+          '  <input type="search" onfocus="showCancel();" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress">'+
           '  <a href="#" class="searchbar-clear"></a>'+
        ' </div>'+
         '<a href="#" class="searchbar-cancel">Cancel</a>'+
