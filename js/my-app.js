@@ -1352,12 +1352,10 @@ function openSearchHome() {
  ' <div class="navbar-inner">'+
     '<div class="left"><a href="#" class="close-popup"><i class="icon icon-back" style="margin-right:10px;"></i></a></div>'+
     
-    '<div class="center">Location'+
- 
-    '</div>'+
+
     
     
- '<div class="right">'+
+ '<div class="right">Location'+
        ' <a href="#tab1" class="active button"><i class="pe-7s-map-marker pe-lg"></i></a>'+
         '<a href="#tab2" class="button"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
         '<a href="#tab3" class="button"><i class="pe-7s-filter pe-lg"></i></a>'+
@@ -1368,9 +1366,8 @@ function openSearchHome() {
  ' <form class="searchbar">'+
        ' <div class="searchbar-input">'+
           '  <input type="search" onfocus="showCancel();" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress">'+
-          '  <a href="#" class="searchbar-clear"></a>'+
        ' </div>'+
-        '<a href="#" class="searchbar-cancel">Cancel</a>'+
+
    ' </form>'+
 
 
