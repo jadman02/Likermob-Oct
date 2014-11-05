@@ -1340,7 +1340,7 @@ function openSearchHome() {
 
 
 	 var popupHTML = 
-'<div class="popup" style="background-color:#ff8000;">'+
+'<div class="popup" class="theme-orange">'+
  '<div class="navbar">'+
  ' <div class="navbar-inner">'+
     '<div class="left"><a href="#" class="close-popup"><i class="icon icon-back" style="margin-right:10px;"></i></a></div>'+
