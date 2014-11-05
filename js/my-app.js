@@ -1358,7 +1358,15 @@ function openSearchHome() {
  ' </div>'+
 '</div>'+
 
-'<form class="searchbar"><div class="searchbar-input"><input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress"></div></form>'+
+ ' <form class="searchbar" data-search-list="" data-search-in="" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">'+
+       ' <div class="searchbar-input">'+
+          '  <input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress">'+
+          '  <a href="#" class="searchbar-clear"></a>'+
+       ' </div>'+
+        '<a href="#" class="searchbar-cancel">Cancel</a>'+
+   ' </form>'+
+
+
 '<div class="content-block">'+
 '<a href="#" class="button disabled" id="search_button" style="height:80px;position:absolute;border:none;left:40%;margin-top:50px;"><i class="pe-7s-search pe-5x"></i></a>'+
 '<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resulta" style="background-color:transparent;border:none;padding:0px;margin:0px;"></ul></div>'+
