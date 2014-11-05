@@ -1345,7 +1345,7 @@ function openSearchHome() {
 
 	 var popupHTML = 
 '<div class="popup">'+
- '<div class="navbar theme-orange">'+
+ '<div class="navbar theme-white" style="background-color:#ff8000;">'+
  ' <div class="navbar-inner">'+
     '<div class="left"><a href="#" class="close-popup"><i class="icon icon-back" style="margin-right:10px;"></i></a></div>'+
     
@@ -1364,7 +1364,7 @@ function openSearchHome() {
        ' <div class="searchbar-input">'+
           '  <input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress">'+
        ' </div>'+
-'<a href="#" class="button">Current location</a>'+
+'<a href="#" class="button" style="margin-left:5px;"><i class="pe-7s-compass"></i></a>'+
    ' </form>'+
 
 
