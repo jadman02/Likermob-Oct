@@ -1337,10 +1337,7 @@ function openSearch() {
 }
 
 
-function showCancel() {
-		$$('.searchbar-cancel').show();
-	
-}
+
 
 
 function openSearchHome() {
@@ -1355,7 +1352,7 @@ function openSearchHome() {
 
     
     
- '<div class="right">Location'+
+ '<div class="right"><b style="margin-right:10px;">Location</b>'+
        ' <a href="#tab1" class="active button"><i class="pe-7s-map-marker pe-lg"></i></a>'+
         '<a href="#tab2" class="button"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
         '<a href="#tab3" class="button"><i class="pe-7s-filter pe-lg"></i></a>'+
@@ -1365,9 +1362,9 @@ function openSearchHome() {
 
  ' <form class="searchbar">'+
        ' <div class="searchbar-input">'+
-          '  <input type="search" onfocus="showCancel();" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress">'+
+          '  <input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress">'+
        ' </div>'+
-
+'<a href="#" class="button">Current location</a>'+
    ' </form>'+
 
 
