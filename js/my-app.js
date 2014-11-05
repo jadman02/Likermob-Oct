@@ -1344,7 +1344,7 @@ function openSearchHome() {
 
 
 	 var popupHTML = 
-'<div class="popup">'+
+'<div class="popup" background-color:#ff8000;>'+
  '<div class="navbar theme-orange">'+
  ' <div class="navbar-inner">'+
     '<div class="left"><a href="#" class="close-popup"><i class="icon icon-back" style="margin-right:10px;"></i></a></div>'+
@@ -1369,7 +1369,7 @@ function openSearchHome() {
 
 
 '<div class="content-block">'+
-'<a href="#" class="button disabled" id="search_button" style="height:80px;position:absolute;border:none;left:40%;margin-top:50px;"><i class="pe-7s-search pe-5x"></i></a>'+
+'<a href="#" class="button disabled" id="search_button" style="height:80px;position:absolute;border:none;left:40%;margin-top:50px;"><i class="pe-7s-map-marker pe-5x" style="color:white;"></i></a>'+
 '<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resulta" style="background-color:transparent;border:none;padding:0px;margin:0px;"></ul></div>'+
 
 '</div>'+
