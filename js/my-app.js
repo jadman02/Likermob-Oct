@@ -1346,15 +1346,17 @@ function openSearchHome() {
     '<div class="left"><a href="#" class="close-popup"><i class="icon icon-back" style="margin-right:10px;"></i></a></div>'+
     
     '<div class="center">'+
- '<div class="buttons-row" style="padding:5px;">'+
-       ' <a href="#tab1" class="tab-link active button"><i class="pe-7s-map-marker pe-lg" style="padding-left:15px;padding-right:15px;"></i></a>'+
-        '<a href="#tab2" class="tab-link button"><i class="pe-7s-photo-gallery pe-lg" style="padding-left:15px;padding-right:15px;"></i></a>'+
-        '<a href="#tab3" class="tab-link button"><i class="pe-7s-filter pe-lg" style="padding-left:15px;padding-right:15px;"></i></a>'+
-      '</div>'+
+ Location
     '</div>'+
     
     
- '<div class="right"><i class="pe-7s-compass pe-lg"></i></div>'+
+ '<div class="right">'+
+ '<div class="buttons-row">'+
+       ' <a href="#tab1" class="tab-link active button"><i class="pe-7s-map-marker pe-lg" style="padding-left:5px;padding-right:5px;"></i></a>'+
+        '<a href="#tab2" class="tab-link button"><i class="pe-7s-photo-gallery pe-lg" style="padding-left:5px;padding-right:5px;"></i></a>'+
+        '<a href="#tab3" class="tab-link button"><i class="pe-7s-filter pe-lg" style="padding-left:5px;padding-right:5px;"></i></a>'+
+      '</div>'+
+ '</div>'+
  ' </div>'+
 '</div>'+
 
