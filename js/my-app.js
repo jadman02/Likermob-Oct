@@ -1417,11 +1417,11 @@ var position = localStorage.getItem("position");
 var mySlider = myApp.slider('.slider-container', {
   pagination: '.slider-pagination',
   paginationHide: false,
-  loop:true,
   onSlideChangeEnd(slider) : function() {
       //Do something when you touch the slide
-      alert(mySlider.activeSlideIndex); 
+      alert('changed'); 
     }
+  
 }); 
 //document.getElementsByName('addressf')[0].placeholder=;
 }
