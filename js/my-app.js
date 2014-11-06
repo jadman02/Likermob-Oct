@@ -1342,9 +1342,7 @@ function openSearch() {
 
 function openSearchHome() {
 
-heightnavbar = $$('.navbar').height();
-
-alert(heightnavbar);
+var heightslider = $$(window).height() - 44;
 
 $$("#result li").remove();
 $$( ".business" ).remove();
@@ -1367,7 +1365,7 @@ var position = localStorage.getItem("position");
 '</div>'+
 
 '<div class="slider-custom"><div class="slider-container slider-init"><div class="slider-pagination"></div><div class="slider-wrapper">'+
-        '<div class="slider-slide">'+
+        '<div class="slider-slide" style="height:'+ heightslider +' px;">'+
         
                      ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
@@ -1383,8 +1381,8 @@ var position = localStorage.getItem("position");
 '</div>'+
         
         '</div>'+
-        '<div class="slider-slide"><span>Slide 2</span></div>'+
-        '<div class="slider-slide"><span>Slide 3</span></div>'+
+        '<div class="slider-slide" style="height:'+ heightslider +' px;"><span>Slide 2</span></div>'+
+        '<div class="slider-slide" style="height:'+ heightslider +' px;"><span>Slide 3</span></div>'+
 '</div></div></div></div>'+
 
 
