@@ -1357,9 +1357,9 @@ var position = localStorage.getItem("position");
     
     
  '<div class="right"><b style="margin-right:10px;color:#ff8000" id="searchtitle">Set Location</b>'+
-       ' <a href="#" class="active button location"><i class="pe-7s-map-marker pe-lg"></i></a>'+
-        '<a href="#" class="button gallery"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
-        '<a href="#" class="button filter"><i class="pe-7s-filter pe-lg"></i></a>'+
+       ' <a href="#" class="active button location" onclick="searchPopup(\'location\')"><i class="pe-7s-map-marker pe-lg"></i></a>'+
+        '<a href="#" class="button gallery" onclick="searchPopup(\'gallery\')"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
+        '<a href="#" class="button filter" onclick="searchPopup(\'filter\')"><i class="pe-7s-filter pe-lg"></i></a>'+
  '</div>'+
  ' </div>'+
 '</div>'+
