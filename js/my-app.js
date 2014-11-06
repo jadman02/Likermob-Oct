@@ -1834,14 +1834,14 @@ function nameDb() {
 	
 
 var searchvalue1 = document.getElementById('dbnames').value;
-alert(searchvalue1);
+
 
 $$.getJSON('http://smilesavers.net.au/getname.php?callback=?','input=' + searchvalue1,function(response){
 $$("#resultd li").remove();
 for (i = 0; i < 5; i++) 
 { 
 	
-
+alert(response[i][1]);
 	
 $$( '#resultd' ).append('<li class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title button" style="margin-left:15px;" onclick="">' +  response[i][1] + '</div></div></li>');
 }
