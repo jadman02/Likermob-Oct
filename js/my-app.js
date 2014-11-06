@@ -1352,7 +1352,7 @@ function openSearchHome() {
 
     
     
- '<div class="right"><b style="margin-right:10px;color:#ff8000" id="searchtitle">Location</b>'+
+ '<div class="right"><b style="margin-right:10px;color:#ff8000" id="searchtitle">Search Location</b>'+
        ' <a href="#" class="active button"><i class="pe-7s-map-marker pe-lg"></i></a>'+
         '<a href="#" class="button"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
         '<a href="#" class="button"><i class="pe-7s-filter pe-lg"></i></a>'+
@@ -1364,7 +1364,7 @@ function openSearchHome() {
        ' <div class="searchbar-input">'+
           '  <input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress">'+
        ' </div>'+
-'<a href="#" class="button" style="margin-left:5px;"><i class="pe-7s-compass" style="color:white"></i></a>'+
+'<a href="#" class="button theme-white" style="margin-left:5px;"><i class="pe-7s-compass pe-lg"></i></a>'+
    ' </form>'+
 
 
