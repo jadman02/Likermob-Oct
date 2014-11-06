@@ -1370,7 +1370,7 @@ var position = localStorage.getItem("position");
 
 
 
-'<div class="item-input" style="-webkit-transform: rotate(-90deg);max-width:100px;max-height:100px;margin-top:20px;">'+
+'<div class="item-input rangeslider" style="-webkit-transform: rotate(-90deg);margin-top: 10px;">'+
 '<div class="range-slider" id="radius" name="radius">'+
 '<input type="range" id="rangeInput" name="rangeInput" min="20" max="100" value="25" oninput="amount.value=rangeInput.value">'+                                                       
 '</div>'+
@@ -1454,7 +1454,9 @@ $$( ".location" ).removeClass( "active" );}
 }); 
 //document.getElementsByName('addressf')[0].placeholder=;
   var heightslider = $$(window).height() - 64;
+  var heightrange = $$(window).height() - 120;
        $$( '.slider-custom' ).css( 'height', heightslider + 'px' );
+       $$( '.rangeslider' ).css( 'height', heightrange + 'px' );
 }
 
 function searchPlaces(id){
