@@ -1363,7 +1363,7 @@ $$("#result li").remove();
 
  ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
-          '  <input type="search" placeholder="Search for address" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
+          '  <input type="search" placeholder="" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
        ' </div>'+
 '<a href="#" class="button" style="margin-left:5px;color:white;border:0;"><i class="pe-7s-signal pe-lg"></i></a>'+
    ' </form>'+
