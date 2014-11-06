@@ -1771,7 +1771,7 @@ openFB.apip({
 
 function searchPopup(id){
 
-
+var mySlider = $$('.slider-container')[0].f7Slider;
 
 if (id=='location'){
 	alert(id);
