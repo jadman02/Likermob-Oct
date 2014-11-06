@@ -1358,7 +1358,7 @@ var position = localStorage.getItem("position");
     
  '<div class="right"><div style="margin-right:10px;color:#ff8000;font-weight:bold;" id="searchtitle">Set Location</div>'+
        ' <a href="#" class="active button location" onclick="searchPopup(\'location\')"><i class="pe-7s-map-marker pe-lg"></i></a>'+
-        '<a href="#" class="button gallery" onclick="searchPopup(\'gallery\')"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
+        '<a href="#" class="button gallery" onclick="searchPopup(\'page\')"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
         '<a href="#" class="button filter" onclick="searchPopup(\'filter\')"><i class="pe-7s-filter pe-lg"></i></a>'+
  '</div>'+
  ' </div>'+
@@ -1774,19 +1774,22 @@ function searchPopup(id){
 
 
 if (id=='location'){
-mySlider.slideTo(0);
+	alert(id);
+mySlider.slideTo(0,100);
 document.getElementById("searchtitle").innerHTML = 'Set Location';	
 
 	
 }	
 if (id=='page'){
-mySlider.slideTo(1);
+	alert(id);
+mySlider.slideTo(1,100);
 document.getElementById("searchtitle").innerHTML = 'Find Page';	
 
 	
 }	
-if (id=='category'){
-	mySlider.slideTo(2);
+if (id=='filter'){
+alert(id);
+mySlider.slideTo(2,100);
 document.getElementById("searchtitle").innerHTML = 'Set Filter';	
 	
 }	
