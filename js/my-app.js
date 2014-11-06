@@ -1334,7 +1334,7 @@ function openSearch() {
 function openSearchHome() {
 
   var heightslider = $$(window).height() - 64;
-  var heightrange = $$(window).height() - 180;
+  var heightrange = $$(window).height() - 170;
 
 $$("#result li").remove();
 $$( ".business" ).remove();
@@ -1367,7 +1367,7 @@ var position = localStorage.getItem("position");
 
 
 '<div class="content-block">'+
-'<div class="list-block" style="margin-top:-30px;background-color:transparent;width:80%;float:left;"><ul id="resultf" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"></ul></div>'+
+'<div class="list-block" style="margin-top:-30px;background-color:transparent;width:80%;float:left;margin-left:0px;padding-left:0px;"><ul id="resultf" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"></ul></div>'+
 
 
 
