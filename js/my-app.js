@@ -1833,10 +1833,10 @@ mySlider.slideTo(2);
 function nameDb() {
 	
 
+searchvalue = document.getElementById('dbnames').value;
+alert(searchvalue);
 
-alert('keyup');
-
-$$.getJSON('http://smilesavers.net.au/getname.php?callback=?','input=' + this.value,function(response){
+$$.getJSON('http://smilesavers.net.au/getname.php?callback=?','input=' + searchvalue,function(response){
 $$("#resultd li").remove();
 for (i = 0; i < 5; i++) 
 { 
