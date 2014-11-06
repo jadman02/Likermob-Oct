@@ -1833,7 +1833,7 @@ mySlider.slideTo(2);
 function nameDb() {
 	
 
-searchvalue = document.getElementById('dbnames').value;
+var searchvalue = document.getElementById('dbnames').value;
 alert(searchvalue);
 
 $$.getJSON('http://smilesavers.net.au/getname.php?callback=?','input=' + searchvalue,function(response){
