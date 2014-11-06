@@ -12,7 +12,23 @@ var uid = localStorage.getItem("uid");
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
 
     functionEmpty();
+
+$$('#dbnames').keyup(function(){
+
+
+
+$$.getJSON('http://smilesavers.net.au/getname.php?callback=?','input=' + this.value,function(response){
+$$("#resultd li").remove();
+for (i = 0; i < 5; i++) 
+{ 
 	
+
+	
+$$( '#resultd' ).append('<li class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title button" style="margin-left:15px;" onclick="">' +  response[i][1] + '</div></div></li>');
+}
+});    
+    
+});	
 	
 
 
@@ -69,23 +85,8 @@ if (!radius) {radius == 25;}
 
 document.getElementById("amount").innerHTML = radius;
 
-//Autocomplete JSON Google
-$$('#dbnames').keyup(function(){
 
 
-
-$$.getJSON('http://smilesavers.net.au/getname.php?callback=?','input=' + this.value,function(response){
-$$("#resultf li").remove();
-for (i = 0; i < 5; i++) 
-{ 
-	
-
-	
-$$( '#resulty' ).append('<li class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title button" style="margin-left:15px;" onclick="savePosition(\''+ response.predictions[i].place_id  +'\')">' + response.predictions[i].description + '</div></div></li>');
-}
-});    
-    
-});
 
 
 
@@ -1351,7 +1352,7 @@ var position = localStorage.getItem("position");
 '<div class="popup popup-search" style="background-color:#ff8000;">'+
  '<div class="navbar theme-orange">'+
  ' <div class="navbar-inner">'+
-    '<div class="left"><a href="#" class="close-popup" onclick="functionEmpty();"><i class="icon icon-back" style="margin-right:10px;"></i></a><div style="font-style:bold;" id="searchtitle">Location</div></div>'+
+    '<div class="left"><a href="#" class="close-popup" onclick="functionEmpty();"><i class="icon icon-back" style="margin-right:10px;"></i></a><div style="font-weight:bold;margin-left:15px;" id="searchtitle">Location</div></div>'+
     
     
  '<div class="right">'+
@@ -1379,7 +1380,19 @@ var position = localStorage.getItem("position");
 '</div>'+
         
         '</div>'+
-        '<div class="slider-slide"><span>Slide 2</span></div>'+
+        '<div class="slider-slide">'+
+                             '<form class="searchbar" style="background-color:#ff8000; border:0;">'+
+       ' <div class="searchbar-input">'+
+          '  <input type="search" placeholder="Search business" id="#dbnames">'+
+       ' </div>'+
+   ' </form>'+
+
+
+'<div class="content-block">'+
+'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultd" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"></ul></div>'+
+
+'</div>'+
+        '</div>'+
         '<div class="slider-slide"><span>Slide 3</span></div>'+
 '</div></div></div></div>'+
 
@@ -1433,7 +1446,7 @@ $$( ".location" ).removeClass( "active" );}
 
 }); 
 //document.getElementsByName('addressf')[0].placeholder=;
-  var heightslider = $$(window).height() - 44;
+  var heightslider = $$(window).height() - 64;
        $$( '.slider-custom' ).css( 'height', heightslider + 'px' );
 }
 
