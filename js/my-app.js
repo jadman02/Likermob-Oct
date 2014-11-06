@@ -1359,7 +1359,7 @@ var position = localStorage.getItem("position");
         
 
   
-          '  <input type="text" placeholder="<i class="pe-7s-map-marker pe-lg"></i>'+ position +'" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
+          '  <input type="text" placeholder="<i class=\'pe-7s-map-marker pe-lg\'></i>'+ position +'" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
 
 '<div class="item-title label" style="background-color:white;border-radius:5px;margin-left:5px;padding:4px;float:left;width:60px;"><output name="amount" id="amount" for="rangeInput">20</output> km</div>'+
 //'<a href="#" class="button" style="margin-left:5px;color:white;border:0;"><i class="pe-7s-signal pe-lg"></i></a>'+
