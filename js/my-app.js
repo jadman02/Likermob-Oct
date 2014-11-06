@@ -1366,11 +1366,11 @@ var position = localStorage.getItem("position");
 
 
 '<div class="content-block">'+
-'<div class="list-block" style="margin-top:-30px;background-color:transparent;width:85%;float:left;"><ul id="resultf" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"></ul></div>'+
+'<div class="list-block" style="margin-top:-30px;background-color:transparent;width:80%;float:left;"><ul id="resultf" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"></ul></div>'+
 
 
 
-'<div class="item-input rangeslider" style="-webkit-transform: rotate(-90deg);width:15%;float:left;">'+
+'<div class="item-input rangeslider" style="-webkit-transform: rotate(-90deg);width:20%;float:left;height:200px;">'+
 '<div class="range-slider" id="radius" name="radius">'+
 '<input type="range" id="rangeInput" name="rangeInput" min="20" max="99" value="25" oninput="amount.value=rangeInput.value">'+                                                       
 '</div>'+
