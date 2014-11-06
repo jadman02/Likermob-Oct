@@ -1324,7 +1324,7 @@ function openSearch() {
 
 
 	 var popupHTML = '<div class="popup">'+
-'<form class="searchbar"><a href="#" class="close-popup" onclick="document.getElementById(\'addressbox\').checked = true;showAddress();document.getElementById(\'addressbox\').checked = false;"><i class="icon icon-back" style="margin-right:10px;"></i></a><div class="searchbar-input"><input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress"></div></form>'+
+'<form class="searchbar"><a href="#" class="close-popup" onclick="document.getElementById(\'addressbox\').checked = true;showAddress();document.getElementById(\'addressbox\').checked = false;"><i class="icon icon-back" style="margin-right:10px;"></i></a><div class="searchbar-input"><input type="search" placeholder="Search for address" onkeyup="searchPlaces(\'search\');" id="fulladdress"></div></form>'+
 '<div class="content-block">'+
 '<a href="#" class="button disabled" id="search_button" style="height:80px;position:absolute;border:none;left:40%;margin-top:50px;"><i class="pe-7s-search pe-5x"></i></a>'+
 '<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resulta" style="background-color:transparent;border:none;padding:0px;margin:0px;"></ul></div>'+
@@ -1362,15 +1362,14 @@ function openSearchHome() {
 
  ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
-          '  <input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress">'+
+          '  <input type="search" placeholder="Search for address" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
        ' </div>'+
 '<a href="#" class="button" style="margin-left:5px;color:white;border:0;"><i class="pe-7s-signal pe-lg"></i></a>'+
    ' </form>'+
 
 
 '<div class="content-block">'+
-'<a href="#" class="button disabled" id="search_button" style="height:80px;position:absolute;border:none;left:40%;margin-top:50px;"><i class="pe-7s-map-marker pe-5x" style="color:white;"></i></a>'+
-'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resulta" style="background-color:transparent;border:none;padding:0px;margin:0px;"></ul></div>'+
+'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" style="background-color:transparent;border:none;padding:0px;margin:0px;"></ul></div>'+
 
 '</div>'+
 '</div>'
@@ -1379,10 +1378,30 @@ function openSearchHome() {
 	
 }
 
-function searchPlaces(){
+function searchPlaces(id){
 	
-var searchvalue = document.getElementById('fulladdress').value;
+var searchvalue;
 
+if (id=='set'){
+
+searchvalue = document.getElementById('fulladdressf').value;
+	
+$$.getJSON('https://maps.googleapis.com/maps/api/place/autocomplete/json?input='+ searchvalue +'&types=(cities)&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
+$$("#resultf li").remove();
+for (i = 0; i < 10; i++) 
+{ 
+	
+
+	
+$$( '#resultf' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\''+ response.predictions[i].place_id  +'\')" class="item-link"><div class="item-content"><div class="item-inner"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
+}
+});
+	
+}
+
+if (id=='search') {
+
+searchvalue= document.getElementById('fulladdress').value;	
 $$.getJSON('https://maps.googleapis.com/maps/api/place/autocomplete/json?input='+ searchvalue +'&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
 $$("#resulta li").remove();
 for (i = 0; i < 10; i++) 
@@ -1393,6 +1412,8 @@ for (i = 0; i < 10; i++)
 $$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')" class="item-link"><div class="item-content"><div class="item-inner"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
 }
 });
+}
+
 
 	
 }
