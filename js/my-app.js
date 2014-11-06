@@ -1414,7 +1414,7 @@ var position = localStorage.getItem("position");
 
 var mySlider = myApp.slider('.slider-container', {
   pagination: '.slider-pagination',
-  paginationHide: false,
+  paginationHide: true,
   onTransitionEnd : function() {
       //Do something when you touch the slide
       
@@ -1435,7 +1435,7 @@ $$( ".location" ).removeClass( "active" );}
 
 }); 
 //document.getElementsByName('addressf')[0].placeholder=;
-  var heightslider = $$(window).height() - 100;
+  var heightslider = $$(window).height() - 44;
        $$( '.slider-custom' ).css( 'height', heightslider + 'px' );
 }
 
