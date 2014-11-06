@@ -1364,40 +1364,14 @@ var position = localStorage.getItem("position");
  ' </div>'+
 '</div>'+
 
-'<div class="tabs-animated-wrap">'+
-        
-
-       ' <div class="tabs">'+
-
-         ' <div id="tab7" class="tab active">'+
-            
-             ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
-       ' <div class="searchbar-input">'+
-          '  <input type="search" placeholder="'+ position +'" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
-       ' </div>'+
-'<a href="#" class="button" style="margin-left:5px;color:white;border:0;"><i class="pe-7s-signal pe-lg"></i></a>'+
-   ' </form>'+
+<div class="slider-custom"><div class="slider-container slider-init"><div class="slider-pagination"></div><div class="slider-wrapper">
+        <div class="slider-slide"><span>Slide 1</span></div>
+        <div class="slider-slide"><span>Slide 2</span></div>
+        <div class="slider-slide"><span>Slide 3</span></div>
+</div></div></div></div>
 
 
-'<div class="content-block">'+
-'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" style="background-color:transparent;border:none;padding:0px;margin:0px;"></ul></div>'+
 
-'</div>'+
-            
-         ' </div>'+
- 
-
-        '  <div id="tab8" class="tab">2222'+
-            
-         ' </div>'+
- 
-
-         ' <div id="tab9" class="tab">3333'+
-           
-         ' </div>   '+    
-        '</div>'+
-        
-     ' </div> '+
 
 
 
@@ -1796,13 +1770,13 @@ function searchPopup(id){
 
 
 if (id=='location'){
-	alert(id);
+
 document.getElementById("searchtitle").innerHTML = 'Set Location';	
 
 	
 }	
 if (id=='page'){
-	alert(id);
+
 document.getElementById("searchtitle").innerHTML = 'Find Page';	
 
 	
