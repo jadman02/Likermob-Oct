@@ -1342,7 +1342,7 @@ function openSearch() {
 
 function openSearchHome() {
 
-var heightslider = $$(window).height() - 44;
+var heightslider = $$(window).height() - 44 + 'px';
 
 $$("#result li").remove();
 $$( ".business" ).remove();
@@ -1364,7 +1364,7 @@ var position = localStorage.getItem("position");
  ' </div>'+
 '</div>'+
 
-'<div class="slider-custom" style="height: 100%"><div class="slider-container slider-init"><div class="slider-pagination"></div><div class="slider-wrapper">'+
+'<div class="slider-custom" style="height: '+ heightslider +'"><div class="slider-container slider-init"><div class="slider-pagination"></div><div class="slider-wrapper">'+
         '<div class="slider-slide">'+
         
                      ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
