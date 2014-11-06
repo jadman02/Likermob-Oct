@@ -1365,10 +1365,43 @@ var position = localStorage.getItem("position");
 '</div>'+
 
 '<div class="slider-custom"><div class="slider-container slider-init"><div class="slider-pagination"></div><div class="slider-wrapper">'+
-        '<div class="slider-slide"><span>Slide 1</span></div>'+
+        '<div class="slider-slide">'+
+        
+                     ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
+       ' <div class="searchbar-input">'+
+          '  <input type="search" placeholder="'+ position +'" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
+       ' </div>'+
+'<a href="#" class="button" style="margin-left:5px;color:white;border:0;"><i class="pe-7s-signal pe-lg"></i></a>'+
+   ' </form>'+
+
+
+'<div class="content-block">'+
+'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" style="background-color:transparent;border:none;padding:0px;margin:0px;"></ul></div>'+
+
+'</div>'+
+        
+        '</div>'+
         '<div class="slider-slide"><span>Slide 2</span></div>'+
         '<div class="slider-slide"><span>Slide 3</span></div>'+
 '</div></div></div></div>'+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1383,7 +1416,8 @@ var position = localStorage.getItem("position");
 
 var mySlider = myApp.slider('.slider-container', {
   pagination: '.slider-pagination',
-  paginationHide: false
+  paginationHide: false,
+  loop:true
 }); 
 //document.getElementsByName('addressf')[0].placeholder=;
 }
@@ -1774,22 +1808,19 @@ function searchPopup(id){
 var mySlider = $$('.slider-container')[0].f7Slider;
 
 if (id=='location'){
-	alert(id);
-mySlider.slideTo(0,100);
+mySlider.slideTo(0,300);
 document.getElementById("searchtitle").innerHTML = 'Set Location';	
 
 	
 }	
 if (id=='page'){
-	alert(id);
-mySlider.slideTo(1,100);
+mySlider.slideTo(1,300);
 document.getElementById("searchtitle").innerHTML = 'Find Page';	
 
 	
 }	
 if (id=='filter'){
-alert(id);
-mySlider.slideTo(2,100);
+mySlider.slideTo(2,300);
 document.getElementById("searchtitle").innerHTML = 'Set Filter';	
 	
 }	
