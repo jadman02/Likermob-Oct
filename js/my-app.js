@@ -414,15 +414,14 @@ function savePosition(place_id) {
 
 $$.getJSON('https://maps.googleapis.com/maps/api/place/details/json?placeid='+ place_id +'&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
 
-$$("#resulty li").remove();
+$$("#resultf li").remove();
 
 
 localStorage.setItem("latitude", response.result.geometry.location.lat);
 localStorage.setItem("longitude", response.result.geometry.location.lng);
 localStorage.setItem("position", response.result.formatted_address);
 
-var elem = document.getElementById("numPeople");
-elem.value = response.result.formatted_address;
+
 
 });    	
 	
@@ -1341,7 +1340,9 @@ function openSearch() {
 
 
 function openSearchHome() {
-
+var position = localStorage.getItem("position");
+var elem = document.getElementById("addressf");
+elem.value = position;
 
 	 var popupHTML = 
 '<div class="popup" style="background-color:#ff8000;">'+
