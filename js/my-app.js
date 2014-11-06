@@ -1353,10 +1353,10 @@ var position = localStorage.getItem("position");
  ' <div class="navbar-inner">'+
     '<div class="left"><a href="#" class="close-popup" onclick="functionEmpty();"><i class="icon icon-back" style="margin-right:10px;"></i></a></div>'+
     
-
+'<div class="center"><div style="margin-right:10px;color:#ff8000;font-weight:bold;" id="searchtitle">Location</div></div>'+
     
     
- '<div class="right"><div style="margin-right:10px;color:#ff8000;font-weight:bold;" id="searchtitle">Set Location</div>'+
+ '<div class="right">'+
        ' <a href="#" class="active button location" onclick="searchPopup(\'location\')"><i class="pe-7s-map-marker pe-lg"></i></a>'+
         '<a href="#" class="button gallery" onclick="searchPopup(\'page\')"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
         '<a href="#" class="button filter" onclick="searchPopup(\'filter\')"><i class="pe-7s-filter pe-lg"></i></a>'+
@@ -1376,7 +1376,7 @@ var position = localStorage.getItem("position");
 
 
 '<div class="content-block">'+
-'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" style="background-color:transparent;border:none;padding:0px;margin:0px;"></ul></div>'+
+'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"></ul></div>'+
 
 '</div>'+
         
@@ -1420,15 +1420,15 @@ var mySlider = myApp.slider('.slider-container', {
   onTransitionEnd : function() {
       //Do something when you touch the slide
       
-      if (mySlider.activeSlideIndex=='0'){document.getElementById("searchtitle").innerHTML = 'Set Location';	
+      if (mySlider.activeSlideIndex=='0'){document.getElementById("searchtitle").innerHTML = 'Location';	
 $$( ".gallery" ).removeClass( "active" );
 $$( ".filter" ).removeClass( "active" );
 $$( ".location" ).addClass( "active" );}
-      if (mySlider.activeSlideIndex=='1'){document.getElementById("searchtitle").innerHTML = 'Find Page';	
+      if (mySlider.activeSlideIndex=='1'){document.getElementById("searchtitle").innerHTML = 'Business';	
 $$( ".gallery" ).addClass( "active" );
 $$( ".filter" ).removeClass( "active" );
 $$( ".location" ).removeClass( "active" );}
-      if (mySlider.activeSlideIndex=='2'){document.getElementById("searchtitle").innerHTML = 'Set Filter';	
+      if (mySlider.activeSlideIndex=='2'){document.getElementById("searchtitle").innerHTML = 'Category';	
 $$( ".gallery" ).removeClass( "active" );
 $$( ".filter" ).addClass( "active" );
 $$( ".location" ).removeClass( "active" );}
