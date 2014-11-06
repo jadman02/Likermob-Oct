@@ -1357,19 +1357,14 @@ var position = localStorage.getItem("position");
     
     
  '<div class="right"><div style="margin-right:10px;color:#ff8000;font-weight:bold;" id="searchtitle">Set Location</div>'+
-       ' <a href="#tab7" class="tab-link active button location" ><i class="pe-7s-map-marker pe-lg"></i></a>'+
-        '<a href="#tab8" class="tab-link button gallery" ><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
-        '<a href="#tab9" class="tab-link button filter" ><i class="pe-7s-filter pe-lg"></i></a>'+
+       ' <a href="#" class="active button location" onclick="searchPopup(\'location\')"><i class="pe-7s-map-marker pe-lg"></i></a>'+
+        '<a href="#" class="button gallery" onclick="searchPopup(\'gallery\')"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
+        '<a href="#" class="button filter" onclick="searchPopup(\'filter\')"><i class="pe-7s-filter pe-lg"></i></a>'+
  '</div>'+
  ' </div>'+
 '</div>'+
 
-'<div class="tabs-animated-wrap">'+
-'<div class="tabs">'+
-
-'<div id="tab7" class="tab active">'+
-
-' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
+ ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
           '  <input type="search" placeholder="'+ position +'" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
        ' </div>'+
@@ -1381,42 +1376,7 @@ var position = localStorage.getItem("position");
 '<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" style="background-color:transparent;border:none;padding:0px;margin:0px;"></ul></div>'+
 
 '</div>'+
-
-'<div id="tab8" class="tab">'+
-
-' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
-       ' <div class="searchbar-input">'+
-          '  <input type="search" placeholder="'+ position +'" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
-       ' </div>'+
-'<a href="#" class="button" style="margin-left:5px;color:white;border:0;"><i class="pe-7s-signal pe-lg"></i></a>'+
-   ' </form>'+
-
-
-'<div class="content-block">'+
-'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" style="background-color:transparent;border:none;padding:0px;margin:0px;"></ul></div>'+
-
-'</div>'+ 
-
-'<div id="tab9" class="tab">'+
-
-' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
-       ' <div class="searchbar-input">'+
-          '  <input type="search" placeholder="'+ position +'" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
-       ' </div>'+
-'<a href="#" class="button" style="margin-left:5px;color:white;border:0;"><i class="pe-7s-signal pe-lg"></i></a>'+
-   ' </form>'+
-
-
-'<div class="content-block">'+
-'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" style="background-color:transparent;border:none;padding:0px;margin:0px;"></ul></div>'+
-
-'</div>'+
-
-  
-       ' </div>'+
-     ' </div>' 
-
-
+'</div>'
                   
   myApp.popup(popupHTML);
 
