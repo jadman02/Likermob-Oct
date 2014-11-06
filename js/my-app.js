@@ -1361,7 +1361,7 @@ var position = localStorage.getItem("position");
 
 
 '<div class="content-block">'+
-'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"><li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\''+ response.predictions[i].place_id  +'\')" class="item-link"><div class="item-content"><div class="item-inner"><div class="item-title">Melbourne, Victoria, Australia</div></div></div></a></li></ul></div>'+
+'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"><li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="" class="item-link"><div class="item-content"><div class="item-inner"><div class="item-title">Melbourne, Victoria, Australia</div></div></div></a></li></ul></div>'+
 
 '</div>'+
         
