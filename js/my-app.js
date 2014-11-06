@@ -1364,7 +1364,7 @@ function openSearchHome() {
        ' <div class="searchbar-input">'+
           '  <input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress">'+
        ' </div>'+
-'<a href="#" class="button" style="margin-left:5px;"><i class="pe-7s-compass" class="theme-orange"></i></a>'+
+'<a href="#" class="button" style="margin-left:5px;"><i class="pe-7s-compass" class="white"></i></a>'+
    ' </form>'+
 
 
