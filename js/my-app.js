@@ -1369,7 +1369,7 @@ var position = localStorage.getItem("position");
 
         '<div class="tabs">'+
 
-          '<div id="tab1" class="tab active">'+
+          '<div id="tab7" class="tab active">'+
  ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
           '  <input type="search" placeholder="'+ position +'" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
@@ -1385,7 +1385,7 @@ var position = localStorage.getItem("position");
 '</div>'
          ' </div>'+
  
-         ' <div id="tab2" class="tab">'+
+         ' <div id="tab8" class="tab">'+
  ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
           '  <input type="search" placeholder="find page" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
@@ -1402,7 +1402,7 @@ var position = localStorage.getItem("position");
          ' </div>'+
  
           
-          '<div id="tab3" class="tab">'+
+          '<div id="tab9" class="tab">'+
  ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
           '  <input type="search" placeholder="'+ position +'" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
