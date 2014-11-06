@@ -1456,7 +1456,7 @@ $$( ".location" ).removeClass( "active" );}
   var heightslider = $$(window).height() - 64;
   var heightrange = $$(window).height() - 120;
        $$( '.slider-custom' ).css( 'height', heightslider + 'px' );
-       $$( '.rangeslider' ).css( 'height', heightrange + 'px' );
+       //$$( '.rangeslider' ).css( 'height', heightrange + 'px' );
 }
 
 function searchPlaces(id){
