@@ -1369,12 +1369,12 @@ var position = localStorage.getItem("position");
 
 '<div class="item-title label" style="margin-left:15px;"><output name="amount" id="amount" for="rangeInput"></output> km</div>'+
 
-'<div class="item-input">'+
-'<div class="range-slider" id="radius" name="radius" style="-webkit-transform: rotate(-90deg);max-width:100px;max-height:100px;">'+
+'<div class="item-input" style="-webkit-transform: rotate(-90deg);max-width:100px;max-height:100px;margin-top:20px;">'+
+'<div class="range-slider" id="radius" name="radius">'+
 '<input type="range" id="rangeInput" name="rangeInput" min="20" max="100" value="25" oninput="amount.value=rangeInput.value">'+                                                       
 '</div>'+
 '</div>'+
-1
+
 '</div>'+
         
         '</div>'+
