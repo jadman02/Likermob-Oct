@@ -1364,7 +1364,7 @@ var position = localStorage.getItem("position");
  ' </div>'+
 '</div>'+
 
-<div class="tabs-animated-wrap">
+'<div class="tabs-animated-wrap">'+
         
 
        ' <div class="tabs">'+
