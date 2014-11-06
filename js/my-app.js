@@ -1334,7 +1334,7 @@ function openSearch() {
 function openSearchHome() {
 
   var heightslider = $$(window).height() - 64;
-  var heightrange = $$(window).height() - 200;
+  var heightrange = $$(window).height() - 150;
 
 $$("#result li").remove();
 $$( ".business" ).remove();
