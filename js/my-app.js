@@ -1418,7 +1418,7 @@ var mySlider = myApp.slider('.slider-container', {
   pagination: '.slider-pagination',
   paginationHide: false,
   loop:true,
-  onSlideChangeEnd(mySlider) : function() {
+  onSlideChangeEnd(slider) : function() {
       //Do something when you touch the slide
       alert(mySlider.activeSlideIndex); 
     }
