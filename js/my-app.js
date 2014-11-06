@@ -1358,7 +1358,7 @@ var position = localStorage.getItem("position");
 
 
 '<div class="content-block">'+
-'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"></ul></div>'+
+'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"></ul></div>'+
 
 '</div>'+
         
@@ -1372,7 +1372,7 @@ var position = localStorage.getItem("position");
 
 
 '<div class="content-block">'+
-'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultd" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"></ul></div>'+
+'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultd" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"></ul></div>'+
 
 '</div>'+
         '</div>'+
@@ -1843,10 +1843,10 @@ for (i = 0; i < 5; i++)
 	
 alert(response[i][0]);
 	
-$$( '#resultd' ).append('<li class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title button" style="margin-left:15px;" onclick="">' +  response[i][1] + '</div></div></li>');
+$$( '#resultd' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" getBusiness(\''+ response[i][1]  +'\') class="item-link"><div class="item-content"><div class="item-inner"><div class="item-title">' +  response[i][0] + '</div></div></div></a></li>');
 }
 });    
     
-	
+
 	
 }
