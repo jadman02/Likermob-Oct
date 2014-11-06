@@ -1378,7 +1378,18 @@ var position = localStorage.getItem("position");
 
 '</div>'+
         '</div>'+
-        '<div class="slider-slide"><span>Slide 3</span></div>'+
+        '<div class="slider-slide">'+
+          '<form class="searchbar" data-search-list=".list-block-search" data-search-in=".item-title" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">'+
+        '<div class="searchbar-input">'+
+           ' <input type="search" placeholder="Search">'+
+            '<a href="#" class="searchbar-clear"></a>'+
+        '</div>
+        '<a href="#" class="searchbar-cancel">Cancel</a>'+
+    '</form>'+
+    
+
+    '<div class="searchbar-overlay"></div>'+
+        '</div>'+
 '</div></div></div></div>'+
 
 
