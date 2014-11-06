@@ -1454,7 +1454,7 @@ for (i = 0; i < 10; i++)
 	
 
 	
-$$( '#resultf' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\''+ response.predictions[i].place_id  +'\')" class="item-link" style="margin:0;padding:0px;"><div class="item-content" style="margin:0;padding:0px;"><div class="item-inner" style="margin:0;padding:0px;"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
+$$( '#resultf' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\''+ response.predictions[i].place_id  +'\')" class="item-link"><div class="item-content"><div class="item-inner" style="margin:0;padding:0px;"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
 }
 });
 	
@@ -1470,7 +1470,7 @@ for (i = 0; i < 10; i++)
 	
 
 	
-$$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')" class="item-link"><div class="item-content"><div class="item-inner"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
+$$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')" class="item-link"><div class="item-content"><div class="item-inner" style="margin:0;padding:0px;"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
 }
 });
 }
@@ -1849,7 +1849,7 @@ for (i = 0; i < 5; i++)
 	
 
 	
-$$( '#resultd' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ response[i][1]  +')" class="item-link"><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ response[i][1]  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner"><div class="item-title">' +  response[i][0] + '</div></div></div></a></li>');
+$$( '#resultd' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ response[i][1]  +')" class="item-link"><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ response[i][1]  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner" style="margin:0;padding:0px;"><div class="item-title">' +  response[i][0] + '</div></div></div></a></li>');
 }
 });    
     
