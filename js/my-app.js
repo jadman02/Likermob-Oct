@@ -1377,7 +1377,9 @@ $$("#result li").remove();
                   
   myApp.popup(popupHTML);
 
-document.getElementsByName('addressf')[0].placeholder=localStorage.getItem("position");
+alert(localStorage.getItem("position");
+
+//document.getElementsByName('addressf')[0].placeholder=;
 }
 
 function searchPlaces(id){
