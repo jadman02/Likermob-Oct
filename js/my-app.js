@@ -1841,7 +1841,7 @@ $$("#resultd li").remove();
 for (i = 0; i < 5; i++) 
 { 
 	
-alert(response[i][1]);
+alert(response[i][0]);
 	
 $$( '#resultd' ).append('<li class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title button" style="margin-left:15px;" onclick="">' +  response[i][1] + '</div></div></li>');
 }
