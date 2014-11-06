@@ -8,6 +8,10 @@ var $$ = Dom7;
 
 myApp.onPageBeforeInit('index', function (page) {
 
+$$('.popup-search').on('close', function () {
+  functionEmpty();
+});
+
 var uid = localStorage.getItem("uid");
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
 
@@ -1348,7 +1352,7 @@ function openSearchHome() {
 $$("#result li").remove();
 var position = localStorage.getItem("position");
 	 var popupHTML = 
-'<div class="popup" style="background-color:#ff8000;">'+
+'<div class="popup popup-search" style="background-color:#ff8000;">'+
  '<div class="navbar theme-orange">'+
  ' <div class="navbar-inner">'+
     '<div class="left"><a href="#" class="close-popup"><i class="icon icon-back" style="margin-right:10px;"></i></a></div>'+
