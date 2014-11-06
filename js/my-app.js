@@ -1766,9 +1766,10 @@ openFB.apip({
 
 function searchPopup(id){
 
-alert(id);
+
 
 if (id=='location'){
+	alert(id);
 //document.getElementById("searchtitle").innerHTML = 'Set Location';	
 $$( ".gallery" ).removeClass( "active" );
 $$( ".filter" ).removeClass( "active" );
@@ -1776,6 +1777,7 @@ $$( ".location" ).addClass( "active" );
 	
 }	
 if (id=='page'){
+	alert(id);
 //document.getElementById("searchtitle").innerHTML = 'Find Page';	
 $$( ".gallery" ).addClass( "active" );
 $$( ".filter" ).removeClass( "active" );
