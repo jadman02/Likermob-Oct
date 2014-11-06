@@ -1352,10 +1352,10 @@ function openSearchHome() {
 
     
     
- '<div class="right"><b style="margin-right:10px;">Location</b>'+
-       ' <a href="#tab1" class="active button"><i class="pe-7s-map-marker pe-lg"></i></a>'+
-        '<a href="#tab2" class="button"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
-        '<a href="#tab3" class="button"><i class="pe-7s-filter pe-lg"></i></a>'+
+ '<div class="right"><b style="margin-right:10px;color:#ff8000" id="searchtitle">Location</b>'+
+       ' <a href="#" class="active button"><i class="pe-7s-map-marker pe-lg"></i></a>'+
+        '<a href="#" class="button"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
+        '<a href="#" class="button"><i class="pe-7s-filter pe-lg"></i></a>'+
  '</div>'+
  ' </div>'+
 '</div>'+
@@ -1364,7 +1364,7 @@ function openSearchHome() {
        ' <div class="searchbar-input">'+
           '  <input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress">'+
        ' </div>'+
-'<a href="#" class="button" style="margin-left:5px;"><i class="pe-7s-compass" class="white"></i></a>'+
+'<a href="#" class="button" style="margin-left:5px;"><i class="pe-7s-compass" style="color:white"></i></a>'+
    ' </form>'+
 
 
