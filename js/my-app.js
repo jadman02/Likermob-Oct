@@ -1419,7 +1419,20 @@ var mySlider = myApp.slider('.slider-container', {
   paginationHide: false,
   onSlideChangeEnd : function() {
       //Do something when you touch the slide
-      alert('OMG you touch the slide!') 
+      
+      if (mySlider.activeSlideIndex=='0'){document.getElementById("searchtitle").innerHTML = 'Set Location';	
+$$( ".gallery" ).removeClass( "active" );
+$$( ".filter" ).removeClass( "active" );
+$$( ".location" ).addClass( "active" );}
+      if (mySlider.activeSlideIndex=='1'){document.getElementById("searchtitle").innerHTML = 'Find Page';	
+$$( ".gallery" ).addClass( "active" );
+$$( ".filter" ).removeClass( "active" );
+$$( ".location" ).removeClass( "active" );}
+      if (mySlider.activeSlideIndex=='2'){document.getElementById("searchtitle").innerHTML = 'Set Filter';	
+$$( ".gallery" ).removeClass( "active" );
+$$( ".filter" ).addClass( "active" );
+$$( ".location" ).removeClass( "active" );}
+
     }
   
 }); 
@@ -1813,26 +1826,16 @@ var mySlider = $$('.slider-container')[0].f7Slider;
 
 if (id=='location'){
 mySlider.slideTo(0,300);
-document.getElementById("searchtitle").innerHTML = 'Set Location';	
-$$( ".gallery" ).removeClass( "active" );
-$$( ".filter" ).removeClass( "active" );
-$$( ".location" ).addClass( "active" );
 	
 }	
 if (id=='page'){
 mySlider.slideTo(1,300);
-document.getElementById("searchtitle").innerHTML = 'Find Page';	
-$$( ".gallery" ).addClass( "active" );
-$$( ".filter" ).removeClass( "active" );
-$$( ".location" ).removeClass( "active" );
+
 	
 }	
 if (id=='filter'){
 mySlider.slideTo(2,300);
-document.getElementById("searchtitle").innerHTML = 'Set Filter';	
-$$( ".gallery" ).removeClass( "active" );
-$$( ".filter" ).addClass( "active" );
-$$( ".location" ).removeClass( "active" );	
+	
 }	
 	
 }
