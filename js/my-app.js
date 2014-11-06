@@ -1342,7 +1342,7 @@ function openSearch() {
 
 function openSearchHome() {
 
-var heightslider = $$(window).height() - 100;
+
 
 $$("#result li").remove();
 $$( ".business" ).remove();
@@ -1362,7 +1362,7 @@ var position = localStorage.getItem("position");
  ' </div>'+
 '</div>'+
 
-'<div class="slider-custom" style="height: '+ heightslider +' px"><div class="slider-container slider-init"><div class="slider-pagination"></div><div class="slider-wrapper">'+
+'<div class="slider-custom"><div class="slider-container slider-init"><div class="slider-pagination"></div><div class="slider-wrapper">'+
         '<div class="slider-slide">'+
         
                      ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
@@ -1433,6 +1433,8 @@ $$( ".location" ).removeClass( "active" );}
 
     }
   
+  var heightslider = $$(window).height() - 100;
+       $$( '.slider-custom' ).css( 'height', heightslider + 'px' );
 }); 
 //document.getElementsByName('addressf')[0].placeholder=;
 }
