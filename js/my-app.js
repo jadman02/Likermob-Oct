@@ -15,7 +15,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
 $$('#dbnames').keyup(function(){
 
-
+alert('keyup');
 
 $$.getJSON('http://smilesavers.net.au/getname.php?callback=?','input=' + this.value,function(response){
 $$("#resultd li").remove();
