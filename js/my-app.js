@@ -1365,12 +1365,11 @@ var position = localStorage.getItem("position");
 '</div>'+
 
 '<div class="tabs-animated-wrap">'+
-        
+'<div class="tabs">'+
 
-        '<div class="tabs">'+
+'<div id="tab7" class="tab active">'+
 
-          '<div id="tab7" class="tab active">'+
- ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
+' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
           '  <input type="search" placeholder="'+ position +'" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
        ' </div>'+
@@ -1382,13 +1381,12 @@ var position = localStorage.getItem("position");
 '<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" style="background-color:transparent;border:none;padding:0px;margin:0px;"></ul></div>'+
 
 '</div>'+
-'</div>'
-         ' </div>'+
- 
-         ' <div id="tab8" class="tab">'+
- ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
+
+'<div id="tab8" class="tab">'+
+
+' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
-          '  <input type="search" placeholder="find page" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
+          '  <input type="search" placeholder="'+ position +'" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
        ' </div>'+
 '<a href="#" class="button" style="margin-left:5px;color:white;border:0;"><i class="pe-7s-signal pe-lg"></i></a>'+
    ' </form>'+
@@ -1397,13 +1395,11 @@ var position = localStorage.getItem("position");
 '<div class="content-block">'+
 '<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" style="background-color:transparent;border:none;padding:0px;margin:0px;"></ul></div>'+
 
-'</div>'+
-'</div>'
-         ' </div>'+
- 
-          
-          '<div id="tab9" class="tab">'+
- ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
+'</div>'+ 
+
+'<div id="tab9" class="tab">'+
+
+' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
           '  <input type="search" placeholder="'+ position +'" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
        ' </div>'+
@@ -1415,10 +1411,9 @@ var position = localStorage.getItem("position");
 '<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" style="background-color:transparent;border:none;padding:0px;margin:0px;"></ul></div>'+
 
 '</div>'+
-'</div>'+
-          '</div> '+      
+
+  
        ' </div>'+
-        
      ' </div>' 
 
 
