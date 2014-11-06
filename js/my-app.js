@@ -1810,19 +1810,25 @@ var mySlider = $$('.slider-container')[0].f7Slider;
 if (id=='location'){
 mySlider.slideTo(0,300);
 document.getElementById("searchtitle").innerHTML = 'Set Location';	
-
+$$( ".gallery" ).removeClass( "active" );
+$$( ".filter" ).removeClass( "active" );
+$$( ".location" ).addClass( "active" );
 	
 }	
 if (id=='page'){
 mySlider.slideTo(1,300);
 document.getElementById("searchtitle").innerHTML = 'Find Page';	
-
+$$( ".gallery" ).addClass( "active" );
+$$( ".filter" ).removeClass( "active" );
+$$( ".location" ).removeClass( "active" );
 	
 }	
 if (id=='filter'){
 mySlider.slideTo(2,300);
 document.getElementById("searchtitle").innerHTML = 'Set Filter';	
-	
+$$( ".gallery" ).removeClass( "active" );
+$$( ".filter" ).addClass( "active" );
+$$( ".location" ).removeClass( "active" );	
 }	
 	
 }
