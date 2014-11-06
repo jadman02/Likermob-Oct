@@ -1377,7 +1377,9 @@ $$("#result li").remove();
                   
   myApp.popup(popupHTML);
 
-alert(localStorage.getItem("position");
+var position = localStorage.getItem("position");
+
+alert(position);
 
 //document.getElementsByName('addressf')[0].placeholder=;
 }
