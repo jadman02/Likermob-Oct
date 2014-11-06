@@ -1351,9 +1351,7 @@ var position = localStorage.getItem("position");
 '<div class="popup popup-search" style="background-color:#ff8000;">'+
  '<div class="navbar theme-orange">'+
  ' <div class="navbar-inner">'+
-    '<div class="left"><a href="#" class="close-popup" onclick="functionEmpty();"><i class="icon icon-back" style="margin-right:10px;"></i></a></div>'+
-    
-'<div class="center"><div id="searchtitle">Location</div></div>'+
+    '<div class="left"><a href="#" class="close-popup" onclick="functionEmpty();"><i class="icon icon-back" style="margin-right:10px;"></i></a><div id="searchtitle">Location</div></div>'+
     
     
  '<div class="right">'+
