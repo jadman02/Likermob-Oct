@@ -1370,7 +1370,7 @@ var position = localStorage.getItem("position");
 
 
 
-'<div class="item-input rangeslider" style="-webkit-transform: rotate(-90deg);height:40px;width:200px;float:left;">'+
+'<div class="item-input rangeslider" style="-webkit-transform: rotate(-90deg);float:left;">'+
 '<div class="range-slider" id="radius" name="radius">'+
 '<input type="range" id="rangeInput" name="rangeInput" min="20" max="99" value="25" oninput="amount.value=rangeInput.value">'+                                                       
 '</div>'+
