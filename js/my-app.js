@@ -1797,25 +1797,19 @@ function searchPopup(id){
 
 if (id=='location'){
 	alert(id);
-//document.getElementById("searchtitle").innerHTML = 'Set Location';	
-$$( ".gallery" ).removeClass( "active" );
-$$( ".filter" ).removeClass( "active" );
-$$( ".location" ).addClass( "active" );
+document.getElementById("searchtitle").innerHTML = 'Set Location';	
+
 	
 }	
 if (id=='page'){
 	alert(id);
-//document.getElementById("searchtitle").innerHTML = 'Find Page';	
-$$( ".gallery" ).addClass( "active" );
-$$( ".filter" ).removeClass( "active" );
-$$( ".location" ).removeClass( "active" );
+document.getElementById("searchtitle").innerHTML = 'Find Page';	
+
 	
 }	
 if (id=='category'){
-//document.getElementById("searchtitle").innerHTML = 'Set Filter';	
-$$( ".gallery" ).removeClass( "active" );
-$$( ".filter" ).addClass( "active" );
-$$( ".location" ).removeClass( "active" );	
+document.getElementById("searchtitle").innerHTML = 'Set Filter';	
+	
 }	
 	
 }
