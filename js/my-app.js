@@ -12,23 +12,6 @@ var uid = localStorage.getItem("uid");
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
 
     functionEmpty();
-
-$$('#dbnames').keyup(function(){
-
-alert('keyup');
-
-$$.getJSON('http://smilesavers.net.au/getname.php?callback=?','input=' + this.value,function(response){
-$$("#resultd li").remove();
-for (i = 0; i < 5; i++) 
-{ 
-	
-
-	
-$$( '#resultd' ).append('<li class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title button" style="margin-left:15px;" onclick="">' +  response[i][1] + '</div></div></li>');
-}
-});    
-    
-});	
 	
 
 
@@ -1383,7 +1366,7 @@ var position = localStorage.getItem("position");
         '<div class="slider-slide">'+
                              '<form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
-          '  <input type="search" placeholder="Search business" id="#dbnames">'+
+          '  <input type="search" placeholder="Search business" onkeyup="nameDb();" id="#dbnames">'+
        ' </div>'+
    ' </form>'+
 
@@ -1844,5 +1827,26 @@ mySlider.slideTo(1);
 if (id=='filter'){
 mySlider.slideTo(2);
 }	
+	
+}
+
+function nameDb() {
+	
+
+
+alert('keyup');
+
+$$.getJSON('http://smilesavers.net.au/getname.php?callback=?','input=' + this.value,function(response){
+$$("#resultd li").remove();
+for (i = 0; i < 5; i++) 
+{ 
+	
+
+	
+$$( '#resultd' ).append('<li class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title button" style="margin-left:15px;" onclick="">' +  response[i][1] + '</div></div></li>');
+}
+});    
+    
+	
 	
 }
