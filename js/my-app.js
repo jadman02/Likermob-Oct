@@ -1381,6 +1381,11 @@ var position = localStorage.getItem("position");
                   
   myApp.popup(popupHTML);
 
+var mySlider = myApp.slider('.slider-container', {
+  pagination: '.slider-pagination',
+  paginationHide: false,
+  indexButton: '.slider-pagination-bullet'
+}); 
 //document.getElementsByName('addressf')[0].placeholder=;
 }
 
