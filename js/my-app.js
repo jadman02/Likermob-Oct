@@ -394,9 +394,13 @@ function askLocation() {
                 'message: ' + error.message + '\n');
     }
 
-function savePosition(place_id) {
+function saveCategory(id){
+	
+localStorage.setItem("category_filter", id);	
+functionEmpty();
+}
 
-alert(place_id);
+function savePosition(place_id) {
 
 $$.getJSON('https://maps.googleapis.com/maps/api/place/details/json?placeid='+ place_id +'&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
 
@@ -1363,6 +1367,14 @@ var position = localStorage.getItem("position");
 '<div class="content-block">'+
 '<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"></ul></div>'+
 
+'<div class="item-title label" style="margin-left:15px;"><output name="amount" id="amount" for="rangeInput"></output> km</div>'+
+
+'<div class="item-input">'+
+'<div class="range-slider" id="radius" name="radius">'+
+'<input type="range" id="rangeInput" name="rangeInput" min="20" max="100" value="25" oninput="amount.value=rangeInput.value">'+                                                       
+'</div>'+
+'</div>'+
+
 '</div>'+
         
         '</div>'+
@@ -1454,7 +1466,7 @@ for (i = 0; i < 10; i++)
 	
 
 	
-$$( '#resultf' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\''+ response.predictions[i].place_id  +'\')" class="item-link"><div class="item-content"><div class="item-inner" style="margin:0;padding:0px;"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
+$$( '#resultf' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\''+ response.predictions[i].place_id  +'\')" class="item-link"><div class="item-content"><div class="item-inner" style="margin:0;"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
 }
 });
 	
@@ -1470,7 +1482,7 @@ for (i = 0; i < 10; i++)
 	
 
 	
-$$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')" class="item-link"><div class="item-content"><div class="item-inner" style="margin:0;padding:0px;"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
+$$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')" class="item-link"><div class="item-content"><div class="item-inner" style="margin:0;"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
 }
 });
 }
@@ -1849,7 +1861,7 @@ for (i = 0; i < 5; i++)
 	
 
 	
-$$( '#resultd' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ response[i][1]  +')" class="item-link"><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ response[i][1]  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner" style="margin:0;padding:0px;"><div class="item-title">' +  response[i][0] + '</div></div></div></a></li>');
+$$( '#resultd' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;"><a href="#" onclick="getBusiness('+ response[i][1]  +')" class="item-link"><div class="item-content"><div class="item-media"><img src="http://graph.facebook.com/'+ response[i][1]  +'/picture?width=20&height=20" style="height:20px;width:20px;"/></div><div class="item-inner" style="margin:0;"><div class="item-title">' +  response[i][0] + '</div></div></div></a></li>');
 }
 });    
     
