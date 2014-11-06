@@ -1351,7 +1351,7 @@ var position = localStorage.getItem("position");
 '<div class="popup popup-search" style="background-color:#ff8000;">'+
  '<div class="navbar theme-orange">'+
  ' <div class="navbar-inner">'+
-    '<div class="left"><a href="#" class="close-popup" onclick="functionEmpty();"><i class="icon icon-back" style="margin-right:10px;"></i></a><div style="font-style:bold;font-weight:300;" id="searchtitle">Location</div></div>'+
+    '<div class="left"><a href="#" class="close-popup" onclick="functionEmpty();"><i class="icon icon-back" style="margin-right:10px;"></i></a><div style="font-style:bold;" id="searchtitle">Location</div></div>'+
     
     
  '<div class="right">'+
@@ -1362,7 +1362,7 @@ var position = localStorage.getItem("position");
  ' </div>'+
 '</div>'+
 
-'<div class="slider-custom"><div class="slider-container slider-init"><div class="slider-pagination"></div><div class="slider-wrapper">'+
+'<div class="slider-custom"><div class="slider-container slider-init"><div class="slider-wrapper">'+
         '<div class="slider-slide">'+
         
                      ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
@@ -1413,8 +1413,6 @@ var position = localStorage.getItem("position");
   myApp.popup(popupHTML);
 
 var mySlider = myApp.slider('.slider-container', {
-  pagination: '.slider-pagination',
-  paginationHide: true,
   onTransitionEnd : function() {
       //Do something when you touch the slide
       
