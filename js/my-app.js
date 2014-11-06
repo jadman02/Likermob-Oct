@@ -1360,7 +1360,7 @@ var position = localStorage.getItem("position");
        ' <div class="searchbar-input">'+
           '  <input type="search" placeholder="'+ position +'" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
        ' </div>'+
-'<div class="item-title label" style="background-color:white;border-radius:5px;margin-left:5px;float:left;"><output name="amount" id="amount" for="rangeInput">20</output> km</div>'+
+'<div class="item-title label" style="background-color:white;border-radius:5px;margin-left:5px;float:left;width:100px;"><output name="amount" id="amount" for="rangeInput">20</output> km</div>'+
 //'<a href="#" class="button" style="margin-left:5px;color:white;border:0;"><i class="pe-7s-signal pe-lg"></i></a>'+
    ' </form>'+
 
