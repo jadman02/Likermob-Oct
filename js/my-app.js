@@ -1417,7 +1417,7 @@ var position = localStorage.getItem("position");
 var mySlider = myApp.slider('.slider-container', {
   pagination: '.slider-pagination',
   paginationHide: false,
-  onSlideChangeEnd : function() {
+  onTransitionEnd : function() {
       //Do something when you touch the slide
       
       if (mySlider.activeSlideIndex=='0'){document.getElementById("searchtitle").innerHTML = 'Set Location';	
@@ -1825,17 +1825,13 @@ function searchPopup(id){
 var mySlider = $$('.slider-container')[0].f7Slider;
 
 if (id=='location'){
-mySlider.slideTo(0,300);
-	
+mySlider.slideTo(0);
 }	
 if (id=='page'){
-mySlider.slideTo(1,300);
-
-	
+mySlider.slideTo(1);
 }	
 if (id=='filter'){
-mySlider.slideTo(2,300);
-	
+mySlider.slideTo(2);
 }	
 	
 }
