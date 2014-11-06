@@ -1352,7 +1352,7 @@ function openSearchHome() {
 
     
     
- '<div class="right"><b style="margin-right:10px;color:#ff8000" id="searchtitle">Search Location</b>'+
+ '<div class="right"><b style="margin-right:10px;color:#ff8000" id="searchtitle">Set Location</b>'+
        ' <a href="#" class="active button"><i class="pe-7s-map-marker pe-lg"></i></a>'+
         '<a href="#" class="button"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
         '<a href="#" class="button"><i class="pe-7s-filter pe-lg"></i></a>'+
