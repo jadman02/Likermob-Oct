@@ -9,6 +9,7 @@ var $$ = Dom7;
 myApp.onPageBeforeInit('index', function (page) {
 
 $$('.popup-search').on('close', function () {
+  alert('closed popup before init');
   functionEmpty();
 });
 
@@ -104,6 +105,10 @@ $$( '#resulty' ).append('<li class="item-content"><div class="item-media"></div>
 //And now we initialize app
 myApp.init();
 
+$$('.popup-search').on('close', function () {
+  alert('closed popup after initi');
+  functionEmpty();
+});
 
 // Pull to refresh content
 var ptrContent = $$('.pull-to-refresh-content');
