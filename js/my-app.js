@@ -1383,7 +1383,7 @@ var position = localStorage.getItem("position");
         '<div class="searchbar-input">'+
            ' <input type="search" placeholder="Search">'+
             '<a href="#" class="searchbar-clear"></a>'+
-        '</div>
+        '</div>'+
         '<a href="#" class="searchbar-cancel">Cancel</a>'+
     '</form>'+
     
