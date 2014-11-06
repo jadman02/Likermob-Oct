@@ -737,7 +737,7 @@ $$("#loader-container").show();
 $$.getJSON('http://www.smilesavers.net.au/getbusiness.php?callback=?', 'page_id=' + page_id, function(res){
 
 
-closeModal();
+
 
 
 
@@ -785,6 +785,8 @@ $$.getJSON('https://graph.facebook.com/'+ page_id +'?fields=cover', function(res
         '</div>'
     );
     initialize(res[0][13],res[0][14]);
+  
+  closeModal();
     
     for (i = 1; i < res.length; i++) {
     	
