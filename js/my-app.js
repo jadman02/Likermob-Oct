@@ -1766,6 +1766,8 @@ openFB.apip({
 
 function searchPopup(id){
 
+alert(id);
+
 if (id=='location'){
 document.getElementById("searchtitle").innerHTML = 'Set Location';	
 $$( ".gallery" ).removeClass( "active" );
