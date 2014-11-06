@@ -1340,9 +1340,9 @@ function openSearch() {
 
 
 function openSearchHome() {
-var position = localStorage.getItem("position");
-var elem = document.getElementById("addressf");
-elem.value = position;
+//var position = localStorage.getItem("position");
+//var elem = document.getElementById("addressf");
+//elem.value = position;
 
 	 var popupHTML = 
 '<div class="popup" style="background-color:#ff8000;">'+
