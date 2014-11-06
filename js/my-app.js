@@ -1432,11 +1432,11 @@ $$( ".filter" ).addClass( "active" );
 $$( ".location" ).removeClass( "active" );}
 
     }
-  
-  var heightslider = $$(window).height() - 100;
-       $$( '.slider-custom' ).css( 'height', heightslider + 'px' );
+
 }); 
 //document.getElementsByName('addressf')[0].placeholder=;
+  var heightslider = $$(window).height() - 100;
+       $$( '.slider-custom' ).css( 'height', heightslider + 'px' );
 }
 
 function searchPlaces(id){
