@@ -1357,9 +1357,9 @@ var position = localStorage.getItem("position");
     
     
  '<div class="right"><div style="margin-right:10px;color:#ff8000;font-weight:bold;" id="searchtitle">Set Location</div>'+
-       ' <a href="#" class="slider-pagination-bullet active button location" onclick="searchPopup(\'location\')"><i class="pe-7s-map-marker pe-lg"></i></a>'+
-        '<a href="#" class="slider-pagination-bullet button gallery" onclick="searchPopup(\'gallery\')"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
-        '<a href="#" class="slider-pagination-bullet button filter" onclick="searchPopup(\'filter\')"><i class="pe-7s-filter pe-lg"></i></a>'+
+       ' <a href="#" class="active button location" onclick="searchPopup(\'location\')"><i class="pe-7s-map-marker pe-lg"></i></a>'+
+        '<a href="#" class="button gallery" onclick="searchPopup(\'gallery\')"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
+        '<a href="#" class="button filter" onclick="searchPopup(\'filter\')"><i class="pe-7s-filter pe-lg"></i></a>'+
  '</div>'+
  ' </div>'+
 '</div>'+
@@ -1384,7 +1384,7 @@ var position = localStorage.getItem("position");
 var mySlider = myApp.slider('.slider-container', {
   pagination: '.slider-pagination',
   paginationHide: false,
-  indexButton: '.slider-pagination-bullet'
+  indexButton: '.button'
 }); 
 //document.getElementsByName('addressf')[0].placeholder=;
 }
