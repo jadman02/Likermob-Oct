@@ -1357,7 +1357,6 @@ var position = localStorage.getItem("position");
     
     
  '<div class="right"><div style="margin-right:10px;color:#ff8000;font-weight:bold;" id="searchtitle">Set Location</div>'+
-       ' <a href="#" class="button" style="border:none;width:0px;height:0px;"></a>'+
        ' <a href="#" class="active button location" onclick="searchPopup(\'location\')"><i class="pe-7s-map-marker pe-lg"></i></a>'+
         '<a href="#" class="button gallery" onclick="searchPopup(\'gallery\')"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
         '<a href="#" class="button filter" onclick="searchPopup(\'filter\')"><i class="pe-7s-filter pe-lg"></i></a>'+
@@ -1384,8 +1383,7 @@ var position = localStorage.getItem("position");
 
 var mySlider = myApp.slider('.slider-container', {
   pagination: '.slider-pagination',
-  paginationHide: false,
-  indexButton: '.button'
+  paginationHide: false
 }); 
 //document.getElementsByName('addressf')[0].placeholder=;
 }
@@ -1776,18 +1774,19 @@ function searchPopup(id){
 
 
 if (id=='location'){
-
+mySlider.slideTo(0);
 document.getElementById("searchtitle").innerHTML = 'Set Location';	
 
 	
 }	
 if (id=='page'){
-
+mySlider.slideTo(1);
 document.getElementById("searchtitle").innerHTML = 'Find Page';	
 
 	
 }	
 if (id=='category'){
+	mySlider.slideTo(2);
 document.getElementById("searchtitle").innerHTML = 'Set Filter';	
 	
 }	
