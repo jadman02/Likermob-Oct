@@ -1360,7 +1360,7 @@ function openSearchHome() {
  ' </div>'+
 '</div>'+
 
- ' <form class="searchbar" style="background-color:#ff8000;">'+
+ ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
           '  <input type="search" placeholder="Search for address" onkeyup="searchPlaces();" id="fulladdress">'+
        ' </div>'+
