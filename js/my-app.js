@@ -1366,11 +1366,11 @@ var position = localStorage.getItem("position");
 
 
 '<div class="content-block">'+
-'<div class="list-block" style="margin-top:-30px;background-color:transparent;width:90%;float:left;"><ul id="resultf" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"></ul></div>'+
+'<div class="list-block" style="margin-top:-30px;background-color:transparent;width:85%;float:left;"><ul id="resultf" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"></ul></div>'+
 
 
 
-'<div class="item-input rangeslider" style="-webkit-transform: rotate(-90deg);margin-top:200px;width:10%;float:left;">'+
+'<div class="item-input rangeslider" style="-webkit-transform: rotate(-90deg);width:15%;float:left;">'+
 '<div class="range-slider" id="radius" name="radius">'+
 '<input type="range" id="rangeInput" name="rangeInput" min="20" max="99" value="25" oninput="amount.value=rangeInput.value">'+                                                       
 '</div>'+
@@ -1474,7 +1474,7 @@ for (i = 0; i < 10; i++)
 	
 
 	
-$$( '#resultf' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\''+ response.predictions[i].place_id  +'\')" class="item-link" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-inner"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
+$$( '#resultf' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\''+ response.predictions[i].place_id  +'\')" class="item-link" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-inner" style="margin-left:0px;padding-left:0px;"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
 }
 });
 	
@@ -1490,7 +1490,7 @@ for (i = 0; i < 10; i++)
 	
 
 	
-$$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')" class="item-link" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-inner"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
+$$( '#resulta' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="saveAddress(\''+ response.predictions[i].place_id  +'\')" class="item-link" style="margin:0;"><div class="item-content" style="margin:0;"><div class="item-inner" style="margin-left:0px;padding-left:0px;"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
 }
 });
 }
