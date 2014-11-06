@@ -1342,7 +1342,9 @@ function openSearch() {
 
 function openSearchHome() {
 
+heightnavbar = $$('.navbar').height();
 
+alert(heightnavbar);
 
 $$("#result li").remove();
 $$( ".business" ).remove();
