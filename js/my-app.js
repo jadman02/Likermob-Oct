@@ -1416,11 +1416,7 @@ var position = localStorage.getItem("position");
 
 var mySlider = myApp.slider('.slider-container', {
   pagination: '.slider-pagination',
-  paginationHide: false,
-  onSlideChangeEnd(slider) : function() {
-      //Do something when you touch the slide
-      alert('changed'); 
-    }
+  paginationHide: false
   
 }); 
 //document.getElementsByName('addressf')[0].placeholder=;
