@@ -70,11 +70,13 @@ if (!radius) {radius == 25;}
 document.getElementById("amount").innerHTML = radius;
 
 //Autocomplete JSON Google
-$$('#numPeople').keyup(function(){
+$$('#dbnames').keyup(function(){
 
-$$.getJSON('https://maps.googleapis.com/maps/api/place/autocomplete/json?input='+ this.value +'&types=(cities)&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
-$$("#resulty li").remove();
-for (i = 0; i < 10; i++) 
+
+
+$$.getJSON('http://smilesavers.net.au/getname.php?callback=?','input=' + this.value,function(response){
+$$("#resultf li").remove();
+for (i = 0; i < 5; i++) 
 { 
 	
 
@@ -1340,10 +1342,8 @@ function openSearch() {
 
 
 function openSearchHome() {
-//var position = localStorage.getItem("position");
-//var elem = document.getElementById("addressf");
-//elem.value = position;
 
+$$("#result li").remove();
 	 var popupHTML = 
 '<div class="popup" style="background-color:#ff8000;">'+
  '<div class="navbar theme-orange">'+
@@ -1377,8 +1377,7 @@ function openSearchHome() {
                   
   myApp.popup(popupHTML);
 
-$$('#fulladdressf').focus();
-	
+document.getElementsByName('addressf')[0].placeholder=localStorage.getItem("position");
 }
 
 function searchPlaces(id){
