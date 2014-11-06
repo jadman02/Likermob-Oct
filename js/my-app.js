@@ -8,11 +8,6 @@ var $$ = Dom7;
 
 myApp.onPageBeforeInit('index', function (page) {
 
-$$('.popup').on('close', function () {
-  alert('closed popup before init');
-  functionEmpty();
-});
-
 var uid = localStorage.getItem("uid");
 document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebook.com/' + uid + '/picture?type=normal" style="margin:0 auto;text-align:center;width:80px;border-radius:50%;"/>';
 
@@ -104,11 +99,6 @@ $$( '#resulty' ).append('<li class="item-content"><div class="item-media"></div>
  
 //And now we initialize app
 myApp.init();
-
-$$('.popup').on('close', function () {
-  alert('closed popup after initi');
-  functionEmpty();
-});
 
 // Pull to refresh content
 var ptrContent = $$('.pull-to-refresh-content');
@@ -431,7 +421,7 @@ $$("#resultf li").remove();
 localStorage.setItem("latitude", response.result.geometry.location.lat);
 localStorage.setItem("longitude", response.result.geometry.location.lng);
 localStorage.setItem("position", response.result.formatted_address);
-
+functionEmpty();
 
 
 });    	
@@ -1360,7 +1350,7 @@ var position = localStorage.getItem("position");
 '<div class="popup popup-search" style="background-color:#ff8000;">'+
  '<div class="navbar theme-orange">'+
  ' <div class="navbar-inner">'+
-    '<div class="left"><a href="#" class="close-popup"><i class="icon icon-back" style="margin-right:10px;"></i></a></div>'+
+    '<div class="left"><a href="#" class="close-popup" onclick="functionEmpty();"><i class="icon icon-back" style="margin-right:10px;"></i></a></div>'+
     
 
     
