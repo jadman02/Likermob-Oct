@@ -396,6 +396,7 @@ function askLocation() {
 
 function savePosition(place_id) {
 
+alert(place_id);
 
 $$.getJSON('https://maps.googleapis.com/maps/api/place/details/json?placeid='+ place_id +'&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
 
@@ -1360,7 +1361,7 @@ var position = localStorage.getItem("position");
 
 
 '<div class="content-block">'+
-'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"></ul></div>'+
+'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"><li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\''+ response.predictions[i].place_id  +'\')" class="item-link"><div class="item-content"><div class="item-inner"><div class="item-title">Melbourne, Victoria, Australia</div></div></div></a></li></ul></div>'+
 
 '</div>'+
         
