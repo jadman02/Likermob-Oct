@@ -1376,6 +1376,8 @@ function openSearchHome() {
 '</div>'
                   
   myApp.popup(popupHTML);
+
+$$('#fulladdressf').focus();
 	
 }
 
