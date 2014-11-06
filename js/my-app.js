@@ -1366,7 +1366,7 @@ var position = localStorage.getItem("position");
         '<div class="slider-slide">'+
                              '<form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
-          '  <input type="search" placeholder="Search business" onkeyup="nameDb();" id="#dbnames">'+
+          '  <input type="search" placeholder="Search business" onkeyup="nameDb();" id="dbnames">'+
        ' </div>'+
    ' </form>'+
 
@@ -1833,10 +1833,10 @@ mySlider.slideTo(2);
 function nameDb() {
 	
 
-var searchvalue = document.getElementById('dbnames').value;
-alert(searchvalue);
+var searchvalue1 = document.getElementById('dbnames').value;
+alert(searchvalue1);
 
-$$.getJSON('http://smilesavers.net.au/getname.php?callback=?','input=' + searchvalue,function(response){
+$$.getJSON('http://smilesavers.net.au/getname.php?callback=?','input=' + searchvalue1,function(response){
 $$("#resultd li").remove();
 for (i = 0; i < 5; i++) 
 { 
