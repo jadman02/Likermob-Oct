@@ -1343,7 +1343,10 @@ function openSearch() {
 
 function openSearchHome() {
 
+
+
 $$("#result li").remove();
+var position = localStorage.getItem("position");
 	 var popupHTML = 
 '<div class="popup" style="background-color:#ff8000;">'+
  '<div class="navbar theme-orange">'+
@@ -1363,7 +1366,7 @@ $$("#result li").remove();
 
  ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
-          '  <input type="search" placeholder="" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
+          '  <input type="search" placeholder="'+ position +'" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
        ' </div>'+
 '<a href="#" class="button" style="margin-left:5px;color:white;border:0;"><i class="pe-7s-signal pe-lg"></i></a>'+
    ' </form>'+
@@ -1376,10 +1379,6 @@ $$("#result li").remove();
 '</div>'
                   
   myApp.popup(popupHTML);
-
-var position = localStorage.getItem("position");
-
-alert(position);
 
 //document.getElementsByName('addressf')[0].placeholder=;
 }
