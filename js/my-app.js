@@ -1345,6 +1345,7 @@ function openSearchHome() {
 
 
 $$("#result li").remove();
+$$( ".business" ).remove();
 var position = localStorage.getItem("position");
 	 var popupHTML = 
 '<div class="popup popup-search" style="background-color:#ff8000;">'+
@@ -1356,9 +1357,9 @@ var position = localStorage.getItem("position");
     
     
  '<div class="right"><b style="margin-right:10px;color:#ff8000" id="searchtitle">Set Location</b>'+
-       ' <a href="#" class="active button"><i class="pe-7s-map-marker pe-lg"></i></a>'+
-        '<a href="#" class="button"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
-        '<a href="#" class="button"><i class="pe-7s-filter pe-lg"></i></a>'+
+       ' <a href="#" class="active button location"><i class="pe-7s-map-marker pe-lg"></i></a>'+
+        '<a href="#" class="button gallery"><i class="pe-7s-photo-gallery pe-lg"></i></a>'+
+        '<a href="#" class="button filter"><i class="pe-7s-filter pe-lg"></i></a>'+
  '</div>'+
  ' </div>'+
 '</div>'+
@@ -1762,3 +1763,28 @@ openFB.apip({
         function fail(error) {
             alert("An error has occurred: Code = " = error.code);
         }
+
+function searchPopup(id){
+
+if (id=='location'){
+document.getElementById("searchtitle").innerHTML = 'Set Location';	
+$$( ".gallery" ).removeClass( "active" );
+$$( ".filter" ).removeClass( "active" );
+$$( ".location" ).addClass( "active" );
+	
+}	
+if (id=='page'){
+document.getElementById("searchtitle").innerHTML = 'Find Page';	
+$$( ".gallery" ).addClass( "active" );
+$$( ".filter" ).removeClass( "active" );
+$$( ".location" ).removeClass( "active" );
+	
+}	
+if (id=='category'){
+document.getElementById("searchtitle").innerHTML = 'Set Filter';	
+$$( ".gallery" ).removeClass( "active" );
+$$( ".filter" ).addClass( "active" );
+$$( ".location" ).removeClass( "active" );	
+}	
+	
+}
