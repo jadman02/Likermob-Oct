@@ -1769,21 +1769,21 @@ function searchPopup(id){
 alert(id);
 
 if (id=='location'){
-document.getElementById("searchtitle").innerHTML = 'Set Location';	
+//document.getElementById("searchtitle").innerHTML = 'Set Location';	
 $$( ".gallery" ).removeClass( "active" );
 $$( ".filter" ).removeClass( "active" );
 $$( ".location" ).addClass( "active" );
 	
 }	
 if (id=='page'){
-document.getElementById("searchtitle").innerHTML = 'Find Page';	
+//document.getElementById("searchtitle").innerHTML = 'Find Page';	
 $$( ".gallery" ).addClass( "active" );
 $$( ".filter" ).removeClass( "active" );
 $$( ".location" ).removeClass( "active" );
 	
 }	
 if (id=='category'){
-document.getElementById("searchtitle").innerHTML = 'Set Filter';	
+//document.getElementById("searchtitle").innerHTML = 'Set Filter';	
 $$( ".gallery" ).removeClass( "active" );
 $$( ".filter" ).addClass( "active" );
 $$( ".location" ).removeClass( "active" );	
