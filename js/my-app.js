@@ -1393,7 +1393,18 @@ var position = localStorage.getItem("position");
         '</div>'+
         '<div class="slider-slide">'+
 
-'<form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar"><div class="searchbar-input"><input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a></div><a href="#" class="searchbar-cancel">Cancel</a></form><div class="searchbar-overlay"></div><div class="list-block list-block-search searchbar-found"><ul><li class="item-content"><div class="item-inner"><div class="item-title">Acura </div></div></li><li class="item-content"><div class="item-inner"><div class="item-title">Audi</div></div></li></ul></div>'+
+ ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
+       ' <div class="searchbar-input">'+
+          '  <input type="search" placeholder="'+ position +'" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
+       ' </div>'+
+'<a href="#" class="button" style="margin-left:5px;color:white;border:0;"><i class="pe-7s-signal pe-lg"></i></a>'+
+   ' </form>'+
+
+
+'<div class="content-block">'+
+'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"><li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="saveCategory(\'accountant\')" class="item-link"><div class="item-content"><div class="item-inner" style="margin:0;"><div class="item-title">Accountant</div></div></div></a></li><li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="saveCategory(\'bakery\')" class="item-link"><div class="item-content"><div class="item-inner" style="margin:0;"><div class="item-title">Bakery</div></div></div></a></li><li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="saveCategory(\'dentist\')" class="item-link"><div class="item-content"><div class="item-inner" style="margin:0;"><div class="item-title">Dentist</div></div></div></a></li></ul></div>'+
+'</div>'
+
 
 
         '</div>'+
