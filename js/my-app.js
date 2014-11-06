@@ -1361,7 +1361,7 @@ var position = localStorage.getItem("position");
 
 
 '<div class="content-block">'+
-'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"><li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\'ChIJgf0RD69C1moR4OeMIXVWBAU\')" class="item-link"><div class="item-content"><div class="item-inner"><div class="item-title">Melbourne, Victoria, Australia</div></div></div></a></li><li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\'ChIJOwg_06VPwokRYv534QaPC8g\')" class="item-link"><div class="item-content"><div class="item-inner"><div class="item-title">New York, NY, United States</div></div></div></a></li><li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\'ChIJdd4hrwug2EcRmSrV3Vo6llI\')" class="item-link"><div class="item-content"><div class="item-inner"><div class="item-title">London, United Kingdom</div></div></div></a></li><li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\'ChIJH3w7GaZMHRURkD-WwKJy-8E\')" class="item-link"><div class="item-content"><div class="item-inner"><div class="item-title">Tel Aviv, Israel</div></div></div></a></li><li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\'ChIJAVkDPzdOqEcRcDteW0YgIQQ\')" class="item-link"><div class="item-content"><div class="item-inner"><div class="item-title">Berlin, Germany</div></div></div></a></li></ul></div>'+
+'<div class="list-block" style="margin-top:-30px;background-color:transparent;"><ul id="resultf" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"></ul></div>'+
 
 '</div>'+
         
@@ -1380,16 +1380,23 @@ var position = localStorage.getItem("position");
 '</div>'+
         '</div>'+
         '<div class="slider-slide">'+
-          '<form class="searchbar" data-search-list=".list-block-search" data-search-in=".item-title" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">'+
-        '<div class="searchbar-input">'+
-           ' <input type="search" placeholder="Search">'+
-            '<a href="#" class="searchbar-clear"></a>'+
-        '</div>'+
-        '<a href="#" class="searchbar-cancel">Cancel</a>'+
-    '</form>'+
-    
 
-    '<div class="searchbar-overlay"></div>'+
+' <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar" style="background-color:#ff8000; border:0;">'+
+       ' <div class="searchbar-input">'+
+          '  <input type="search" placeholder="Search category" id="fulladdressf">'+
+       ' </div>'+
+'<a href="#" class="button" style="margin-left:5px;color:white;border:0;"><i class="pe-7s-signal pe-lg"></i></a>'+
+   ' </form>'+
+
+
+'<div class="content-block">'+
+'<div class="list-block list-block-search searchbar-found" style="margin-top:-30px;background-color:transparent;"><ul id="categoryf" class="theme-white" style="background-color:transparent;color:white;border:none;padding:0px;margin:0px;"><li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="" class="item-link"><div class="item-content" style="margin:0;"><div class="item-inner"><div class="item-title">Dentist</div></div></div></a></li><li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="" class="item-link"><div class="item-content" style="margin:0;"><div class="item-inner"><div class="item-title">Doctor</div></div></div></a></li></ul></div>'+
+
+
+
+'</div>'+
+
+
         '</div>'+
 '</div></div></div></div>'+
 
@@ -1462,7 +1469,7 @@ for (i = 0; i < 10; i++)
 	
 
 	
-$$( '#resultf' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\''+ response.predictions[i].place_id  +'\')" class="item-link"><div class="item-content"><div class="item-inner"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
+$$( '#resultf' ).append('<li style="font-size:16px;padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:transparent;" class="close-popup"><a href="#" onclick="savePosition(\''+ response.predictions[i].place_id  +'\')" class="item-link"><div class="item-content" style="margin:0;"><div class="item-inner"><div class="item-title">' + response.predictions[i].description + '</div></div></div></a></li>');
 }
 });
 	
