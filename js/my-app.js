@@ -1364,8 +1364,8 @@ var position = localStorage.getItem("position");
  ' </div>'+
 '</div>'+
 
-'<div class="slider-custom"><div class="slider-container slider-init"><div class="slider-pagination"></div><div class="slider-wrapper">'+
-        '<div class="slider-slide" style="height:'+ heightslider +' px;">'+
+'<div class="slider-custom" style="height:'+ heightslider +' px;"><div class="slider-container slider-init"><div class="slider-pagination"></div><div class="slider-wrapper">'+
+        '<div class="slider-slide">'+
         
                      ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
@@ -1381,8 +1381,8 @@ var position = localStorage.getItem("position");
 '</div>'+
         
         '</div>'+
-        '<div class="slider-slide" style="height:'+ heightslider +' px;"><span>Slide 2</span></div>'+
-        '<div class="slider-slide" style="height:'+ heightslider +' px;"><span>Slide 3</span></div>'+
+        '<div class="slider-slide"><span>Slide 2</span></div>'+
+        '<div class="slider-slide"><span>Slide 3</span></div>'+
 '</div></div></div></div>'+
 
 
