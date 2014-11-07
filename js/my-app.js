@@ -171,11 +171,11 @@ var domain;
 function functionEmpty(pages_list) {
 
 var uid = localStorage.getItem("uid");
-alert(latitude);
-alert(longitude);
+
 var latitude = localStorage.getItem("latitude");
 var longitude = localStorage.getItem("longitude");
-
+alert(latitude);
+alert(longitude);
 
 if (pages_list=='a') {$$("#result li").remove();domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
 if (typeof pages_list === 'undefined') {domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
