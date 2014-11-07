@@ -1384,7 +1384,7 @@ var position = localStorage.getItem("position");
                              '<form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
           '  <input type="search" placeholder="Search business" onkeyup="nameDb();" id="dbnames">'+
-       ' </div>'+
+       ' <a href="#" id="dbnamesclear" onclick="clearInput();" style="display:none;float:left;margin-left:-25px;margin-top:3px;color:hsl(0, 0%, 70%);"><i class="pe-7s-close-circle pe-lg"></i></a></div>'+
    ' </form>'+
 
 
@@ -1865,6 +1865,8 @@ function nameDb() {
 
 var searchvalue1 = document.getElementById('dbnames').value;
 
+if (searchvalue1 == '') {$$('#dbnamesclear').hide();}
+else {$$('#dbnamesclear').show();}
 
 $$.getJSON('http://smilesavers.net.au/getname.php?callback=?','input=' + searchvalue1,function(response){
 $$("#resultd li").remove();
@@ -1884,5 +1886,7 @@ $$( '#resultd' ).append('<li style="font-size:16px;padding-left:0px;padding-righ
 function clearInput(){
 	
 	document.getElementById('fulladdressf').value = "";
+	document.getElementById('dbnames').value = "";
 	$$('#resultfclear').hide();
+	$$('#dbnamesclear').hide();
 }
