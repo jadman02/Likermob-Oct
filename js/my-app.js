@@ -1468,7 +1468,7 @@ if (id=='set'){
 
 searchvalue = document.getElementById('fulladdressf').value;
 
-if (typeof searchvalue !=== 'undefined') {$$('#resultfclear').show();}
+if (typeof searchvalue === 'undefined') {$$('#resultfclear').show();}
 	
 $$.getJSON('https://maps.googleapis.com/maps/api/place/autocomplete/json?input='+ searchvalue +'&types=(cities)&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
 $$("#resultf li").remove();
