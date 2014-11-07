@@ -1360,7 +1360,7 @@ var position = localStorage.getItem("position");
                      ' <form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
           '  <input type="search" style="float:left;" placeholder="'+ position +'" onkeyup="searchPlaces(\'set\');" id="fulladdressf">'+
-       ' <a href="#" style="float:left;margin-left:-20px;"><i class="pe-7s-close-circle pe-lg"></i></a></div>'+
+       ' <a href="#" id="resultfclear" style="display:none;float:left;margin-left:-25px;margin-top:5px;color:hsl(0, 0%, 70%);"><i class="pe-7s-close-circle pe-lg"></i></a></div>'+
 '<div class="item-title label" style="background-color:white;border-radius:5px;margin-left:5px;padding:4px;float:left;width:60px;"><output name="amount" id="amount" for="rangeInput">20</output> km</div>'+
 //'<a href="#" class="button" style="margin-left:5px;color:white;border:0;"><i class="pe-7s-signal pe-lg"></i></a>'+
    ' </form>'+
@@ -1467,6 +1467,8 @@ var searchvalue;
 if (id=='set'){
 
 searchvalue = document.getElementById('fulladdressf').value;
+
+if (typeof searchvalue !=== 'undefined') {$$('#resultfclear').show();}
 	
 $$.getJSON('https://maps.googleapis.com/maps/api/place/autocomplete/json?input='+ searchvalue +'&types=(cities)&key=AIzaSyAssayN33K28DkBxPB8iWOM0NG2-sCNHEk', function(response){
 $$("#resultf li").remove();
