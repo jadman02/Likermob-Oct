@@ -1383,7 +1383,7 @@ var position = localStorage.getItem("position");
         '<div class="slider-slide">'+
                              '<form class="searchbar" style="background-color:#ff8000; border:0;">'+
        ' <div class="searchbar-input">'+
-          '  <input type="search" placeholder="Search business" onkeyup="nameDb();" id="dbnames">'+
+          '  <input type="search" style="float:left;" placeholder="Search business" onkeyup="nameDb();" id="dbnames">'+
        ' <a href="#" id="dbnamesclear" onclick="clearInput();" style="display:none;float:left;margin-left:-25px;margin-top:3px;color:hsl(0, 0%, 70%);"><i class="pe-7s-close-circle pe-lg"></i></a></div>'+
    ' </form>'+
 
