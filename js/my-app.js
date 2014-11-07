@@ -171,6 +171,8 @@ var domain;
 function functionEmpty(pages_list) {
 
 var uid = localStorage.getItem("uid");
+alert(latitude);
+alert(longitude);
 var latitude = localStorage.getItem("latitude");
 var longitude = localStorage.getItem("longitude");
 
