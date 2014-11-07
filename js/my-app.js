@@ -171,9 +171,12 @@ var domain;
 function functionEmpty(pages_list) {
 
 var uid = localStorage.getItem("uid");
+var latitude = localStorage.getItem("latitude");
+var longitude = localStorage.getItem("longitude");
 
-if (pages_list=='a') {$$("#result li").remove();domain = "jsonp";data_send = "user_id=" + uid;}
-if (typeof pages_list === 'undefined') {domain = "jsonp";data_send = "user_id=" + uid;}
+
+if (pages_list=='a') {$$("#result li").remove();domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
+if (typeof pages_list === 'undefined') {domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
 if (pages_list instanceof Array) {domain = "getpages";data_send = "pages_list=" + pages_list;}
 
 
