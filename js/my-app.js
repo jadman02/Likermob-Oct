@@ -1898,7 +1898,7 @@ function clearInput(){
 	$$('#dbnamesclear').hide();
 }
 
-function initialisePayent(){
+function initialisePayment(){
  define([], function () {
     'use strict';
 
