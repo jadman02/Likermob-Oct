@@ -1903,7 +1903,7 @@ function initialisePayment(){
     'use strict';
 
     var IAP = {
-        list: [ 'qwerty1234', 'qwerty12345' ],
+        list: [ 'com.likermob.test.qwerty1234', 'com.likermob.test.qwerty1235' ],
         products: {}
     };
     var localStorage = window.localStorage || {};
@@ -1944,9 +1944,9 @@ function initialisePayment(){
     };
 
 IAP.onPurchase = function (transactionId, productId, receipt) {
-  if (productId === 'qwerty1234')
+  if (productId === 'com.likermob.test.qwerty1234')
    // Coins.add(10);
-  if (productId === 'qwerty12345')
+  if (productId === 'com.likermob.test.qwerty12345')
     //Coins.add(100);
   alert('Congratulation, you now own a coin');
 };
@@ -1962,8 +1962,8 @@ IAP.onError = function (errorCode, errorMessage) {
 
 var renderIAPs = function (el) {
   if (IAP.loaded) {
-    var coins10  = IAP.products["qwerty1234"];
-    var coins100 = IAP.products["qwerty12345"];
+    var coins10  = IAP.products["com.likermob.test.qwerty1234"];
+    var coins100 = IAP.products["com.likermob.test.qwerty1235"];
     var html = "<ul>";
     for (var id in IAP.products) {
       var prod = IAP.products[id];
