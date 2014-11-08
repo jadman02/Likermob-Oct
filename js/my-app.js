@@ -1900,14 +1900,14 @@ function clearInput(){
 
 
 
+
+
 function functionPay(){
+ 
  define([], function () {
     'use strict';
 
-var IAP = {
-        list: [ 'com.likermob.test.qwerty1234', 'com.likermob.test.qwerty1235' ],
-        products: {}
-    };
+
     var localStorage = window.localStorage || {};
 
     IAP.initialize = function () {
@@ -1927,6 +1927,7 @@ var IAP = {
     };
 
     IAP.onReady = function () {
+        alert('ready');
         // Once setup is done, load all product data.
         storekit.load(IAP.list, function (products, invalidIds) {
             alert('IAPs loading done:');
