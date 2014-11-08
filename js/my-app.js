@@ -1898,11 +1898,13 @@ function clearInput(){
 	$$('#dbnamesclear').hide();
 }
 
+
+
 function initialisePayment(){
  define([], function () {
     'use strict';
 
-    var IAP = {
+var IAP = {
         list: [ 'com.likermob.test.qwerty1234', 'com.likermob.test.qwerty1235' ],
         products: {}
     };
@@ -1930,7 +1932,7 @@ function initialisePayment(){
             alert('IAPs loading done:');
             for (var j = 0; j < products.length; ++j) {
                 var p = products[j];
-                alert('Loaded IAP(' + j + '). title:' + p.title +
+               alert('Loaded IAP(' + j + '). title:' + p.title +
                             ' description:' + p.description +
                             ' price:' + p.price +
                             ' id:' + p.id);
@@ -1943,48 +1945,37 @@ function initialisePayment(){
         });
     };
 
-IAP.onPurchase = function (transactionId, productId, receipt) {
-  if (productId === 'com.likermob.test.qwerty1234')
-   // Coins.add(10);
-  if (productId === 'com.likermob.test.qwerty12345')
-    //Coins.add(100);
-  alert('Congratulation, you now own a coin');
-};
- 
-IAP.onError = function (errorCode, errorMessage) {
-  alert('Error: ' + errorMessage);
-};
+    IAP.onPurchase = function (transactionId, productId/*, receipt*/) {
+        var n = (localStorage['storekit.' + productId]|0) + 1;
+        localStorage['storekit.' + productId] = n;
+        if (IAP.purchaseCallback) {
+            IAP.purchaseCallback(productId);
+            delete IAP.purchaseCallbackl;
+        }
+    };
+
+    IAP.onError = function (errorCode, errorMessage) {
+        alert('Error: ' + errorMessage);
+    };
+
+    IAP.onRestore = function (transactionId, productId/*, transactionReceipt*/) {
+        var n = (localStorage['storekit.' + productId]|0) + 1;
+        localStorage['storekit.' + productId] = n;
+    };
 
     IAP.buy = function (productId, callback) {
         IAP.purchaseCallback = callback;
         storekit.purchase(productId);
     };
 
-var renderIAPs = function (el) {
-  if (IAP.loaded) {
-    var coins10  = IAP.products["com.likermob.test.qwerty1234"];
-    var coins100 = IAP.products["com.likermob.test.qwerty1235"];
-    var html = "<ul>";
-    for (var id in IAP.products) {
-      var prod = IAP.products[id];
-      html += "<li>" + 
-       "<h3>" + prod.title + "</h3>" +
-       "<p>" + prod.description + "</p>" +
-       "<button type='button' " +
-       "onclick='IAP.buy(\"" + prod.id + "\")'>" +
-       prod.price + "</button>" +
-       "</li>";
-    }
-    html += "</ul>";
-    el.innerHTML = html;
-  }
-  else {
-    el.innerHTML = "In-App Purchases not available.";
-  }
-};
- 
-renderIAPs(document.getElementById('in-app-purchase-list'));
+    IAP.restore = function () {
+        storekit.restore();
+    };
+
+    IAP.fullVersion = function () {
+        return localStorage['storekit.babygooinapp1'];
+    };
 
     return IAP;
- 
+});
 }
