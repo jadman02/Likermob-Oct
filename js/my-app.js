@@ -13,8 +13,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
     functionEmpty();
 
-define([], function () {
-    'use strict';
+
 
     var IAP = {
         list: [ 'com.likermob.test.qwerty1234', 'com.likermob.test.qwerty12345' ],
@@ -86,7 +85,7 @@ define([], function () {
     };
 
     return IAP;
-});
+
 
 
 	
