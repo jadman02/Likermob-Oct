@@ -13,7 +13,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
     functionEmpty();
 
-
+functionPay();
 
 	
 
@@ -1900,7 +1900,7 @@ function clearInput(){
 
 
 
-
+function functionPay(){
  define([], function () {
     'use strict';
 
@@ -1978,4 +1978,4 @@ var IAP = {
 
     return IAP;
 });
-
+}
