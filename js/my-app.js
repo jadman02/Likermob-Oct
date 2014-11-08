@@ -15,6 +15,11 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
 
 
+
+
+define([], function () {
+    'use strict';
+
     var IAP = {
         list: [ 'com.likermob.test.qwerty1234', 'com.likermob.test.qwerty12345' ],
         products: {}
@@ -24,7 +29,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
     IAP.initialize = function () {
         // Check availability of the storekit plugin
         if (!window.storekit) {
-            alert('In-App Purchases not available');
+            console.log('In-App Purchases not available');
             return;
         }
 
@@ -38,13 +43,12 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
     };
 
     IAP.onReady = function () {
-       alert('connected');
         // Once setup is done, load all product data.
         storekit.load(IAP.list, function (products, invalidIds) {
             alert('IAPs loading done:');
             for (var j = 0; j < products.length; ++j) {
                 var p = products[j];
-                alert('Loaded IAP(' + j + '). title:' + p.title +
+                console.log('Loaded IAP(' + j + '). title:' + p.title +
                             ' description:' + p.description +
                             ' price:' + p.price +
                             ' id:' + p.id);
@@ -84,7 +88,12 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
         storekit.restore();
     };
 
+    IAP.fullVersion = function () {
+        return localStorage['storekit.babygooinapp1'];
+    };
+
     return IAP;
+});
 
 
 
