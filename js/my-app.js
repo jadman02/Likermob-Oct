@@ -206,7 +206,7 @@ var longitude = localStorage.getItem("longitude");
 var post_id_list = [];
 
 if (pages_list=='a') {$$("#result li").remove();domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
-if (pages_list=='b') 
+if (pages_list=='b') {
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
 for (i = 0; i < existingEntries.length; i++) {post_id_list.push("999999"+ existingEntries[i].post_id +"999999");}
 alert(post_id_list);domain = "getpages";data_send = "pages_list=" + post_id_list;}
