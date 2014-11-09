@@ -28,8 +28,8 @@
     },
     ready: function () {
         var productIds = [
-            "cc.fovea.coins10", 
-            "cc.fovea.coins100"
+            "com.likermob.test.qwerty1234", 
+            "com.likermob.test.qwerty12345"
         ];
         window.storekit.load(productIds, function(validProducts, invalidProductIds) {
             $.each(validProducts, function (i, val) {
