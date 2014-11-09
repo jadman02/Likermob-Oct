@@ -28,7 +28,9 @@
 </gap:plugin>
 <preference name="orientation" value="portrait" />
 <preference name="DisallowOverscroll" value="true" />
-
+<feature name="InAppPurchase">
+       <param name="ios-package" value="InAppPurchase" />
+    </feature>
 <feature name="Camera">
     <param name="ios-package" value="CDVCamera" />
 </feature>
