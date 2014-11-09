@@ -14,47 +14,6 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
     functionEmpty();
 
 
- alert('empty');
-window.storekit.init({
-
-    debug: true, /* Because we like to see logs on the console */
-
-    purchase: function (transactionId, productId) {
-        console.log('purchased: ' + productId);
-    },
-    restore: function (transactionId, productId) {
-        console.log('restored: ' + productId);
-    },
-    restoreCompleted: function () {
-       console.log('all restore complete');
-    },
-    restoreFailed: function (errCode) {
-        console.log('restore failed: ' + errCode);
-    },
-    error: function (errno, errtext) {
-        console.log('Failed: ' + errtext);
-    },
-    ready: function () {
-        var productIds = [
-            "com.likermob.test.qwerty1234", 
-            "com.likermob.test.qwerty12345"
-        ];
-        window.storekit.load(productIds, function(validProducts, invalidProductIds) {
-            $.each(validProducts, function (i, val) {
-                alert("id: " + val.id + " title: " + val.title + " val: " + val.description + " price: " + val.price);
-            });
-            if(invalidProductIds.length) {
-                alert("Invalid Product IDs: " + JSON.stringify(invalidProductIds));
-            }
-        });
-    }
-});
-       var storekit = window.storekit;
-       alert(storekit):
-
-
-
-
 
 	
 
