@@ -146,8 +146,6 @@ window.storekit.init({
     }
 });
 
-var storekit = window.storekit;
-alert (storekit);		
 }
 
 
