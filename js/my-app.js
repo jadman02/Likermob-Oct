@@ -13,7 +13,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
     functionEmpty();
 
-
+storeKit();
 
 
 
@@ -110,7 +110,7 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
-
+function storeKit(){
 window.storekit.init({
 
     debug: true, /* Because we like to see logs on the console */
@@ -132,8 +132,8 @@ window.storekit.init({
     },
     ready: function () {
         var productIds = [
-            "cc.fovea.coins10", 
-            "cc.fovea.coins100"
+            "com.likermob.test.qwerty1234", 
+            "com.likermob.test.qwerty12345"
         ];
         window.storekit.load(productIds, function(validProducts, invalidProductIds) {
             $.each(validProducts, function (i, val) {
@@ -148,7 +148,7 @@ window.storekit.init({
 
 var storekit = window.storekit;
 alert (storekit);		
-
+}
 
 
 
