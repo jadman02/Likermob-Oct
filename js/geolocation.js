@@ -7,7 +7,7 @@
     function onDeviceReady() {
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
        
-      window.storekit.init({
+     window.storekit.init({
 
     debug: true, /* Because we like to see logs on the console */
 
@@ -28,15 +28,15 @@
     },
     ready: function () {
         var productIds = [
-            "com.likermob.test.qwerty1234", 
-            "com.likermob.test.qwerty12345"
+            "cc.fovea.coins10", 
+            "cc.fovea.coins100"
         ];
         window.storekit.load(productIds, function(validProducts, invalidProductIds) {
             $.each(validProducts, function (i, val) {
-                alert("id: " + val.id + " title: " + val.title + " val: " + val.description + " price: " + val.price);
+                console.log("id: " + val.id + " title: " + val.title + " val: " + val.description + " price: " + val.price);
             });
             if(invalidProductIds.length) {
-                alert("Invalid Product IDs: " + JSON.stringify(invalidProductIds));
+                console.log("Invalid Product IDs: " + JSON.stringify(invalidProductIds));
             }
         });
     }
