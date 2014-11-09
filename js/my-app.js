@@ -13,11 +13,9 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
 
     functionEmpty();
 
-
-    var IAP = {
-        list: [ 'com.likermob.test.qwerty1234', 'com.likermob.test.qwerty12345' ],
-        products: {}
-    };
+var IAP = {
+  list: [ "com.likermob.test.qwerty1234", "com.likermob.test.qwerty12345" ]
+};
 
 IAP.load = function () {
   // Check availability of the storekit plugin
@@ -41,7 +39,6 @@ IAP.onReady = function () {alert('Hi');};
 IAP.onPurchase = function () {};
 IAP.onRestore = function () {};
 IAP.onError = function () {};
-
 
 
 
