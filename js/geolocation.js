@@ -33,10 +33,10 @@
         ];
         window.storekit.load(productIds, function(validProducts, invalidProductIds) {
             $.each(validProducts, function (i, val) {
-                console.log("id: " + val.id + " title: " + val.title + " val: " + val.description + " price: " + val.price);
+                alert("id: " + val.id + " title: " + val.title + " val: " + val.description + " price: " + val.price);
             });
             if(invalidProductIds.length) {
-                console.log("Invalid Product IDs: " + JSON.stringify(invalidProductIds));
+                alert("Invalid Product IDs: " + JSON.stringify(invalidProductIds));
             }
         });
     }
