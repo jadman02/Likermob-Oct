@@ -209,7 +209,7 @@ if (pages_list=='a') {$$("#result li").remove();domain = "jsonp";data_send = "us
 if (pages_list=='b') {$$("#result li").remove();
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
 for (i = 0; i < existingEntries.length; i++) {post_id_list.push("999999"+ existingEntries[i].post_id + "999999");}
-alert(post_id_list);domain = "getposts";data_send = "pages_list=" + post_id_list + "&user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
+domain = "getposts";data_send = "pages_list=" + post_id_list + "&user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
 
 
 if (typeof pages_list === 'undefined') {domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
