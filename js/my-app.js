@@ -14,86 +14,35 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
     functionEmpty();
 
 
-
-
-
-define([], function () {
-    'use strict';
-
     var IAP = {
         list: [ 'com.likermob.test.qwerty1234', 'com.likermob.test.qwerty12345' ],
         products: {}
     };
-    var localStorage = window.localStorage || {};
 
-    IAP.initialize = function () {
-        // Check availability of the storekit plugin
-        if (!window.storekit) {
-            console.log('In-App Purchases not available');
-            return;
-        }
+IAP.load = function () {
+  // Check availability of the storekit plugin
+  if (!window.storekit) {
+    alert("In-App Purchases not available");
+    return;
+  }
+ 
+  // Initialize
+  storekit.init({
+    debug:    true, // Enable IAP messages on the console
+    ready:    IAP.onReady,
+    purchase: IAP.onPurchase,
+    restore:  IAP.onRestore,
+    error:    IAP.onError
+  });
+};
+ 
+// StoreKit's callbacks (we'll talk about them later)
+IAP.onReady = function () {alert('Hi');};
+IAP.onPurchase = function () {};
+IAP.onRestore = function () {};
+IAP.onError = function () {};
 
-        // Initialize
-        storekit.init({
-            ready:    IAP.onReady,
-            purchase: IAP.onPurchase,
-            restore:  IAP.onRestore,
-            error:    IAP.onError
-        });
-    };
 
-    IAP.onReady = function () {
-        // Once setup is done, load all product data.
-        storekit.load(IAP.list, function (products, invalidIds) {
-            alert('IAPs loading done:');
-            for (var j = 0; j < products.length; ++j) {
-                var p = products[j];
-                console.log('Loaded IAP(' + j + '). title:' + p.title +
-                            ' description:' + p.description +
-                            ' price:' + p.price +
-                            ' id:' + p.id);
-                IAP.products[p.id] = p;
-            }
-            IAP.loaded = true;
-            for (var i = 0; i < invalidIds.length; ++i) {
-                console.log('Error: could not load ' + invalidIds[i]);
-            }
-        });
-    };
-
-    IAP.onPurchase = function (transactionId, productId/*, receipt*/) {
-        var n = (localStorage['storekit.' + productId]|0) + 1;
-        localStorage['storekit.' + productId] = n;
-        if (IAP.purchaseCallback) {
-            IAP.purchaseCallback(productId);
-            delete IAP.purchaseCallbackl;
-        }
-    };
-
-    IAP.onError = function (errorCode, errorMessage) {
-        alert('Error: ' + errorMessage);
-    };
-
-    IAP.onRestore = function (transactionId, productId/*, transactionReceipt*/) {
-        var n = (localStorage['storekit.' + productId]|0) + 1;
-        localStorage['storekit.' + productId] = n;
-    };
-
-    IAP.buy = function (productId, callback) {
-        IAP.purchaseCallback = callback;
-        storekit.purchase(productId);
-    };
-
-    IAP.restore = function () {
-        storekit.restore();
-    };
-
-    IAP.fullVersion = function () {
-        return localStorage['storekit.babygooinapp1'];
-    };
-
-    return IAP;
-});
 
 
 
