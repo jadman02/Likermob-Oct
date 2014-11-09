@@ -564,10 +564,9 @@ function addEntry(post_id,expiry) {
     // Save allEntries back to local storage
     existingEntries.push(entry);
     localStorage.setItem("allEntries", JSON.stringify(existingEntries));
-
-    var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
-  alert(existingEntries);	
+  alert(localStorage.getItem("allEntries"));	
 }
+
 
 
 
@@ -580,13 +579,12 @@ function favList(page_id) {
         "page_id": page_id,
         "created": timestamp
     };
-    localStorage.setItem("favEntries", JSON.stringify(faventry));
+    localStorage.setItem("faventry", JSON.stringify(faventry));
     // Save allEntries back to local storage
     favEntries.push(faventry);
     localStorage.setItem("favEntries", JSON.stringify(favEntries));
 
-    var favEntries = JSON.parse(localStorage.getItem("favEntries"));
-  alert(favEntries);	
+  alert(localStorage.getItem("favEntries"));	
 }
 
 
