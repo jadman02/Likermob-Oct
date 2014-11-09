@@ -549,17 +549,13 @@ function addEntry(post_id,expiry) {
         "post_id": post_id,
         "expiry": timestamp
     };
-    var entry = {
-        "post_id": post_id,
-        "expiry": timestamp
-    };
     localStorage.setItem("entry", JSON.stringify(entry));
     // Save allEntries back to local storage
     existingEntries.push(entry);
     localStorage.setItem("allEntries", JSON.stringify(existingEntries));
-  alert(localStorage.getItem("allEntries"));
-  alert(existingEntries);
-	
+
+    var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+  alert(existingEntries);	
 }
 
 
