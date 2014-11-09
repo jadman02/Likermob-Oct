@@ -14,7 +14,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
     functionEmpty();
 
 var previousScrollPosition = 0;
-$$(''.page-content'').on('scroll', function (e) {
+$$('.page-content').on('scroll', function (e) {
     var pageContent = this;
     var pageScroll = pageContent.scrollTop;
     if (pageScroll > 44) {
