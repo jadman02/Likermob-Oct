@@ -26,13 +26,12 @@ $$('.page-content').on('scroll', function (e) {
             mainView.showNavbar();
             mainView.showToolbar();
         }
-        // Uncomment if we need to show them on the end of scroll 
-        /*
+
         if (pageScroll >= pageContent.scrollHeight - pageContent.offsetHeight - 44) {
             mainView.showNavbar();
             mainView.showToolbar();
         }
-        */
+
     }
     else {
         mainView.showNavbar();
