@@ -194,7 +194,7 @@
 <ul id="add_container" style="border:none;"></ul>
 
 <ul id="result" style="margin-top:-35px;"></ul></div>
-
+<a href="#" class="button" onclick="getMyPages()"></a>
 <p class="buttons-row">
 
 
@@ -593,6 +593,7 @@ function getMyPages(){
         error: function() {alert('error not posted on facebook');}
         	
         });
+        alert(pages_list);
 }
 
     function revoke() {
