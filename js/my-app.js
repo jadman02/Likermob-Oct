@@ -14,7 +14,7 @@ document.getElementById("profilepic").innerHTML = '<img src="http://graph.facebo
     functionEmpty();
 
 
- alert('device ready');
+ alert('empty');
 window.storekit.init({
 
     debug: true, /* Because we like to see logs on the console */
