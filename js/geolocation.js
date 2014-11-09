@@ -42,8 +42,8 @@ window.storekit.init({
         });
     }
 });
-       
-       alert(window.storekit):
+       var storekit = window.storekit;
+       alert(storekit):
        
     }
 
