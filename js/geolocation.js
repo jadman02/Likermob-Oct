@@ -43,6 +43,8 @@ window.storekit.init({
     }
 });
        
+       alert(window.storekit):
+       
     }
 
     // onSuccess Geolocation
