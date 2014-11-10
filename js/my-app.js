@@ -572,7 +572,7 @@ function addEntry(post_id,expiry) {
 
 function favList(page_id) {
  alert(localStorage.getItem("favEntries"));
-	var timestamp = new Date(expiry).getTime() / 1000;
+	var timestamp = new Date().getTime() / 1000;
     // Parse any JSON previously stored in allEntries
     var favEntries = JSON.parse(localStorage.getItem("favEntries"));
     if(favEntries == null) favEntries = [];
