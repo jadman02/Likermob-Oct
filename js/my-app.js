@@ -968,7 +968,7 @@ myApp.modal({
         }
       },
       {
-        text: '<i class="pe-7s-like2 pe-lg pe-rotate-180"></i>',
+        text: '<div style="background-color:#ff8000;color:white;border:20px solid #ff8000;"><i class="pe-7s-like2 pe-lg pe-rotate-180"></i></div>',
         bold: true,
         onClick: function() {
         	myApp.swipeoutDelete('.s_'+ post_id);
