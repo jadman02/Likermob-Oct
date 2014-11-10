@@ -939,7 +939,7 @@ myApp.modal({
     afterText: '<div style="margin-bottom:-15px;height:49px;border-top:1px solid #ccc;background-image:url(\'http://graph.facebook.com/' + uid + '/picture?type=small\');background-repeat:no-repeat;"><input id="commentbox" type="text" placeholder="Comment on Facebook" style="margin-left:49px;border:none;border-radius:0px; height:30px;margin-top:0px;font-size:14px;width:205px;"></div>',
     buttons: [
       {
-        text: '<div style="background-color:#3b5998;color:white;border:30px solid #3b5998;margin:-10px;margin-top:-25px;"><i class="pe-7s-like2 pe-lg"></i></div>',
+        text: '<div style="background-color:#3b5998;color:white;border:30px solid #3b5998;margin:-10px;margin-top:-30px;"><i class="pe-7s-like2 pe-lg"></i></div>',
         onClick: function() {
           
           var inputcomment = $$("#commentbox").val();
@@ -968,7 +968,7 @@ myApp.modal({
         }
       },
       {
-        text: '<div style="background-color:#ff8000;color:white;border:30px solid #ff8000;margin:-10px;margin-top:-25px;"><i class="pe-7s-like2 pe-lg pe-rotate-180"></i></div>',
+        text: '<div style="background-color:#ff8000;color:white;border:30px solid #ff8000;margin:-10px;margin-top:-30px;"><i class="pe-7s-like2 pe-lg pe-rotate-180"></i></div>',
         bold: true,
         onClick: function() {
         	myApp.swipeoutDelete('.s_'+ post_id);
