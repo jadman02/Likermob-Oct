@@ -961,14 +961,14 @@ myApp.modal({
         }
       },
       {
-        text: '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-right:30px solid #ff8000;border-left:30px solid #3b5998;border-radius:50%;margin-top:10px;"/>',
+        text: '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=25&height=25" style="border-right:70px solid #ff8000;border-left:70px solid #3b5998;border-radius:50%;margin-top:10px;"/>',
         onClick: function() {
           getBusiness(page_id);
           
         }
       },
       {
-        text: '<div style="background-color:#ff8000;color:white;border:30px solid #ff8000;margin:-10px;"><i class="pe-7s-like2 pe-lg pe-rotate-180" style="padding-top:-20px;"></i></div>',
+        text: '<div style="background-color:#ff8000;color:white;border:30px solid #ff8000;margin:-10px;margin-top:-30px;"><i class="pe-7s-like2 pe-lg pe-rotate-180"></i></div>',
         bold: true,
         onClick: function() {
         	myApp.swipeoutDelete('.s_'+ post_id);
