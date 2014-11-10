@@ -936,7 +936,7 @@ var clear_description = description.replace(/qqqq/g, "'");
 myApp.modal({
     title: '<a class="button" style="float:right;border:none;margin-top:-10px;" href="#" onclick="closeModal();"><i class="pe-7s-close pe-lg"></i></a><div style="margin-left:25px;margin-right:25px;">' + title + '</div>',
     text: '<div class="page-content"><div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;"><div class="content-block-inner">' + clear_description + '<br/><br/>4444<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>sdfdfsfdds<br/><br/></div></div></div>',
-    afterText: '<div style="margin-bottom:-15px;height:49px;border-top:1px solid #ccc;width:270px;background-image:url(\'http://graph.facebook.com/' + uid + '/picture?type=small\');background-repeat:no-repeat;"><input id="commentbox" type="text" placeholder="Comment on Facebook" style="margin-left:49px;border:none;border-radius:0px; height:30px;margin-top:0px;font-size:14px;width:205px;"></div>',
+    afterText: '<div style="margin-bottom:-15px;height:49px;border-top:1px solid #ccc;background-image:url(\'http://graph.facebook.com/' + uid + '/picture?type=small\');background-repeat:no-repeat;"><input id="commentbox" type="text" placeholder="Comment on Facebook" style="margin-left:49px;border:none;border-radius:0px; height:30px;margin-top:0px;font-size:14px;width:205px;"></div>',
     buttons: [
       {
         text: '<i class="pe-7s-like2 pe-lg"></i>',
