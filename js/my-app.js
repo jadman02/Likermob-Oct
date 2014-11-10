@@ -961,7 +961,7 @@ myApp.modal({
         }
       },
       {
-        text: '<div style="border-right:100px solid #ff8000;border-left:100px solid #3b5998;margin:-10px;margin-left:-50px;"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-top:10px;margin:0 auto;"/><span class="tabbar-label" style="clear:both;">More</span></div>',
+        text: '<div style="border-right:100px solid #ff8000;border-left:100px solid #3b5998;margin:-10px;margin-left:-60px;"><img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-top:10px;margin:0 auto;"/></div>',
         onClick: function() {
           getBusiness(page_id);
           
