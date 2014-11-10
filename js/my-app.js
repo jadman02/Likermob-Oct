@@ -204,13 +204,19 @@ var uid = localStorage.getItem("uid");
 var latitude = localStorage.getItem("latitude");
 var longitude = localStorage.getItem("longitude");
 var post_id_list = [];
+var fav_id_list = [];
 
 if (pages_list=='a') {$$("#result li").remove();domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
+
 if (pages_list=='b') {$$("#result li").remove();
 var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
 for (i = 0; i < existingEntries.length; i++) {post_id_list.push("999999"+ existingEntries[i].post_id + "999999");}
 domain = "getposts";data_send = "pages_list=" + post_id_list + "&user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
 
+if (pages_list=='c') {$$("#result li").remove();
+var favEntries = JSON.parse(localStorage.getItem("favEntries"));
+for (i = 0; i < favEntries.length; i++) {fav_id_list.push("999999"+ favEntries[i].page_id + "999999");}
+domain = "getpages";data_send = "pages_list=" + fav_id_list + "&user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
 
 if (typeof pages_list === 'undefined') {domain = "jsonp";data_send = "user_id=" + uid + "&latitude=" + latitude + "&longitude=" + longitude;}
 if (pages_list instanceof Array) {domain = "getpages";data_send = "pages_list=" + pages_list;}
@@ -255,6 +261,12 @@ if (type=='like') {$$( '#result' ).append('<li class="swipeout s_'+ response[i][
 if ((post_id_list instanceof Array) && (pages_list=='b')) {
 	
 $$( '#result' ).append('<li class="swipeout s_'+ response[i][2] +'" style="border-right:5px solid #ff3b30;border-left:5px solid #4cd964;margin-top:5px;margin-bottom:5px;"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="http://smilesavers.net.au/images/compressed/'+response[i][1]+'_'+response[i][21]+'.jpg" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-media" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner" style="border-bottom:0;"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;">'+ response[i][18] + '</span></div></div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick=""><i class="pe-7s-diskette pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');
+	
+}
+
+if ((fav_id_list instanceof Array) && (pages_list=='c')) {
+	
+$$( '#result' ).append('<li class="swipeout s_'+ response[i][2] +'" style="border-right:5px solid #ff3b30;border-left:5px solid #5ac8fa;margin-top:5px;margin-bottom:5px;"><img onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" src="http://smilesavers.net.au/images/compressed/'+response[i][1]+'_'+response[i][21]+'.jpg" style="width:100%;"/><div class="swipeout-content"><a href="#" id="getDeal"  onclick="popUp(\''+ response[i][3]  +'\',\''+ singlequote  +'\',\''+ response[i][1]  +'\',\''+ response[i][2]  +'\')" class="item-content"><div class="item-media" onclick="getBusiness(\''+ response[i][1]  +'\');"><img src="http://graph.facebook.com/'+response[i][1]+'/picture?width=50&height=50" style="border-radius:50%;"/></div><div class="item-inner" style="border-bottom:0;"><div class="item-title-row" style="clear:both;"><div class="item-title">'+ response[i][3] + '</div><div class="item-after"><span class="badge" style="margin-right:2px;background-color:#3b5998;">'+ response[i][17] + '</span><span class="badge" style="background-color:#ff8000;">'+ response[i][18] + '</span></div></div></div></a></div><div class="swipeout-actions-left"><a href="#" class="bg-green swipeout-delete swipeout-overswipe" style="background-color:#3b5998;" onclick=""><i class="pe-7s-diskette pe-2x"></i></a></div><div class="swipeout-actions-right"><a href="#" onclick="closeButton(\''+ response[i][2]  +'\')" class="swipeout-delete swipeout-overswipe" style="background-color:#ff8000;"><i class="pe-7s-like2 pe-2x pe-rotate-180"></i></a></div></li>');
 	
 }
 
@@ -572,7 +584,7 @@ function addEntry(post_id,expiry) {
 
 function favList(page_id) {
  alert(localStorage.getItem("favEntries"));
-	var timestamp = new Date().getTime() / 1000;
+	var timestamp = Math.round(new Date().getTime() / 1000);
     // Parse any JSON previously stored in allEntries
     var favEntries = JSON.parse(localStorage.getItem("favEntries"));
     if(favEntries == null) favEntries = [];
