@@ -935,7 +935,7 @@ var clear_description = description.replace(/qqqq/g, "'");
 
 myApp.modal({
     title: '<a class="button" style="float:right;border:none;margin-top:-10px;" href="#" onclick="closeModal();"><i class="pe-7s-close pe-lg"></i></a><div style="margin-left:25px;margin-right:25px;">' + title + '</div>',
-    text: '<div class="content-block-title">Deal</div><div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;"><div class="content-block-inner">' + clear_description + '</div></div><div class="content-block-title">Terms</div><div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;"><div class="content-block-inner">These are the terms</div></div>',
+    text: '<div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;"><div class="content-block-inner"><div class="content-block-title">Deal</div>' + clear_description + '</div></div><div class="content-block" style="padding:0;margin:0;max-height:200px;overflow: scroll;"><div class="content-block-inner"><div class="content-block-title">Terms</div>These are the terms</div></div>',
     afterText: '<div style="margin-bottom:-15px;height:49px;border-top:1px solid #ccc;background-image:url(\'http://graph.facebook.com/' + uid + '/picture?type=small\');background-repeat:no-repeat;"><input id="commentbox" type="text" placeholder="Comment on Facebook" style="margin-left:49px;border:none;border-radius:0px; height:30px;margin-top:0px;font-size:14px;width:205px;"></div>',
     buttons: [
       {
@@ -961,7 +961,7 @@ myApp.modal({
         }
       },
       {
-        text: '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;padding-top:5px;"/>',
+        text: '<img src="http://graph.facebook.com/'+ page_id +'/picture?width=20&height=20" style="border-radius:50%;margin-top:10px;"/>',
         onClick: function() {
           getBusiness(page_id);
           
